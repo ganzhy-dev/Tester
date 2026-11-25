@@ -79,3 +79,9 @@ Semua timing ada di `src/timeline.ts`. Kalau timing diubah, samakan juga angka d
 Catatan: di container cloud tempat video ini dibuat, browser bawaan Remotion tidak bisa diunduh, jadi render memakai Chromium yang sudah terpasang lewat variabel lingkungan `REMOTION_BROWSER=/path/ke/chrome`. Di komputer sendiri biasanya tidak perlu: Remotion akan mengunduh browsernya sendiri.
 
 Lisensi Remotion: gratis untuk perorangan dan tim sampai 3 orang (https://remotion.dev/license).
+
+## File video
+
+- `video/PanasKeDingin_4K_60fps_upload.mp4`: 2160×3840, 60 fps, sekitar 88 MB. Ini yang di-upload ke TikTok.
+- `video/PanasKeDingin_preview_1080p60.mp4`: 1080×1920, 60 fps, buat preview cepat.
+- Master 4K dengan kualitas lebih tinggi (CRF 16, 124 MB) tidak masuk ke Git karena melebihi batas 100 MB GitHub. Untuk membuatnya, jalankan `npm run render:4k`.
