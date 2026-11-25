@@ -1,0 +1,40 @@
+{
+  "name": "cuaca-panas-dingin",
+  "version": "1.0.0",
+  "description": "Motion video TikTok 60 dtk: cuaca Indonesia siang panas, sore dingin (4K 60fps)",
+  "repository": {},
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.547",
+    "@remotion/fonts": "4.0.547",
+    "@remotion/media": "4.0.547",
+    "@remotion/transitions": "4.0.547",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.547"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.547",
+    "@types/react": "19.3.0",
+    "@types/web": "0.0.166",
+    "eslint": "10.15.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src && tsc",
+    "music": "mkdir -p out && python3 scripts/make_music.py out/music_raw.wav && ffmpeg -y -loglevel error -i out/music_raw.wav -af loudnorm=I=-11:TP=-1.2:LRA=9 -ar 48000 public/music.wav",
+    "render:4k": "remotion render PanasKeDingin out/PanasKeDingin_4K_60fps.mp4 --scale=2 --codec=h264 --crf=16 --x264-preset=slow --jpeg-quality=95 --audio-bitrate=320k",
+    "render:preview": "remotion render PanasKeDingin out/PanasKeDingin_preview_1080p.mp4 --codec=h264 --crf=22"
+  },
+  "allowScripts": {
+    "esbuild": false
+  }
+}
