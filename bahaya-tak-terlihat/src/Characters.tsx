@@ -198,7 +198,7 @@ export const Worker: React.FC<{
  * Maskot bahaya tak terlihat — "makhluk halus" versi K3.
  * Varian: co2 (kabut ngantuk), vibe (getaran), noise (bising).
  */
-export type HalusVariant = "co2" | "vibe" | "noise" | "heat" | "dust" | "gas";
+export type HalusVariant = "co2" | "vibe" | "noise" | "heat" | "dust" | "gas" | "stress" | "burnout" | "doom";
 
 export const SiHalus: React.FC<{
   size?: number;
@@ -217,11 +217,14 @@ export const SiHalus: React.FC<{
     heat: [C.orange, "#E0601F"],
     dust: ["#E3D3B0", "#B89E6E"],
     gas: ["#8A93A6", "#5C6478"],
+    stress: ["#FF6B6B", "#D63C44"],
+    burnout: ["#A89A90", "#7A6C63"],
+    doom: ["#6C8CFF", "#3F5FE0"],
   };
   const [col, col2] = PAL[variant];
   const s = { stroke: C.ink, strokeWidth: OUTLINE, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
   const float = Math.sin(t * Math.PI * 1.2) * 12;
-  const jit = variant === "vibe" ? (random(`hj${frame}`) - 0.5) * 10 : 0;
+  const jit = variant === "vibe" ? (random(`hj${frame}`) - 0.5) * 10 : variant === "stress" ? (random(`hs${frame}`) - 0.5) * 4 : 0;
 
   // badan hantu dengan ujung bawah bergelombang
   const bumps = 5;
@@ -301,10 +304,47 @@ export const SiHalus: React.FC<{
           const p = (t * 0.4 + i / 4) % 1;
           return <circle key={i} cx={20 + i * 85 + Math.sin(t * 1.5 + i) * 14} cy={300 - p * 360} r={22 + p * 30} fill="#5C6478" opacity={0.45 * Math.sin(p * Math.PI)} />;
         })}
+      {variant === "stress" &&
+        [0, 1, 2].map((i) => {
+          const on = Math.sin(t * 9 + i * 2.1) > 0.2;
+          const x = [20, 260, 140][i];
+          const y = [40, 50, -30][i];
+          return on ? <path key={i} d={`M${x} ${y} l-18 34 l16 0 l-14 34 l36 -44 l-17 0 l15 -24 Z`} fill={C.yellow} {...s} strokeWidth={5} /> : null;
+        })}
+      {variant === "burnout" &&
+        [0, 1, 2].map((i) => {
+          const p = (t * 0.5 + i / 3) % 1;
+          return <circle key={i} cx={150 + Math.sin(t * 2 + i * 2) * 18} cy={0 - p * 120} r={12 + p * 22} fill="#B9B0AA" opacity={0.55 * Math.sin(p * Math.PI)} />;
+        })}
+      {variant === "doom" &&
+        [0, 1, 2, 3].map((i) => {
+          const p = (t * 0.8 + i / 4) % 1;
+          return <path key={i} d={`M${i % 2 ? 290 : 0} ${40 + p * 220} l14 18 l14 -18`} fill="none" stroke="#9FB4FF" strokeWidth={8} strokeLinecap="round" opacity={Math.sin(p * Math.PI)} />;
+        })}
       <path d={d} fill={col} {...s} />
+      {variant === "doom" && <path d={d} fill="url(#doomGlow)" stroke="none" />}
       <path d="M70 120 Q80 60 140 52" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth={14} strokeLinecap="round" />
       {variant === "heat" && (
         <path d="M95 52 Q100 10 125 30 Q130 -10 150 12 Q172 -10 176 30 Q200 10 205 52" fill={C.yellow} {...s} />
+      )}
+      {variant === "doom" && (
+        <defs>
+          <radialGradient id="doomGlow" cx="0.5" cy="0.75" r="0.6">
+            <stop offset="0" stopColor="#E8F0FF" stopOpacity={0.55 + 0.15 * Math.sin(t * 5)} />
+            <stop offset="1" stopColor="#E8F0FF" stopOpacity={0} />
+          </radialGradient>
+        </defs>
+      )}
+      {variant === "stress" && (
+        <g transform={`translate(205 50) scale(${1 + 0.12 * Math.abs(Math.sin(t * 6))})`}>
+          <path d="M-22 -6 Q-8 -8 -6 -22 M6 -22 Q8 -8 22 -6 M22 6 Q8 8 6 22 M-6 22 Q-8 8 -22 6" fill="none" stroke="#B0182A" strokeWidth={8} strokeLinecap="round" />
+        </g>
+      )}
+      {variant === "burnout" && (
+        <g>
+          <rect x={146} y={-4} width={8} height={40} rx={3} fill="#3A2E28" />
+          <path d={`M150 -4 Q${138 + Math.sin(t * 12) * 3} -24 150 ${-46 - Math.sin(t * 9) * 4} Q${162 + Math.sin(t * 10) * 3} -24 150 -4 Z`} fill={C.orange} {...s} strokeWidth={4} opacity={0.9} />
+        </g>
       )}
       {variant === "noise" && (
         <path d="M95 48 L110 8 L135 42 L150 0 L165 42 L190 8 L205 48" fill={col2} {...s} />
@@ -352,6 +392,23 @@ export const SiHalus: React.FC<{
             </tspan>
           )}
         </text>
+      )}
+      {variant === "burnout" && (
+        <g transform="translate(112 240)">
+          <rect x={0} y={0} width={70} height={36} rx={6} fill={C.cream} {...s} strokeWidth={5} />
+          <rect x={70} y={11} width={8} height={14} rx={2} fill={C.ink} />
+          <rect x={6} y={6} width={Math.max(4, 14 * (0.6 + 0.4 * Math.sin(t * 4)))} height={24} rx={3} fill="#FF3B3B" />
+        </g>
+      )}
+      {variant === "doom" && (
+        <g transform={`translate(196 196) rotate(-12)`}>
+          <rect x={0} y={0} width={62} height={104} rx={12} fill="#1B1F3A" {...s} strokeWidth={5} />
+          <rect x={7} y={9} width={48} height={84} rx={6} fill="#CFE0FF" />
+          {[0, 1, 2, 3, 4].map((k) => {
+            const yy = 12 + (((k * 18 - t * 60) % 90) + 90) % 90;
+            return <rect key={k} x={12} y={yy} width={38} height={10} rx={3} fill={k % 2 ? C.pink : "#6C8CFF"} opacity={yy < 82 ? 1 : 0} />;
+          })}
+        </g>
       )}
       {variant === "co2" && (
         <text x={150} y={276} textAnchor="middle" fontFamily="LilitaOne" fontSize={46} fill={C.ink}>

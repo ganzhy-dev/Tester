@@ -6,6 +6,7 @@ import { SiHalus, Worker } from "./Characters";
 import { Grinder, Hand } from "./ep/Ep2";
 import { ShoutBubble } from "./ep/Ep3";
 import { Zzz } from "./Props";
+import { Headline, Phone, S } from "./PropsStress";
 
 /**
  * Cover TikTok 1080x1920. Grid profil memotong ke 3:4 di tengah (y 240–1680),
@@ -246,6 +247,78 @@ export const Cover6: React.FC = () => (
     <ScanLine y={1460} />
     <div style={{ position: "absolute", left: 20, top: 960, rotate: "-10deg" }}>
       <SiHalus size={380} variant="gas" mood="grin" />
+    </div>
+  </CoverFrame>
+);
+
+/** Kartu hasil lab "NORMAL" */
+const LabCard: React.FC = () => (
+  <div style={{ width: 380, background: C.white, border: `${OUTLINE}px solid ${C.ink}`, borderRadius: 26, boxShadow: `0 12px 0 ${C.ink}`, padding: "18px 26px", fontFamily: BODY, fontWeight: 800, color: C.ink, rotate: "8deg" }}>
+    <div style={{ fontFamily: HEAD, fontSize: 44 }}>🧪 HASIL LAB</div>
+    {["Darah", "Lambung", "Jantung"].map((k) => (
+      <div key={k} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 32, marginTop: 8, whiteSpace: "nowrap", gap: 12 }}>
+        {k}
+        <span style={{ color: C.white, background: "#1F9D55", borderRadius: 99, padding: "0 14px", fontSize: 28 }}>NORMAL ✓</span>
+      </div>
+    ))}
+  </div>
+);
+
+export const Cover7: React.FC = () => (
+  <CoverFrame ep={7} accent={S.red} tint="#4A1426" line1="SAKIT TERUS," line2="HASIL LAB NORMAL?" sub="sakitnya nyata, bukan lebay 😣">
+    <div style={{ position: "absolute", left: 620, top: 1060 }}>
+      <LabCard />
+    </div>
+    <ScanLine y={1450} />
+    <div style={{ position: "absolute", left: 90, top: 1000 }}>
+      <Worker size={660} expr="pain" pose="idle" shirt="#5B6BD8" pants="#2E3557" seed={3} />
+    </div>
+    <div style={{ position: "absolute", left: 330, top: 905, rotate: "-8deg" }}>
+      <SiHalus size={300} variant="stress" mood="grin" />
+    </div>
+  </CoverFrame>
+);
+
+export const Cover8: React.FC = () => (
+  <CoverFrame ep={8} accent={S.violet} tint="#231A4E" line1="NOTIF GRUP" line2="JAM 10 MALAM?" sub="badanmu ngira ini bahaya 📱">
+    <div style={{ position: "absolute", left: 540, top: 990, rotate: "7deg" }}>
+      <Phone
+        w={360}
+        time="22.07"
+        notifs={[
+          { app: "Grup Kantor", title: "Pak Bos", text: "Tolong dicek ya, besok pagi 🙏", at: -5 },
+          { app: "Grup Kelas", title: "Ketua Kelas", text: "Tugas dikumpulin jam 7!", color: "#FFB020", at: -5 },
+          { app: "Grup Kantor", title: "Pak Bos", text: "Udah dibaca kan? 👀", at: -5 },
+        ]}
+      />
+    </div>
+    <ScanLine y={1450} />
+    <div style={{ position: "absolute", left: 60, top: 1010 }}>
+      <Worker size={660} expr="shocked" pose="idle" shirt="#3FA7A0" pants="#2E3557" seed={2} />
+    </div>
+    <div style={{ position: "absolute", left: 340, top: 960, rotate: "-8deg" }}>
+      <SiHalus size={270} variant="burnout" mood="grin" />
+    </div>
+  </CoverFrame>
+);
+
+export const Cover9: React.FC = () => (
+  <CoverFrame ep={9} accent={S.blue} tint="#16204F" line1="SCROLL BERITA" line2="SAMPAI SUBUH?" sub="otakmu nggak bisa bedain 😵">
+    <div style={{ position: "absolute", left: 600, top: 1010 }}>
+      <Headline tag="PHK" text="Ribuan pekerja dirumahkan" w={410} rotate={6} at={-5} />
+    </div>
+    <div style={{ position: "absolute", left: 640, top: 1240 }}>
+      <Headline tag="HARGA" text="Semua naik lagi" color={C.orange} w={360} rotate={-5} at={-5} />
+    </div>
+    <ScanLine y={1450} />
+    <div style={{ position: "absolute", left: 60, top: 1000 }}>
+      <Worker size={660} expr="dizzy" pose="idle" shirt={C.pink} pants="#2E3557" seed={4} />
+    </div>
+    <div style={{ position: "absolute", left: 340, top: 1210, rotate: "-6deg" }}>
+      <Phone w={220} dark time="02.13" feed={[{ tag: "VIRAL", text: "Bencana lagi 😢", color: C.pink }, { tag: "PHK", text: "PHK massal", color: S.red }, { tag: "FYP", text: "Umur 22 udah kaya", color: S.blue }]} />
+    </div>
+    <div style={{ position: "absolute", left: 20, top: 880, rotate: "-12deg" }}>
+      <SiHalus size={300} variant="doom" mood="grin" />
     </div>
   </CoverFrame>
 );

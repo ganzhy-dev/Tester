@@ -1,0 +1,989 @@
+{
+"words": [
+{
+"text": "Lambung",
+"start": 0.089,
+"end": 0.311
+},
+{
+"text": "perih",
+"start": 0.45,
+"end": 0.729
+},
+{
+"text": "tiap",
+"start": 0.798,
+"end": 0.937
+},
+{
+"text": "mau",
+"start": 0.972,
+"end": 1.042
+},
+{
+"text": "presentasi.",
+"start": 1.076,
+"end": 1.711
+},
+{
+"text": "Kepala",
+"start": 1.833,
+"end": 2.25
+},
+{
+"text": "kayak",
+"start": 2.32,
+"end": 2.459
+},
+{
+"text": "diiket",
+"start": 2.529,
+"end": 2.946
+},
+{
+"text": "pas",
+"start": 3.016,
+"end": 3.085
+},
+{
+"text": "deadline.",
+"start": 3.155,
+"end": 3.624
+},
+{
+"text": "Leher",
+"start": 3.789,
+"end": 3.998
+},
+{
+"text": "kaku,",
+"start": 4.068,
+"end": 4.694
+},
+{
+"text": "jantung",
+"start": 4.833,
+"end": 5.042
+},
+{
+"text": "deg-degan,",
+"start": 5.111,
+"end": 5.853
+},
+{
+"text": "padahal",
+"start": 5.9,
+"end": 6.085
+},
+{
+"text": "lagi",
+"start": 6.155,
+"end": 6.294
+},
+{
+"text": "rebahan...",
+"start": 6.363,
+"end": 6.946
+},
+{
+"text": "Udah",
+"start": 7.155,
+"end": 7.294
+},
+{
+"text": "minum",
+"start": 7.363,
+"end": 7.502
+},
+{
+"text": "obat",
+"start": 7.572,
+"end": 7.781
+},
+{
+"text": "maag,",
+"start": 7.85,
+"end": 8.244
+},
+{
+"text": "udah",
+"start": 8.291,
+"end": 8.372
+},
+{
+"text": "ke",
+"start": 8.407,
+"end": 8.476
+},
+{
+"text": "dokter,",
+"start": 8.546,
+"end": 9.068
+},
+{
+"text": "katanya",
+"start": 9.242,
+"end": 9.52
+},
+{
+"text": "normal.",
+"start": 9.589,
+"end": 10.102
+},
+{
+"text": "Bisa",
+"start": 10.373,
+"end": 10.433
+},
+{
+"text": "jadi,",
+"start": 10.502,
+"end": 11.094
+},
+{
+"text": "itu",
+"start": 11.129,
+"end": 11.337
+},
+{
+"text": "ulah",
+"start": 11.407,
+"end": 11.546
+},
+{
+"text": "makhluk",
+"start": 11.615,
+"end": 11.894
+},
+{
+"text": "halus",
+"start": 11.998,
+"end": 12.172
+},
+{
+"text": "yang",
+"start": 12.242,
+"end": 12.381
+},
+{
+"text": "nempel",
+"start": 12.415,
+"end": 12.729
+},
+{
+"text": "di",
+"start": 12.798,
+"end": 12.868
+},
+{
+"text": "pundak",
+"start": 12.914,
+"end": 13.076
+},
+{
+"text": "kamu...",
+"start": 13.146,
+"end": 13.555
+},
+{
+"text": "Stres!",
+"start": 13.844,
+"end": 14.424
+},
+{
+"text": "Jadi",
+"start": 14.563,
+"end": 14.702
+},
+{
+"text": "gini.",
+"start": 14.737,
+"end": 15.015
+},
+{
+"text": "Pas",
+"start": 15.129,
+"end": 15.268
+},
+{
+"text": "stres,",
+"start": 15.337,
+"end": 15.789
+},
+{
+"text": "otak",
+"start": 15.894,
+"end": 16.102
+},
+{
+"text": "ngira",
+"start": 16.172,
+"end": 16.45
+},
+{
+"text": "kamu",
+"start": 16.485,
+"end": 16.659
+},
+{
+"text": "lagi",
+"start": 16.729,
+"end": 16.822
+},
+{
+"text": "dikejar",
+"start": 16.844,
+"end": 17.146
+},
+{
+"text": "macan.",
+"start": 17.25,
+"end": 17.615
+},
+{
+"text": "Badan",
+"start": 17.789,
+"end": 17.998
+},
+{
+"text": "langsung",
+"start": 18.068,
+"end": 18.276
+},
+{
+"text": "siaga:",
+"start": 18.346,
+"end": 18.859
+},
+{
+"text": "jantung",
+"start": 18.894,
+"end": 19.137
+},
+{
+"text": "dipacu,",
+"start": 19.207,
+"end": 19.833
+},
+{
+"text": "otot",
+"start": 19.902,
+"end": 20.042
+},
+{
+"text": "ditegangin,",
+"start": 20.076,
+"end": 20.807
+},
+{
+"text": "napas",
+"start": 20.911,
+"end": 21.085
+},
+{
+"text": "jadi",
+"start": 21.155,
+"end": 21.294
+},
+{
+"text": "pendek.",
+"start": 21.363,
+"end": 21.824
+},
+{
+"text": "Kalau",
+"start": 21.859,
+"end": 21.963
+},
+{
+"text": "sebentar",
+"start": 22.033,
+"end": 22.381
+},
+{
+"text": "sih",
+"start": 22.415,
+"end": 22.485
+},
+{
+"text": "nggak",
+"start": 22.52,
+"end": 22.624
+},
+{
+"text": "apa-apa.",
+"start": 22.659,
+"end": 23.25
+},
+{
+"text": "Masalahnya,",
+"start": 23.355,
+"end": 24.094
+},
+{
+"text": "macannya",
+"start": 24.163,
+"end": 24.581
+},
+{
+"text": "sekarang",
+"start": 24.65,
+"end": 24.859
+},
+{
+"text": "nggak",
+"start": 24.894,
+"end": 24.998
+},
+{
+"text": "pergi-pergi.",
+"start": 25.033,
+"end": 25.807
+},
+{
+"text": "Cicilan,",
+"start": 25.876,
+"end": 26.502
+},
+{
+"text": "kerjaan,",
+"start": 26.711,
+"end": 27.268
+},
+{
+"text": "tugas,",
+"start": 27.302,
+"end": 27.824
+},
+{
+"text": "berita...",
+"start": 27.894,
+"end": 28.659
+},
+{
+"text": "alarmnya",
+"start": 28.798,
+"end": 29.146
+},
+{
+"text": "bunyi",
+"start": 29.181,
+"end": 29.424
+},
+{
+"text": "tiap",
+"start": 29.494,
+"end": 29.633
+},
+{
+"text": "hari.",
+"start": 29.702,
+"end": 30.094
+},
+{
+"text": "Otot",
+"start": 30.209,
+"end": 30.372
+},
+{
+"text": "yang",
+"start": 30.442,
+"end": 30.511
+},
+{
+"text": "tegang",
+"start": 30.546,
+"end": 30.789
+},
+{
+"text": "terus,",
+"start": 30.859,
+"end": 31.276
+},
+{
+"text": "lama-lama",
+"start": 31.381,
+"end": 31.694
+},
+{
+"text": "bikin",
+"start": 31.729,
+"end": 31.972
+},
+{
+"text": "sakit",
+"start": 32.042,
+"end": 32.181
+},
+{
+"text": "kepala",
+"start": 32.25,
+"end": 32.598
+},
+{
+"text": "sama",
+"start": 32.668,
+"end": 32.807
+},
+{
+"text": "leher",
+"start": 32.876,
+"end": 33.085
+},
+{
+"text": "kaku.",
+"start": 33.201,
+"end": 33.563
+},
+{
+"text": "Usus",
+"start": 33.633,
+"end": 33.911
+},
+{
+"text": "juga",
+"start": 33.957,
+"end": 34.05
+},
+{
+"text": "nyambung",
+"start": 34.12,
+"end": 34.398
+},
+{
+"text": "langsung",
+"start": 34.502,
+"end": 34.676
+},
+{
+"text": "ke",
+"start": 34.746,
+"end": 34.815
+},
+{
+"text": "otak,",
+"start": 34.885,
+"end": 35.198
+},
+{
+"text": "makanya",
+"start": 35.268,
+"end": 35.685
+},
+{
+"text": "pas",
+"start": 35.755,
+"end": 35.824
+},
+{
+"text": "cemas,",
+"start": 35.894,
+"end": 36.381
+},
+{
+"text": "perut",
+"start": 36.45,
+"end": 36.589
+},
+{
+"text": "ikut",
+"start": 36.659,
+"end": 36.798
+},
+{
+"text": "berulah.",
+"start": 36.868,
+"end": 37.407
+},
+{
+"text": "Ini",
+"start": 37.546,
+"end": 37.685
+},
+{
+"text": "namanya",
+"start": 37.755,
+"end": 38.033
+},
+{
+"text": "psikosomatik.",
+"start": 38.172,
+"end": 39.128
+},
+{
+"text": "Bukan",
+"start": 39.198,
+"end": 39.337
+},
+{
+"text": "pura-pura,",
+"start": 39.372,
+"end": 40.033
+},
+{
+"text": "bukan",
+"start": 40.102,
+"end": 40.242
+},
+{
+"text": "lebay.",
+"start": 40.311,
+"end": 40.876
+},
+{
+"text": "Sakitnya",
+"start": 40.911,
+"end": 41.294
+},
+{
+"text": "nyata,",
+"start": 41.328,
+"end": 41.92
+},
+{
+"text": "pemicunya",
+"start": 42.013,
+"end": 42.476
+},
+{
+"text": "pikiran.",
+"start": 42.615,
+"end": 43.346
+},
+{
+"text": "Faktanya,",
+"start": 43.45,
+"end": 44.111
+},
+{
+"text": "stres",
+"start": 44.181,
+"end": 44.389
+},
+{
+"text": "nggak",
+"start": 44.459,
+"end": 44.563
+},
+{
+"text": "bikin",
+"start": 44.598,
+"end": 44.876
+},
+{
+"text": "asam",
+"start": 44.946,
+"end": 45.085
+},
+{
+"text": "lambung",
+"start": 45.155,
+"end": 45.328
+},
+{
+"text": "nambah",
+"start": 45.363,
+"end": 45.688
+},
+{
+"text": "banyak.",
+"start": 45.804,
+"end": 46.131
+},
+{
+"text": "Tapi",
+"start": 46.248,
+"end": 46.433
+},
+{
+"text": "bikin",
+"start": 46.502,
+"end": 46.711
+},
+{
+"text": "lambung",
+"start": 46.815,
+"end": 47.128
+},
+{
+"text": "jauh",
+"start": 47.198,
+"end": 47.442
+},
+{
+"text": "lebih",
+"start": 47.476,
+"end": 47.662
+},
+{
+"text": "sensitif.",
+"start": 47.708,
+"end": 48.294
+},
+{
+"text": "Perih",
+"start": 48.328,
+"end": 48.502
+},
+{
+"text": "dikit,",
+"start": 48.537,
+"end": 48.92
+},
+{
+"text": "kerasanya",
+"start": 48.955,
+"end": 49.326
+},
+{
+"text": "kayak",
+"start": 49.348,
+"end": 49.546
+},
+{
+"text": "ditusuk.",
+"start": 49.65,
+"end": 50.128
+},
+{
+"text": "Terus",
+"start": 50.163,
+"end": 50.302
+},
+{
+"text": "gimana?",
+"start": 50.372,
+"end": 50.885
+},
+{
+"text": "Tarik",
+"start": 50.955,
+"end": 51.094
+},
+{
+"text": "napas",
+"start": 51.233,
+"end": 51.372
+},
+{
+"text": "lewat",
+"start": 51.442,
+"end": 51.65
+},
+{
+"text": "hidung,",
+"start": 51.72,
+"end": 52.172
+},
+{
+"text": "tambah",
+"start": 52.207,
+"end": 52.485
+},
+{
+"text": "dikit",
+"start": 52.659,
+"end": 52.902
+},
+{
+"text": "lagi",
+"start": 52.972,
+"end": 53.042
+},
+{
+"text": "sampai",
+"start": 53.181,
+"end": 53.285
+},
+{
+"text": "penuh,",
+"start": 53.32,
+"end": 53.772
+},
+{
+"text": "terus",
+"start": 53.807,
+"end": 54.085
+},
+{
+"text": "buang",
+"start": 54.294,
+"end": 54.502
+},
+{
+"text": "pelan-pelan",
+"start": 54.572,
+"end": 54.955
+},
+{
+"text": "lewat",
+"start": 54.989,
+"end": 55.198
+},
+{
+"text": "mulut.",
+"start": 55.337,
+"end": 55.624
+},
+{
+"text": "Lima",
+"start": 55.659,
+"end": 55.868
+},
+{
+"text": "menit",
+"start": 55.937,
+"end": 56.111
+},
+{
+"text": "sehari.",
+"start": 56.146,
+"end": 56.668
+},
+{
+"text": "Di",
+"start": 56.702,
+"end": 56.772
+},
+{
+"text": "penelitian",
+"start": 56.842,
+"end": 57.189
+},
+{
+"text": "Stanford,",
+"start": 57.468,
+"end": 57.85
+},
+{
+"text": "cara",
+"start": 57.885,
+"end": 58.094
+},
+{
+"text": "ini",
+"start": 58.233,
+"end": 58.268
+},
+{
+"text": "bikin",
+"start": 58.302,
+"end": 58.581
+},
+{
+"text": "mood",
+"start": 58.65,
+"end": 58.755
+},
+{
+"text": "lebih",
+"start": 58.789,
+"end": 58.998
+},
+{
+"text": "baik",
+"start": 59.137,
+"end": 59.276
+},
+{
+"text": "daripada",
+"start": 59.346,
+"end": 59.694
+},
+{
+"text": "meditasi",
+"start": 59.763,
+"end": 60.181
+},
+{
+"text": "biasa.",
+"start": 60.32,
+"end": 60.676
+},
+{
+"text": "Tetap",
+"start": 60.746,
+"end": 60.885
+},
+{
+"text": "periksa",
+"start": 60.955,
+"end": 61.129
+},
+{
+"text": "ke",
+"start": 61.163,
+"end": 61.198
+},
+{
+"text": "dokter,",
+"start": 61.233,
+"end": 61.581
+},
+{
+"text": "ya.",
+"start": 61.65,
+"end": 61.868
+},
+{
+"text": "Kalau",
+"start": 61.937,
+"end": 62.146
+},
+{
+"text": "hasilnya",
+"start": 62.285,
+"end": 62.424
+},
+{
+"text": "normal",
+"start": 62.772,
+"end": 62.842
+},
+{
+"text": "tapi",
+"start": 62.911,
+"end": 63.12
+},
+{
+"text": "keluhannya",
+"start": 63.189,
+"end": 63.502
+},
+{
+"text": "jalan",
+"start": 63.537,
+"end": 63.746
+},
+{
+"text": "terus,",
+"start": 63.815,
+"end": 64.233
+},
+{
+"text": "cerita",
+"start": 64.302,
+"end": 64.511
+},
+{
+"text": "juga",
+"start": 64.581,
+"end": 64.72
+},
+{
+"text": "ke",
+"start": 64.755,
+"end": 64.789
+},
+{
+"text": "psikolog.",
+"start": 64.859,
+"end": 65.346
+},
+{
+"text": "Itu",
+"start": 65.485,
+"end": 65.624
+},
+{
+"text": "bukan",
+"start": 65.694,
+"end": 65.833
+},
+{
+"text": "berarti",
+"start": 65.902,
+"end": 66.111
+},
+{
+"text": "kamu",
+"start": 66.181,
+"end": 66.355
+},
+{
+"text": "lemah.",
+"start": 66.459,
+"end": 66.798
+},
+{
+"text": "Badan",
+"start": 66.937,
+"end": 67.146
+},
+{
+"text": "kamu",
+"start": 67.216,
+"end": 67.494
+},
+{
+"text": "cuma",
+"start": 67.563,
+"end": 67.702
+},
+{
+"text": "lagi",
+"start": 67.772,
+"end": 67.911
+},
+{
+"text": "ngomong...",
+"start": 67.981,
+"end": 68.711
+},
+{
+"text": "pakai",
+"start": 68.816,
+"end": 68.955
+},
+{
+"text": "bahasa",
+"start": 69.024,
+"end": 69.233
+},
+{
+"text": "sakit.",
+"start": 69.302,
+"end": 69.894
+},
+{
+"text": "Follow,",
+"start": 70.172,
+"end": 70.416
+},
+{
+"text": "biar",
+"start": 70.45,
+"end": 70.589
+},
+{
+"text": "bahaya",
+"start": 70.729,
+"end": 70.937
+},
+{
+"text": "yang",
+"start": 71.007,
+"end": 71.042
+},
+{
+"text": "nggak",
+"start": 71.076,
+"end": 71.146
+},
+{
+"text": "kelihatan...",
+"start": 71.216,
+"end": 71.946
+},
+{
+"text": "jadi",
+"start": 72.05,
+"end": 72.12
+},
+{
+"text": "kelihatan.",
+"start": 72.189,
+"end": 72.737
+}
+]
+}

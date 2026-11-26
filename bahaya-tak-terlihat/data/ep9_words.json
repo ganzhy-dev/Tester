@@ -1,0 +1,894 @@
+{
+"words": [
+{
+"text": "Bangun",
+"start": 0.117,
+"end": 0.214
+},
+{
+"text": "tidur,",
+"start": 0.283,
+"end": 0.736
+},
+{
+"text": "buka",
+"start": 0.84,
+"end": 1.049
+},
+{
+"text": "HP.",
+"start": 1.118,
+"end": 1.501
+},
+{
+"text": "Berita",
+"start": 1.57,
+"end": 1.849
+},
+{
+"text": "PHK,",
+"start": 1.883,
+"end": 2.614
+},
+{
+"text": "harga",
+"start": 2.753,
+"end": 2.892
+},
+{
+"text": "naik,",
+"start": 2.962,
+"end": 3.449
+},
+{
+"text": "bencana,",
+"start": 3.542,
+"end": 4.353
+},
+{
+"text": "orang",
+"start": 4.457,
+"end": 4.562
+},
+{
+"text": "lain",
+"start": 4.631,
+"end": 4.701
+},
+{
+"text": "udah",
+"start": 4.77,
+"end": 4.91
+},
+{
+"text": "sukses",
+"start": 4.979,
+"end": 5.257
+},
+{
+"text": "di",
+"start": 5.327,
+"end": 5.397
+},
+{
+"text": "umur",
+"start": 5.431,
+"end": 5.536
+},
+{
+"text": "dua",
+"start": 5.605,
+"end": 5.675
+},
+{
+"text": "puluhan...",
+"start": 5.744,
+"end": 6.37
+},
+{
+"text": "scroll,",
+"start": 6.614,
+"end": 6.927
+},
+{
+"text": "scroll,",
+"start": 6.997,
+"end": 7.414
+},
+{
+"text": "scroll.",
+"start": 7.483,
+"end": 7.901
+},
+{
+"text": "Tau-tau",
+"start": 8.005,
+"end": 8.492
+},
+{
+"text": "udah",
+"start": 8.631,
+"end": 8.77
+},
+{
+"text": "jam",
+"start": 8.84,
+"end": 8.91
+},
+{
+"text": "dua",
+"start": 8.944,
+"end": 9.049
+},
+{
+"text": "pagi.",
+"start": 9.118,
+"end": 9.536
+},
+{
+"text": "Makhluk",
+"start": 9.69,
+"end": 9.91
+},
+{
+"text": "halus",
+"start": 9.979,
+"end": 10.188
+},
+{
+"text": "yang",
+"start": 10.257,
+"end": 10.327
+},
+{
+"text": "satu",
+"start": 10.397,
+"end": 10.536
+},
+{
+"text": "ini",
+"start": 10.605,
+"end": 10.814
+},
+{
+"text": "masuknya",
+"start": 11.023,
+"end": 11.37
+},
+{
+"text": "lewat",
+"start": 11.44,
+"end": 11.649
+},
+{
+"text": "layar...",
+"start": 11.718,
+"end": 12.397
+},
+{
+"text": "Doomscrolling!",
+"start": 12.457,
+"end": 13.37
+},
+{
+"text": "Ada",
+"start": 13.649,
+"end": 13.788
+},
+{
+"text": "penelitian",
+"start": 13.857,
+"end": 14.275
+},
+{
+"text": "setelah",
+"start": 14.344,
+"end": 14.553
+},
+{
+"text": "bom",
+"start": 14.623,
+"end": 14.831
+},
+{
+"text": "di",
+"start": 14.901,
+"end": 14.97
+},
+{
+"text": "Boston",
+"start": 15.11,
+"end": 15.249
+},
+{
+"text": "Marathon.",
+"start": 15.318,
+"end": 15.805
+},
+{
+"text": "Orang",
+"start": 16.092,
+"end": 16.301
+},
+{
+"text": "yang",
+"start": 16.336,
+"end": 16.37
+},
+{
+"text": "nonton",
+"start": 16.405,
+"end": 16.649
+},
+{
+"text": "beritanya",
+"start": 16.718,
+"end": 17.066
+},
+{
+"text": "enam",
+"start": 17.136,
+"end": 17.344
+},
+{
+"text": "jam",
+"start": 17.414,
+"end": 17.553
+},
+{
+"text": "lebih",
+"start": 17.623,
+"end": 17.762
+},
+{
+"text": "sehari,",
+"start": 17.831,
+"end": 18.388
+},
+{
+"text": "stresnya",
+"start": 18.457,
+"end": 18.805
+},
+{
+"text": "lebih",
+"start": 18.875,
+"end": 19.014
+},
+{
+"text": "tinggi...",
+"start": 19.084,
+"end": 19.779
+},
+{
+"text": "daripada",
+"start": 19.814,
+"end": 20.127
+},
+{
+"text": "orang",
+"start": 20.197,
+"end": 20.405
+},
+{
+"text": "yang",
+"start": 20.475,
+"end": 20.614
+},
+{
+"text": "ada",
+"start": 20.684,
+"end": 20.823
+},
+{
+"text": "di",
+"start": 20.857,
+"end": 20.892
+},
+{
+"text": "lokasi",
+"start": 20.962,
+"end": 21.17
+},
+{
+"text": "kejadian.",
+"start": 21.24,
+"end": 21.727
+},
+{
+"text": "Kenapa?",
+"start": 21.814,
+"end": 22.292
+},
+{
+"text": "Otak",
+"start": 22.553,
+"end": 22.762
+},
+{
+"text": "kita",
+"start": 22.831,
+"end": 23.04
+},
+{
+"text": "nggak",
+"start": 23.11,
+"end": 23.225
+},
+{
+"text": "bisa",
+"start": 23.249,
+"end": 23.388
+},
+{
+"text": "bedain",
+"start": 23.457,
+"end": 23.736
+},
+{
+"text": "bahaya",
+"start": 23.805,
+"end": 24.014
+},
+{
+"text": "di",
+"start": 24.084,
+"end": 24.153
+},
+{
+"text": "layar",
+"start": 24.257,
+"end": 24.501
+},
+{
+"text": "sama",
+"start": 24.57,
+"end": 24.71
+},
+{
+"text": "bahaya",
+"start": 24.779,
+"end": 24.988
+},
+{
+"text": "beneran.",
+"start": 25.057,
+"end": 25.544
+},
+{
+"text": "Tiap",
+"start": 25.892,
+"end": 26.101
+},
+{
+"text": "berita",
+"start": 26.17,
+"end": 26.379
+},
+{
+"text": "buruk,",
+"start": 26.449,
+"end": 26.797
+},
+{
+"text": "alarmnya",
+"start": 26.97,
+"end": 27.284
+},
+{
+"text": "bunyi",
+"start": 27.318,
+"end": 27.562
+},
+{
+"text": "lagi.",
+"start": 27.631,
+"end": 27.936
+},
+{
+"text": "Padahal",
+"start": 28.031,
+"end": 28.518
+},
+{
+"text": "orang",
+"start": 28.657,
+"end": 28.797
+},
+{
+"text": "Indonesia",
+"start": 28.866,
+"end": 29.353
+},
+{
+"text": "main",
+"start": 29.423,
+"end": 29.562
+},
+{
+"text": "medsos",
+"start": 29.631,
+"end": 29.979
+},
+{
+"text": "lebih",
+"start": 30.084,
+"end": 30.327
+},
+{
+"text": "dari",
+"start": 30.397,
+"end": 30.536
+},
+{
+"text": "tiga",
+"start": 30.675,
+"end": 30.884
+},
+{
+"text": "jam",
+"start": 31.092,
+"end": 31.231
+},
+{
+"text": "sehari.",
+"start": 31.301,
+"end": 31.701
+},
+{
+"text": "Anak",
+"start": 31.908,
+"end": 32.005
+},
+{
+"text": "sekolah",
+"start": 32.075,
+"end": 32.284
+},
+{
+"text": "juga",
+"start": 32.353,
+"end": 32.492
+},
+{
+"text": "kena.",
+"start": 32.597,
+"end": 32.918
+},
+{
+"text": "Survei",
+"start": 33.057,
+"end": 33.336
+},
+{
+"text": "nasional",
+"start": 33.405,
+"end": 33.684
+},
+{
+"text": "nemuin:",
+"start": 33.718,
+"end": 34.353
+},
+{
+"text": "satu",
+"start": 34.388,
+"end": 34.631
+},
+{
+"text": "dari",
+"start": 34.701,
+"end": 34.84
+},
+{
+"text": "tiga",
+"start": 34.979,
+"end": 35.118
+},
+{
+"text": "remaja",
+"start": 35.188,
+"end": 35.466
+},
+{
+"text": "Indonesia",
+"start": 35.536,
+"end": 35.953
+},
+{
+"text": "punya",
+"start": 36.092,
+"end": 36.37
+},
+{
+"text": "masalah",
+"start": 36.44,
+"end": 36.718
+},
+{
+"text": "kesehatan",
+"start": 36.753,
+"end": 37.066
+},
+{
+"text": "mental.",
+"start": 37.136,
+"end": 37.614
+},
+{
+"text": "Tapi",
+"start": 37.701,
+"end": 37.979
+},
+{
+"text": "yang",
+"start": 38.049,
+"end": 38.118
+},
+{
+"text": "dapet",
+"start": 38.188,
+"end": 38.292
+},
+{
+"text": "bantuan,",
+"start": 38.327,
+"end": 38.883
+},
+{
+"text": "cuma",
+"start": 38.918,
+"end": 39.092
+},
+{
+"text": "dua",
+"start": 39.162,
+"end": 39.37
+},
+{
+"text": "koma",
+"start": 39.44,
+"end": 39.51
+},
+{
+"text": "enam",
+"start": 39.649,
+"end": 39.742
+},
+{
+"text": "persen.",
+"start": 39.788,
+"end": 40.205
+},
+{
+"text": "Jadi",
+"start": 40.362,
+"end": 40.501
+},
+{
+"text": "gimana?",
+"start": 40.536,
+"end": 40.901
+},
+{
+"text": "Kamu",
+"start": 41.031,
+"end": 41.24
+},
+{
+"text": "tetep",
+"start": 41.31,
+"end": 41.449
+},
+{
+"text": "boleh",
+"start": 41.518,
+"end": 41.657
+},
+{
+"text": "update.",
+"start": 41.866,
+"end": 42.083
+},
+{
+"text": "Tapi",
+"start": 42.214,
+"end": 42.492
+},
+{
+"text": "kasih",
+"start": 42.562,
+"end": 42.77
+},
+{
+"text": "batas:",
+"start": 42.875,
+"end": 43.405
+},
+{
+"text": "cek",
+"start": 43.475,
+"end": 43.544
+},
+{
+"text": "berita",
+"start": 43.614,
+"end": 43.892
+},
+{
+"text": "dua",
+"start": 44.031,
+"end": 44.17
+},
+{
+"text": "kali",
+"start": 44.24,
+"end": 44.379
+},
+{
+"text": "sehari",
+"start": 44.449,
+"end": 44.657
+},
+{
+"text": "aja,",
+"start": 44.727,
+"end": 45.144
+},
+{
+"text": "jangan",
+"start": 45.179,
+"end": 45.423
+},
+{
+"text": "sebelum",
+"start": 45.492,
+"end": 45.631
+},
+{
+"text": "tidur.",
+"start": 45.701,
+"end": 46.066
+},
+{
+"text": "Matiin",
+"start": 46.283,
+"end": 46.631
+},
+{
+"text": "autoplay.",
+"start": 46.875,
+"end": 47.188
+},
+{
+"text": "Unfollow",
+"start": 47.466,
+"end": 47.883
+},
+{
+"text": "akun",
+"start": 47.953,
+"end": 48.162
+},
+{
+"text": "yang",
+"start": 48.231,
+"end": 48.301
+},
+{
+"text": "bikin",
+"start": 48.336,
+"end": 48.51
+},
+{
+"text": "kamu",
+"start": 48.579,
+"end": 48.718
+},
+{
+"text": "ngerasa",
+"start": 48.753,
+"end": 49.066
+},
+{
+"text": "kurang",
+"start": 49.136,
+"end": 49.414
+},
+{
+"text": "terus.",
+"start": 49.483,
+"end": 49.831
+},
+{
+"text": "Dan",
+"start": 50.179,
+"end": 50.388
+},
+{
+"text": "kalau",
+"start": 50.457,
+"end": 50.597
+},
+{
+"text": "rasanya",
+"start": 50.666,
+"end": 50.875
+},
+{
+"text": "udah",
+"start": 50.944,
+"end": 51.083
+},
+{
+"text": "berat",
+"start": 51.188,
+"end": 51.431
+},
+{
+"text": "banget,",
+"start": 51.501,
+"end": 51.866
+},
+{
+"text": "kamu",
+"start": 51.901,
+"end": 52.075
+},
+{
+"text": "nggak",
+"start": 52.11,
+"end": 52.19
+},
+{
+"text": "harus",
+"start": 52.214,
+"end": 52.353
+},
+{
+"text": "sendirian.",
+"start": 52.423,
+"end": 52.91
+},
+{
+"text": "Ada",
+"start": 53.188,
+"end": 53.397
+},
+{
+"text": "layanan",
+"start": 53.466,
+"end": 53.744
+},
+{
+"text": "Kemenkes:",
+"start": 53.837,
+"end": 54.51
+},
+{
+"text": "satu",
+"start": 54.544,
+"end": 54.649
+},
+{
+"text": "satu",
+"start": 54.788,
+"end": 54.857
+},
+{
+"text": "sembilan,",
+"start": 54.927,
+"end": 55.483
+},
+{
+"text": "ekstensi",
+"start": 55.518,
+"end": 55.831
+},
+{
+"text": "delapan.",
+"start": 55.901,
+"end": 56.466
+},
+{
+"text": "Dunia",
+"start": 56.528,
+"end": 56.814
+},
+{
+"text": "emang",
+"start": 56.883,
+"end": 57.023
+},
+{
+"text": "lagi",
+"start": 57.092,
+"end": 57.231
+},
+{
+"text": "ribut...",
+"start": 57.37,
+"end": 57.997
+},
+{
+"text": "tapi",
+"start": 58.09,
+"end": 58.275
+},
+{
+"text": "kamu",
+"start": 58.344,
+"end": 58.553
+},
+{
+"text": "boleh",
+"start": 58.623,
+"end": 58.727
+},
+{
+"text": "pilih,",
+"start": 58.762,
+"end": 59.249
+},
+{
+"text": "mau",
+"start": 59.283,
+"end": 59.353
+},
+{
+"text": "dengerin",
+"start": 59.388,
+"end": 59.666
+},
+{
+"text": "seberapa",
+"start": 59.736,
+"end": 60.083
+},
+{
+"text": "keras.",
+"start": 60.153,
+"end": 60.57
+},
+{
+"text": "Follow,",
+"start": 60.762,
+"end": 61.249
+},
+{
+"text": "biar",
+"start": 61.318,
+"end": 61.457
+},
+{
+"text": "bahaya",
+"start": 61.527,
+"end": 61.805
+},
+{
+"text": "yang",
+"start": 61.84,
+"end": 61.875
+},
+{
+"text": "nggak",
+"start": 61.91,
+"end": 62.014
+},
+{
+"text": "kelihatan...",
+"start": 62.083,
+"end": 62.718
+},
+{
+"text": "jadi",
+"start": 62.823,
+"end": 62.927
+},
+{
+"text": "kelihatan.",
+"start": 62.997,
+"end": 63.414
+}
+]
+}

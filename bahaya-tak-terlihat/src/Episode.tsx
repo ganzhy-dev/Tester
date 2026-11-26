@@ -5,11 +5,11 @@ import { AbsoluteFill, Sequence, interpolate, spring, staticFile, useCurrentFram
 import { BODY, C, HEAD, clamp } from "./brand";
 import { HalusVariant, SiHalus } from "./Characters";
 import { Backdrop, Captions, HandleTag, Scanner, Word, flashAt } from "./Kit";
-import { Cover1, Cover2, Cover3, Cover4, Cover5, Cover6 } from "./Covers";
+import { Cover1, Cover2, Cover3, Cover4, Cover5, Cover6, Cover7, Cover8, Cover9 } from "./Covers";
 import { HOOKCTA } from "./ep/hookcta";
 
 // lazy (hindari impor melingkar Covers -> Ep2 -> Episode)
-const getCover = (ep: number): React.FC => [Cover1, Cover2, Cover3, Cover4, Cover5, Cover6][ep - 1];
+const getCover = (ep: number): React.FC => [Cover1, Cover2, Cover3, Cover4, Cover5, Cover6, Cover7, Cover8, Cover9][ep - 1];
 const easeIn = (x: number) => x * x * x;
 
 /** Cold open 3-5 dtk: frame pertama = cover, lalu push-in + kalimat hook (taruhan/stakes), diakhiri whip-zoom */
@@ -116,7 +116,7 @@ export const warpOldToNew = (x: number, w: [number, number][]) => {
 
 /** End card seragam untuk semua episode */
 export const EndCard: React.FC<{ revealAt: number; ep?: number; ctaAt?: number; ctaText?: string; ctaDur?: number }> = ({ revealAt, ep = 1, ctaAt, ctaText, ctaDur = 3 }) => {
-  const trio: HalusVariant[] = ep >= 4 ? ["heat", "gas", "dust"] : ["co2", "noise", "vibe"];
+  const trio: HalusVariant[] = ep >= 7 ? ["stress", "doom", "burnout"] : ep >= 4 ? ["heat", "gas", "dust"] : ["co2", "noise", "vibe"];
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
