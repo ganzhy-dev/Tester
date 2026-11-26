@@ -3,7 +3,7 @@ import React from "react";
 import { Audio } from "@remotion/media";
 import { AbsoluteFill, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { BODY, C, HEAD, clamp } from "./brand";
-import { SiHalus } from "./Characters";
+import { HalusVariant, SiHalus } from "./Characters";
 import { Backdrop, Captions, HandleTag, Scanner, Word, flashAt } from "./Kit";
 
 /** Peta waktu lama -> baru (piecewise linear) */
@@ -17,7 +17,8 @@ export const warpOldToNew = (x: number, w: [number, number][]) => {
 };
 
 /** End card seragam untuk semua episode */
-export const EndCard: React.FC<{ revealAt: number }> = ({ revealAt }) => {
+export const EndCard: React.FC<{ revealAt: number; ep?: number }> = ({ revealAt, ep = 1 }) => {
+  const trio: HalusVariant[] = ep >= 4 ? ["heat", "gas", "dust"] : ["co2", "noise", "vibe"];
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
@@ -47,9 +48,9 @@ export const EndCard: React.FC<{ revealAt: number }> = ({ revealAt }) => {
       </div>
       <Scanner at={revealAt} dur={0.8} top={900} height={420}>
         <div style={{ position: "absolute", top: 930, left: 0, right: 0, display: "flex", justifyContent: "center", gap: 10 }}>
-          <SiHalus size={300} variant="co2" mood="laugh" />
-          <SiHalus size={330} variant="noise" mood="grin" />
-          <SiHalus size={300} variant="vibe" mood="laugh" />
+          <SiHalus size={300} variant={trio[0]} mood="laugh" />
+          <SiHalus size={330} variant={trio[1]} mood="grin" />
+          <SiHalus size={300} variant={trio[2]} mood="laugh" />
         </div>
       </Scanner>
       <div style={{ position: "absolute", top: 1330, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: interpolate(t, [0.3, 0.6], [0, 1], clamp) }}>
@@ -115,7 +116,7 @@ export const Episode: React.FC<{
         </Sequence>
       )}
       <Sequence name="End card" from={Math.round(endStart * fps)}>
-        <EndCard revealAt={revealAt - endStart} />
+        <EndCard revealAt={revealAt - endStart} ep={ep} />
       </Sequence>
       {t < endStart && <Captions words={words.filter((w) => w.start < endStart - 0.05)} />}
       <HandleTag ep={`EP ${ep}`} />

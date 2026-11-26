@@ -13,6 +13,8 @@ export const CharTest: React.FC = () => (
     <SiHalus size={380} variant="co2" />
     <SiHalus size={380} variant="vibe" mood="laugh" />
     <SiHalus size={380} variant="noise" />
-    <SiHalus size={380} variant="co2" mood="busted" />
+    <SiHalus size={380} variant="heat" />
+    <SiHalus size={380} variant="dust" mood="laugh" />
+    <SiHalus size={380} variant="gas" />
   </AbsoluteFill>
 );

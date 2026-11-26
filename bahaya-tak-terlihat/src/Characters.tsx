@@ -198,7 +198,7 @@ export const Worker: React.FC<{
  * Maskot bahaya tak terlihat — "makhluk halus" versi K3.
  * Varian: co2 (kabut ngantuk), vibe (getaran), noise (bising).
  */
-export type HalusVariant = "co2" | "vibe" | "noise";
+export type HalusVariant = "co2" | "vibe" | "noise" | "heat" | "dust" | "gas";
 
 export const SiHalus: React.FC<{
   size?: number;
@@ -210,8 +210,15 @@ export const SiHalus: React.FC<{
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
-  const col = variant === "co2" ? "#B9A6FF" : variant === "vibe" ? C.cyan : C.pink;
-  const col2 = variant === "co2" ? "#8E76F0" : variant === "vibe" ? "#1FB6D6" : "#D93370";
+  const PAL: Record<HalusVariant, [string, string]> = {
+    co2: ["#B9A6FF", "#8E76F0"],
+    vibe: [C.cyan, "#1FB6D6"],
+    noise: [C.pink, "#D93370"],
+    heat: [C.orange, "#E0601F"],
+    dust: ["#E3D3B0", "#B89E6E"],
+    gas: ["#8A93A6", "#5C6478"],
+  };
+  const [col, col2] = PAL[variant];
   const s = { stroke: C.ink, strokeWidth: OUTLINE, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
   const float = Math.sin(t * Math.PI * 1.2) * 12;
   const jit = variant === "vibe" ? (random(`hj${frame}`) - 0.5) * 10 : 0;
@@ -276,8 +283,29 @@ export const SiHalus: React.FC<{
             />
           );
         })}
+      {variant === "heat" &&
+        [0, 1, 2].map((i) => {
+          const p = (t * 0.9 + i / 3) % 1;
+          let w = `M${70 + i * 80} ${10 - p * 90}`;
+          for (let k = 1; k <= 6; k++) w += ` q8 -10 0 -20`;
+          return <path key={i} d={w} fill="none" stroke={C.orange} strokeWidth={8} strokeLinecap="round" opacity={0.8 * (1 - p)} />;
+        })}
+      {variant === "dust" &&
+        new Array(14).fill(0).map((_, i) => {
+          const a = (i / 14) * Math.PI * 2 + t * 0.8;
+          const r = 175 + 25 * Math.sin(t * 3 + i);
+          return <circle key={i} cx={150 + Math.cos(a) * r} cy={170 + Math.sin(a) * r * 0.9} r={4 + (i % 3) * 3} fill="#E3D3B0" opacity={0.75} />;
+        })}
+      {variant === "gas" &&
+        [0, 1, 2, 3].map((i) => {
+          const p = (t * 0.4 + i / 4) % 1;
+          return <circle key={i} cx={20 + i * 85 + Math.sin(t * 1.5 + i) * 14} cy={300 - p * 360} r={22 + p * 30} fill="#5C6478" opacity={0.45 * Math.sin(p * Math.PI)} />;
+        })}
       <path d={d} fill={col} {...s} />
       <path d="M70 120 Q80 60 140 52" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth={14} strokeLinecap="round" />
+      {variant === "heat" && (
+        <path d="M95 52 Q100 10 125 30 Q130 -10 150 12 Q172 -10 176 30 Q200 10 205 52" fill={C.yellow} {...s} />
+      )}
       {variant === "noise" && (
         <path d="M95 48 L110 8 L135 42 L150 0 L165 42 L190 8 L205 48" fill={col2} {...s} />
       )}
@@ -314,6 +342,11 @@ export const SiHalus: React.FC<{
           <path d="M100 195 Q150 250 200 195 Z" fill="#5A1030" {...s} />
           <path d="M118 200 L128 214 L138 202 L148 216 L158 202 L168 214 L178 200" fill={C.white} stroke="none" />
         </g>
+      )}
+      {(variant === "dust" || variant === "gas") && (
+        <text x={150} y={276} textAnchor="middle" fontFamily="LilitaOne" fontSize={44} fill={C.ink}>
+          {variant === "dust" ? "SiO₂" : "CO"}
+        </text>
       )}
       {variant === "co2" && (
         <text x={150} y={276} textAnchor="middle" fontFamily="LilitaOne" fontSize={46} fill={C.ink}>
