@@ -157,3 +157,98 @@ File di `covers/Cover_EP1.jpg`, `covers/Cover_EP2.jpg`, dan `covers/Cover_EP3.jp
 - EP3: **HARUS TERIAK?** · "telingamu lagi dirusak 😬"
 
 Cara pakai: saat upload di TikTok, ketuk **Edit sampul** lalu pilih **Upload/Galeri**, kemudian pilih file cover-nya. Render ulang dengan `npx remotion still Cover-EP1 covers/Cover_EP1.png`.
+
+---
+
+# Season 1 lanjutan: EP4–EP6
+
+| Ep | Topik | Durasi | Si Halus |
+|---|---|---|---|
+| 4 | Tekanan panas (heat stress) | 66,2 dtk | oranye, mahkota api |
+| 5 | Debu silika | 63,8 dtk | krem, partikel debu (SiO₂) |
+| 6 | Karbon monoksida (CO) | 63,0 dtk | abu-abu, asap (CO) |
+
+Format sama dengan EP1–3: 1080×1920, 60 fps, H.264 (BT.709), suara Adrianleoh (ElevenLabs v4), musik dan SFX orisinal.
+
+## Naskah
+
+**EP4: "Hari pertama paling bahaya"**
+> Hari pertama kerja di dapur panas… justru itu hari paling bahaya. Serius. Lebih dari tujuh puluh persen kematian akibat panas di tempat kerja, kejadiannya di minggu pertama. Badannya belum adaptasi.
+> Soalnya ada makhluk halus yang suka nongkrong di tempat panas… Tekanan panas!
+> Jadi gini. Badan kita kayak mesin. Kalau panas dari luar, ditambah panas dari kerja, nggak bisa dibuang… suhu tubuh naik terus.
+> Awalnya keringetan banyak, pusing, mual, lemes. Itu masih bisa ditolong: istirahat di tempat adem, minum, dinginin badan.
+> Tapi kalau udah bingung, ngomongnya ngelantur, sampai pingsan… itu heat stroke. Darurat. Suhu tubuh bisa tembus empat puluh derajat lebih. Langsung dinginin badannya, dan panggil bantuan.
+> Terus biar aman gimana? Minum segelas air tiap lima belas sampai dua puluh menit. Jangan nunggu haus, karena haus itu alarm yang telat. Cek juga warna pipis. Kalau udah kayak teh, berarti kamu kurang minum.
+> Dan buat anak baru, jam kerjanya dicicil dulu beberapa hari, biar badannya adaptasi.
+> Jadi kalau ada yang bilang, kerja di dapur emang harus panas-panasan… boleh. Asal yang mateng masakannya, bukan kamu.
+> Follow, biar bahaya yang nggak kelihatan… jadi kelihatan.
+
+**EP5: "Potong keramik?"**
+> Pernah liat tukang potong keramik, debunya ngebul putih ke mana-mana? Nah, yang kelihatan itu masih mending. Yang bahaya justru yang nggak kelihatan… Debu silika!
+> Ukurannya seratus kali lebih kecil dari pasir pantai. Kehirup, masuk sampai ujung paru-paru, dan nggak bisa keluar lagi. Lama-lama paru-parunya jadi kaku, penuh jaringan parut. Namanya silikosis. Dan sampai sekarang, nggak bisa disembuhin.
+> Saking bahayanya, Australia sampai ngelarang batu buatan buat meja dapur, mulai tahun 2024. Banyak tukangnya kena silikosis di umur yang masih muda.
+> Terus, pakai masker kain cukup dong? Sayangnya… masker kain sama masker bedah itu bukan respirator.
+> Yang bener: potongnya pakai air yang ngalir terus, biar debunya nggak terbang. Pakai alat yang ada penyedot debunya. Dan pakai respirator minimal N95 yang rapet di muka.
+> Jadi kalau abis motong keramik kamu batuk-batuk, terus bilang, "ah cuma debu doang"… justru itu masalahnya. Bahayanya bukan di debu yang kamu liat.
+> Follow, biar bahaya yang nggak kelihatan… jadi kelihatan.
+
+**EP6: "Tidur di mobil, mesin nyala?"**
+> Tidur di mobil, mesin nyala, AC dingin, kaca ditutup rapet… enak banget, kan? Tapi udah berkali-kali ada berita orang yang nggak bangun lagi gara-gara ini. Dan itu bukan keracunan AC, ya.
+> Pelakunya makhluk halus paling licik… Karbon monoksida!
+> Eh, jangan ketuker sama CO₂ di episode satu. Ini CO, tanpa dua. Gas beracun dari pembakaran: knalpot, genset, sampai kompor arang.
+> Nggak berwarna, nggak berbau. Dan dia nempel ke darah lebih dari dua ratus kali lebih kuat daripada oksigen. Jadi badan kita kekurangan oksigen, pelan-pelan.
+> Gejalanya mirip masuk angin: pusing, mual, lemes, ngantuk. Dan kalau lagi tidur… bisa nggak sempet ngerasain apa-apa.
+> Jadi, jangan tidur di mobil yang mesinnya nyala di tempat tertutup. Genset taruh di luar, minimal enam meter dari jendela dan pintu. Dan kalau bisa, pasang detektor CO di rumah.
+> Inget ya, beda satu angka, beda nasib. CO₂ bikin kamu ngantuk pas meeting… CO bisa bikin kamu nggak bangun lagi.
+> Follow, biar bahaya yang nggak kelihatan… jadi kelihatan.
+
+## Caption TikTok
+
+**EP4**
+```
+hari pertama kerja di tempat panas justru paling bahaya 🔥
+
+Lebih dari 70% kematian akibat panas terjadi di minggu pertama kerja. Kamu kerja di dapur, pabrik, atau lapangan? Ceritain di komen 👇
+
+#k3 #ihoh #heatstress #tekananpanas #anakdapur #pekerjalapangan #fyp
+```
+
+**EP5**
+```
+debu keramik yang kelihatan itu masih mending 😷
+
+Debu silika 100x lebih kecil dari pasir dan bisa bikin paru-paru rusak permanen. Tag temen kamu yang suka potong keramik pakai gerinda 👇
+
+#k3 #ihoh #silikosis #debusilika #tukangbangunan #safetyfirst #fyp
+```
+
+**EP6**
+```
+bukan "keracunan AC", pelakunya gas CO dari knalpot ⚠️
+
+Nggak berwarna, nggak berbau, dan bisa bikin orang nggak bangun lagi. Share ke keluarga yang suka tidur di mobil 🙏
+
+#k3 #ihoh #karbonmonoksida #keracunanco #safetyfirst #edukasi #fyp
+```
+
+## Cover
+- `covers/Cover_EP4_HD.jpg`: **HARI PERTAMA PALING BAHAYA?** · "kerja di tempat panas 🔥"
+- `covers/Cover_EP5_HD.jpg`: **POTONG KERAMIK?** · "bahayanya nggak keliatan 👀"
+- `covers/Cover_EP6_HD.jpg`: **TIDUR DI MOBIL MESIN NYALA?** · "ini bukan keracunan AC ⚠️"
+
+## Sumber riset EP4–6
+- **Panas:**
+  - Gejala heat exhaustion/heat stroke dan pertolongan pertama (NIOSH): https://www.cdc.gov/niosh/heat-stress/about/illnesses.html
+  - Minum 1 cangkir tiap 15–20 menit, jangan tunggu haus (NIOSH): https://www.cdc.gov/niosh/heat-stress/recommendations/index.html
+  - Lebih dari 70% kematian terjadi di minggu pertama kerja (OSHA): https://www.osha.gov/heat-exposure/protecting-new-workers
+  - Grafik warna urine (NIOSH 2016-106): https://www.cdc.gov/niosh/docs/2016-106/pdfs/Hot-Environments_nr10.pdf
+- **Silika:**
+  - Partikel minimal 100× lebih kecil dari pasir pantai, silikosis tidak bisa disembuhkan (OSHA): https://www.osha.gov/silica-crystalline/health-effects
+  - Potong basah dengan air mengalir (HSE): https://www.hse.gov.uk/construction/healthrisks/hazardous-substances/cutting-paving-blocks-kerbs-and-flags.htm
+  - Respirator N95 atau lebih baik (NIOSH): https://www.cdc.gov/niosh/docs/2008-140/default.html
+  - Larangan batu buatan Australia, 1 Juli 2024: https://www.safeworkaustralia.gov.au/esban/about
+  - Kasus silikosis California pada usia lebih muda: https://www.cdph.ca.gov/Programs/OPA/Pages/CAHAN/Silicosis-Becomes-a-Reportable-Disease-in-California-.aspx
+- **CO:**
+  - Gejala mirip flu, orang yang tidur bisa meninggal tanpa gejala, genset harus lebih dari 20 kaki (sekitar 6 m) dari rumah (CDC): https://www.cdc.gov/carbon-monoxide/about/index.html
+  - Daya ikat CO ke hemoglobin lebih dari 200× oksigen: https://ncbi.nlm.nih.gov/books/NBK153687
+  - Kasus di Indonesia: https://oto.detik.com/berita/d-5187692/kisah-tragis-3-mahasiswi-tewas-keracunan-co-saat-tidur-dalam-mobil dan https://www.gridoto.com/read/224337044/kaca-tertutup-dan-ac-nyala-penyebab-tewasnya-4-penumpang-kijang-di-tol-pejagan-terpecahkan?page=all

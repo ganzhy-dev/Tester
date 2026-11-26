@@ -288,7 +288,7 @@ export const SiHalus: React.FC<{
           const p = (t * 0.9 + i / 3) % 1;
           let w = `M${70 + i * 80} ${10 - p * 90}`;
           for (let k = 1; k <= 6; k++) w += ` q8 -10 0 -20`;
-          return <path key={i} d={w} fill="none" stroke={C.orange} strokeWidth={8} strokeLinecap="round" opacity={0.8 * (1 - p)} />;
+          return <path key={i} d={w} fill="none" stroke={C.yellow} strokeWidth={9} strokeLinecap="round" opacity={0.9 * Math.sin(p * Math.PI)} />;
         })}
       {variant === "dust" &&
         new Array(14).fill(0).map((_, i) => {
@@ -345,12 +345,20 @@ export const SiHalus: React.FC<{
       )}
       {(variant === "dust" || variant === "gas") && (
         <text x={150} y={276} textAnchor="middle" fontFamily="LilitaOne" fontSize={44} fill={C.ink}>
-          {variant === "dust" ? "SiO₂" : "CO"}
+          {variant === "dust" ? "SiO" : "CO"}
+          {variant === "dust" && (
+            <tspan fontSize={28} dy={10}>
+              2
+            </tspan>
+          )}
         </text>
       )}
       {variant === "co2" && (
         <text x={150} y={276} textAnchor="middle" fontFamily="LilitaOne" fontSize={46} fill={C.ink}>
-          CO₂
+          CO
+          <tspan fontSize={28} dy={10}>
+            2
+          </tspan>
         </text>
       )}
       <ellipse cx={86} cy={178} rx={16} ry={9} fill={col2} opacity={0.6} />
