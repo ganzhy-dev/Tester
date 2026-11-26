@@ -507,13 +507,13 @@ const Ep9Scenes: React.FC = () => {
         )}
         {t >= 37.6 && (
           <>
-            <Sticker at={37.7} y={290} bg={C.cream} size={60}>
+            <Sticker at={37.7} y={320} bg={C.cream} size={60}>
               YANG DAPET BANTUAN CUMA…
             </Sticker>
-            <BigStat at={38.92} from={0} to={2.6} dur={1.0} decimals={1} suffix="%" label="remaja bermasalah" y={500} color={C.yellow} />
-            <Pop at={39.2} x={0} y={880} style={{ width: 1080, textAlign: "center" }}>
-              <div style={{ fontFamily: BODY, fontWeight: 800, fontSize: 30, color: C.cream, opacity: 0.85 }}>I-NAMHS 2022 · 15,5 juta remaja punya masalah kesehatan mental</div>
-            </Pop>
+            <BigStat at={38.92} from={0} to={2.6} dur={1.0} decimals={1} suffix="%" label="yang akses layanan" y={500} color={C.yellow} />
+            <div style={{ position: "absolute", left: 60, right: 60, top: 880, textAlign: "center", fontFamily: BODY, fontWeight: 800, fontSize: 30, color: C.cream, opacity: 0.85 * Math.min(1, Math.max(0, (t - 39.2) / 0.3)) }}>
+              I-NAMHS 2022 · 15,5 juta remaja punya masalah kesehatan mental
+            </div>
           </>
         )}
       </Scene>
