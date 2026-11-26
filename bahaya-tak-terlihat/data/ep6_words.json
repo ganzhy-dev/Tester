@@ -4,1015 +4,1129 @@
 "text": "[curious]",
 "type": "word",
 "start": 0.0,
-"end": 0.012
+"end": 0.011
 },
 {
 "text": "Tidur",
 "type": "word",
-"start": 0.025,
-"end": 0.259
+"start": 0.023,
+"end": 0.243
 },
 {
 "text": "di",
 "type": "word",
-"start": 0.296,
-"end": 0.333
+"start": 0.313,
+"end": 0.383
 },
 {
 "text": "mobil,",
 "type": "word",
-"start": 0.481,
-"end": 1.222
+"start": 0.417,
+"end": 1.217
 },
 {
 "text": "mesin",
 "type": "word",
-"start": 1.37,
-"end": 1.667
+"start": 1.322,
+"end": 1.496
 },
 {
 "text": "nyala,",
 "type": "word",
-"start": 1.741,
-"end": 2.361
+"start": 1.565,
+"end": 2.4
 },
 {
 "text": "AC",
 "type": "word",
-"start": 2.454,
-"end": 2.75
+"start": 2.47,
+"end": 2.678
 },
 {
 "text": "dingin,",
 "type": "word",
-"start": 2.824,
-"end": 3.463
+"start": 2.748,
+"end": 3.348
 },
 {
 "text": "kaca",
 "type": "word",
-"start": 3.556,
-"end": 3.852
+"start": 3.417,
+"end": 3.696
 },
 {
 "text": "ditutup",
 "type": "word",
-"start": 3.926,
-"end": 4.222
+"start": 3.765,
+"end": 4.043
 },
 {
 "text": "rapet...",
 "type": "word",
-"start": 4.37,
-"end": 4.667
+"start": 4.217,
+"end": 4.6
 },
 {
 "text": "enak",
 "type": "word",
-"start": 4.769,
-"end": 4.991
+"start": 4.67,
+"end": 4.878
 },
 {
 "text": "banget,",
 "type": "word",
-"start": 5.102,
-"end": 5.398
+"start": 4.948,
+"end": 5.261
 },
 {
 "text": "kan?",
 "type": "word",
-"start": 5.435,
-"end": 5.722
+"start": 5.296,
+"end": 5.574
 },
 {
 "text": "[serious]",
 "type": "word",
-"start": 5.824,
-"end": 6.009
+"start": 5.635,
+"end": 5.677
 },
 {
 "text": "Tapi",
 "type": "word",
-"start": 6.071,
-"end": 6.195
+"start": 5.69,
+"end": 5.983
 },
 {
 "text": "udah",
 "type": "word",
-"start": 6.417,
-"end": 6.565
+"start": 6.191,
+"end": 6.33
 },
 {
 "text": "berkali-kali",
 "type": "word",
-"start": 6.639,
-"end": 7.232
+"start": 6.4,
+"end": 6.957
 },
 {
 "text": "ada",
 "type": "word",
-"start": 7.306,
-"end": 7.38
+"start": 7.026,
+"end": 7.165
 },
 {
 "text": "berita",
 "type": "word",
-"start": 7.454,
-"end": 7.75
+"start": 7.235,
+"end": 7.513
 },
 {
 "text": "orang",
 "type": "word",
-"start": 7.824,
-"end": 7.972
+"start": 7.617,
+"end": 7.722
 },
 {
 "text": "yang",
 "type": "word",
-"start": 8.046,
-"end": 8.12
+"start": 7.791,
+"end": 7.861
 },
 {
 "text": "nggak",
 "type": "word",
-"start": 8.145,
-"end": 8.269
+"start": 7.896,
+"end": 8.0
 },
 {
 "text": "bangun",
 "type": "word",
-"start": 8.343,
-"end": 8.565
+"start": 8.07,
+"end": 8.278
 },
 {
 "text": "lagi",
 "type": "word",
-"start": 8.676,
-"end": 8.824
+"start": 8.348,
+"end": 8.591
 },
 {
 "text": "gara-gara",
 "type": "word",
-"start": 8.861,
-"end": 9.306
+"start": 8.626,
+"end": 8.974
 },
 {
 "text": "ini.",
 "type": "word",
-"start": 9.417,
-"end": 9.806
+"start": 9.113,
+"end": 9.296
 },
 {
 "text": "Dan",
 "type": "word",
-"start": 9.88,
-"end": 9.954
+"start": 9.4,
+"end": 9.539
 },
 {
 "text": "itu",
 "type": "word",
-"start": 10.028,
-"end": 10.324
+"start": 9.609,
+"end": 9.887
 },
 {
 "text": "bukan",
 "type": "word",
-"start": 10.398,
-"end": 10.62
+"start": 10.026,
+"end": 10.235
 },
 {
 "text": "keracunan",
 "type": "word",
-"start": 10.657,
-"end": 10.991
+"start": 10.304,
+"end": 10.652
 },
 {
 "text": "AC,",
 "type": "word",
-"start": 11.065,
-"end": 11.435
+"start": 10.722,
+"end": 11.07
 },
 {
 "text": "ya.",
 "type": "word",
-"start": 11.509,
-"end": 11.657
+"start": 11.139,
+"end": 11.296
 },
 {
 "text": "[whispers]",
 "type": "word",
-"start": 11.667,
-"end": 11.744
+"start": 11.383,
+"end": 11.476
 },
 {
 "text": "Pelakunya",
 "type": "word",
-"start": 11.769,
-"end": 12.287
+"start": 11.498,
+"end": 11.939
 },
 {
 "text": "makhluk",
 "type": "word",
-"start": 12.361,
-"end": 12.583
+"start": 12.009,
+"end": 12.287
 },
 {
 "text": "halus",
 "type": "word",
-"start": 12.657,
-"end": 12.88
+"start": 12.357,
+"end": 12.565
 },
 {
 "text": "paling",
 "type": "word",
-"start": 12.954,
-"end": 13.25
+"start": 12.635,
+"end": 12.913
 },
 {
 "text": "licik...",
 "type": "word",
-"start": 13.398,
-"end": 14.056
+"start": 13.087,
+"end": 13.739
 },
 {
 "text": "[excited]",
 "type": "word",
-"start": 14.066,
-"end": 14.108
+"start": 13.749,
+"end": 13.789
 },
 {
 "text": "Karbon",
 "type": "word",
-"start": 14.12,
-"end": 14.426
+"start": 13.799,
+"end": 14.087
 },
 {
 "text": "monoksida!",
 "type": "word",
-"start": 14.5,
-"end": 15.241
+"start": 14.157,
+"end": 14.852
 },
 {
 "text": "Eh,",
 "type": "word",
-"start": 15.463,
-"end": 15.833
+"start": 15.061,
+"end": 15.2
 },
 {
 "text": "jangan",
 "type": "word",
-"start": 15.87,
-"end": 16.056
+"start": 15.409,
+"end": 15.617
 },
 {
 "text": "ketuker",
 "type": "word",
-"start": 16.13,
-"end": 16.352
+"start": 15.687,
+"end": 15.896
 },
 {
 "text": "sama",
 "type": "word",
-"start": 16.389,
-"end": 16.574
+"start": 15.965,
+"end": 16.104
 },
 {
 "text": "ce",
 "type": "word",
-"start": 16.648,
-"end": 16.722
+"start": 16.174,
+"end": 16.243
 },
 {
 "text": "o",
 "type": "word",
-"start": 16.796,
-"end": 16.87
+"start": 16.313,
+"end": 16.383
 },
 {
 "text": "dua",
 "type": "word",
-"start": 16.945,
-"end": 17.056
+"start": 16.452,
+"end": 16.591
 },
 {
 "text": "di",
 "type": "word",
-"start": 17.093,
-"end": 17.167
+"start": 16.661,
+"end": 16.73
 },
 {
 "text": "episode",
 "type": "word",
-"start": 17.315,
-"end": 17.463
+"start": 16.87,
+"end": 17.009
 },
 {
 "text": "satu.",
 "type": "word",
-"start": 17.5,
-"end": 17.833
+"start": 17.078,
+"end": 17.426
 },
 {
 "text": "Ini",
 "type": "word",
-"start": 18.102,
-"end": 18.324
+"start": 17.661,
+"end": 17.87
 },
 {
 "text": "ce",
 "type": "word",
-"start": 18.472,
-"end": 18.62
+"start": 18.009,
+"end": 18.217
 },
 {
 "text": "o,",
 "type": "word",
-"start": 18.843,
-"end": 19.065
+"start": 18.357,
+"end": 18.565
 },
 {
 "text": "tanpa",
 "type": "word",
-"start": 19.287,
-"end": 19.657
+"start": 18.774,
+"end": 19.122
 },
 {
 "text": "dua.",
 "type": "word",
-"start": 19.732,
-"end": 20.009
+"start": 19.191,
+"end": 19.47
 },
 {
 "text": "Gas",
 "type": "word",
-"start": 20.139,
-"end": 20.361
+"start": 19.617,
+"end": 19.826
 },
 {
 "text": "beracun",
 "type": "word",
-"start": 20.435,
-"end": 20.732
+"start": 19.896,
+"end": 20.174
 },
 {
 "text": "dari",
 "type": "word",
-"start": 20.806,
-"end": 20.954
+"start": 20.243,
+"end": 20.383
 },
 {
 "text": "pembakaran:",
 "type": "word",
-"start": 21.003,
-"end": 21.658
+"start": 20.429,
+"end": 21.026
 },
 {
 "text": "knalpot,",
 "type": "word",
-"start": 21.732,
-"end": 22.398
+"start": 21.096,
+"end": 21.722
 },
 {
 "text": "genset,",
 "type": "word",
-"start": 22.546,
-"end": 22.991
+"start": 21.861,
+"end": 22.209
 },
 {
 "text": "sampai",
 "type": "word",
-"start": 23.139,
-"end": 23.361
+"start": 22.348,
+"end": 22.557
 },
 {
 "text": "kompor",
 "type": "word",
-"start": 23.435,
-"end": 23.658
+"start": 22.626,
+"end": 22.835
 },
 {
 "text": "arang.",
 "type": "word",
-"start": 23.732,
-"end": 24.102
+"start": 22.904,
+"end": 23.209
 },
 {
 "text": "Nggak",
 "type": "word",
-"start": 24.204,
-"end": 24.352
+"start": 23.296,
+"end": 23.435
 },
 {
 "text": "berwarna,",
 "type": "word",
-"start": 24.426,
-"end": 25.167
+"start": 23.504,
+"end": 24.2
 },
 {
 "text": "nggak",
 "type": "word",
-"start": 25.204,
-"end": 25.315
+"start": 24.235,
+"end": 24.339
 },
 {
 "text": "berbau.",
 "type": "word",
-"start": 25.389,
-"end": 25.833
+"start": 24.409,
+"end": 24.826
 },
 {
 "text": "Dan",
 "type": "word",
-"start": 26.13,
-"end": 26.278
+"start": 25.009,
+"end": 25.148
 },
 {
 "text": "dia",
 "type": "word",
-"start": 26.426,
-"end": 26.648
+"start": 25.217,
+"end": 25.426
 },
 {
 "text": "nempel",
 "type": "word",
-"start": 26.796,
-"end": 27.167
+"start": 25.565,
+"end": 25.843
 },
 {
 "text": "ke",
 "type": "word",
-"start": 27.241,
-"end": 27.315
+"start": 25.913,
+"end": 25.983
 },
 {
 "text": "darah",
 "type": "word",
-"start": 27.426,
-"end": 27.611
+"start": 26.052,
+"end": 26.261
 },
 {
 "text": "lebih",
 "type": "word",
-"start": 27.685,
-"end": 28.056
+"start": 26.33,
+"end": 26.609
 },
 {
 "text": "dari",
 "type": "word",
-"start": 28.13,
-"end": 28.278
+"start": 26.678,
+"end": 26.817
 },
 {
 "text": "dua",
 "type": "word",
-"start": 28.426,
-"end": 28.574
+"start": 26.957,
+"end": 27.061
 },
 {
 "text": "ratus",
 "type": "word",
-"start": 28.648,
-"end": 28.87
+"start": 27.096,
+"end": 27.304
 },
 {
 "text": "kali",
 "type": "word",
-"start": 28.945,
-"end": 29.093
+"start": 27.374,
+"end": 27.513
 },
 {
 "text": "lebih",
 "type": "word",
-"start": 29.167,
-"end": 29.315
+"start": 27.583,
+"end": 27.722
 },
 {
 "text": "kuat",
 "type": "word",
-"start": 29.463,
-"end": 29.611
+"start": 27.861,
+"end": 28.07
 },
 {
 "text": "daripada",
 "type": "word",
-"start": 29.685,
-"end": 29.982
+"start": 28.139,
+"end": 28.348
 },
 {
 "text": "oksigen.",
 "type": "word",
-"start": 30.056,
-"end": 30.528
-},
-{
-"text": "Jadi",
-"type": "word",
-"start": 30.917,
-"end": 31.287
-},
-{
-"text": "badan",
-"type": "word",
-"start": 31.361,
-"end": 31.583
-},
-{
-"text": "kita",
-"type": "word",
-"start": 31.657,
-"end": 31.88
-},
-{
-"text": "kekurangan",
-"type": "word",
-"start": 31.954,
-"end": 32.324
-},
-{
-"text": "oksigen,",
-"type": "word",
-"start": 32.398,
-"end": 33.046
-},
-{
-"text": "pelan-pelan.",
-"type": "word",
-"start": 33.12,
-"end": 33.796
+"start": 28.417,
+"end": 28.887
 },
 {
 "text": "Gejalanya",
 "type": "word",
-"start": 34.102,
-"end": 34.546
+"start": 28.965,
+"end": 29.452
 },
 {
 "text": "mirip",
 "type": "word",
-"start": 34.62,
-"end": 34.769
+"start": 29.522,
+"end": 29.661
 },
 {
 "text": "masuk",
 "type": "word",
-"start": 34.843,
-"end": 34.991
+"start": 29.73,
+"end": 29.87
 },
 {
 "text": "angin:",
 "type": "word",
-"start": 35.065,
-"end": 35.463
+"start": 29.939,
+"end": 30.339
 },
 {
 "text": "pusing,",
 "type": "word",
-"start": 35.537,
-"end": 36.204
+"start": 30.409,
+"end": 31.035
 },
 {
 "text": "mual,",
 "type": "word",
-"start": 36.241,
-"end": 36.796
+"start": 31.07,
+"end": 31.591
 },
 {
 "text": "lemes,",
 "type": "word",
-"start": 36.907,
-"end": 37.389
+"start": 31.696,
+"end": 32.148
 },
 {
 "text": "ngantuk.",
 "type": "word",
-"start": 37.426,
-"end": 37.852
+"start": 32.183,
+"end": 32.635
 },
 {
 "text": "Dan",
 "type": "word",
-"start": 38.046,
-"end": 38.12
+"start": 32.852,
+"end": 32.922
 },
 {
 "text": "kalau",
 "type": "word",
-"start": 38.194,
-"end": 38.343
+"start": 32.991,
+"end": 33.165
 },
 {
 "text": "lagi",
 "type": "word",
-"start": 38.417,
-"end": 38.565
+"start": 33.2,
+"end": 33.339
 },
 {
 "text": "tidur...",
 "type": "word",
-"start": 38.639,
-"end": 39.232
+"start": 33.409,
+"end": 33.974
 },
 {
 "text": "bisa",
 "type": "word",
-"start": 39.281,
-"end": 39.38
+"start": 34.02,
+"end": 34.113
 },
 {
 "text": "nggak",
 "type": "word",
-"start": 39.417,
-"end": 39.565
+"start": 34.148,
+"end": 34.252
 },
 {
 "text": "sempet",
 "type": "word",
-"start": 39.602,
-"end": 39.898
+"start": 34.322,
+"end": 34.53
 },
 {
 "text": "ngerasain",
 "type": "word",
-"start": 39.972,
-"end": 40.343
+"start": 34.6,
+"end": 34.948
 },
 {
 "text": "apa-apa.",
 "type": "word",
-"start": 40.417,
-"end": 40.843
+"start": 35.017,
+"end": 35.435
 },
 {
-"text": "Jadi,",
+"text": "Di",
 "type": "word",
-"start": 41.056,
-"end": 41.639
+"start": 35.583,
+"end": 35.652
 },
 {
-"text": "jangan",
+"text": "rumah,",
 "type": "word",
-"start": 41.713,
-"end": 42.009
+"start": 35.722,
+"end": 36.209
 },
 {
-"text": "tidur",
+"text": "ini",
 "type": "word",
-"start": 42.083,
-"end": 42.232
+"start": 36.278,
+"end": 36.348
 },
 {
-"text": "di",
+"text": "sering",
 "type": "word",
-"start": 42.306,
-"end": 42.38
+"start": 36.417,
+"end": 36.556
 },
 {
-"text": "mobil",
+"text": "kejadian",
 "type": "word",
-"start": 42.417,
-"end": 42.676
-},
-{
-"text": "yang",
-"type": "word",
-"start": 42.75,
-"end": 42.824
-},
-{
-"text": "mesinnya",
-"type": "word",
-"start": 42.898,
-"end": 43.194
-},
-{
-"text": "nyala",
-"type": "word",
-"start": 43.232,
-"end": 43.491
-},
-{
-"text": "di",
-"type": "word",
-"start": 43.528,
-"end": 43.565
-},
-{
-"text": "tempat",
-"type": "word",
-"start": 43.639,
-"end": 43.824
-},
-{
-"text": "tertutup.",
-"type": "word",
-"start": 43.861,
-"end": 44.37
-},
-{
-"text": "Genset",
-"type": "word",
-"start": 44.713,
-"end": 45.083
-},
-{
-"text": "taruh",
-"type": "word",
-"start": 45.157,
-"end": 45.38
-},
-{
-"text": "di",
-"type": "word",
-"start": 45.417,
-"end": 45.454
-},
-{
-"text": "luar,",
-"type": "word",
-"start": 45.528,
-"end": 45.972
-},
-{
-"text": "minimal",
-"type": "word",
-"start": 46.194,
-"end": 46.417
-},
-{
-"text": "enam",
-"type": "word",
-"start": 46.565,
-"end": 46.676
-},
-{
-"text": "meter",
-"type": "word",
-"start": 46.713,
-"end": 47.009
-},
-{
-"text": "dari",
-"type": "word",
-"start": 47.083,
-"end": 47.157
-},
-{
-"text": "jendela",
-"type": "word",
-"start": 47.232,
-"end": 47.602
-},
-{
-"text": "dan",
-"type": "word",
-"start": 47.676,
-"end": 47.75
-},
-{
-"text": "pintu.",
-"type": "word",
-"start": 47.824,
-"end": 48.213
-},
-{
-"text": "Dan",
-"type": "word",
-"start": 48.398,
-"end": 48.472
-},
-{
-"text": "kalau",
-"type": "word",
-"start": 48.546,
-"end": 48.769
-},
-{
-"text": "bisa,",
-"type": "word",
-"start": 48.868,
-"end": 49.333
-},
-{
-"text": "pasang",
-"type": "word",
-"start": 49.444,
-"end": 49.63
-},
-{
-"text": "detektor",
-"type": "word",
-"start": 49.704,
-"end": 50.0
-},
-{
-"text": "CO",
-"type": "word",
-"start": 50.074,
-"end": 50.333
-},
-{
-"text": "di",
-"type": "word",
-"start": 50.37,
-"end": 50.444
-},
-{
-"text": "rumah.",
-"type": "word",
-"start": 50.519,
-"end": 50.815
-},
-{
-"text": "[serious]",
-"type": "word",
-"start": 50.963,
-"end": 51.007
-},
-{
-"text": "Inget",
-"type": "word",
-"start": 51.022,
-"end": 51.185
-},
-{
-"text": "ya,",
-"type": "word",
-"start": 51.259,
-"end": 51.593
-},
-{
-"text": "beda",
-"type": "word",
-"start": 51.667,
-"end": 51.889
-},
-{
-"text": "satu",
-"type": "word",
-"start": 51.926,
-"end": 52.111
-},
-{
-"text": "angka,",
-"type": "word",
-"start": 52.185,
-"end": 52.704
-},
-{
-"text": "beda",
-"type": "word",
-"start": 52.778,
-"end": 53.0
-},
-{
-"text": "nasib.",
-"type": "word",
-"start": 53.111,
-"end": 53.463
-},
-{
-"text": "Ce",
-"type": "word",
-"start": 53.537,
-"end": 53.611
-},
-{
-"text": "o",
-"type": "word",
-"start": 53.685,
-"end": 53.759
-},
-{
-"text": "dua",
-"type": "word",
-"start": 53.833,
-"end": 53.981
-},
-{
-"text": "bikin",
-"type": "word",
-"start": 54.13,
-"end": 54.352
-},
-{
-"text": "kamu",
-"type": "word",
-"start": 54.389,
-"end": 54.574
-},
-{
-"text": "ngantuk",
-"type": "word",
-"start": 54.611,
-"end": 55.019
+"start": 36.626,
+"end": 36.974
 },
 {
 "text": "pas",
 "type": "word",
-"start": 55.093,
-"end": 55.167
+"start": 37.043,
+"end": 37.183
 },
 {
-"text": "meeting...",
+"text": "mati",
 "type": "word",
-"start": 55.352,
-"end": 55.981
+"start": 37.252,
+"end": 37.391
 },
 {
-"text": "ce",
+"text": "lampu,",
 "type": "word",
-"start": 56.056,
-"end": 56.13
+"start": 37.53,
+"end": 38.0
 },
 {
-"text": "o",
+"text": "genset",
 "type": "word",
-"start": 56.278,
-"end": 56.426
+"start": 38.139,
+"end": 38.348
 },
 {
-"text": "bisa",
+"text": "dinyalain",
 "type": "word",
-"start": 56.574,
-"end": 56.722
+"start": 38.394,
+"end": 38.765
 },
 {
-"text": "bikin",
+"text": "di",
 "type": "word",
-"start": 56.796,
-"end": 57.019
+"start": 38.8,
+"end": 38.835
 },
 {
-"text": "kamu",
+"text": "dalam",
 "type": "word",
-"start": 57.093,
-"end": 57.315
+"start": 38.904,
+"end": 39.043
 },
 {
-"text": "nggak",
+"text": "rumah",
 "type": "word",
-"start": 57.352,
-"end": 57.463
+"start": 39.113,
+"end": 39.322
 },
 {
-"text": "bangun",
+"text": "atau",
 "type": "word",
-"start": 57.537,
-"end": 57.759
+"start": 39.461,
+"end": 39.704
 },
 {
-"text": "lagi.",
+"text": "di",
 "type": "word",
-"start": 57.907,
-"end": 58.417
+"start": 39.739,
+"end": 39.809
 },
 {
-"text": "Follow,",
+"text": "garasi.",
 "type": "word",
-"start": 58.565,
-"end": 59.009
+"start": 39.878,
+"end": 40.296
 },
 {
-"text": "biar",
+"text": "Di",
 "type": "word",
-"start": 59.046,
-"end": 59.157
+"start": 40.374,
+"end": 40.443
 },
 {
-"text": "bahaya",
+"text": "tempat",
 "type": "word",
-"start": 59.231,
-"end": 59.528
+"start": 40.513,
+"end": 40.652
+},
+{
+"text": "kerja,",
+"type": "word",
+"start": 40.722,
+"end": 41.287
+},
+{
+"text": "di",
+"type": "word",
+"start": 41.322,
+"end": 41.356
+},
+{
+"text": "bengkel",
+"type": "word",
+"start": 41.426,
+"end": 41.774
+},
+{
+"text": "atau",
+"type": "word",
+"start": 41.843,
+"end": 42.052
+},
+{
+"text": "gudang",
+"type": "word",
+"start": 42.122,
+"end": 42.33
 },
 {
 "text": "yang",
 "type": "word",
-"start": 59.602,
-"end": 59.676
+"start": 42.4,
+"end": 42.47
+},
+{
+"text": "tertutup.",
+"type": "word",
+"start": 42.539,
+"end": 42.948
+},
+{
+"text": "Jadi,",
+"type": "word",
+"start": 43.113,
+"end": 43.669
+},
+{
+"text": "jangan",
+"type": "word",
+"start": 43.739,
+"end": 44.017
+},
+{
+"text": "tidur",
+"type": "word",
+"start": 44.087,
+"end": 44.296
+},
+{
+"text": "di",
+"type": "word",
+"start": 44.33,
+"end": 44.365
+},
+{
+"text": "mobil",
+"type": "word",
+"start": 44.435,
+"end": 44.643
+},
+{
+"text": "yang",
+"type": "word",
+"start": 44.713,
+"end": 44.783
+},
+{
+"text": "mesinnya",
+"type": "word",
+"start": 44.852,
+"end": 45.13
+},
+{
+"text": "nyala",
+"type": "word",
+"start": 45.165,
+"end": 45.478
+},
+{
+"text": "di",
+"type": "word",
+"start": 45.617,
+"end": 45.687
+},
+{
+"text": "tempat",
+"type": "word",
+"start": 45.756,
+"end": 45.965
+},
+{
+"text": "tertutup.",
+"type": "word",
+"start": 46.035,
+"end": 46.461
+},
+{
+"text": "Genset",
+"type": "word",
+"start": 46.748,
+"end": 47.096
+},
+{
+"text": "taruh",
+"type": "word",
+"start": 47.165,
+"end": 47.304
+},
+{
+"text": "di",
+"type": "word",
+"start": 47.339,
+"end": 47.374
+},
+{
+"text": "luar,",
+"type": "word",
+"start": 47.443,
+"end": 47.861
+},
+{
+"text": "minimal",
+"type": "word",
+"start": 48.069,
+"end": 48.278
+},
+{
+"text": "enam",
+"type": "word",
+"start": 48.417,
+"end": 48.522
+},
+{
+"text": "meter",
+"type": "word",
+"start": 48.556,
+"end": 48.765
+},
+{
+"text": "dari",
+"type": "word",
+"start": 48.835,
+"end": 48.974
+},
+{
+"text": "jendela",
+"type": "word",
+"start": 49.043,
+"end": 49.322
+},
+{
+"text": "dan",
+"type": "word",
+"start": 49.391,
+"end": 49.461
+},
+{
+"text": "pintu.",
+"type": "word",
+"start": 49.53,
+"end": 49.878
+},
+{
+"text": "Dan",
+"type": "word",
+"start": 50.096,
+"end": 50.165
+},
+{
+"text": "kalau",
+"type": "word",
+"start": 50.235,
+"end": 50.374
+},
+{
+"text": "bisa,",
+"type": "word",
+"start": 50.443,
+"end": 50.887
+},
+{
+"text": "pasang",
+"type": "word",
+"start": 50.956,
+"end": 51.235
+},
+{
+"text": "detektor",
+"type": "word",
+"start": 51.304,
+"end": 51.583
+},
+{
+"text": "CO",
+"type": "word",
+"start": 51.652,
+"end": 51.861
+},
+{
+"text": "di",
+"type": "word",
+"start": 51.896,
+"end": 51.93
+},
+{
+"text": "rumah.",
+"type": "word",
+"start": 52.0,
+"end": 52.296
+},
+{
+"text": "[serious]",
+"type": "word",
+"start": 52.409,
+"end": 52.45
+},
+{
+"text": "Inget",
+"type": "word",
+"start": 52.464,
+"end": 52.617
+},
+{
+"text": "ya,",
+"type": "word",
+"start": 52.687,
+"end": 52.826
+},
+{
+"text": "beda",
+"type": "word",
+"start": 53.104,
+"end": 53.313
+},
+{
+"text": "satu",
+"type": "word",
+"start": 53.348,
+"end": 53.522
+},
+{
+"text": "angka,",
+"type": "word",
+"start": 53.591,
+"end": 54.078
+},
+{
+"text": "beda",
+"type": "word",
+"start": 54.183,
+"end": 54.322
+},
+{
+"text": "nasib.",
+"type": "word",
+"start": 54.356,
+"end": 54.678
+},
+{
+"text": "Ce",
+"type": "word",
+"start": 54.783,
+"end": 54.852
+},
+{
+"text": "o",
+"type": "word",
+"start": 54.922,
+"end": 54.991
+},
+{
+"text": "dua",
+"type": "word",
+"start": 55.061,
+"end": 55.269
+},
+{
+"text": "bikin",
+"type": "word",
+"start": 55.409,
+"end": 55.617
+},
+{
+"text": "kamu",
+"type": "word",
+"start": 55.652,
+"end": 55.826
+},
+{
+"text": "ngantuk",
+"type": "word",
+"start": 55.896,
+"end": 56.243
+},
+{
+"text": "pas",
+"type": "word",
+"start": 56.313,
+"end": 56.383
+},
+{
+"text": "meeting...",
+"type": "word",
+"start": 56.452,
+"end": 56.922
+},
+{
+"text": "ce",
+"type": "word",
+"start": 57.026,
+"end": 57.13
+},
+{
+"text": "o",
+"type": "word",
+"start": 57.2,
+"end": 57.339
+},
+{
+"text": "bisa",
+"type": "word",
+"start": 57.548,
+"end": 57.687
+},
+{
+"text": "bikin",
+"type": "word",
+"start": 57.722,
+"end": 57.896
+},
+{
+"text": "kamu",
+"type": "word",
+"start": 57.965,
+"end": 58.243
 },
 {
 "text": "nggak",
 "type": "word",
-"start": 59.713,
-"end": 59.799
+"start": 58.278,
+"end": 58.383
+},
+{
+"text": "bangun",
+"type": "word",
+"start": 58.452,
+"end": 58.661
+},
+{
+"text": "lagi.",
+"type": "word",
+"start": 58.73,
+"end": 59.148
+},
+{
+"text": "Follow,",
+"type": "word",
+"start": 59.313,
+"end": 59.869
+},
+{
+"text": "biar",
+"type": "word",
+"start": 59.904,
+"end": 60.009
+},
+{
+"text": "bahaya",
+"type": "word",
+"start": 60.078,
+"end": 60.356
+},
+{
+"text": "yang",
+"type": "word",
+"start": 60.426,
+"end": 60.496
+},
+{
+"text": "nggak",
+"type": "word",
+"start": 60.53,
+"end": 60.611
 },
 {
 "text": "kelihatan...",
 "type": "word",
-"start": 59.824,
-"end": 60.639
+"start": 60.635,
+"end": 61.33
 },
 {
 "text": "jadi",
 "type": "word",
-"start": 60.75,
-"end": 60.861
+"start": 61.435,
+"end": 61.539
 },
 {
 "text": "kelihatan.",
 "type": "word",
-"start": 60.935,
-"end": 61.528
+"start": 61.609,
+"end": 62.235
 }
 ]
 }

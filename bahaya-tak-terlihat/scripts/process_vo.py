@@ -16,7 +16,7 @@ import numpy as np
 SR = 48000
 THRESH_DB = -42
 # Per episode: (tempo, jeda maksimum, jeda yang disisakan). Target: video > 60 dtk (syarat Creator Rewards).
-SETTINGS = {1: (1.10, 0.30, 0.24), 2: (1.06, 0.30, 0.24), 3: (1.00, 0.55, 0.40), 4: (1.15, 0.30, 0.24), 5: (1.03, 0.30, 0.24), 6: (1.08, 0.30, 0.24)}
+SETTINGS = {1: (1.10, 0.30, 0.24), 2: (1.06, 0.30, 0.24), 3: (1.00, 0.55, 0.40), 4: (1.15, 0.30, 0.24), 5: (1.15, 0.30, 0.24), 6: (1.15, 0.30, 0.24)}
 
 raw, words_path, ep = sys.argv[1], sys.argv[2], int(sys.argv[3])
 TEMPO, MAX_PAUSE, KEEP = SETTINGS[ep]

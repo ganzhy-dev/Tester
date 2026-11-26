@@ -164,40 +164,43 @@ Cara pakai: saat upload di TikTok, ketuk **Edit sampul** lalu pilih **Upload/Gal
 
 | Ep | Topik | Durasi | Si Halus |
 |---|---|---|---|
-| 4 | Tekanan panas (heat stress) | 66,2 dtk | oranye, mahkota api |
-| 5 | Debu silika | 63,8 dtk | krem, partikel debu (SiO₂) |
-| 6 | Karbon monoksida (CO) | 63,0 dtk | abu-abu, asap (CO) |
+| 4 | Tekanan panas (heat stress) | 65,3 dtk | oranye, mahkota api |
+| 5 | Debu silika | 65,0 dtk | krem, partikel debu (SiO₂) |
+| 6 | Karbon monoksida (CO) | 63,7 dtk | abu-abu, asap (CO) |
 
 Format sama dengan EP1–3: 1080×1920, 60 fps, H.264 (BT.709), suara Adrianleoh (ElevenLabs v4), musik dan SFX orisinal.
 
-## Naskah
+## Naskah (revisi: sehari-hari dulu, baru tempat kerja)
 
-**EP4: "Hari pertama paling bahaya"**
-> Hari pertama kerja di dapur panas… justru itu hari paling bahaya. Serius. Lebih dari tujuh puluh persen kematian akibat panas di tempat kerja, kejadiannya di minggu pertama. Badannya belum adaptasi.
-> Soalnya ada makhluk halus yang suka nongkrong di tempat panas… Tekanan panas!
-> Jadi gini. Badan kita kayak mesin. Kalau panas dari luar, ditambah panas dari kerja, nggak bisa dibuang… suhu tubuh naik terus.
-> Awalnya keringetan banyak, pusing, mual, lemes. Itu masih bisa ditolong: istirahat di tempat adem, minum, dinginin badan.
+**EP4: "Siang bolong, tiba-tiba pusing?"**
+> Siang bolong nunggu angkot, upacara di lapangan, atau kejebak macet naik motor… terus tiba-tiba pusing, mual, keringetan dingin? Jangan dianggep sepele, ya.
+> Itu ulah makhluk halus yang suka nongkrong di tempat panas… Tekanan panas!
+> Jadi gini. Badan kita kayak mesin. Kalau panasnya nggak bisa dibuang, suhu tubuh naik terus.
+> Awalnya keringetan banyak, pusing, mual, lemes. Itu masih bisa ditolong: neduh di tempat adem, minum, dinginin badan.
 > Tapi kalau udah bingung, ngomongnya ngelantur, sampai pingsan… itu heat stroke. Darurat. Suhu tubuh bisa tembus empat puluh derajat lebih. Langsung dinginin badannya, dan panggil bantuan.
-> Terus biar aman gimana? Minum segelas air tiap lima belas sampai dua puluh menit. Jangan nunggu haus, karena haus itu alarm yang telat. Cek juga warna pipis. Kalau udah kayak teh, berarti kamu kurang minum.
-> Dan buat anak baru, jam kerjanya dicicil dulu beberapa hari, biar badannya adaptasi.
-> Jadi kalau ada yang bilang, kerja di dapur emang harus panas-panasan… boleh. Asal yang mateng masakannya, bukan kamu.
+> Nah, di tempat kerja kayak dapur, pabrik, atau proyek, ini lebih rawan lagi. Lebih dari tujuh puluh persen kematian akibat panas di tempat kerja, kejadiannya di minggu pertama kerja, pas badannya belum adaptasi.
+> Jadi, minum segelas air tiap lima belas sampai dua puluh menit. Jangan nunggu haus, karena haus itu alarm yang telat. Cek juga warna pipis. Kalau udah kayak teh, berarti kamu kurang minum.
+> Indonesia emang panas… nggak apa-apa. Asal yang mateng gorengannya, bukan kamu.
 > Follow, biar bahaya yang nggak kelihatan… jadi kelihatan.
 
-**EP5: "Potong keramik?"**
-> Pernah liat tukang potong keramik, debunya ngebul putih ke mana-mana? Nah, yang kelihatan itu masih mending. Yang bahaya justru yang nggak kelihatan… Debu silika!
+**EP5: "Lagi renovasi rumah?"**
+> Lagi renovasi rumah, tukang motong keramik di teras, debunya ngebul putih sampai ke ruang tamu… dan kamu santai aja?
+> Nah, debu yang kelihatan itu masih mending. Yang bahaya justru yang nggak kelihatan… Debu silika!
 > Ukurannya seratus kali lebih kecil dari pasir pantai. Kehirup, masuk sampai ujung paru-paru, dan nggak bisa keluar lagi. Lama-lama paru-parunya jadi kaku, penuh jaringan parut. Namanya silikosis. Dan sampai sekarang, nggak bisa disembuhin.
-> Saking bahayanya, Australia sampai ngelarang batu buatan buat meja dapur, mulai tahun 2024. Banyak tukangnya kena silikosis di umur yang masih muda.
+> Yang paling kena, ya tukang dan pekerja yang tiap hari motong keramik, beton, atau batu. Saking bahayanya, Australia sampai ngelarang batu buatan buat meja dapur, mulai tahun 2024.
 > Terus, pakai masker kain cukup dong? Sayangnya… masker kain sama masker bedah itu bukan respirator.
-> Yang bener: potongnya pakai air yang ngalir terus, biar debunya nggak terbang. Pakai alat yang ada penyedot debunya. Dan pakai respirator minimal N95 yang rapet di muka.
-> Jadi kalau abis motong keramik kamu batuk-batuk, terus bilang, "ah cuma debu doang"… justru itu masalahnya. Bahayanya bukan di debu yang kamu liat.
+> Jadi kalau di rumah lagi ada yang motong keramik, tutup pintunya, jauhin anak-anak, dan minta tukangnya motong pakai air.
+> Buat tukangnya: pakai alat yang ada penyedot debunya, dan respirator minimal N95 yang rapet di muka.
+> Jadi kalau abis renovasi kamu batuk-batuk, terus bilang, "ah cuma debu doang"… justru itu masalahnya. Bahayanya bukan di debu yang kamu liat.
 > Follow, biar bahaya yang nggak kelihatan… jadi kelihatan.
 
 **EP6: "Tidur di mobil, mesin nyala?"**
 > Tidur di mobil, mesin nyala, AC dingin, kaca ditutup rapet… enak banget, kan? Tapi udah berkali-kali ada berita orang yang nggak bangun lagi gara-gara ini. Dan itu bukan keracunan AC, ya.
 > Pelakunya makhluk halus paling licik… Karbon monoksida!
 > Eh, jangan ketuker sama CO₂ di episode satu. Ini CO, tanpa dua. Gas beracun dari pembakaran: knalpot, genset, sampai kompor arang.
-> Nggak berwarna, nggak berbau. Dan dia nempel ke darah lebih dari dua ratus kali lebih kuat daripada oksigen. Jadi badan kita kekurangan oksigen, pelan-pelan.
+> Nggak berwarna, nggak berbau. Dan dia nempel ke darah lebih dari dua ratus kali lebih kuat daripada oksigen.
 > Gejalanya mirip masuk angin: pusing, mual, lemes, ngantuk. Dan kalau lagi tidur… bisa nggak sempet ngerasain apa-apa.
+> Di rumah, ini sering kejadian pas mati lampu, genset dinyalain di dalam rumah atau di garasi. Di tempat kerja, di bengkel atau gudang yang tertutup.
 > Jadi, jangan tidur di mobil yang mesinnya nyala di tempat tertutup. Genset taruh di luar, minimal enam meter dari jendela dan pintu. Dan kalau bisa, pasang detektor CO di rumah.
 > Inget ya, beda satu angka, beda nasib. CO₂ bikin kamu ngantuk pas meeting… CO bisa bikin kamu nggak bangun lagi.
 > Follow, biar bahaya yang nggak kelihatan… jadi kelihatan.
@@ -206,34 +209,34 @@ Format sama dengan EP1–3: 1080×1920, 60 fps, H.264 (BT.709), suara Adrianleoh
 
 **EP4**
 ```
-hari pertama kerja di tempat panas justru paling bahaya 🔥
+siang bolong tiba-tiba pusing & mual? jangan dianggep sepele 🥵
 
-Lebih dari 70% kematian akibat panas terjadi di minggu pertama kerja. Kamu kerja di dapur, pabrik, atau lapangan? Ceritain di komen 👇
+Nunggu angkot, upacara, kejebak macet… badan kita bisa "overheat". Kamu paling sering kepanasan di mana? 👇
 
-#k3 #ihoh #heatstress #tekananpanas #anakdapur #pekerjalapangan #fyp
+#tekananpanas #heatstroke #cuacapanas #k3 #ihoh #kesehatan #fyp
 ```
 
 **EP5**
 ```
-debu keramik yang kelihatan itu masih mending 😷
+lagi renovasi rumah? debu yang kelihatan itu masih mending 😷
 
-Debu silika 100x lebih kecil dari pasir dan bisa bikin paru-paru rusak permanen. Tag temen kamu yang suka potong keramik pakai gerinda 👇
+Debu silika 100x lebih kecil dari pasir dan bisa bikin paru-paru rusak permanen. Share ke yang lagi renovasi rumah 🏠👇
 
-#k3 #ihoh #silikosis #debusilika #tukangbangunan #safetyfirst #fyp
+#renovasirumah #debusilika #silikosis #k3 #ihoh #kesehatan #fyp
 ```
 
 **EP6**
 ```
 bukan "keracunan AC", pelakunya gas CO dari knalpot ⚠️
 
-Nggak berwarna, nggak berbau, dan bisa bikin orang nggak bangun lagi. Share ke keluarga yang suka tidur di mobil 🙏
+Nggak berwarna, nggak berbau, dan bisa bikin orang nggak bangun lagi, termasuk dari genset yang dinyalain di dalam rumah pas mati lampu. Share ke keluarga 🙏
 
-#k3 #ihoh #karbonmonoksida #keracunanco #safetyfirst #edukasi #fyp
+#karbonmonoksida #keracunanco #matilampu #k3 #ihoh #edukasi #fyp
 ```
 
 ## Cover
-- `covers/Cover_EP4_HD.jpg`: **HARI PERTAMA PALING BAHAYA?** · "kerja di tempat panas 🔥"
-- `covers/Cover_EP5_HD.jpg`: **POTONG KERAMIK?** · "bahayanya nggak keliatan 👀"
+- `covers/Cover_EP4_HD.jpg`: **SIANG BOLONG TIBA-TIBA PUSING?** · "bukan sekadar kepanasan 🔥"
+- `covers/Cover_EP5_HD.jpg`: **LAGI RENOVASI RUMAH?** · "debu ini nggak keliatan 👀"
 - `covers/Cover_EP6_HD.jpg`: **TIDUR DI MOBIL MESIN NYALA?** · "ini bukan keracunan AC ⚠️"
 
 ## Sumber riset EP4–6

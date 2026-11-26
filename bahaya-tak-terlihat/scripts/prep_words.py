@@ -4,9 +4,9 @@ HL = {
  1: ["makhluk", "halus", "seribu", "setengahnya.", "Harvard,", "anjlok", "Permenkes", "ngantuk,", "berat,", "fokus.", "seger", "jendela", "jeda.", "kos.", "Gila", "berat", "AC-nya"],
  2: ["Getaran!", "getaran", "getaran,", "putih", "pucat?", "dikerokin.", "saraf", "pembuluh", "kesemutan,", "kebas.", "lemah,", "memutih,", "balik", "satu", "setengah", "kali.", "diandalkan.", "rendah,", "dicicil,", "nonstop.", "hangat", "kering.", "saldo.", "makhluk", "halus", "Eits..."],
  3: ["Kebisingan!", "teriak,", "selengan...", "delapan", "puluh", "lima", "desibel,", "desibel.", "desibel?", "seratus", "belas", "menit,", "setengah.", "permanen.", "berdenging", "earplug", "earmuff,", "nyerah.", "makhluk", "halus", "pendengaran.", "biasa.", "dirusak,"],
- 4: ["Tekanan", "panas!", "tujuh", "puluh", "persen", "minggu", "pertama.", "makhluk", "halus", "heat", "stroke.", "Darurat.", "empat", "derajat", "segelas", "haus,", "telat.", "teh,", "adaptasi.", "mateng", "bingung,", "pingsan..."],
- 5: ["Debu", "silika!", "seratus", "kali", "pasir", "silikosis.", "disembuhin.", "Australia", "ngelarang", "respirator.", "air", "N95", "penyedot", "makhluk", "halus", "kaku,", "parut."],
- 6: ["Karbon", "monoksida!", "berwarna,", "berbau.", "dua", "ratus", "oksigen.", "masuk", "angin:", "genset,", "enam", "meter", "detektor", "makhluk", "halus", "licik...", "nasib.", "bangun", "keracunan"],
+ 4: ["angkot,", "upacara", "macet", "sepele,", "neduh", "gorengannya,", "Tekanan", "panas!", "tujuh", "puluh", "persen", "minggu", "pertama.", "makhluk", "halus", "heat", "stroke.", "Darurat.", "empat", "derajat", "segelas", "haus,", "telat.", "teh,", "adaptasi.", "mateng", "bingung,", "pingsan..."],
+ 5: ["renovasi", "ruang", "tamu...", "anak-anak,", "pintunya,", "Debu", "silika!", "seratus", "kali", "pasir", "silikosis.", "disembuhin.", "Australia", "ngelarang", "respirator.", "air", "N95", "penyedot", "makhluk", "halus", "kaku,", "parut."],
+ 6: ["mati", "lampu,", "garasi.", "bengkel", "gudang", "Karbon", "monoksida!", "berwarna,", "berbau.", "dua", "ratus", "oksigen.", "masuk", "angin:", "genset,", "enam", "meter", "detektor", "makhluk", "halus", "licik...", "nasib.", "bangun", "keracunan"],
 }
 DISPLAY = {"ce": "CO₂", "o": "", "dua!": "", "duanya": "", "pe": "", "em.": "", "em,": "", "K3": "K3"}
 import os

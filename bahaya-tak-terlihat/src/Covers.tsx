@@ -148,7 +148,8 @@ export const Cover3: React.FC = () => (
 );
 
 /* ---------- gambar kecil khusus cover EP4–6 ---------- */
-const Stove: React.FC = () => (
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const Stove: React.FC = () => (
   <svg width={520} height={300} viewBox="0 0 520 300" style={{ overflow: "visible" }}>
     {[120, 260, 400].map((x, i) => (
       <path key={i} d={`M${x - 50} 120 Q${x - 40} 20 ${x} 60 Q${x + 10} -10 ${x + 30} 50 Q${x + 60} 10 ${x + 50} 120 Z`} fill={i === 1 ? C.yellow : C.orange} stroke={C.ink} strokeWidth={OUTLINE} strokeLinejoin="round" />
@@ -197,16 +198,20 @@ const Car: React.FC = () => (
 );
 
 export const Cover4: React.FC = () => (
-  <CoverFrame ep={4} accent={C.orange} tint="#5A2A12" line1="HARI PERTAMA" line2="PALING BAHAYA?" sub="kerja di tempat panas 🔥">
+  <CoverFrame ep={4} accent={C.orange} tint="#5A2A12" line1="SIANG BOLONG" line2="TIBA-TIBA PUSING?" sub="bukan sekadar kepanasan 🔥">
+    <svg width={420} height={420} viewBox="0 0 420 420" style={{ position: "absolute", left: 610, top: 930 }}>
+      {new Array(12).fill(0).map((_, i) => {
+        const a = (i / 12) * Math.PI * 2;
+        return <line key={i} x1={210 + Math.cos(a) * 120} y1={210 + Math.sin(a) * 120} x2={210 + Math.cos(a) * 190} y2={210 + Math.sin(a) * 190} stroke={C.yellow} strokeWidth={22} strokeLinecap="round" />;
+      })}
+      <circle cx={210} cy={210} r={100} fill={C.yellow} stroke={C.ink} strokeWidth={OUTLINE} />
+    </svg>
     <div style={{ position: "absolute", left: 600, top: 940, rotate: "10deg" }}>
       <SiHalus size={400} variant="heat" mood="laugh" />
     </div>
     <ScanLine y={1440} />
-    <div style={{ position: "absolute", left: 300, top: 1380 }}>
-      <Stove />
-    </div>
     <div style={{ position: "absolute", left: 70, top: 1000 }}>
-      <Worker size={660} expr="pain" pose="idle" shirt={C.cream} seed={1} />
+      <Worker size={660} expr="pain" pose="idle" shirt={C.white} pants="#B23A3A" tie seed={1} />
     </div>
     <div style={{ position: "absolute", left: 60, top: 980 }}>
       <SweatDrops />
@@ -215,7 +220,7 @@ export const Cover4: React.FC = () => (
 );
 
 export const Cover5: React.FC = () => (
-  <CoverFrame ep={5} accent={C.yellow} tint="#4A3E22" line1="POTONG" line2="KERAMIK?" sub="bahayanya nggak keliatan 👀">
+  <CoverFrame ep={5} accent={C.yellow} tint="#4A3E22" line1="LAGI RENOVASI" line2="RUMAH?" sub="debu ini nggak keliatan 👀">
     <div style={{ position: "absolute", left: 380, top: 940 }}>
       <DustCloud w={640} />
     </div>
