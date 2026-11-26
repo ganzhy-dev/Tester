@@ -29,7 +29,7 @@ const useJitter = (amp: number, key: string) => {
 const S = { stroke: C.ink, strokeWidth: OUTLINE, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
 
 /* ----------------------------------------------------------- gambar lokal */
-const Grinder: React.FC<{ size?: number; spin?: boolean }> = ({ size = 360, spin = true }) => {
+export const Grinder: React.FC<{ size?: number; spin?: boolean }> = ({ size = 360, spin = true }) => {
   const t = useT();
   return (
     <svg width={size} height={size * 0.6} viewBox="0 0 360 216" style={{ overflow: "visible" }}>
@@ -85,7 +85,7 @@ const Saw: React.FC<{ size?: number }> = ({ size = 240 }) => {
 };
 
 /** Tangan kartun; ujung jari berubah pucat (whiten 0..1); overlay saraf & pembuluh */
-const Hand: React.FC<{ size?: number; whiten?: number; nerves?: number; vessels?: number; tingle?: boolean }> = ({
+export const Hand: React.FC<{ size?: number; whiten?: number; nerves?: number; vessels?: number; tingle?: boolean }> = ({
   size = 520,
   whiten = 0,
   nerves = 0,

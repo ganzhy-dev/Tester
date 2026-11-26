@@ -25,7 +25,7 @@ const FLOOR = "#2E1428";
 /* ------------------------------------------------------------ props lokal */
 
 /** Mesin pabrik di latar */
-const Machine: React.FC<{ x: number; y: number; scale?: number }> = ({ x, y, scale = 1 }) => {
+export const Machine: React.FC<{ x: number; y: number; scale?: number }> = ({ x, y, scale = 1 }) => {
   const t = useT();
   return (
     <svg width={300 * scale} height={330 * scale} viewBox="0 0 300 330" style={{ position: "absolute", left: x, top: y }}>
@@ -68,7 +68,7 @@ const NoiseLines: React.FC<{ x: number; y: number; color?: string }> = ({ x, y, 
 };
 
 /** Balon teriakan bergerigi */
-const ShoutBubble: React.FC<{ text: string; w?: number; h?: number }> = ({ text, w = 460, h = 260 }) => {
+export const ShoutBubble: React.FC<{ text: string; w?: number; h?: number }> = ({ text, w = 460, h = 260 }) => {
   const t = useT();
   const n = 18;
   let d = "";

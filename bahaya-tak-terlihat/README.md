@@ -147,3 +147,13 @@ Semua file berformat 1080×1920 (9:16), MP4 H.264 High, 60 fps, warna BT.709 (yu
 - `video/EP1_CO2_RuangRapat_1080p60.mp4` (65,7 dtk)
 - `video/EP2_Getaran_1080p60.mp4` (63,8 dtk)
 - `video/EP3_Kebisingan_1080p60.mp4` (63,4 dtk)
+
+## Cover (halaman muka)
+
+File di `covers/Cover_EP1.jpg`, `covers/Cover_EP2.jpg`, dan `covers/Cover_EP3.jpg` (versi PNG juga ada). Ukurannya 1080×1920. Hook dan tokohnya ada di zona tengah 3:4 (y 240–1680), supaya tetap utuh saat dipotong di grid profil TikTok.
+
+- EP1: **NGANTUK PAS RAPAT?** · "bukan salah bosmu 👀"
+- EP2: **JARI JADI PUTIH?!** · "ini bukan masuk angin 🙅"
+- EP3: **HARUS TERIAK?** · "telingamu lagi dirusak 😬"
+
+Cara pakai: saat upload di TikTok, ketuk **Edit sampul** lalu pilih **Upload/Galeri**, kemudian pilih file cover-nya. Render ulang dengan `npx remotion still Cover-EP1 covers/Cover_EP1.png`.
