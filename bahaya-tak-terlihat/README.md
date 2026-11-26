@@ -139,3 +139,11 @@ npx remotion render EP1-CO2 out/EP1.mp4 --crf=15   # 1080x1920 60fps
 - **`scripts/process_vo.py`:** merapikan VO ElevenLabs dan memetakan ulang timestamp kata.
 - **Browser lokal:** kalau browser bawaan Remotion tidak bisa diunduh, tambahkan `--browser-executable=/path/ke/chrome`.
 - **Lisensi Remotion:** gratis untuk perorangan dan tim sampai 3 orang.
+
+## File video
+
+Semua file berformat 1080×1920 (9:16), MP4 H.264 High, 60 fps, warna BT.709 (yuv420p), dan AAC 320 kbps:
+
+- `video/EP1_CO2_RuangRapat_1080p60.mp4` (65,7 dtk)
+- `video/EP2_Getaran_1080p60.mp4` (63,8 dtk)
+- `video/EP3_Kebisingan_1080p60.mp4` (63,4 dtk)
