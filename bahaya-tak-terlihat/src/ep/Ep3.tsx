@@ -11,7 +11,7 @@ import { warp } from "./ep3.warp";
 
 /** Semua waktu = detik absolut pada voice-over EP3 (lihat data/ep3_words.json) */
 /** Adegan ditulis dalam detik VO lama; `warp` memetakannya ke VO baru (Adrianleoh) */
-export const EP3 = { dur: 52.2, endStart: 47.77, revealAt: 49.9 };
+export const EP3 = { dur: 63.4, endStart: 58.58, revealAt: 61.02 };
 
 const useT = () => {
   const f = useCurrentFrame();

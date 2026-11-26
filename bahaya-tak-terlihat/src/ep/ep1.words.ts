@@ -3,980 +3,980 @@ import type { Word } from "../Kit";
 export const words: Word[] = [
 {
 "w": "Kalian",
-"start": 0.05,
-"end": 0.27,
+"start": 0.052,
+"end": 0.282,
 "hl": false
 },
 {
 "w": "pernah",
-"start": 0.339,
-"end": 0.548,
+"start": 0.355,
+"end": 0.573,
 "hl": false
 },
 {
 "w": "nggak",
-"start": 0.583,
-"end": 0.687,
+"start": 0.609,
+"end": 0.718,
 "hl": false
 },
 {
 "w": "sih,",
-"start": 0.757,
-"end": 1.035,
+"start": 0.791,
+"end": 1.082,
 "hl": false
 },
 {
 "w": "rapat",
-"start": 1.104,
-"end": 1.313,
+"start": 1.155,
+"end": 1.373,
 "hl": false
 },
 {
 "w": "baru",
-"start": 1.383,
-"end": 1.522,
+"start": 1.445,
+"end": 1.591,
 "hl": false
 },
 {
 "w": "setengah",
-"start": 1.591,
-"end": 1.8,
+"start": 1.664,
+"end": 1.882,
 "hl": false
 },
 {
 "w": "jam...",
-"start": 1.939,
-"end": 2.426,
+"start": 2.027,
+"end": 2.536,
 "hl": false
 },
 {
 "w": "mata",
-"start": 2.496,
-"end": 2.704,
+"start": 2.609,
+"end": 2.827,
 "hl": false
 },
 {
 "w": "udah",
-"start": 2.739,
-"end": 2.843,
+"start": 2.864,
+"end": 2.973,
 "hl": false
 },
 {
 "w": "berat",
-"start": 2.913,
-"end": 3.33,
+"start": 3.045,
+"end": 3.482,
 "hl": true
 },
 {
 "w": "banget?",
-"start": 3.4,
-"end": 3.687,
+"start": 3.555,
+"end": 3.855,
 "hl": false
 },
 {
 "w": "Jangan-jangan",
-"start": 3.765,
-"end": 4.391,
+"start": 3.936,
+"end": 4.591,
 "hl": false
 },
 {
 "w": "bukan",
-"start": 4.6,
-"end": 4.809,
+"start": 4.809,
+"end": 5.027,
 "hl": false
 },
 {
 "w": "bosnya",
-"start": 4.878,
-"end": 5.157,
+"start": 5.1,
+"end": 5.391,
 "hl": false
 },
 {
 "w": "yang",
-"start": 5.191,
-"end": 5.226,
+"start": 5.427,
+"end": 5.464,
 "hl": false
 },
 {
 "w": "ngebosenin.",
-"start": 5.272,
-"end": 5.922,
+"start": 5.512,
+"end": 6.191,
 "hl": false
 },
 {
 "w": "[laughs",
-"start": 6.13,
-"end": 6.15,
+"start": 6.409,
+"end": 6.43,
 "hl": false
 },
 {
 "w": "softly]",
-"start": 6.16,
-"end": 6.19,
+"start": 6.44,
+"end": 6.472,
 "hl": false
 },
 {
 "w": "Ya...",
-"start": 6.2,
-"end": 6.826,
+"start": 6.482,
+"end": 7.136,
 "hl": false
 },
 {
 "w": "mungkin",
-"start": 6.896,
-"end": 7.104,
+"start": 7.209,
+"end": 7.427,
 "hl": false
 },
 {
 "w": "juga",
-"start": 7.174,
-"end": 7.452,
+"start": 7.5,
+"end": 7.791,
 "hl": false
 },
 {
 "w": "sih.",
-"start": 7.522,
-"end": 7.8,
+"start": 7.864,
+"end": 8.155,
 "hl": false
 },
 {
 "w": "Tapi",
-"start": 7.928,
-"end": 8.078,
+"start": 8.288,
+"end": 8.445,
 "hl": false
 },
 {
 "w": "sebenernya,",
-"start": 8.148,
-"end": 8.983,
+"start": 8.518,
+"end": 9.391,
 "hl": false
 },
 {
 "w": "ada",
-"start": 9.087,
-"end": 9.191,
+"start": 9.5,
+"end": 9.609,
 "hl": false
 },
 {
 "w": "makhluk",
-"start": 9.261,
-"end": 9.47,
+"start": 9.682,
+"end": 9.9,
 "hl": true
 },
 {
 "w": "halus",
-"start": 9.539,
-"end": 9.887,
+"start": 9.973,
+"end": 10.336,
 "hl": true
 },
 {
 "w": "di",
-"start": 9.922,
-"end": 9.957,
+"start": 10.373,
+"end": 10.409,
 "hl": false
 },
 {
 "w": "ruangan",
-"start": 10.026,
-"end": 10.235,
+"start": 10.482,
+"end": 10.7,
 "hl": false
 },
 {
 "w": "itu.",
-"start": 10.374,
-"end": 10.583,
+"start": 10.845,
+"end": 11.064,
 "hl": false
 },
 {
 "w": "Namanya...",
-"start": 10.913,
-"end": 11.574,
+"start": 11.409,
+"end": 12.1,
 "hl": false
 },
 {
 "w": "CO₂!",
-"start": 11.643,
-"end": 12.339,
+"start": 12.173,
+"end": 12.9,
 "hl": true
 },
 {
 "w": "Jadi",
-"start": 12.548,
-"end": 12.687,
+"start": 13.118,
+"end": 13.264,
 "hl": false
 },
 {
 "w": "gini.",
-"start": 12.722,
-"end": 13.035,
+"start": 13.3,
+"end": 13.627,
 "hl": false
 },
 {
 "w": "Tiap",
-"start": 13.122,
-"end": 13.261,
+"start": 13.718,
+"end": 13.864,
 "hl": false
 },
 {
 "w": "kita",
-"start": 13.33,
-"end": 13.47,
+"start": 13.936,
+"end": 14.082,
 "hl": false
 },
 {
 "w": "napas,",
-"start": 13.574,
-"end": 14.026,
+"start": 14.191,
+"end": 14.664,
 "hl": false
 },
 {
 "w": "kita",
-"start": 14.061,
-"end": 14.235,
+"start": 14.7,
+"end": 14.882,
 "hl": false
 },
 {
 "w": "ngeluarin",
-"start": 14.27,
-"end": 14.652,
+"start": 14.918,
+"end": 15.318,
 "hl": false
 },
 {
 "w": "karbon",
-"start": 14.722,
-"end": 14.93,
+"start": 15.391,
+"end": 15.609,
 "hl": false
 },
 {
 "w": "dioksida.",
-"start": 15.0,
-"end": 15.626,
+"start": 15.682,
+"end": 16.336,
 "hl": false
 },
 {
 "w": "Nah,",
-"start": 15.974,
-"end": 16.252,
+"start": 16.7,
+"end": 16.991,
 "hl": false
 },
 {
 "w": "kalau",
-"start": 16.322,
-"end": 16.461,
+"start": 17.064,
+"end": 17.209,
 "hl": false
 },
 {
 "w": "pintunya",
-"start": 16.496,
-"end": 16.809,
+"start": 17.245,
+"end": 17.573,
 "hl": false
 },
 {
 "w": "ditutup,",
-"start": 16.913,
-"end": 17.504,
+"start": 17.682,
+"end": 18.3,
 "hl": false
 },
 {
 "w": "orangnya",
-"start": 17.609,
-"end": 17.852,
+"start": 18.409,
+"end": 18.664,
 "hl": false
 },
 {
 "w": "banyak,",
-"start": 17.887,
-"end": 18.617,
+"start": 18.7,
+"end": 19.464,
 "hl": false
 },
 {
 "w": "AC-nya",
-"start": 18.687,
-"end": 19.104,
+"start": 19.536,
+"end": 19.973,
 "hl": true
 },
 {
 "w": "cuma",
-"start": 19.139,
-"end": 19.313,
+"start": 20.009,
+"end": 20.191,
 "hl": false
 },
 {
 "w": "muter",
-"start": 19.383,
-"end": 19.522,
+"start": 20.264,
+"end": 20.409,
 "hl": false
 },
 {
 "w": "udara",
-"start": 19.591,
-"end": 19.8,
+"start": 20.482,
+"end": 20.7,
 "hl": false
 },
 {
 "w": "yang",
-"start": 19.87,
-"end": 19.939,
+"start": 20.773,
+"end": 20.845,
 "hl": false
 },
 {
 "w": "itu-itu",
-"start": 20.043,
-"end": 20.357,
+"start": 20.955,
+"end": 21.282,
 "hl": false
 },
 {
 "w": "aja...",
-"start": 20.426,
-"end": 20.974,
+"start": 21.355,
+"end": 21.927,
 "hl": false
 },
 {
 "w": "nggak",
-"start": 21.009,
-"end": 21.113,
+"start": 21.964,
+"end": 22.073,
 "hl": false
 },
 {
 "w": "sampai",
-"start": 21.183,
-"end": 21.391,
+"start": 22.145,
+"end": 22.364,
 "hl": false
 },
 {
 "w": "sejam,",
-"start": 21.496,
-"end": 21.948,
+"start": 22.473,
+"end": 22.945,
 "hl": false
 },
 {
 "w": "kadarnya",
-"start": 22.017,
-"end": 22.296,
+"start": 23.018,
+"end": 23.309,
 "hl": false
 },
 {
 "w": "bisa",
-"start": 22.33,
-"end": 22.504,
+"start": 23.345,
+"end": 23.527,
 "hl": false
 },
 {
 "w": "tembus",
-"start": 22.574,
-"end": 22.783,
+"start": 23.6,
+"end": 23.818,
 "hl": false
 },
 {
 "w": "seribu",
-"start": 22.852,
-"end": 23.2,
+"start": 23.891,
+"end": 24.255,
 "hl": true
 },
 {
 "w": "ppm.",
-"start": 23.27,
-"end": 23.757,
+"start": 24.327,
+"end": 24.836,
 "hl": true
 },
 {
 "w": "Padahal",
-"start": 23.965,
-"end": 24.522,
+"start": 25.055,
+"end": 25.636,
 "hl": false
 },
 {
 "w": "udara",
-"start": 24.661,
-"end": 24.87,
+"start": 25.782,
+"end": 26.0,
 "hl": false
 },
 {
 "w": "di",
-"start": 24.939,
-"end": 25.009,
+"start": 26.073,
+"end": 26.145,
 "hl": false
 },
 {
 "w": "luar",
-"start": 25.078,
-"end": 25.217,
+"start": 26.218,
+"end": 26.364,
 "hl": false
 },
 {
 "w": "cuma",
-"start": 25.287,
-"end": 25.496,
+"start": 26.436,
+"end": 26.655,
 "hl": false
 },
 {
 "w": "sekitar",
-"start": 25.53,
-"end": 25.739,
+"start": 26.691,
+"end": 26.909,
 "hl": false
 },
 {
 "w": "empat",
-"start": 25.774,
-"end": 25.913,
+"start": 26.945,
+"end": 27.091,
 "hl": false
 },
 {
 "w": "ratusan.",
-"start": 25.948,
-"end": 26.47,
+"start": 27.127,
+"end": 27.673,
 "hl": false
 },
 {
 "w": "Emang",
-"start": 26.643,
-"end": 26.783,
+"start": 27.855,
+"end": 28.0,
 "hl": false
 },
 {
 "w": "ngaruh?",
-"start": 26.817,
-"end": 27.243,
+"start": 28.036,
+"end": 28.482,
 "hl": false
 },
 {
 "w": "Ngaruh",
-"start": 27.365,
-"end": 27.643,
+"start": 28.609,
+"end": 28.9,
 "hl": false
 },
 {
 "w": "banget.",
-"start": 27.783,
-"end": 28.209,
+"start": 29.045,
+"end": 29.491,
 "hl": false
 },
 {
 "w": "Ada",
-"start": 28.452,
-"end": 28.591,
+"start": 29.745,
+"end": 29.891,
 "hl": false
 },
 {
 "w": "penelitian",
-"start": 28.661,
-"end": 29.009,
+"start": 29.964,
+"end": 30.327,
 "hl": false
 },
 {
 "w": "Harvard,",
-"start": 29.113,
-"end": 29.704,
+"start": 30.436,
+"end": 31.054,
 "hl": true
 },
 {
 "w": "di",
-"start": 29.739,
-"end": 29.774,
+"start": 31.091,
+"end": 31.127,
 "hl": false
 },
 {
 "w": "sekitar",
-"start": 29.843,
-"end": 30.122,
+"start": 31.2,
+"end": 31.491,
 "hl": false
 },
 {
 "w": "seribu",
-"start": 30.191,
-"end": 30.4,
+"start": 31.564,
+"end": 31.782,
 "hl": true
 },
 {
 "w": "empat",
-"start": 30.47,
-"end": 30.609,
+"start": 31.854,
+"end": 32.0,
 "hl": false
 },
 {
 "w": "ratus",
-"start": 30.643,
-"end": 30.817,
+"start": 32.036,
+"end": 32.218,
 "hl": false
 },
 {
 "w": "ppm,",
-"start": 30.956,
-"end": 31.443,
+"start": 32.364,
+"end": 32.873,
 "hl": true
 },
 {
 "w": "skor",
-"start": 31.652,
-"end": 31.93,
+"start": 33.091,
+"end": 33.382,
 "hl": false
 },
 {
 "w": "mikir",
-"start": 31.965,
-"end": 32.139,
+"start": 33.418,
+"end": 33.6,
 "hl": false
 },
 {
 "w": "orang",
-"start": 32.209,
-"end": 32.417,
+"start": 33.673,
+"end": 33.891,
 "hl": false
 },
 {
 "w": "bisa",
-"start": 32.452,
-"end": 32.626,
+"start": 33.927,
+"end": 34.109,
 "hl": false
 },
 {
 "w": "anjlok",
-"start": 32.696,
-"end": 33.043,
+"start": 34.182,
+"end": 34.545,
 "hl": true
 },
 {
 "w": "sampai",
-"start": 33.113,
-"end": 33.252,
+"start": 34.618,
+"end": 34.764,
 "hl": false
 },
 {
 "w": "setengahnya.",
-"start": 33.322,
-"end": 33.809,
+"start": 34.836,
+"end": 35.345,
 "hl": true
 },
 {
 "w": "Gila",
-"start": 33.991,
-"end": 34.269,
+"start": 35.536,
+"end": 35.827,
 "hl": true
 },
 {
 "w": "nggak",
-"start": 34.304,
-"end": 34.409,
+"start": 35.864,
+"end": 35.973,
 "hl": false
 },
 {
 "w": "tuh?",
-"start": 34.478,
-"end": 34.678,
+"start": 36.045,
+"end": 36.254,
 "hl": false
 },
 {
 "w": "Makanya",
-"start": 34.965,
-"end": 35.383,
+"start": 36.554,
+"end": 36.991,
 "hl": false
 },
 {
 "w": "kepala",
-"start": 35.452,
-"end": 35.661,
+"start": 37.064,
+"end": 37.282,
 "hl": false
 },
 {
 "w": "jadi",
-"start": 35.73,
-"end": 35.869,
+"start": 37.354,
+"end": 37.5,
 "hl": false
 },
 {
 "w": "berat,",
-"start": 35.974,
-"end": 36.426,
+"start": 37.609,
+"end": 38.082,
 "hl": true
 },
 {
 "w": "ngantuk,",
-"start": 36.461,
-"end": 36.983,
+"start": 38.118,
+"end": 38.664,
 "hl": true
 },
 {
 "w": "nggak",
-"start": 37.017,
-"end": 37.122,
+"start": 38.7,
+"end": 38.809,
 "hl": false
 },
 {
 "w": "fokus.",
-"start": 37.191,
-"end": 37.678,
+"start": 38.882,
+"end": 39.391,
 "hl": true
 },
 {
 "w": "Dan",
-"start": 37.878,
-"end": 38.017,
+"start": 39.6,
+"end": 39.745,
 "hl": false
 },
 {
 "w": "anehnya,",
-"start": 38.087,
-"end": 38.783,
+"start": 39.818,
+"end": 40.545,
 "hl": false
 },
 {
 "w": "begitu",
-"start": 38.852,
-"end": 39.061,
+"start": 40.618,
+"end": 40.836,
 "hl": false
 },
 {
 "w": "keluar",
-"start": 39.096,
-"end": 39.269,
+"start": 40.873,
+"end": 41.054,
 "hl": false
 },
 {
 "w": "ruangan,",
-"start": 39.339,
-"end": 39.826,
+"start": 41.127,
+"end": 41.636,
 "hl": false
 },
 {
 "w": "langsung",
-"start": 39.896,
-"end": 40.174,
+"start": 41.709,
+"end": 42.0,
 "hl": false
 },
 {
 "w": "seger",
-"start": 40.243,
-"end": 40.383,
+"start": 42.073,
+"end": 42.218,
 "hl": true
 },
 {
 "w": "lagi.",
-"start": 40.452,
-"end": 40.774,
+"start": 42.291,
+"end": 42.627,
 "hl": false
 },
 {
 "w": "Di",
-"start": 41.096,
-"end": 41.165,
+"start": 42.964,
+"end": 43.036,
 "hl": false
 },
 {
 "w": "Permenkes",
-"start": 41.235,
-"end": 41.513,
+"start": 43.109,
+"end": 43.4,
 "hl": true
 },
 {
 "w": "sendiri,",
-"start": 41.583,
-"end": 42.069,
+"start": 43.473,
+"end": 43.982,
 "hl": false
 },
 {
 "w": "batas",
-"start": 42.174,
-"end": 42.348,
+"start": 44.091,
+"end": 44.273,
 "hl": false
 },
 {
 "w": "CO₂",
-"start": 42.417,
-"end": 42.8,
+"start": 44.345,
+"end": 44.745,
 "hl": true
 },
 {
 "w": "buat",
-"start": 42.835,
-"end": 43.043,
+"start": 44.782,
+"end": 45.0,
 "hl": false
 },
 {
 "w": "ruang",
-"start": 43.078,
-"end": 43.183,
+"start": 45.036,
+"end": 45.145,
 "hl": false
 },
 {
 "w": "kantor",
-"start": 43.252,
-"end": 43.53,
+"start": 45.218,
+"end": 45.509,
 "hl": false
 },
 {
 "w": "itu",
-"start": 43.635,
-"end": 43.739,
+"start": 45.618,
+"end": 45.727,
 "hl": false
 },
 {
 "w": "seribu",
-"start": 43.878,
-"end": 44.156,
+"start": 45.873,
+"end": 46.164,
 "hl": true
 },
 {
 "w": "ppm.",
-"start": 44.226,
-"end": 44.713,
+"start": 46.236,
+"end": 46.745,
 "hl": true
 },
 {
 "w": "Jadi",
-"start": 45.061,
-"end": 45.339,
+"start": 47.109,
+"end": 47.4,
 "hl": false
 },
 {
 "w": "kalau",
-"start": 45.478,
-"end": 45.617,
+"start": 47.545,
+"end": 47.691,
 "hl": false
 },
 {
 "w": "rapatnya",
-"start": 45.687,
-"end": 45.965,
+"start": 47.764,
+"end": 48.054,
 "hl": false
 },
 {
 "w": "lama,",
-"start": 46.139,
-"end": 46.496,
+"start": 48.236,
+"end": 48.609,
 "hl": false
 },
 {
 "w": "buka",
-"start": 46.565,
-"end": 46.704,
+"start": 48.682,
+"end": 48.827,
 "hl": false
 },
 {
 "w": "pintu",
-"start": 46.774,
-"end": 47.052,
+"start": 48.9,
+"end": 49.191,
 "hl": false
 },
 {
 "w": "atau",
-"start": 47.122,
-"end": 47.226,
+"start": 49.264,
+"end": 49.373,
 "hl": false
 },
 {
 "w": "jendela",
-"start": 47.261,
-"end": 47.539,
+"start": 49.409,
+"end": 49.7,
 "hl": true
 },
 {
 "w": "sebentar.",
-"start": 47.574,
-"end": 48.026,
+"start": 49.736,
+"end": 50.209,
 "hl": false
 },
 {
 "w": "Kasih",
-"start": 48.235,
-"end": 48.443,
+"start": 50.427,
+"end": 50.645,
 "hl": false
 },
 {
 "w": "jeda.",
-"start": 48.478,
-"end": 48.861,
+"start": 50.682,
+"end": 51.082,
 "hl": true
 },
 {
 "w": "Dan",
-"start": 49.035,
-"end": 49.174,
+"start": 51.264,
+"end": 51.409,
 "hl": false
 },
 {
 "w": "please,",
-"start": 49.313,
-"end": 49.73,
+"start": 51.554,
+"end": 51.991,
 "hl": false
 },
 {
 "w": "jangan",
-"start": 50.009,
-"end": 50.287,
+"start": 52.282,
+"end": 52.573,
 "hl": false
 },
 {
 "w": "jejelin",
-"start": 50.356,
-"end": 50.635,
+"start": 52.645,
+"end": 52.936,
 "hl": false
 },
 {
 "w": "sepuluh",
-"start": 50.704,
-"end": 50.983,
+"start": 53.009,
+"end": 53.3,
 "hl": false
 },
 {
 "w": "orang",
-"start": 51.052,
-"end": 51.261,
+"start": 53.373,
+"end": 53.591,
 "hl": false
 },
 {
 "w": "di",
-"start": 51.296,
-"end": 51.33,
+"start": 53.627,
+"end": 53.664,
 "hl": false
 },
 {
 "w": "ruangan",
-"start": 51.4,
-"end": 51.609,
+"start": 53.736,
+"end": 53.954,
 "hl": false
 },
 {
 "w": "sekecil",
-"start": 51.678,
-"end": 51.956,
+"start": 54.027,
+"end": 54.318,
 "hl": false
 },
 {
 "w": "kamar",
-"start": 51.991,
-"end": 52.165,
+"start": 54.354,
+"end": 54.536,
 "hl": false
 },
 {
 "w": "kos.",
-"start": 52.304,
-"end": 52.652,
+"start": 54.682,
+"end": 55.045,
 "hl": true
 },
 {
 "w": "Terus",
-"start": 53.0,
-"end": 53.304,
+"start": 55.409,
+"end": 55.727,
 "hl": false
 },
 {
 "w": "kalau",
-"start": 53.374,
-"end": 53.548,
+"start": 55.8,
+"end": 55.982,
 "hl": false
 },
 {
 "w": "besok",
-"start": 53.583,
-"end": 53.791,
+"start": 56.018,
+"end": 56.236,
 "hl": false
 },
 {
 "w": "kamu",
-"start": 53.861,
-"end": 54.0,
+"start": 56.309,
+"end": 56.454,
 "hl": false
 },
 {
 "w": "ketiduran",
-"start": 54.069,
-"end": 54.417,
+"start": 56.527,
+"end": 56.891,
 "hl": false
 },
 {
 "w": "pas",
-"start": 54.487,
-"end": 54.626,
+"start": 56.964,
+"end": 57.109,
 "hl": false
 },
 {
 "w": "meeting...",
-"start": 54.939,
-"end": 55.461,
+"start": 57.436,
+"end": 57.982,
 "hl": false
 },
 {
 "w": "bilang",
-"start": 55.53,
-"end": 55.669,
+"start": 58.054,
+"end": 58.2,
 "hl": false
 },
 {
 "w": "aja,",
-"start": 55.739,
-"end": 56.365,
+"start": 58.273,
+"end": 58.927,
 "hl": false
 },
 {
 "w": "maaf",
-"start": 56.435,
-"end": 56.643,
+"start": 59.0,
+"end": 59.218,
 "hl": false
 },
 {
 "w": "Pak,",
-"start": 56.713,
-"end": 56.991,
+"start": 59.291,
+"end": 59.582,
 "hl": false
 },
 {
 "w": "CO₂-nya",
-"start": 57.061,
-"end": 57.478,
+"start": 59.654,
+"end": 60.091,
 "hl": true
 },
 {
 "w": "tinggi.",
-"start": 57.548,
-"end": 57.965,
+"start": 60.164,
+"end": 60.6,
 "hl": false
 },
 {
 "w": "Follow,",
-"start": 58.139,
-"end": 58.556,
+"start": 60.782,
+"end": 61.218,
 "hl": false
 },
 {
 "w": "biar",
-"start": 58.765,
-"end": 58.904,
+"start": 61.436,
+"end": 61.582,
 "hl": false
 },
 {
 "w": "bahaya",
-"start": 58.974,
-"end": 59.252,
+"start": 61.654,
+"end": 61.945,
 "hl": false
 },
 {
 "w": "yang",
-"start": 59.287,
-"end": 59.322,
+"start": 61.982,
+"end": 62.018,
 "hl": false
 },
 {
 "w": "nggak",
-"start": 59.356,
-"end": 59.461,
+"start": 62.054,
+"end": 62.164,
 "hl": false
 },
 {
 "w": "kelihatan...",
-"start": 59.53,
-"end": 60.296,
+"start": 62.236,
+"end": 63.036,
 "hl": false
 },
 {
 "w": "jadi",
-"start": 60.4,
-"end": 60.504,
+"start": 63.145,
+"end": 63.254,
 "hl": false
 },
 {
 "w": "kelihatan.",
-"start": 60.574,
-"end": 61.409,
+"start": 63.327,
+"end": 64.2,
 "hl": false
 }
 ];

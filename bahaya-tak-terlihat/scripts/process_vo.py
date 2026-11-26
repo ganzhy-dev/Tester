@@ -14,12 +14,12 @@ import sys
 import numpy as np
 
 SR = 48000
-MAX_PAUSE = 0.30
-KEEP = 0.24
-TEMPO = 1.15
 THRESH_DB = -42
+# Per episode: (tempo, jeda maksimum, jeda yang disisakan). Target: video > 60 dtk (syarat Creator Rewards).
+SETTINGS = {1: (1.10, 0.30, 0.24), 2: (1.06, 0.30, 0.24), 3: (1.00, 0.55, 0.40)}
 
 raw, words_path, ep = sys.argv[1], sys.argv[2], int(sys.argv[3])
+TEMPO, MAX_PAUSE, KEEP = SETTINGS[ep]
 x = np.frombuffer(
     subprocess.run(["ffmpeg", "-v", "error", "-i", raw, "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout,
     np.float32,

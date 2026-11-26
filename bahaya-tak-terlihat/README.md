@@ -4,17 +4,18 @@ Tiga video motion TikTok tentang bahaya lingkungan kerja yang jarang dibahas.
 
 | Ep | Topik | Durasi | Si Halus |
 |---|---|---|---|
-| 1 | CO₂ di ruang rapat (Sick Building Syndrome) | 62,8 dtk | ungu, kabut CO₂ |
-| 2 | Getaran tangan-lengan & seluruh tubuh | 58,9 dtk | cyan, bergetar |
-| 3 | Kebisingan | 52,1 dtk | pink, berteriak |
+| 1 | CO₂ di ruang rapat (Sick Building Syndrome) | 65,6 dtk | ungu, kabut CO₂ |
+| 2 | Getaran tangan-lengan & seluruh tubuh | 63,8 dtk | cyan, bergetar |
+| 3 | Kebisingan | 63,3 dtk | pink, berteriak |
 
-- **Format:** 2160×3840 (4K vertikal), 60 fps, H.264 + AAC 320 kbps. Ada juga versi 1080p60 dengan bitrate tinggi.
+- **Format:** 1080×1920 (9:16), MP4 H.264 High profile, 60 fps, AAC 320 kbps.
+- **Durasi:** semua di atas 1 menit, syarat program monetisasi TikTok Creator Rewards.
 - **Tokoh orisinal:**
   - **Bang Jo**, pekerja polos yang sering apes.
   - **Si Halus**, "makhluk halus" versi K3, yaitu bahaya yang baru kelihatan saat disorot scanner hijau neon. Scanner ini jadi ciri khas tiap episode.
 - **Gaya visual:** komik flat dengan garis tepi tebal. Palet plum gelap dengan aksen lime, pink, dan cyan.
 - **Suara:** ElevenLabs Eleven v4, suara **Adrianleoh**. Dipilih karena hasil audisi terukur paling ekspresif dibanding Zandhira dan Bangnik.
-  - Jeda dirapatkan dan tempo dinaikkan 1,15× (pitch tetap) supaya pace-nya cocok untuk TikTok.
+  - Jeda panjang dirapatkan dan tempo disesuaikan (EP1 1,10×, EP2 1,06×, EP3 tempo asli; pitch tetap) supaya pace-nya enak dan durasinya di atas 1 menit.
   - Mastering vokal: high-pass, EQ presence dan air, kompresi, de-esser.
 - **Musik & SFX:** orisinal, disintesis dengan kode (`scripts/make_audio.py`). Bebas copyright.
   - Musik otomatis turun saat narator bicara (ducking).
@@ -96,7 +97,7 @@ Hook cadangan, kalau mau A/B test caption:
 
 ## Tips posting
 
-- **Upload:** pakai file `*_4K_60fps.mp4` langsung dari HP/PC tanpa diedit ulang di CapCut, supaya tidak terkompres dua kali. Di TikTok, aktifkan **"Upload HD / kualitas tinggi"**.
+- **Upload:** pakai file `*_1080p60.mp4` langsung dari HP/PC tanpa diedit ulang di CapCut, supaya tidak terkompres dua kali. Di TikTok, aktifkan **"Upload HD / kualitas tinggi"**.
 - **Jadwal:** posting berseri, EP1, EP2, EP3 dengan jarak 1–2 hari, supaya penonton menunggu episode berikutnya.
 - **Cover:**
   - EP1: scene "ADA MAKHLUK HALUS" sekitar detik 9.
@@ -131,7 +132,7 @@ Catatan: teks resmi Permenaker 5/2018 dan Permenkes 48/2016 tidak bisa dibuka da
 npm i
 python3 scripts/make_audio.py 1   # (2, 3) mix audio: VO + musik + SFX
 npx remotion studio               # preview
-npx remotion render EP1-CO2 out/EP1.mp4 --scale=2 --crf=17   # 4K 60fps
+npx remotion render EP1-CO2 out/EP1.mp4 --crf=15   # 1080x1920 60fps
 ```
 
 - **`src/ep/EpN.tsx`:** adegan ditulis dalam detik VO versi pertama, lalu `src/ep/epN.warp.ts` memetakannya ke timing VO final (dibuat oleh `scripts/make_warp.py`).
