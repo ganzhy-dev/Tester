@@ -21,14 +21,17 @@ const useT = () => {
 /** Tampilkan anak hanya di [a, b) + transisi masuk/keluar cepat */
 export const Scene: React.FC<{ a: number; b: number; children: React.ReactNode; zoom?: boolean }> = ({ a, b, children, zoom = true }) => {
   const t = useT();
-  if (t < a - 0.02 || t >= b) return null;
-  const inP = interpolate(t, [a, a + 0.18], [0, 1], { ...clamp, easing: easeOut });
-  const outP = interpolate(t, [b - 0.12, b], [0, 1], clamp);
+  // Transisi halus: adegan baru masuk (fade + zoom + naik sedikit) di atas adegan lama yang masih memudar
+  const X = 0.22;
+  if (t < a - 0.02 || t >= b + X) return null;
+  const inP = interpolate(t, [a, a + 0.3], [0, 1], { ...clamp, easing: easeOut });
+  const outP = interpolate(t, [b - 0.04, b + X], [0, 1], { ...clamp, easing: easeOut });
   return (
     <AbsoluteFill
       style={{
-        opacity: inP * (1 - outP),
-        scale: String((zoom ? interpolate(inP, [0, 1], [1.08, 1]) : 1) * (1 + 0.012 * (t - a))),
+        opacity: (a < 0.05 ? 1 : inP) * (1 - outP),
+        translate: `0px ${(a < 0.05 ? 0 : (1 - inP) * 46) - outP * 30}px`,
+        scale: String((zoom ? interpolate(inP, [0, 1], [1.07, 1]) : 1) * (1 + 0.012 * (t - a)) * (1 + 0.05 * outP)),
       }}
     >
       {children}

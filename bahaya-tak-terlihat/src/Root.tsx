@@ -4,22 +4,23 @@ import { Cover1, Cover2, Cover3, Cover4, Cover5, Cover6 } from "./Covers";
 import { AvatarA, AvatarB, ProfilePicture } from "./Avatar";
 import { CharTest } from "./CharTest";
 import { FPS, H, W } from "./brand";
-import { EP1, Ep1 } from "./ep/Ep1";
-import { EP2, Ep2 } from "./ep/Ep2";
-import { EP3, Ep3 } from "./ep/Ep3";
-import { EP4, Ep4 } from "./ep/Ep4";
-import { EP5, Ep5 } from "./ep/Ep5";
-import { EP6, Ep6 } from "./ep/Ep6";
+import { HOOKCTA } from "./ep/hookcta";
+import { Ep1 } from "./ep/Ep1";
+import { Ep2 } from "./ep/Ep2";
+import { Ep3 } from "./ep/Ep3";
+import { Ep4 } from "./ep/Ep4";
+import { Ep5 } from "./ep/Ep5";
+import { Ep6 } from "./ep/Ep6";
 
 /** 1080x1920 @60fps. Render 4K (2160x3840) dengan --scale=2. */
 export const RemotionRoot: React.FC = () => (
   <>
-    <Composition id="EP1-CO2" component={Ep1} durationInFrames={Math.ceil(EP1.dur * FPS)} fps={FPS} width={W} height={H} />
-    <Composition id="EP2-Getaran" component={Ep2} durationInFrames={Math.ceil(EP2.dur * FPS)} fps={FPS} width={W} height={H} />
-    <Composition id="EP3-Bising" component={Ep3} durationInFrames={Math.ceil(EP3.dur * FPS)} fps={FPS} width={W} height={H} />
-    <Composition id="EP4-Panas" component={Ep4} durationInFrames={Math.ceil(EP4.dur * FPS)} fps={FPS} width={W} height={H} />
-    <Composition id="EP5-DebuSilika" component={Ep5} durationInFrames={Math.ceil(EP5.dur * FPS)} fps={FPS} width={W} height={H} />
-    <Composition id="EP6-KarbonMonoksida" component={Ep6} durationInFrames={Math.ceil(EP6.dur * FPS)} fps={FPS} width={W} height={H} />
+    <Composition id="EP1-CO2" component={Ep1} durationInFrames={Math.ceil(HOOKCTA[1].total * FPS)} fps={FPS} width={W} height={H} />
+    <Composition id="EP2-Getaran" component={Ep2} durationInFrames={Math.ceil(HOOKCTA[2].total * FPS)} fps={FPS} width={W} height={H} />
+    <Composition id="EP3-Bising" component={Ep3} durationInFrames={Math.ceil(HOOKCTA[3].total * FPS)} fps={FPS} width={W} height={H} />
+    <Composition id="EP4-Panas" component={Ep4} durationInFrames={Math.ceil(HOOKCTA[4].total * FPS)} fps={FPS} width={W} height={H} />
+    <Composition id="EP5-DebuSilika" component={Ep5} durationInFrames={Math.ceil(HOOKCTA[5].total * FPS)} fps={FPS} width={W} height={H} />
+    <Composition id="EP6-KarbonMonoksida" component={Ep6} durationInFrames={Math.ceil(HOOKCTA[6].total * FPS)} fps={FPS} width={W} height={H} />
     <Still id="Cover-EP1" component={Cover1} width={W} height={H} />
     <Still id="Cover-EP2" component={Cover2} width={W} height={H} />
     <Still id="Cover-EP3" component={Cover3} width={W} height={H} />

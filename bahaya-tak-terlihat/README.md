@@ -67,7 +67,7 @@ Tiga video motion TikTok tentang bahaya lingkungan kerja yang jarang dibahas.
 ```
 ternyata ngantuk pas rapat bukan selalu salah kita 😭
 
-CO₂ di ruang rapat bisa tembus 1.000 ppm dalam waktu kurang dari sejam. Kalau ruang rapat kantormu gimana, ada jendelanya nggak? 👇
+CO₂ di ruang rapat bisa tembus 1.000 ppm dalam waktu kurang dari sejam. Ruang rapat atau kelas kamu ada jendelanya nggak? Jawab di komen 👇
 
 #k3 #ihoh #kesehatankerja #ruangrapat #ngantuk #anakkantor #fyp
 ```
@@ -76,7 +76,7 @@ CO₂ di ruang rapat bisa tembus 1.000 ppm dalam waktu kurang dari sejam. Kalau 
 ```
 jari pucat habis pegang gerinda itu bukan masuk angin ya 🙅‍♂️
 
-Kerusakannya bisa permanen. Tag temen kamu yang kerja pakai bor/gerinda tiap hari biar dia tau 👇
+Kerusakannya bisa permanen. Siapa yang pernah kesemutan habis pegang gerinda? Ngaku di komen 👇 terus tag temen yang tiap hari pegang bor/gerinda
 
 #k3 #ihoh #getaran #gerinda #pekerjaproyek #safetyfirst #fyp
 ```
@@ -85,7 +85,7 @@ Kerusakannya bisa permanen. Tag temen kamu yang kerja pakai bor/gerinda tiap har
 ```
 tes 5 detik: kamu harus teriak buat ngobrol sama orang di sebelahmu? 😬
 
-Di 100 dB jatah amannya cuma 15 menit sehari. Tempat kerjamu seberisik apa? Ceritain di komen 👇
+Di 100 dB jatah amannya cuma 15 menit sehari. Tempat kerja atau sekolahmu seberisik apa? Ceritain di komen 👇
 
 #k3 #ihoh #kebisingan #telinga #safetyfirst #pekerjapabrik #fyp
 ```
@@ -94,6 +94,32 @@ Hook cadangan, kalau mau A/B test caption:
 - EP1: "rapat 2 jam terus ngantuk? ini bukan soal kurang kopi"
 - EP2: "kalau jarimu pernah kayak gini habis kerja, stop dulu"
 - EP3: "\"udah biasa sama bisingnya\" = telinganya udah nyerah"
+
+## Update retensi (versi 2): hook 3 detik + ajakan komen
+
+Semua episode (EP1–EP6) sudah dirender ulang dengan perubahan berikut:
+- **Cold open 4–6 detik.** Frame pertama sama persis dengan cover, jadi yang berhenti scroll langsung "nyambung". Narator langsung menyebut taruhannya, kata kuncinya bergetar, lalu ada whip-zoom dan musik "drop" saat masuk ke cerita.
+- **Transisi antar adegan lebih halus.** Adegan baru masuk dengan crossfade, zoom dan naik sedikit, tidak lagi potongan kasar.
+- **Ajakan komen di akhir.** Selain FOLLOW, narator mengajukan pertanyaan, lalu muncul gelembung "💬 JAWAB DI KOMEN" dengan teks yang ngetik sendiri.
+
+| EP | Hook (detik 0–5) | Pertanyaan komen di akhir |
+|---|---|---|
+| 1 | "Ada yang bikin otak kamu lemot sampai setengahnya tiap rapat... dan kamu nggak sadar." | Ruang rapat atau kelas kamu ada jendelanya nggak? |
+| 2 | "Ada kerusakan di tangan yang nggak bisa balik lagi... dan awalnya cuma kesemutan." | Siapa yang pernah kesemutan habis pegang gerinda? |
+| 3 | "Telinga kamu bisa rusak permanen... pelan-pelan, tanpa kamu sadar." | Tempat kerja atau sekolahmu seberisik apa? |
+| 4 | "Panas siang bisa bikin orang pingsan, bahkan meninggal... dan tandanya sering diabaikan." | Kamu paling sering kepanasan di mana? |
+| 5 | "Debu ini bisa nempel di paru-paru kamu seumur hidup... dan kamu nggak bisa ngeliatnya." | Rumah kamu pernah renovasi & debunya ke mana-mana? |
+| 6 | "Satu kebiasaan di mobil ini udah bikin banyak orang nggak bangun lagi." | Tag keluarga/temen yang suka tidur di mobil |
+
+**Komentar pertama untuk di-pin**, supaya ada contoh jawaban dan orang tidak ragu ikut komen:
+- EP1: "aku duluan: ruang rapat kantorku nggak ada jendelanya sama sekali 😭 kalian?"
+- EP2: "yang kerja di bengkel/proyek, jarinya pernah kayak gini nggak?"
+- EP3: "tim pabrik vs tim bengkel vs tim kelas, siapa paling berisik? 👇"
+- EP4: "aku: nunggu angkot jam 12 siang. kalian?"
+- EP5: "jujur, pas renovasi kemarin kalian pakai masker nggak?"
+- EP6: "share ke grup keluarga juga ya, ini serius 🙏"
+
+**Balas komen dengan video.** Pilih 1–2 komen terbaik, lalu "Balas dengan video". Cara ini termasuk yang paling cepat menaikkan reach akun kecil.
 
 ## Tips posting
 
@@ -133,6 +159,8 @@ npm i
 python3 scripts/make_audio.py 1   # (2, 3) mix audio: VO + musik + SFX
 npx remotion studio               # preview
 npx remotion render EP1-CO2 out/EP1.mp4 --crf=15   # 1080x1920 60fps
+./scripts/render_all.sh          # semua episode -> video/*_1080p60.mp4 (H.264 BT.709)
+python3 scripts/prepare_hook_cta.py <dir_klip>   # proses klip hook/CTA ElevenLabs
 ```
 
 - **`src/ep/EpN.tsx`:** adegan ditulis dalam detik VO versi pertama, lalu `src/ep/epN.warp.ts` memetakannya ke timing VO final (dibuat oleh `scripts/make_warp.py`).
@@ -214,7 +242,7 @@ Format sama dengan EP1–3: 1080×1920, 60 fps, H.264 (BT.709), suara Adrianleoh
 ```
 siang bolong tiba-tiba pusing & mual? jangan dianggep sepele 🥵
 
-Nunggu angkot, upacara, kejebak macet… badan kita bisa "overheat". Kamu paling sering kepanasan di mana? 👇
+Nunggu angkot, upacara, kejebak macet… badan kita bisa "overheat". Kamu paling sering kepanasan di mana? Tulis di komen 👇
 
 #tekananpanas #heatstroke #cuacapanas #k3 #ihoh #kesehatan #fyp
 ```
@@ -223,7 +251,7 @@ Nunggu angkot, upacara, kejebak macet… badan kita bisa "overheat". Kamu paling
 ```
 lagi renovasi rumah? debu yang kelihatan itu masih mending 😷
 
-Debu silika 100x lebih kecil dari pasir dan bisa bikin paru-paru rusak permanen. Share ke yang lagi renovasi rumah 🏠👇
+Debu silika 100x lebih kecil dari pasir dan bisa bikin paru-paru rusak permanen. Rumah kamu pernah renovasi terus debunya ke mana-mana? Cerita di komen 👇
 
 #renovasirumah #debusilika #silikosis #k3 #ihoh #kesehatan #fyp
 ```
@@ -232,7 +260,7 @@ Debu silika 100x lebih kecil dari pasir dan bisa bikin paru-paru rusak permanen.
 ```
 bukan "keracunan AC", pelakunya gas CO dari knalpot ⚠️
 
-Nggak berwarna, nggak berbau, dan bisa bikin orang nggak bangun lagi, termasuk dari genset yang dinyalain di dalam rumah pas mati lampu. Share ke keluarga 🙏
+Nggak berwarna, nggak berbau, dan bisa bikin orang nggak bangun lagi, termasuk dari genset yang dinyalain di dalam rumah pas mati lampu. Tag keluarga/temen yang suka tidur di mobil 🙏👇
 
 #karbonmonoksida #keracunanco #matilampu #k3 #ihoh #edukasi #fyp
 ```

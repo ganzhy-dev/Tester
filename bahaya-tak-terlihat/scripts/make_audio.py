@@ -200,7 +200,45 @@ if WARP:
     for c in cues:
         if not c.get("abs"):
             c["t"] = warp(c["t"])
-DUR = len(vo) / SR + 1.4
+
+# --- Cold open (hook) + ajakan komen (CTA): VO = hook | isi utama | CTA
+LAYOUT = None
+if os.path.exists(f"data/ep{EP}_layout.json"):
+    LAYOUT = json.load(open(f"data/ep{EP}_layout.json"))
+    I0, CTA_AT = LAYOUT["intro"], LAYOUT["cta_at"]
+
+    def speech_rms(x):
+        a = np.abs(x)
+        m = a > 0.08 * a.max()
+        return np.sqrt((x[m] ** 2).mean())
+
+    ref = speech_rms(vo)
+    hook = read_audio(f"public/audio/ep{EP}_hook.wav", VOICE_CHAIN)
+    cta = read_audio(f"public/audio/ep{EP}_cta.wav", VOICE_CHAIN)
+    hook *= ref / speech_rms(hook) * 1.05
+    cta *= ref / speech_rms(cta)
+    full = np.zeros(int(LAYOUT["total"] * SR))
+
+    def put(sig, t):
+        i = int(t * SR)
+        full[i:i + len(sig)] += sig[: len(full) - i]
+
+    put(hook, 0.0)
+    put(vo, I0)
+    put(cta, I0 + CTA_AT)
+    vo = full
+    for c in cues:
+        c["t"] += I0
+    cues += [
+        {"t": 0.0, "type": "thud", "gain": 1.1},
+        {"t": 0.02, "type": "ring", "dur": 1.2, "gain": 0.5},
+        {"t": I0 - 0.75, "type": "riser", "dur": 0.75, "gain": 0.9},
+        {"t": I0 - 0.18, "type": "whoosh", "gain": 1.2},
+        {"t": I0, "type": "thud", "gain": 0.9},
+        {"t": I0 + CTA_AT - 0.05, "type": "pop", "gain": 1.2},
+        {"t": I0 + CTA_AT + 0.05, "type": "sparkle", "gain": 0.6},
+    ]
+DUR = LAYOUT["total"] if LAYOUT else len(vo) / SR + 1.4
 N = int(DUR * SR)
 music = np.zeros(N)
 fx = np.zeros(N)
@@ -247,6 +285,15 @@ for c in cues:
 k = np.ones(int(0.01 * SR)) / int(0.01 * SR)
 stop = np.convolve(stop, k, mode="same")
 music *= stop
+if LAYOUT:
+    # intro: musik teredam (low-pass) & pelan, lalu "drop" penuh saat isi utama mulai
+    ni = int(I0 * SR)
+    xf = int(0.12 * SR)
+    muff = filt(music, None, 500) * 0.55
+    w = np.zeros(N)
+    w[ni + xf:] = 1
+    w[ni:ni + xf] = np.linspace(0, 1, xf)
+    music = muff * (1 - w) + music * w
 # akhir: musik fade
 fo = int(1.0 * SR)
 music[-fo:] *= np.linspace(1, 0, fo)
