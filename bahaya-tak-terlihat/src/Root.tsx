@@ -1,6 +1,7 @@
 import React from "react";
 import { Composition, Still } from "remotion";
 import { Cover1, Cover2, Cover3 } from "./Covers";
+import { AvatarA, AvatarB } from "./Avatar";
 import { CharTest } from "./CharTest";
 import { FPS, H, W } from "./brand";
 import { EP1, Ep1 } from "./ep/Ep1";
@@ -16,6 +17,8 @@ export const RemotionRoot: React.FC = () => (
     <Still id="Cover-EP1" component={Cover1} width={W} height={H} />
     <Still id="Cover-EP2" component={Cover2} width={W} height={H} />
     <Still id="Cover-EP3" component={Cover3} width={W} height={H} />
+    <Still id="Avatar-A" component={AvatarA} width={1080} height={1080} />
+    <Still id="Avatar-B" component={AvatarB} width={1080} height={1080} />
     <Composition id="CharTest" component={CharTest} durationInFrames={60} fps={FPS} width={W} height={H} />
   </>
 );
