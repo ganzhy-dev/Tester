@@ -1,0 +1,1078 @@
+{
+"words": [
+{
+"text": "[curious]",
+"type": "word",
+"start": 0.0,
+"end": 0.037
+},
+{
+"text": "Kalian",
+"type": "word",
+"start": 0.05,
+"end": 0.27
+},
+{
+"text": "pernah",
+"type": "word",
+"start": 0.339,
+"end": 0.548
+},
+{
+"text": "nggak",
+"type": "word",
+"start": 0.583,
+"end": 0.687
+},
+{
+"text": "sih,",
+"type": "word",
+"start": 0.757,
+"end": 1.035
+},
+{
+"text": "rapat",
+"type": "word",
+"start": 1.104,
+"end": 1.313
+},
+{
+"text": "baru",
+"type": "word",
+"start": 1.383,
+"end": 1.522
+},
+{
+"text": "setengah",
+"type": "word",
+"start": 1.591,
+"end": 1.8
+},
+{
+"text": "jam...",
+"type": "word",
+"start": 1.939,
+"end": 2.426
+},
+{
+"text": "mata",
+"type": "word",
+"start": 2.496,
+"end": 2.704
+},
+{
+"text": "udah",
+"type": "word",
+"start": 2.739,
+"end": 2.843
+},
+{
+"text": "berat",
+"type": "word",
+"start": 2.913,
+"end": 3.33
+},
+{
+"text": "banget?",
+"type": "word",
+"start": 3.4,
+"end": 3.687
+},
+{
+"text": "Jangan-jangan",
+"type": "word",
+"start": 3.765,
+"end": 4.391
+},
+{
+"text": "bukan",
+"type": "word",
+"start": 4.6,
+"end": 4.809
+},
+{
+"text": "bosnya",
+"type": "word",
+"start": 4.878,
+"end": 5.157
+},
+{
+"text": "yang",
+"type": "word",
+"start": 5.191,
+"end": 5.226
+},
+{
+"text": "ngebosenin.",
+"type": "word",
+"start": 5.272,
+"end": 5.922
+},
+{
+"text": "[laughs",
+"type": "word",
+"start": 6.13,
+"end": 6.15
+},
+{
+"text": "softly]",
+"type": "word",
+"start": 6.16,
+"end": 6.19
+},
+{
+"text": "Ya...",
+"type": "word",
+"start": 6.2,
+"end": 6.826
+},
+{
+"text": "mungkin",
+"type": "word",
+"start": 6.896,
+"end": 7.104
+},
+{
+"text": "juga",
+"type": "word",
+"start": 7.174,
+"end": 7.452
+},
+{
+"text": "sih.",
+"type": "word",
+"start": 7.522,
+"end": 7.8
+},
+{
+"text": "[whispers]",
+"type": "word",
+"start": 7.87,
+"end": 7.916
+},
+{
+"text": "Tapi",
+"type": "word",
+"start": 7.928,
+"end": 8.078
+},
+{
+"text": "sebenernya,",
+"type": "word",
+"start": 8.148,
+"end": 8.983
+},
+{
+"text": "ada",
+"type": "word",
+"start": 9.087,
+"end": 9.191
+},
+{
+"text": "makhluk",
+"type": "word",
+"start": 9.261,
+"end": 9.47
+},
+{
+"text": "halus",
+"type": "word",
+"start": 9.539,
+"end": 9.887
+},
+{
+"text": "di",
+"type": "word",
+"start": 9.922,
+"end": 9.957
+},
+{
+"text": "ruangan",
+"type": "word",
+"start": 10.026,
+"end": 10.235
+},
+{
+"text": "itu.",
+"type": "word",
+"start": 10.374,
+"end": 10.583
+},
+{
+"text": "[excited]",
+"type": "word",
+"start": 10.739,
+"end": 10.878
+},
+{
+"text": "Namanya...",
+"type": "word",
+"start": 10.913,
+"end": 11.574
+},
+{
+"text": "ce",
+"type": "word",
+"start": 11.643,
+"end": 11.713
+},
+{
+"text": "o",
+"type": "word",
+"start": 11.783,
+"end": 11.852
+},
+{
+"text": "dua!",
+"type": "word",
+"start": 11.922,
+"end": 12.339
+},
+{
+"text": "Jadi",
+"type": "word",
+"start": 12.548,
+"end": 12.687
+},
+{
+"text": "gini.",
+"type": "word",
+"start": 12.722,
+"end": 13.035
+},
+{
+"text": "Tiap",
+"type": "word",
+"start": 13.122,
+"end": 13.261
+},
+{
+"text": "kita",
+"type": "word",
+"start": 13.33,
+"end": 13.47
+},
+{
+"text": "napas,",
+"type": "word",
+"start": 13.574,
+"end": 14.026
+},
+{
+"text": "kita",
+"type": "word",
+"start": 14.061,
+"end": 14.235
+},
+{
+"text": "ngeluarin",
+"type": "word",
+"start": 14.27,
+"end": 14.652
+},
+{
+"text": "karbon",
+"type": "word",
+"start": 14.722,
+"end": 14.93
+},
+{
+"text": "dioksida.",
+"type": "word",
+"start": 15.0,
+"end": 15.626
+},
+{
+"text": "Nah,",
+"type": "word",
+"start": 15.974,
+"end": 16.252
+},
+{
+"text": "kalau",
+"type": "word",
+"start": 16.322,
+"end": 16.461
+},
+{
+"text": "pintunya",
+"type": "word",
+"start": 16.496,
+"end": 16.809
+},
+{
+"text": "ditutup,",
+"type": "word",
+"start": 16.913,
+"end": 17.504
+},
+{
+"text": "orangnya",
+"type": "word",
+"start": 17.609,
+"end": 17.852
+},
+{
+"text": "banyak,",
+"type": "word",
+"start": 17.887,
+"end": 18.617
+},
+{
+"text": "AC-nya",
+"type": "word",
+"start": 18.687,
+"end": 19.104
+},
+{
+"text": "cuma",
+"type": "word",
+"start": 19.139,
+"end": 19.313
+},
+{
+"text": "muter",
+"type": "word",
+"start": 19.383,
+"end": 19.522
+},
+{
+"text": "udara",
+"type": "word",
+"start": 19.591,
+"end": 19.8
+},
+{
+"text": "yang",
+"type": "word",
+"start": 19.87,
+"end": 19.939
+},
+{
+"text": "itu-itu",
+"type": "word",
+"start": 20.043,
+"end": 20.357
+},
+{
+"text": "aja...",
+"type": "word",
+"start": 20.426,
+"end": 20.974
+},
+{
+"text": "nggak",
+"type": "word",
+"start": 21.009,
+"end": 21.113
+},
+{
+"text": "sampai",
+"type": "word",
+"start": 21.183,
+"end": 21.391
+},
+{
+"text": "sejam,",
+"type": "word",
+"start": 21.496,
+"end": 21.948
+},
+{
+"text": "kadarnya",
+"type": "word",
+"start": 22.017,
+"end": 22.296
+},
+{
+"text": "bisa",
+"type": "word",
+"start": 22.33,
+"end": 22.504
+},
+{
+"text": "tembus",
+"type": "word",
+"start": 22.574,
+"end": 22.783
+},
+{
+"text": "seribu",
+"type": "word",
+"start": 22.852,
+"end": 23.2
+},
+{
+"text": "pe",
+"type": "word",
+"start": 23.27,
+"end": 23.339
+},
+{
+"text": "pe",
+"type": "word",
+"start": 23.409,
+"end": 23.478
+},
+{
+"text": "em.",
+"type": "word",
+"start": 23.548,
+"end": 23.757
+},
+{
+"text": "Padahal",
+"type": "word",
+"start": 23.965,
+"end": 24.522
+},
+{
+"text": "udara",
+"type": "word",
+"start": 24.661,
+"end": 24.87
+},
+{
+"text": "di",
+"type": "word",
+"start": 24.939,
+"end": 25.009
+},
+{
+"text": "luar",
+"type": "word",
+"start": 25.078,
+"end": 25.217
+},
+{
+"text": "cuma",
+"type": "word",
+"start": 25.287,
+"end": 25.496
+},
+{
+"text": "sekitar",
+"type": "word",
+"start": 25.53,
+"end": 25.739
+},
+{
+"text": "empat",
+"type": "word",
+"start": 25.774,
+"end": 25.913
+},
+{
+"text": "ratusan.",
+"type": "word",
+"start": 25.948,
+"end": 26.47
+},
+{
+"text": "Emang",
+"type": "word",
+"start": 26.643,
+"end": 26.783
+},
+{
+"text": "ngaruh?",
+"type": "word",
+"start": 26.817,
+"end": 27.243
+},
+{
+"text": "Ngaruh",
+"type": "word",
+"start": 27.365,
+"end": 27.643
+},
+{
+"text": "banget.",
+"type": "word",
+"start": 27.783,
+"end": 28.209
+},
+{
+"text": "Ada",
+"type": "word",
+"start": 28.452,
+"end": 28.591
+},
+{
+"text": "penelitian",
+"type": "word",
+"start": 28.661,
+"end": 29.009
+},
+{
+"text": "Harvard,",
+"type": "word",
+"start": 29.113,
+"end": 29.704
+},
+{
+"text": "di",
+"type": "word",
+"start": 29.739,
+"end": 29.774
+},
+{
+"text": "sekitar",
+"type": "word",
+"start": 29.843,
+"end": 30.122
+},
+{
+"text": "seribu",
+"type": "word",
+"start": 30.191,
+"end": 30.4
+},
+{
+"text": "empat",
+"type": "word",
+"start": 30.47,
+"end": 30.609
+},
+{
+"text": "ratus",
+"type": "word",
+"start": 30.643,
+"end": 30.817
+},
+{
+"text": "pe",
+"type": "word",
+"start": 30.956,
+"end": 31.026
+},
+{
+"text": "pe",
+"type": "word",
+"start": 31.096,
+"end": 31.165
+},
+{
+"text": "em,",
+"type": "word",
+"start": 31.235,
+"end": 31.443
+},
+{
+"text": "skor",
+"type": "word",
+"start": 31.652,
+"end": 31.93
+},
+{
+"text": "mikir",
+"type": "word",
+"start": 31.965,
+"end": 32.139
+},
+{
+"text": "orang",
+"type": "word",
+"start": 32.209,
+"end": 32.417
+},
+{
+"text": "bisa",
+"type": "word",
+"start": 32.452,
+"end": 32.626
+},
+{
+"text": "anjlok",
+"type": "word",
+"start": 32.696,
+"end": 33.043
+},
+{
+"text": "sampai",
+"type": "word",
+"start": 33.113,
+"end": 33.252
+},
+{
+"text": "setengahnya.",
+"type": "word",
+"start": 33.322,
+"end": 33.809
+},
+{
+"text": "Gila",
+"type": "word",
+"start": 33.991,
+"end": 34.269
+},
+{
+"text": "nggak",
+"type": "word",
+"start": 34.304,
+"end": 34.409
+},
+{
+"text": "tuh?",
+"type": "word",
+"start": 34.478,
+"end": 34.678
+},
+{
+"text": "Makanya",
+"type": "word",
+"start": 34.965,
+"end": 35.383
+},
+{
+"text": "kepala",
+"type": "word",
+"start": 35.452,
+"end": 35.661
+},
+{
+"text": "jadi",
+"type": "word",
+"start": 35.73,
+"end": 35.869
+},
+{
+"text": "berat,",
+"type": "word",
+"start": 35.974,
+"end": 36.426
+},
+{
+"text": "ngantuk,",
+"type": "word",
+"start": 36.461,
+"end": 36.983
+},
+{
+"text": "nggak",
+"type": "word",
+"start": 37.017,
+"end": 37.122
+},
+{
+"text": "fokus.",
+"type": "word",
+"start": 37.191,
+"end": 37.678
+},
+{
+"text": "Dan",
+"type": "word",
+"start": 37.878,
+"end": 38.017
+},
+{
+"text": "anehnya,",
+"type": "word",
+"start": 38.087,
+"end": 38.783
+},
+{
+"text": "begitu",
+"type": "word",
+"start": 38.852,
+"end": 39.061
+},
+{
+"text": "keluar",
+"type": "word",
+"start": 39.096,
+"end": 39.269
+},
+{
+"text": "ruangan,",
+"type": "word",
+"start": 39.339,
+"end": 39.826
+},
+{
+"text": "langsung",
+"type": "word",
+"start": 39.896,
+"end": 40.174
+},
+{
+"text": "seger",
+"type": "word",
+"start": 40.243,
+"end": 40.383
+},
+{
+"text": "lagi.",
+"type": "word",
+"start": 40.452,
+"end": 40.774
+},
+{
+"text": "Di",
+"type": "word",
+"start": 41.096,
+"end": 41.165
+},
+{
+"text": "Permenkes",
+"type": "word",
+"start": 41.235,
+"end": 41.513
+},
+{
+"text": "sendiri,",
+"type": "word",
+"start": 41.583,
+"end": 42.069
+},
+{
+"text": "batas",
+"type": "word",
+"start": 42.174,
+"end": 42.348
+},
+{
+"text": "ce",
+"type": "word",
+"start": 42.417,
+"end": 42.487
+},
+{
+"text": "o",
+"type": "word",
+"start": 42.556,
+"end": 42.626
+},
+{
+"text": "dua",
+"type": "word",
+"start": 42.696,
+"end": 42.8
+},
+{
+"text": "buat",
+"type": "word",
+"start": 42.835,
+"end": 43.043
+},
+{
+"text": "ruang",
+"type": "word",
+"start": 43.078,
+"end": 43.183
+},
+{
+"text": "kantor",
+"type": "word",
+"start": 43.252,
+"end": 43.53
+},
+{
+"text": "itu",
+"type": "word",
+"start": 43.635,
+"end": 43.739
+},
+{
+"text": "seribu",
+"type": "word",
+"start": 43.878,
+"end": 44.156
+},
+{
+"text": "pe",
+"type": "word",
+"start": 44.226,
+"end": 44.296
+},
+{
+"text": "pe",
+"type": "word",
+"start": 44.365,
+"end": 44.435
+},
+{
+"text": "em.",
+"type": "word",
+"start": 44.504,
+"end": 44.713
+},
+{
+"text": "Jadi",
+"type": "word",
+"start": 45.061,
+"end": 45.339
+},
+{
+"text": "kalau",
+"type": "word",
+"start": 45.478,
+"end": 45.617
+},
+{
+"text": "rapatnya",
+"type": "word",
+"start": 45.687,
+"end": 45.965
+},
+{
+"text": "lama,",
+"type": "word",
+"start": 46.139,
+"end": 46.496
+},
+{
+"text": "buka",
+"type": "word",
+"start": 46.565,
+"end": 46.704
+},
+{
+"text": "pintu",
+"type": "word",
+"start": 46.774,
+"end": 47.052
+},
+{
+"text": "atau",
+"type": "word",
+"start": 47.122,
+"end": 47.226
+},
+{
+"text": "jendela",
+"type": "word",
+"start": 47.261,
+"end": 47.539
+},
+{
+"text": "sebentar.",
+"type": "word",
+"start": 47.574,
+"end": 48.026
+},
+{
+"text": "Kasih",
+"type": "word",
+"start": 48.235,
+"end": 48.443
+},
+{
+"text": "jeda.",
+"type": "word",
+"start": 48.478,
+"end": 48.861
+},
+{
+"text": "Dan",
+"type": "word",
+"start": 49.035,
+"end": 49.174
+},
+{
+"text": "please,",
+"type": "word",
+"start": 49.313,
+"end": 49.73
+},
+{
+"text": "jangan",
+"type": "word",
+"start": 50.009,
+"end": 50.287
+},
+{
+"text": "jejelin",
+"type": "word",
+"start": 50.356,
+"end": 50.635
+},
+{
+"text": "sepuluh",
+"type": "word",
+"start": 50.704,
+"end": 50.983
+},
+{
+"text": "orang",
+"type": "word",
+"start": 51.052,
+"end": 51.261
+},
+{
+"text": "di",
+"type": "word",
+"start": 51.296,
+"end": 51.33
+},
+{
+"text": "ruangan",
+"type": "word",
+"start": 51.4,
+"end": 51.609
+},
+{
+"text": "sekecil",
+"type": "word",
+"start": 51.678,
+"end": 51.956
+},
+{
+"text": "kamar",
+"type": "word",
+"start": 51.991,
+"end": 52.165
+},
+{
+"text": "kos.",
+"type": "word",
+"start": 52.304,
+"end": 52.652
+},
+{
+"text": "[mischievously]",
+"type": "word",
+"start": 52.817,
+"end": 52.974
+},
+{
+"text": "Terus",
+"type": "word",
+"start": 53.0,
+"end": 53.304
+},
+{
+"text": "kalau",
+"type": "word",
+"start": 53.374,
+"end": 53.548
+},
+{
+"text": "besok",
+"type": "word",
+"start": 53.583,
+"end": 53.791
+},
+{
+"text": "kamu",
+"type": "word",
+"start": 53.861,
+"end": 54.0
+},
+{
+"text": "ketiduran",
+"type": "word",
+"start": 54.069,
+"end": 54.417
+},
+{
+"text": "pas",
+"type": "word",
+"start": 54.487,
+"end": 54.626
+},
+{
+"text": "meeting...",
+"type": "word",
+"start": 54.939,
+"end": 55.461
+},
+{
+"text": "bilang",
+"type": "word",
+"start": 55.53,
+"end": 55.669
+},
+{
+"text": "aja,",
+"type": "word",
+"start": 55.739,
+"end": 56.365
+},
+{
+"text": "maaf",
+"type": "word",
+"start": 56.435,
+"end": 56.643
+},
+{
+"text": "Pak,",
+"type": "word",
+"start": 56.713,
+"end": 56.991
+},
+{
+"text": "ce",
+"type": "word",
+"start": 57.061,
+"end": 57.13
+},
+{
+"text": "o",
+"type": "word",
+"start": 57.165,
+"end": 57.2
+},
+{
+"text": "duanya",
+"type": "word",
+"start": 57.269,
+"end": 57.478
+},
+{
+"text": "tinggi.",
+"type": "word",
+"start": 57.548,
+"end": 57.965
+},
+{
+"text": "Follow,",
+"type": "word",
+"start": 58.139,
+"end": 58.556
+},
+{
+"text": "biar",
+"type": "word",
+"start": 58.765,
+"end": 58.904
+},
+{
+"text": "bahaya",
+"type": "word",
+"start": 58.974,
+"end": 59.252
+},
+{
+"text": "yang",
+"type": "word",
+"start": 59.287,
+"end": 59.322
+},
+{
+"text": "nggak",
+"type": "word",
+"start": 59.356,
+"end": 59.461
+},
+{
+"text": "kelihatan...",
+"type": "word",
+"start": 59.53,
+"end": 60.296
+},
+{
+"text": "jadi",
+"type": "word",
+"start": 60.4,
+"end": 60.504
+},
+{
+"text": "kelihatan.",
+"type": "word",
+"start": 60.574,
+"end": 61.409
+}
+]
+}
