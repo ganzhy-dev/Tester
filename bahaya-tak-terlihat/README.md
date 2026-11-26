@@ -147,6 +147,9 @@ Semua file berformat 1080×1920 (9:16), MP4 H.264 High, 60 fps, warna BT.709 (yu
 - `video/EP1_CO2_RuangRapat_1080p60.mp4` (65,7 dtk)
 - `video/EP2_Getaran_1080p60.mp4` (63,8 dtk)
 - `video/EP3_Kebisingan_1080p60.mp4` (63,4 dtk)
+- `video/EP4_TekananPanas_1080p60.mp4` (65,3 dtk)
+- `video/EP5_DebuSilika_1080p60.mp4` (65,0 dtk)
+- `video/EP6_KarbonMonoksida_1080p60.mp4` (63,7 dtk)
 
 ## Cover (halaman muka)
 
