@@ -72,3 +72,12 @@ export const AvatarB: React.FC = () => (
     <div style={{ position: "absolute", left: 720, top: 280, width: 90, height: 90, borderRadius: "50%", background: "rgba(255,255,255,0.85)" }} />
   </AbsoluteFill>
 );
+
+/** Versi final foto profil: Konsep B diperkecil supaya utuh di dalam potongan lingkaran TikTok */
+export const ProfilePicture: React.FC = () => (
+  <AbsoluteFill style={{ background: C.lime }}>
+    <AbsoluteFill style={{ scale: "0.86" }}>
+      <AvatarB />
+    </AbsoluteFill>
+  </AbsoluteFill>
+);
