@@ -7,10 +7,15 @@ import { HalusVariant, SiHalus } from "./Characters";
 import { Backdrop, Captions, HandleTag, Scanner, Word, flashAt } from "./Kit";
 import { Cover1, Cover2, Cover3, Cover4, Cover5, Cover6, Cover7, Cover8, Cover9 } from "./Covers";
 import { HOOKCTA } from "./ep/hookcta";
+import { INSERTS } from "./ep/inserts";
+import { InsertCard, InsertData } from "./Insert";
 
 // lazy (hindari impor melingkar Covers -> Ep2 -> Episode)
 const getCover = (ep: number): React.FC => [Cover1, Cover2, Cover3, Cover4, Cover5, Cover6, Cover7, Cover8, Cover9][ep - 1];
 const easeIn = (x: number) => x * x * x;
+
+/** Label kecil di atas caption hook (mis. episode yang dibuka dengan kasus viral) */
+const HOOK_BADGE: Record<number, string> = { 9: "📰 KASUS VIRAL · JUSTIN BIEBER" };
 
 /** Cold open 3-5 dtk: frame pertama = cover, lalu push-in + kalimat hook (taruhan/stakes), diakhiri whip-zoom */
 const HookIntro: React.FC<{ ep: number; words: Word[]; dur: number }> = ({ ep, words, dur }) => {
@@ -34,6 +39,28 @@ const HookIntro: React.FC<{ ep: number; words: Word[]; dur: number }> = ({ ep, w
         <Cov />
       </AbsoluteFill>
       <AbsoluteFill style={{ opacity: band, background: "linear-gradient(180deg, rgba(20,11,36,0) 62%, rgba(20,11,36,0.82) 71%, rgba(20,11,36,0.82) 85%, rgba(20,11,36,0) 95%)" }} />
+      {HOOK_BADGE[ep] && t > 0.25 && (
+        <div style={{ position: "absolute", top: 1268, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: band }}>
+          <div
+            style={{
+              fontFamily: HEAD,
+              fontSize: 50,
+              color: C.white,
+              background: "#E02424",
+              border: `6px solid ${C.ink}`,
+              borderRadius: 16,
+              padding: "4px 26px 8px",
+              boxShadow: `0 8px 0 ${C.ink}`,
+              rotate: "-2deg",
+              WebkitTextStroke: `7px ${C.ink}`,
+              paintOrder: "stroke fill",
+              scale: String(spring({ frame: frame - 15, fps, config: { damping: 11, stiffness: 220 } })),
+            }}
+          >
+            {HOOK_BADGE[ep]}
+          </div>
+        </div>
+      )}
       {t > 0.1 && t < dur && <div style={{ opacity: band }}><Captions words={words} y={1390} /></div>}
       {flash > 0.01 && <AbsoluteFill style={{ background: C.white, opacity: flash * 0.9 }} />}
     </AbsoluteFill>
@@ -204,7 +231,7 @@ export const Episode: React.FC<EpisodeProps> = (props) => {
     <AbsoluteFill style={{ background: C.bg1, overflow: "hidden" }}>
       <Audio src={staticFile(`audio/ep${props.ep}_mix.wav`)} />
       <Sequence name="Isi utama" from={introF}>
-        <EpisodeBody {...props} ctaAt={hc.ctaAt} ctaText={hc.ctaText} ctaDur={hc.ctaDur} />
+        <EpisodeBody {...withInsert(props, INSERTS[props.ep])} insert={INSERTS[props.ep]} ctaAt={hc.ctaAt} ctaText={hc.ctaText} ctaDur={hc.ctaDur} />
       </Sequence>
       <Sequence name="Hook (cold open)" durationInFrames={introF + Math.round(0.32 * fps)}>
         <HookIntro ep={props.ep} words={hc.hookWords} dur={hc.hookDur} />
@@ -213,7 +240,32 @@ export const Episode: React.FC<EpisodeProps> = (props) => {
   );
 };
 
-const EpisodeBody: React.FC<EpisodeProps & { ctaAt: number; ctaText: string; ctaDur: number }> = ({ ep, accent, tint, words, endStart, revealAt, flashes = [], warp, children, ctaAt, ctaText, ctaDur }) => {
+/**
+ * Sisipan "KASUS VIRAL": adegan dibekukan di `at` selama `dur` detik (lewat warp), semua waktu sesudahnya mundur `dur`,
+ * dan kata-kata sisipan ikut masuk ke caption karaoke.
+ */
+const withInsert = (p: EpisodeProps, ins?: InsertData): EpisodeProps => {
+  if (!ins) return p;
+  const sh = (x: number) => (x >= ins.at ? x + ins.dur : x);
+  const words = [
+    ...p.words.map((w) => (w.start >= ins.at ? { ...w, start: w.start + ins.dur, end: w.end + ins.dur } : w)),
+    ...ins.words.map((w) => ({ ...w, start: w.start + ins.at, end: w.end + ins.at })),
+  ].sort((a, b) => a.start - b.start);
+  return {
+    ...p,
+    words,
+    endStart: sh(p.endStart),
+    revealAt: sh(p.revealAt),
+    warp: [
+      [0, 0],
+      [ins.at, ins.at],
+      [ins.at + 0.0001, ins.at + ins.dur],
+      [5000, 5000 + ins.dur],
+    ],
+  };
+};
+
+const EpisodeBody: React.FC<EpisodeProps & { ctaAt: number; ctaText: string; ctaDur: number; insert?: InsertData }> = ({ ep, accent, tint, words, endStart, revealAt, flashes = [], warp, children, ctaAt, ctaText, ctaDur, insert }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
@@ -239,6 +291,11 @@ const EpisodeBody: React.FC<EpisodeProps & { ctaAt: number; ctaText: string; cta
       ) : (
         <Sequence name="Scenes" durationInFrames={Math.round(endStart * fps)} layout="none">
           {children}
+        </Sequence>
+      )}
+      {insert && (
+        <Sequence name="Kasus viral" from={Math.round(insert.at * fps)} durationInFrames={Math.round(insert.dur * fps)}>
+          <InsertCard d={insert} />
         </Sequence>
       )}
       <Sequence name="End card" from={Math.round(endStart * fps)}>

@@ -60,7 +60,7 @@ json.dump({"hookDur": intro, "hookWords": hook_words, "ctaAt": cta_at, "ctaDur":
 
 # hookcta2.ts dari semua data/epN_hookcta.json (EP7+)
 import glob, os
-lines = ['import type { Word } from "../Kit";\n', "export const HOOKCTA2: Record<number, { hookDur: number; hookWords: Word[]; ctaAt: number; ctaDur: number; ctaText: string; total: number }> = {"]
+lines = ['import type { Word } from "../Kit";\n', "export const HOOKCTA2: Record<number, { hookDur: number; hookWords: Word[]; ctaAt: number; ctaDur: number; ctaText: string; total: number; baseCtaAt?: number }> = {"]
 for p in sorted(glob.glob("data/ep*_hookcta.json")):
     n = int(re.search(r"ep(\d+)_", p).group(1))
     lines.append(f"  {n}: {json.dumps(json.load(open(p)), ensure_ascii=False)},")

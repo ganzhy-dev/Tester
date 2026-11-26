@@ -286,3 +286,123 @@ Nggak berwarna, nggak berbau, dan bisa bikin orang nggak bangun lagi, termasuk d
   - Gejala mirip flu, orang yang tidur bisa meninggal tanpa gejala, genset harus lebih dari 20 kaki (sekitar 6 m) dari rumah (CDC): https://www.cdc.gov/carbon-monoxide/about/index.html
   - Daya ikat CO ke hemoglobin lebih dari 200× oksigen: https://ncbi.nlm.nih.gov/books/NBK153687
   - Kasus di Indonesia: https://oto.detik.com/berita/d-5187692/kisah-tragis-3-mahasiswi-tewas-keracunan-co-saat-tidur-dalam-mobil dan https://www.gridoto.com/read/224337044/kaca-tertutup-dan-ac-nyala-penyebab-tewasnya-4-penumpang-kijang-di-tol-pejagan-terpecahkan?page=all
+
+---
+
+# Season 2: EP7–EP9, seri STRES (bahaya yang nggak kelihatan di kepala)
+
+| Ep | Topik | Hook 3 detik | Kasus viral / fakta yang disisipkan | Si Halus baru | Durasi |
+|---|---|---|---|---|---|
+| 7 | Psikosomatik: stres yang "ngomong" lewat badan | "Bolak-balik ke dokter, hasil cek normal semua… tapi sakitnya beneran." | Justin Bieber: mendem perasaan, "rasanya kayak tenggelam" (Instagram, Mar 2025) | merah, petir + urat marah (stres) | 91,5 dtk |
+| 8 | Notif grup jam 10 malam, telepressure, burnout | "Satu notif jam sepuluh malam… dan badan kamu langsung siaga." | Efek domino ke tim + meta-analisis dokter burnout (risiko insiden keselamatan pasien ×2) | abu-abu, lilin + baterai lowbat (burnout) | 85,5 dtk |
+| 9 | Doomscrolling, stres dari dunia luar, remaja | "Justin Bieber pernah ngaku… satu komentar jahat bisa ngalahin ribuan komentar baik." | Sienna Spiro: lagu pertamanya (umur 10) tentang dibully di sekolah | biru, layar HP (doom) | 85,2 dtk |
+
+Format sama dengan EP4–6: 1080×1920, 60 fps, H.264 BT.709, cover = frame pertama, transisi crossfade, ajakan komen di akhir. Kasus viral tampil sebagai kartu berita kartun (tanpa foto/wajah asli) dan adegan dibekukan sebentar selama sisipan.
+
+## Naskah
+
+**EP7: "Sakit terus, hasil lab normal?"**
+> [Hook] Bolak-balik ke dokter, hasil cek normal semua… tapi sakitnya beneran.
+> Lambung perih tiap mau presentasi. Kepala kayak diiket pas deadline. Leher kaku, jantung deg-degan, padahal lagi rebahan… Udah minum obat maag, udah ke dokter, katanya normal.
+> Bisa jadi, itu ulah makhluk halus yang nempel di pundak kamu… Stres!
+> Pas stres, otak ngira kamu lagi dikejar macan. Badan langsung siaga: jantung dipacu, otot ditegangin, napas jadi pendek. Kalau sebentar sih nggak apa-apa. Masalahnya, macannya sekarang nggak pergi-pergi. Cicilan, kerjaan, tugas, berita… alarmnya bunyi tiap hari.
+> Otot yang tegang terus, lama-lama bikin sakit kepala sama leher kaku. Usus juga nyambung langsung ke otak, makanya pas cemas, perut ikut berulah. Ini namanya psikosomatik. Bukan pura-pura, bukan lebay. Sakitnya nyata, pemicunya pikiran.
+> **[Kasus viral]** Bahkan Justin Bieber pernah nulis, mendem perasaan bikin dia ngerasa kayak tenggelam. Yang dipendam itu nggak hilang… seringnya pindah ke badan.
+> Faktanya, stres nggak bikin asam lambung nambah banyak. Tapi bikin lambung jauh lebih sensitif. Perih dikit, kerasanya kayak ditusuk.
+> Terus gimana? Tarik napas lewat hidung, tambah dikit lagi sampai penuh, terus buang pelan-pelan lewat mulut. Lima menit sehari. Di penelitian Stanford, cara ini bikin mood lebih baik daripada meditasi biasa.
+> Tetap periksa ke dokter, ya. Kalau hasilnya normal tapi keluhannya jalan terus, cerita juga ke psikolog. Itu bukan berarti kamu lemah. Badan kamu cuma lagi ngomong… pakai bahasa sakit.
+> [CTA] Kamu paling sering kena yang mana: lambung, kepala, atau leher? Jawab di komen, ya!
+
+**EP8: "Notif grup jam 10 malam?"**
+> [Hook] Satu notif jam sepuluh malam… dan badan kamu langsung siaga, kayak lagi ada bahaya.
+> Udah rebahan, udah mau tidur… terus HP bunyi. "Tolong dicek ya, besok pagi." Atau grup kelas: "Tugas dikumpulin jam tujuh." Langsung deg-degan, kan? Padahal cuma satu notif.
+> Itu tanda makhluk halus yang satu ini ngikutin kamu sampai ke kasur… Stres yang nggak ada jam pulangnya!
+> Peneliti nyebutnya telepressure: dorongan buat langsung bales pesan kerja, kapan pun. Orang yang kayak gini, tidurnya lebih jelek, dan lebih gampang burnout.
+> **[Efek domino]** Dan dampaknya nggak berhenti di satu orang. Temen satu timnya yang nambal kerjaan. Di rumah sakit, dokter yang burnout, risiko insiden keselamatan pasiennya sampai dua kali lipat.
+> Burnout itu resmi diakui WHO. Tandanya tiga: capek yang nggak ilang walau udah tidur, jadi sinis sama kerjaan, dan ngerasa sekeras apa pun kerja, hasilnya nggak ada. Di Indonesia, survei 2025: 43% pekerja ngaku lagi burnout.
+> Kalau udah sampai lembur terus-terusan… WHO sama ILO ngitung, kerja 55 jam lebih seminggu, risiko stroke naik 35%. Dalam setahun, ratusan ribu orang meninggal karena ini.
+> Terus gimana? Bikin jam tutup. Matiin notif grup kerja setelah jam tertentu. Bilang baik-baik: "Aku bales besok pagi, ya." Kalau kamu atasan atau ketua kelas, jangan kirim tugas jam sepuluh malam. Jadwalin aja. Kamu itu manusia… bukan customer service 24 jam.
+> [CTA] Grup kerja atau kelas kamu paling malem pernah ngechat jam berapa? Tulis di komen!
+
+**EP9: "Scroll berita sampai subuh?"**
+> [Hook] Justin Bieber pernah ngaku… satu komentar jahat bisa ngalahin ribuan komentar baik. Dan tiap kamu scroll, otak kamu juga gitu.
+> Bangun tidur, buka HP. Berita PHK, harga naik, bencana, orang lain udah sukses di umur dua puluhan… scroll, scroll, scroll. Tau-tau udah jam dua pagi.
+> Makhluk halus yang satu ini masuknya lewat layar… Doomscrolling!
+> Ada penelitian setelah bom di Boston Marathon. Orang yang nonton beritanya enam jam lebih sehari, stresnya lebih tinggi… daripada orang yang ada di lokasi kejadian. Kenapa? Otak kita nggak bisa bedain bahaya di layar sama bahaya beneran. Tiap berita buruk, alarmnya bunyi lagi. Padahal orang Indonesia main medsos lebih dari tiga jam sehari.
+> Anak sekolah juga kena. Survei nasional nemuin: satu dari tiga remaja Indonesia punya masalah kesehatan mental.
+> **[Kasus viral]** Penyanyi yang lagi viral, Sienna Spiro, nulis lagu pertamanya umur sepuluh tahun… tentang dia dibully di sekolah. Terus dia nyanyiin lagu itu, di depan orang-orang yang ngebully dia.
+> Tapi yang dapet bantuan, cuma 2,6%.
+> Jadi gimana? Kamu tetep boleh update. Tapi kasih batas: cek berita dua kali sehari aja, jangan sebelum tidur. Matiin autoplay. Unfollow akun yang bikin kamu ngerasa kurang terus.
+> Dan kalau rasanya udah berat banget, kamu nggak harus sendirian. Ada layanan Kemenkes: 119, ekstensi 8.
+> Dunia emang lagi ribut… tapi kamu boleh pilih, mau dengerin seberapa keras.
+> [CTA] Berapa jam screen time kamu hari ini? Jujur di komen, ya!
+
+## Caption TikTok
+
+**EP7**
+```
+bolak-balik ke dokter, hasilnya normal, tapi sakitnya beneran? 😣
+
+Bisa jadi itu psikosomatik: stres yang "ngomong" lewat badan. Lambung perih, kepala kayak diiket, leher kaku. Bukan lebay, bukan pura-pura. Bahkan Justin Bieber pernah bilang mendem perasaan rasanya kayak tenggelam.
+
+Kamu paling sering kena yang mana: lambung, kepala, atau leher? Jawab di komen 👇
+
+#psikosomatik #asamlambung #gerd #stres #overthinking #kesehatanmental #justinbieber #fyp
+```
+
+**EP8**
+```
+notif grup jam 10 malam, jantung langsung deg-degan? 📱
+
+Namanya telepressure. Lama-lama bisa jadi burnout, dan yang kena imbasnya satu tim. WHO udah resmi ngakuin burnout sebagai fenomena kerja.
+
+Grup kerja/kelas kamu paling malem pernah ngechat jam berapa? Tulis di komen 👇
+
+#burnout #kerjalembur #grupkantor #anakkantor #worklifebalance #kesehatanmental #k3 #fyp
+```
+
+**EP9**
+```
+Justin Bieber aja ngaku 1 komentar jahat bisa ngalahin ribuan komentar baik 😵‍💫
+
+Otak kita nggak bisa bedain bahaya di layar sama bahaya beneran. Nonton berita buruk berjam-jam bisa bikin stres lebih tinggi daripada yang ngalamin langsung.
+
+Berapa jam screen time kamu hari ini? Jujur di komen 👇
+Lagi berat? Layanan Kemenkes 119 ext 8 · healing119.id 🤍
+
+#doomscrolling #screentime #justinbieber #siennaspiro #bullying #kesehatanmental #remaja #fyp
+```
+
+**Komentar pertama untuk di-pin:**
+- EP7: "aku: lambung. tiap mau presentasi pasti perih 🥲 kalian?"
+- EP8: "rekor grup kantorku: jam 23.48 😭 kalahin dong"
+- EP9: "screen time-ku hari ini 7 jam 12 menit… jujur ya kalian 👀"
+
+## Cover
+`covers/Cover_EP7_HD.jpg` (**SAKIT TERUS, HASIL LAB NORMAL?**), `Cover_EP8_HD.jpg` (**NOTIF GRUP JAM 10 MALAM?**), `Cover_EP9_HD.jpg` (**SCROLL BERITA SAMPAI SUBUH?**). Ada juga versi PNG dan 2160×3840.
+
+## Sumber riset EP7–9
+- APA, *Stress effects on the body*: otot tegang, sakit kepala, dan stres tidak menambah produksi asam lambung tapi memperparah rasa nyeri/sensitivitas. https://www.apa.org/topics/stress/body
+- Balban dkk., *Cell Reports Medicine* 2023 (Stanford): cyclic sighing 5 menit/hari, mood lebih baik daripada meditasi mindfulness. https://pmc.ncbi.nlm.nih.gov/articles/PMC9873947
+- Justin Bieber, unggahan Instagram Maret 2025 ("drowning", perasaan yang dipendam) dan stream Twitch Oktober 2025 (satu komentar jahat bisa ngalahin banyak komentar baik). https://www.foxnews.com/entertainment/justin-bieber-drowning-feels-unsafe-acknowledge-hate-he-feels.amp · https://tribune.com.pk/story/2575119/justin-bieber-opens-up-about-twitch-hate-comments-affecting-his-mental-health
+- Sienna Spiro, lagu pertama "Lady in the Mirror" (umur 10) tentang dibully, dinyanyikan di depan para pembully-nya: V Magazine & Principle Magazine. https://vmagazine.com/article/under-sienna-spiros-spell/ · https://principlemagazine.com/2025/03/10/sienna-spiro/
+- Barber & Santuzzi 2015, *workplace telepressure*. https://pubmed.ncbi.nlm.nih.gov/25365629/
+- WHO ICD-11: burn-out sebagai fenomena kerja (3 dimensi). https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases
+- Jobstreet by SEEK, Workplace Happiness Index 2025: 43% pekerja Indonesia burnout. https://tirto.id/survei-jobstreet-pekerja-ri-paling-bahagia-di-asia-43-burnout-hqpN
+- WHO/ILO 2021: ≥55 jam/minggu → risiko stroke +35%, 745.000 kematian (2016). https://www.who.int/news/item/17-05-2021-long-working-hours-increasing-deaths-from-heart-disease-and-stroke-who-ilo
+- Panagioti dkk., *JAMA Internal Medicine* 2018: dokter burnout → odds insiden keselamatan pasien ≈2× (OR 1,96; 47 studi). https://www.ajmc.com/view/physician-burnout-associated-with-poorer-patient-outcomes
+- Holman, Garfin & Silver, *PNAS* 2014: ≥6 jam/hari paparan berita bom Boston → stres akut lebih tinggi daripada paparan langsung. https://pmc.ncbi.nlm.nih.gov/articles/PMC3890785
+- We Are Social/Meltwater, Digital 2026 Indonesia: 21 jam 50 menit/minggu di media sosial (>3 jam/hari). https://wearesocial.com/id/blog/2025/11/digital-2026-top-digital-and-social-media-trends-in-indonesia/
+- I-NAMHS 2022 (UGM dkk.): 1 dari 3 remaja punya masalah kesehatan mental (15,5 juta); hanya 2,6% mengakses layanan. https://ugm.ac.id/id/berita/23086-hasil-survei-i-namhs-satu-dari-tiga-remaja-indonesia-memiliki-masalah-kesehatan-mental/
+- Kemenkes Healing119: 119 ekstensi 8. https://kesprimkom.kemkes.go.id/assets/uploads/contents/others/FAQ_Cegah_Bunuh_Diri%2C_Dukung_Kesehatan_Jiwa__Kenali_Layanan_Healing119.id.pdf
+
+**Catatan soal kasus viral pekerja:** saya tidak menemukan kasus viral pekerja stres yang merugikan rekan/perusahaan yang bisa diverifikasi dari sumber berita. Jadi EP8 memakai data riset (efek ke satu tim dan meta-analisis dokter burnout), bukan kasus perorangan. Kalau kamu punya link kasus spesifiknya, kirim saja dan nanti bisa ditambahkan.
+
+## Cara render ulang EP7–9
+```bash
+python3 scripts/process_vo.py <take.mp3> <scribe_words.json> 7   # lalu split_vo.py 7 "<teks CTA>"
+python3 scripts/prep_words.py 7 8 9
+python3 scripts/make_inserts.py        # sisipan kasus viral + hook baru EP9
+python3 scripts/make_audio.py 7        # dst.
+./scripts/render_all.sh EP7-Psikosomatik EP8-NotifMalam EP9-Doomscrolling
+```

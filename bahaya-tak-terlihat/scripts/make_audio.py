@@ -230,6 +230,15 @@ if os.path.exists(f"data/ep{EP}_layout.json"):
     put(vo, I0)
     put(cta, I0 + CTA_AT)
     vo = full
+    if "insert" in LAYOUT:  # sisipan "KASUS VIRAL": transisi masuk & keluar
+        ia, idur = LAYOUT["insert"]["at"], LAYOUT["insert"]["dur"]
+        cues += [
+            {"t": ia - 0.15, "type": "whoosh", "gain": 1.2},
+            {"t": ia, "type": "thud", "gain": 1.0},
+            {"t": ia + 0.08, "type": "pop", "gain": 1.1},
+            {"t": ia + 0.9, "type": "sparkle", "gain": 0.6},
+            {"t": ia + idur - 0.2, "type": "whoosh", "gain": 1.0},
+        ]
     for c in cues:
         c["t"] += I0
     cues += [
