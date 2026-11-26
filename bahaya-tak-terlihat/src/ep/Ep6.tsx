@@ -9,7 +9,7 @@ import { Scene } from "./Ep1";
 import { words } from "./ep6.words";
 
 // Waktu = detik VO final (data/ep6_words.json), tanpa warp.
-export const EP6 = { dur: 62.98, endStart: 58.48, revealAt: 60.75 };
+export const EP6 = { dur: 63.69, endStart: 59.23, revealAt: 61.44 };
 
 const ACC = C.cyan;
 
@@ -167,8 +167,8 @@ const BloodCell: React.FC = () => {
     [210, 390],
     [430, 390],
   ];
-  const grabAt = [26.8, 27.4, 28.0, 28.6];
-  const bounce = interpolate(t, [30.9, 31.9], [0, 1], { ...clamp, easing: easeOut });
+  const grabAt = [25.39, 25.72, 26.06, 26.40];
+  const bounce = interpolate(t, [27.69, 28.09], [0, 1], { ...clamp, easing: easeOut });
   return (
     <div style={{ position: "relative", width: 700, height: 600 }}>
       <svg width={700} height={600} style={{ position: "absolute", inset: 0 }}>
@@ -189,7 +189,7 @@ const BloodCell: React.FC = () => {
       })}
       {/* O₂ yang ketinggalan */}
       {[0, 1, 2].map((i) => {
-        const appear = interpolate(t, [29.8 + i * 0.15, 30.2 + i * 0.15], [0, 1], clamp);
+        const appear = interpolate(t, [27.07 + i * 0.15, 27.30 + i * 0.15], [0, 1], clamp);
         return (
           <div
             key={i}
@@ -209,12 +209,108 @@ const BloodCell: React.FC = () => {
   );
 };
 
+/** Gumpalan gas CO yang melayang pelan */
+const Wisps: React.FC<{ x: number; y: number; n?: number; dx?: number }> = ({ x, y, n = 4, dx = 160 }) => {
+  const t = useT();
+  return (
+    <>
+      {new Array(n).fill(0).map((_, i) => {
+        const p = (t * 0.35 + i / n) % 1;
+        return (
+          <div
+            key={i}
+            style={{
+              position: "absolute",
+              left: x + p * dx + Math.sin(t * 1.4 + i) * 18,
+              top: y - p * 140,
+              width: 60 + p * 70,
+              height: 60 + p * 70,
+              borderRadius: "50%",
+              background: "#8A93A6",
+              opacity: 0.55 * Math.sin(p * Math.PI),
+            }}
+          />
+        );
+      })}
+    </>
+  );
+};
+
+/** Rumah malam hari saat mati lampu, genset di dalam garasi */
+const HouseNight: React.FC<{ from: number }> = ({ from }) => {
+  const t = useT();
+  const dark = interpolate(t, [from + 1.6, from + 2.0], [0, 1], clamp);
+  return (
+    <>
+      <div style={{ position: "absolute", left: 40, right: 40, top: 400, height: 780, borderRadius: 60, overflow: "hidden", border: `${OUTLINE}px solid ${C.ink}`, background: "#101830" }}>
+        {/* bintang */}
+        {new Array(10).fill(0).map((_, i) => (
+          <div key={i} style={{ position: "absolute", left: 40 + ((i * 97) % 900), top: 30 + ((i * 53) % 140), width: 8, height: 8, borderRadius: "50%", background: C.cream, opacity: 0.7 }} />
+        ))}
+        {/* atap */}
+        <svg width={1000} height={820} style={{ position: "absolute", inset: 0 }}>
+          <path d="M80 330 L360 140 L640 330 Z" fill="#7A3B2E" stroke={C.ink} strokeWidth={OUTLINE} strokeLinejoin="round" />
+          <rect x={110} y={330} width={500} height={420} fill="#C9B79A" stroke={C.ink} strokeWidth={OUTLINE} />
+          {/* jendela: nyala lalu padam */}
+          {[160, 430].map((x) => (
+            <rect key={x} x={x} y={390} width={130} height={120} rx={10} fill={dark > 0.5 ? "#1B2238" : C.yellow} stroke={C.ink} strokeWidth={6} />
+          ))}
+          <rect x={300} y={560} width={110} height={190} rx={8} fill="#6B4528" stroke={C.ink} strokeWidth={6} />
+          {/* garasi samping */}
+          <rect x={610} y={420} width={330} height={330} fill="#A89A82" stroke={C.ink} strokeWidth={OUTLINE} />
+          <rect x={640} y={470} width={270} height={280} fill="#3A4560" stroke={C.ink} strokeWidth={6} />
+          <rect x={0} y={750} width={1000} height={70} fill="#1C2230" />
+        </svg>
+        <div style={{ position: "absolute", left: 660, top: 560 }}>
+          <Genset size={200} />
+        </div>
+        <Wisps x={620} y={520} dx={-260} />
+        <Wisps x={300} y={470} n={3} dx={-120} />
+        <div style={{ position: "absolute", left: 420, top: 420, opacity: 0.85 }}>
+          <SiHalus size={190} variant="gas" />
+        </div>
+      </div>
+    </>
+  );
+};
+
+/** Bengkel & gudang dengan rolling door tertutup */
+const Workshop: React.FC<{ from: number }> = ({ from }) => {
+  const t = useT();
+  const pop2 = interpolate(t, [from + 1.7, from + 2.0], [0, 1], { ...clamp, easing: easeOut });
+  const box = (x: number, label: string, o = 1) => (
+    <div style={{ position: "absolute", left: x, top: 470, width: 440, height: 560, opacity: o, scale: String(0.6 + 0.4 * o) }}>
+      <svg width={440} height={560} viewBox="0 0 440 560">
+        <path d="M10 130 L220 30 L430 130 L430 550 L10 550 Z" fill="#4A5570" stroke={C.ink} strokeWidth={OUTLINE} strokeLinejoin="round" />
+        <rect x={60} y={220} width={320} height={330} fill="#2A3348" stroke={C.ink} strokeWidth={6} />
+        {new Array(9).fill(0).map((_, i) => (
+          <rect key={i} x={60} y={232 + i * 36} width={320} height={8} fill="rgba(0,0,0,0.3)" />
+        ))}
+      </svg>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 140, textAlign: "center", fontFamily: HEAD, fontSize: 52, color: C.cream, WebkitTextStroke: `8px ${C.ink}`, paintOrder: "stroke fill" }}>
+        {label}
+      </div>
+    </div>
+  );
+  return (
+    <>
+      {box(60, "BENGKEL 🔧")}
+      {box(580, "GUDANG 📦", pop2)}
+      <Wisps x={150} y={760} dx={220} />
+      <Wisps x={660} y={760} dx={200} n={3} />
+      <div style={{ position: "absolute", left: 420, top: 690, opacity: 0.9 }}>
+        <SiHalus size={220} variant="gas" mood="grin" />
+      </div>
+    </>
+  );
+};
+
 /* ------------------------------------------------------------------ adegan */
 const Ep6Scenes: React.FC = () => {
   const t = useT();
   const cam = useShake([
-    { t: 14.12, a: 24 },
-    { t: 53.11, a: 16 },
+    { t: 13.80, a: 24 },
+    { t: 54.38, a: 16 },
   ]);
   const sleeperHead = (
     <div style={{ position: "absolute", left: 360, top: 560, rotate: `${Math.sin(t * 1.6) * 4 - 8}deg`, transformOrigin: "50% 90%" }}>
@@ -224,7 +320,7 @@ const Ep6Scenes: React.FC = () => {
   return (
     <AbsoluteFill style={{ translate: cam }}>
       {/* 1 — HOOK: tidur di mobil, mesin nyala */}
-      <Scene a={0} b={6.05} zoom={false}>
+      <Scene a={0} b={5.67} zoom={false}>
         <Garage>
           <div style={{ position: "absolute", left: 30, bottom: 120, width: 920, height: 260, background: "radial-gradient(ellipse at 50% 100%, rgba(255,210,63,0.18), rgba(0,0,0,0) 70%)" }} />
         </Garage>
@@ -233,22 +329,22 @@ const Ep6Scenes: React.FC = () => {
           <Car w={780} />
         </div>
         <Zzz x={600} y={560} />
-        <Sticker at={0.08} out={4.7} y={290} bg={C.cream} size={64}>
+        <Sticker at={0.08} out={4.60} y={290} bg={C.cream} size={64}>
           MESIN NYALA · AC DINGIN 🚗❄️
         </Sticker>
-        <Sticker at={4.77} y={290} bg={ACC} size={76}>
+        <Sticker at={4.67} y={290} bg={ACC} size={76}>
           ENAK BANGET… KAN? 😴
         </Sticker>
       </Scene>
 
       {/* 2 — berita + bukan keracunan AC */}
-      <Scene a={6.05} b={11.75}>
+      <Scene a={5.67} b={11.48}>
         <Garage dark={0.35}>
           <div style={{ position: "absolute", left: 120, top: 470, opacity: 0.55 }}>
             <Car w={700} smoke />
           </div>
         </Garage>
-        <Pop at={6.1} x={90} y={360}>
+        <Pop at={5.72} x={90} y={360}>
           <div
             style={{
               width: 900,
@@ -271,7 +367,7 @@ const Ep6Scenes: React.FC = () => {
             <div style={{ fontSize: 54, lineHeight: 1.12, marginTop: 14 }}>Ditemukan tak sadarkan diri di dalam mobil, mesin masih menyala</div>
           </div>
         </Pop>
-        <Pop at={9.9} x={180} y={790}>
+        <Pop at={9.42} x={180} y={790}>
           <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
             <div style={{ position: "relative", width: 200, height: 120, borderRadius: 22, background: C.white, border: `${OUTLINE}px solid ${C.ink}` }}>
               <div style={{ position: "absolute", left: 20, right: 20, bottom: 22, height: 10, borderRadius: 5, background: "#9AA0B5" }} />
@@ -288,69 +384,69 @@ const Ep6Scenes: React.FC = () => {
       </Scene>
 
       {/* 3 — scanner: makhluk halus paling licik */}
-      <Scene a={11.75} b={14.1}>
-        <Garage dark={interpolate(t, [11.75, 12.1], [0.2, 0.6], clamp)} />
+      <Scene a={11.48} b={13.78}>
+        <Garage dark={interpolate(t, [11.48, 11.82], [0.2, 0.6], clamp)} />
         <div style={{ position: "absolute", left: 360, top: 560, opacity: 0.55 }}>
           <Worker size={330} expr="sleepy" shirt="#7C5CFF" seed={1} />
         </div>
         <div style={{ position: "absolute", left: 150, top: 520, opacity: 0.6 }}>
           <Car w={780} />
         </div>
-        <Scanner at={12.3} dur={0.9} top={330} height={820}>
+        <Scanner at={12.02} dur={0.9} top={330} height={820}>
           <div style={{ position: "absolute", left: 40, top: 520, rotate: "-12deg" }}>
             <SiHalus size={360} variant="gas" />
           </div>
         </Scanner>
-        <Sticker at={11.8} y={290} bg={C.bg1} color={ACC} size={66}>
+        <Sticker at={11.53} y={290} bg={C.bg1} color={ACC} size={66}>
           PALING LICIK 👻
         </Sticker>
       </Scene>
 
       {/* 4 — judul */}
-      <Scene a={14.1} b={15.45}>
+      <Scene a={13.78} b={15.05}>
         <div style={{ position: "absolute", left: 270, top: 340 }}>
-          <Pop at={14.12}>
+          <Pop at={13.80}>
             <SiHalus size={620} variant="gas" mood="laugh" />
           </Pop>
         </div>
-        <Sticker at={14.5} y={960} bg={ACC} size={72} rotate={-4}>
+        <Sticker at={14.16} y={960} bg={ACC} size={72} rotate={-4}>
           {"SI HALUS:\nKARBON MONOKSIDA"}
         </Sticker>
       </Scene>
 
       {/* 5 — jangan ketuker sama CO₂ */}
-      <Scene a={15.45} b={20.12}>
-        <Sticker at={15.5} y={290} bg={C.yellow} size={74}>
+      <Scene a={15.05} b={19.60}>
+        <Sticker at={15.10} y={290} bg={C.yellow} size={74}>
           EH, JANGAN KETUKER! ⚠️
         </Sticker>
-        <Pop at={16.6} x={60} y={430}>
+        <Pop at={16.18} x={60} y={430}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 12, width: 420 }}>
             <SiHalus size={330} variant="co2" mood="grin" />
             <div style={{ fontFamily: HEAD, fontSize: 90, color: "#B9A6FF", WebkitTextStroke: `12px ${C.ink}`, paintOrder: "stroke fill" }}>CO₂</div>
             <div style={{ fontFamily: BODY, fontWeight: 800, fontSize: 40, color: C.cream }}>EP 1 · ruang rapat</div>
           </div>
         </Pop>
-        <Pop at={18.1} x={600} y={430}>
+        <Pop at={17.66} x={600} y={430}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 12, width: 420 }}>
             <SiHalus size={330} variant="gas" mood="grin" />
             <div style={{ fontFamily: HEAD, fontSize: 90, color: "#B8C0D0", WebkitTextStroke: `12px ${C.ink}`, paintOrder: "stroke fill" }}>CO</div>
             <div style={{ fontFamily: BODY, fontWeight: 800, fontSize: 40, color: C.cream }}>gas racun</div>
           </div>
         </Pop>
-        <Pop at={18.5} x={455} y={580}>
+        <Pop at={18.04} x={455} y={580}>
           <div style={{ fontFamily: HEAD, fontSize: 170, color: C.pink, WebkitTextStroke: `14px ${C.ink}`, paintOrder: "stroke fill" }}>≠</div>
         </Pop>
-        <Sticker at={19.29} y={1080} bg={C.cream} size={58}>
+        <Sticker at={18.80} y={1080} bg={C.cream} size={58}>
           CO = TANPA “DUA” ✌️❌
         </Sticker>
       </Scene>
 
       {/* 6 — sumber pembakaran */}
-      <Scene a={20.12} b={24.18}>
-        <Sticker at={20.14} y={290} bg={C.orange} size={70}>
+      <Scene a={19.60} b={23.28}>
+        <Sticker at={19.62} y={290} bg={C.orange} size={70}>
           GAS DARI PEMBAKARAN 🔥
         </Sticker>
-        <Pop at={21.73} x={40} y={470}>
+        <Pop at={21.10} x={40} y={470}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 18, width: 330 }}>
             <div style={{ width: 300, height: 230, display: "flex", alignItems: "center", justifyContent: "center" }}>
               <Car w={300} />
@@ -358,7 +454,7 @@ const Ep6Scenes: React.FC = () => {
             <div style={{ fontFamily: HEAD, fontSize: 60, color: C.cream, WebkitTextStroke: `10px ${C.ink}`, paintOrder: "stroke fill" }}>KNALPOT</div>
           </div>
         </Pop>
-        <Pop at={22.55} x={375} y={470}>
+        <Pop at={21.83} x={375} y={470}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 18, width: 330 }}>
             <div style={{ width: 300, height: 230, display: "flex", alignItems: "center", justifyContent: "center" }}>
               <Genset size={240} />
@@ -366,7 +462,7 @@ const Ep6Scenes: React.FC = () => {
             <div style={{ fontFamily: HEAD, fontSize: 60, color: C.cream, WebkitTextStroke: `10px ${C.ink}`, paintOrder: "stroke fill" }}>GENSET</div>
           </div>
         </Pop>
-        <Pop at={23.43} x={710} y={470}>
+        <Pop at={22.61} x={710} y={470}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 18, width: 330 }}>
             <div style={{ width: 300, height: 230, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 170 }}>🔥</div>
             <div style={{ fontFamily: HEAD, fontSize: 56, color: C.cream, WebkitTextStroke: `10px ${C.ink}`, paintOrder: "stroke fill", textAlign: "center", lineHeight: 1 }}>
@@ -379,30 +475,30 @@ const Ep6Scenes: React.FC = () => {
       </Scene>
 
       {/* 7 — tanpa warna, tanpa bau */}
-      <Scene a={24.18} b={26.1}>
-        <Sticker at={24.2} y={290} bg={C.cream} size={66}>
+      <Scene a={23.28} b={24.98}>
+        <Sticker at={23.30} y={290} bg={C.cream} size={66}>
           NGGAK KELIHATAN · NGGAK KECIUM
         </Sticker>
-        <Pop at={24.43} x={110} y={480}>
-          <IconTile icon="👁️" label="TANPA WARNA" crossed crossAt={24.6} />
+        <Pop at={23.50} x={110} y={480}>
+          <IconTile icon="👁️" label="TANPA WARNA" crossed crossAt={23.65} />
         </Pop>
-        <Pop at={25.39} x={600} y={480}>
-          <IconTile icon="👃" label="TANPA BAU" crossed crossAt={25.55} />
+        <Pop at={24.35} x={600} y={480}>
+          <IconTile icon="👃" label="TANPA BAU" crossed crossAt={24.50} />
         </Pop>
       </Scene>
 
       {/* 8 — darah: CO > 200x lebih kuat */}
-      <Scene a={26.1} b={34.08}>
-        <Sticker at={26.15} out={30.85} y={290} bg={ACC} size={66}>
+      <Scene a={24.98} b={28.95}>
+        <Sticker at={25.02} out={27.66} y={290} bg={ACC} size={66}>
           CO NEMPEL KE DARAH 🩸
         </Sticker>
-        <Sticker at={30.92} y={290} bg={C.pink} color={C.white} size={62}>
+        <Sticker at={27.70} y={290} bg={C.pink} color={C.white} size={62}>
           OKSIGEN NGGAK KEANGKUT
         </Sticker>
         <div style={{ position: "absolute", left: 60, top: 450 }}>
           <BloodCell />
         </div>
-        <Pop at={28.43} x={600} y={930}>
+        <Pop at={26.30} x={600} y={930}>
           <div
             style={{
               fontFamily: HEAD,
@@ -419,60 +515,88 @@ const Ep6Scenes: React.FC = () => {
             &gt;200× KUAT
           </div>
         </Pop>
-        <Pop at={32.4} x={790} y={420}>
+        <Pop at={28.29} x={790} y={420}>
           <Worker size={300} expr="dizzy" shirt="#7C5CFF" seed={2} />
         </Pop>
       </Scene>
 
       {/* 9 — gejala mirip masuk angin */}
-      <Scene a={34.08} b={38.02}>
-        <Sticker at={34.1} y={290} bg={C.cream} size={70}>
+      <Scene a={28.95} b={32.82}>
+        <Sticker at={28.96} y={290} bg={C.cream} size={70}>
           MIRIP MASUK ANGIN 🤧
         </Sticker>
+        <Pop at={29.0} out={30.25} x={330} y={470}>
+          <Worker size={600} expr="dizzy" shirt="#7C5CFF" seed={2} />
+        </Pop>
         <div style={{ position: "absolute", top: 420, left: 120, display: "flex", flexDirection: "column", gap: 22 }}>
-          <Badge icon="😵‍💫" label="PUSING" at={35.54} color={C.pink} />
-          <Badge icon="🤢" label="MUAL" at={36.24} color="#7EE08A" />
-          <Badge icon="🫠" label="LEMES" at={36.91} color={C.yellow} />
-          <Badge icon="😴" label="NGANTUK" at={37.43} color="#B9A6FF" />
+          <Badge icon="😵‍💫" label="PUSING" at={30.41} color={C.pink} />
+          <Badge icon="🤢" label="MUAL" at={31.09} color="#7EE08A" />
+          <Badge icon="🫠" label="LEMES" at={31.74} color={C.yellow} />
+          <Badge icon="😴" label="NGANTUK" at={32.25} color="#B9A6FF" />
         </div>
       </Scene>
 
       {/* 10 — kalau lagi tidur */}
-      <Scene a={38.02} b={41.04}>
-        <Garage dark={interpolate(t, [38.05, 40.5], [0.25, 0.7], clamp)} />
-        <div style={{ position: "absolute", left: 360, top: 560, opacity: interpolate(t, [38.05, 40.6], [1, 0.45], clamp) }}>
+      <Scene a={32.82} b={35.58}>
+        <Garage dark={interpolate(t, [32.85, 35.10], [0.25, 0.7], clamp)} />
+        <div style={{ position: "absolute", left: 360, top: 560, opacity: interpolate(t, [32.85, 35.19], [1, 0.45], clamp) }}>
           <Worker size={330} expr="sleepy" shirt="#7C5CFF" seed={1} />
         </div>
         <div style={{ position: "absolute", left: 150, top: 520 }}>
           <Car w={780} />
         </div>
-        <div style={{ opacity: interpolate(t, [38.3, 40.8], [1, 0], clamp) }}>
-          <Zzz x={600} y={560} at={38.05} />
+        <div style={{ opacity: interpolate(t, [33.09, 35.37], [1, 0], clamp) }}>
+          <Zzz x={600} y={560} at={32.85} />
         </div>
         <div style={{ position: "absolute", left: 30, top: 470, rotate: "-10deg", opacity: 0.85 }}>
           <SiHalus size={260} variant="gas" />
         </div>
-        <Sticker at={38.1} out={39.2} y={290} bg={C.bg1} color={C.cream} size={70}>
+        <Sticker at={32.90} out={33.94} y={290} bg={C.bg1} color={C.cream} size={70}>
           KALAU LAGI TIDUR…
         </Sticker>
-        <Sticker at={39.28} y={290} bg={C.pink} color={C.white} size={68}>
+        <Sticker at={34.02} y={290} bg={C.pink} color={C.white} size={68}>
           BISA NGGAK SEMPET SADAR ⚠️
         </Sticker>
       </Scene>
 
+      {/* 10b — DI RUMAH: mati lampu, genset di dalam */}
+      <Scene a={35.58} b={40.35}>
+        <HouseNight from={35.58} />
+        <Sticker at={35.62} y={290} bg={C.cream} size={74}>
+          DI RUMAH 🏠
+        </Sticker>
+        <Sticker at={37.25} out={39.9} y={1080} bg={C.bg1} color={C.yellow} size={56} rotate={3}>
+          MATI LAMPU 🕯️
+        </Sticker>
+        <Pop at={38.14} x={760} y={430}>
+          <div style={{ fontFamily: HEAD, fontSize: 130, color: "#FF3B30", WebkitTextStroke: `10px ${C.ink}`, paintOrder: "stroke fill" }}>✕</div>
+        </Pop>
+      </Scene>
+
+      {/* 10c — DI TEMPAT KERJA: bengkel & gudang tertutup */}
+      <Scene a={40.35} b={43.11}>
+        <Workshop from={40.35} />
+        <Sticker at={40.4} y={290} bg={ACC} size={70}>
+          DI TEMPAT KERJA 🔧
+        </Sticker>
+        <Sticker at={41.43} y={1080} bg={C.bg1} color={C.cream} size={54} rotate={-2}>
+          BENGKEL &amp; GUDANG TERTUTUP
+        </Sticker>
+      </Scene>
+
       {/* 11 — cara aman */}
-      <Scene a={41.04} b={51.0}>
-        <Sticker at={41.06} y={290} bg={ACC} size={80}>
+      <Scene a={43.11} b={52.44}>
+        <Sticker at={43.11} y={290} bg={ACC} size={80}>
           JADI GINI 👇
         </Sticker>
         <div style={{ position: "absolute", top: 420, left: 80, display: "flex", flexDirection: "column", gap: 28 }}>
-          <CheckRow icon="🚗" label="Jangan tidur di mobil, mesin nyala, di tempat tertutup" at={41.71} />
-          <CheckRow icon="⚙️" label="Genset di luar, ≥ 6 m dari jendela & pintu" at={44.71} />
-          <CheckRow icon="🚨" label="Pasang detektor CO di rumah" at={49.44} />
+          <CheckRow icon="🚗" label="Jangan tidur di mobil, mesin nyala, di tempat tertutup" at={43.76} />
+          <CheckRow icon="⚙️" label="Genset di luar, ≥ 6 m dari jendela & pintu" at={46.75} />
+          <CheckRow icon="🚨" label="Pasang detektor CO di rumah" at={51.04} />
         </div>
         {/* diagram 6 meter */}
-        {t >= 45.4 && t < 49.3 && (
-          <Pop at={45.5} out={49.0} x={80} y={830}>
+        {t >= 47.38 && t < 50.91 && (
+          <Pop at={47.47} out={50.64} x={80} y={830}>
             <div style={{ position: "relative", width: 920, height: 330 }}>
               <div style={{ position: "absolute", left: 0, top: 70, width: 260, height: 210, background: "#3A4560", border: `${OUTLINE}px solid ${C.ink}`, borderRadius: 16 }}>
                 <div style={{ position: "absolute", left: 60, top: 50, width: 90, height: 80, background: "rgba(190,225,255,0.5)", border: `5px solid ${C.ink}`, borderRadius: 8 }} />
@@ -492,19 +616,19 @@ const Ep6Scenes: React.FC = () => {
       </Scene>
 
       {/* 12 — beda satu angka, beda nasib */}
-      <Scene a={51.0} b={58.48}>
-        <Sticker at={51.67} y={290} bg={C.yellow} size={58} rotate={-2}>
+      <Scene a={52.44} b={59.23}>
+        <Sticker at={53.06} y={290} bg={C.yellow} size={58} rotate={-2}>
           BEDA SATU ANGKA, BEDA NASIB
         </Sticker>
-        {t < 53.6 && (
-          <Pop at={51.05} out={53.35} x={0} y={560} style={{ width: 1080, display: "flex", justifyContent: "center", alignItems: "center", gap: 40 }}>
+        {t < 54.83 && (
+          <Pop at={52.49} out={54.61} x={0} y={560} style={{ width: 1080, display: "flex", justifyContent: "center", alignItems: "center", gap: 40 }}>
             <SiHalus size={300} variant="co2" mood="grin" />
             <div style={{ fontFamily: HEAD, fontSize: 110, color: C.cream, WebkitTextStroke: `12px ${C.ink}`, paintOrder: "stroke fill" }}>vs</div>
             <SiHalus size={300} variant="gas" mood="grin" />
           </Pop>
         )}
         {/* panel kiri: CO₂ (EP1) */}
-        <Pop at={53.54} x={50} y={430} from="left">
+        <Pop at={54.78} x={50} y={430} from="left">
           <div style={{ position: "relative", width: 480, height: 740, borderRadius: 40, border: `${OUTLINE}px solid ${C.ink}`, background: "#3B2A66", overflow: "hidden" }}>
             <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 200, background: "#251845", borderTop: `${OUTLINE}px solid ${C.ink}` }} />
             <div style={{ position: "absolute", left: 270, top: 40 }}>
@@ -520,7 +644,7 @@ const Ep6Scenes: React.FC = () => {
           </div>
         </Pop>
         {/* panel kanan: CO */}
-        <Pop at={56.06} x={550} y={430} from="right">
+        <Pop at={57.03} x={550} y={430} from="right">
           <div style={{ position: "relative", width: 480, height: 740, borderRadius: 40, border: `${OUTLINE}px solid ${C.ink}`, background: "#141A26", overflow: "hidden" }}>
             <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 200, background: "#0D1119", borderTop: `${OUTLINE}px solid ${C.ink}` }} />
             <div style={{ position: "absolute", left: 30, top: 300, opacity: 0.8 }}>
@@ -546,8 +670,8 @@ const Ep6Scenes: React.FC = () => {
             </div>
           </div>
         </Pop>
-        {t < 56.0 && (
-          <Pop at={54.4} x={640} y={700}>
+        {t < 56.98 && (
+          <Pop at={55.55} x={640} y={700}>
             <div style={{ fontFamily: HEAD, fontSize: 120, color: "rgba(255,255,255,0.25)" }}>?</div>
           </Pop>
         )}
@@ -557,7 +681,7 @@ const Ep6Scenes: React.FC = () => {
 };
 
 export const Ep6: React.FC = () => (
-  <Episode ep={6} accent={ACC} tint="#1E2A3A" words={words} endStart={EP6.endStart} revealAt={EP6.revealAt} flashes={[14.12]}>
+  <Episode ep={6} accent={ACC} tint="#1E2A3A" words={words} endStart={EP6.endStart} revealAt={EP6.revealAt} flashes={[13.80]}>
     <Ep6Scenes />
   </Episode>
 );

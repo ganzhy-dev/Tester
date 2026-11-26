@@ -10,7 +10,7 @@ import { Grinder } from "./Ep2";
 import { words } from "./ep5.words";
 
 /** Waktu = detik VO final EP5 (data/ep5_words.json), tanpa warp */
-export const EP5 = { dur: 63.8, endStart: 59.2, revealAt: 61.53 };
+export const EP5 = { dur: 65.0, endStart: 60.41, revealAt: 62.75 };
 
 const useT = () => {
   const f = useCurrentFrame();
@@ -71,15 +71,6 @@ const Sparkles: React.FC<{ x: number; y: number; w: number; h: number; n?: numbe
     </svg>
   );
 };
-
-/** Ubin keramik di lantai */
-const Tile: React.FC<{ x: number; y: number }> = ({ x, y }) => (
-  <svg width={420} height={90} style={{ position: "absolute", left: x, top: y, overflow: "visible" }}>
-    <path d="M30 10 L390 10 L420 70 L0 70 Z" fill="#E8E2D6" {...S} />
-    <path d="M140 10 L130 70 M260 10 L270 70" stroke="#B8AE9C" strokeWidth={6} />
-    <path d="M205 10 L198 70" stroke={C.ink} strokeWidth={5} strokeDasharray="10 8" />
-  </svg>
-);
 
 /** Paru-paru sederhana; stiff 0..1 = makin abu & berparut */
 const Lungs: React.FC<{ stiff: number; particles: number; scars: number }> = ({ stiff, particles, scars }) => {
@@ -194,77 +185,202 @@ const Label: React.FC<{ children: React.ReactNode; size?: number; color?: string
   </div>
 );
 
+/* ------------------------------------------------- ruang tamu (hook & punchline) */
+
+const Sofa: React.FC = () => (
+  <svg width={600} height={300} viewBox="0 0 600 300" style={{ overflow: "visible" }}>
+    <rect x={40} y={10} width={520} height={150} rx={40} fill="#C2577A" {...S} />
+    <rect x={30} y={130} width={540} height={110} rx={30} fill="#D96A8E" {...S} />
+    <rect x={0} y={90} width={90} height={170} rx={36} fill="#B04D6E" {...S} />
+    <rect x={510} y={90} width={90} height={170} rx={36} fill="#B04D6E" {...S} />
+    <rect x={70} y={250} width={26} height={40} rx={8} fill={C.ink} />
+    <rect x={504} y={250} width={26} height={40} rx={8} fill={C.ink} />
+  </svg>
+);
+
+const Phone: React.FC = () => (
+  <svg width={70} height={110} viewBox="0 0 70 110">
+    <rect x={4} y={4} width={62} height={102} rx={12} fill="#1C2333" stroke={C.ink} strokeWidth={5} />
+    <rect x={12} y={14} width={46} height={78} rx={6} fill={C.cyan} />
+  </svg>
+);
+
+/** Debu yang hanyut dari pintu teras ke ruang tamu */
+const DriftDust: React.FC<{ from: number; fadeAt?: number }> = ({ from, fadeAt = 999 }) => {
+  const t = useT();
+  if (t < from) return null;
+  const fade = interpolate(t, [fadeAt, fadeAt + 0.8], [1, 0], clamp);
+  if (fade <= 0.01) return null;
+  const reach = interpolate(t, [from, from + 4.2], [0, 1], { ...clamp, easing: easeInOut });
+  return (
+    <svg width={1080} height={1000} style={{ position: "absolute", left: 0, top: 300, overflow: "visible", opacity: fade }}>
+      {new Array(30).fill(0).map((_, i) => {
+        const k = random(`dd-k-${i}`);
+        if (k > reach + 0.15) return null;
+        const p = ((t - from) * 0.35 + random(`dd-p-${i}`)) % 1;
+        const x = 820 - k * 680 - p * 60;
+        const y = 520 + (random(`dd-y-${i}`) - 0.5) * 360 - p * 40;
+        const r = 30 + 60 * random(`dd-r-${i}`) + p * 20;
+        return <circle key={i} cx={x} cy={y} r={r} fill="#F4F1EA" opacity={0.32 * Math.sin(p * Math.PI) + 0.08} />;
+      })}
+    </svg>
+  );
+};
+
+/** Ruang tamu: dinding, figura, lampu, pintu teras dengan tukang di luar */
+const LivingRoom: React.FC<{ dark?: number; worker?: boolean; grindUntil?: number }> = ({ dark = 0, worker = true, grindUntil = 0 }) => {
+  const t = useT();
+  const jit = t < grindUntil ? `${(random(`lr${Math.floor(t * 60)}`) - 0.5) * 6}px 0px` : "0px 0px";
+  return (
+    <>
+      <Room wall="#3E3460" floor="#2A2140" dark={dark}>
+        <div style={{ position: "absolute", left: 70, top: 90, width: 200, height: 140, background: "#2E8B9A", border: `${OUTLINE}px solid ${C.ink}`, borderRadius: 12 }}>
+          <div style={{ position: "absolute", left: 30, top: 60, width: 60, height: 50, borderRadius: "50% 50% 0 0", background: C.yellow }} />
+          <div style={{ position: "absolute", left: 100, top: 40, width: 70, height: 70, background: "#1F6B76", clipPath: "polygon(50% 0, 100% 100%, 0 100%)" }} />
+        </div>
+        <div style={{ position: "absolute", left: 470, top: 340, width: 16, height: 260, background: C.ink }} />
+        <div style={{ position: "absolute", left: 420, top: 270, width: 120, height: 90, background: C.yellow, border: `${OUTLINE}px solid ${C.ink}`, clipPath: "polygon(20% 0, 80% 0, 100% 100%, 0 100%)" }} />
+      </Room>
+      {/* pintu teras */}
+      <div
+        style={{
+          position: "absolute",
+          left: 640,
+          top: 360,
+          width: 360,
+          height: 680,
+          overflow: "hidden",
+          border: `${OUTLINE}px solid ${C.ink}`,
+          borderRadius: 16,
+          background: "linear-gradient(180deg,#BFE3F2 0%,#BFE3F2 62%,#A8946E 62%,#A8946E 100%)",
+          opacity: 1 - dark * 0.6,
+        }}
+      >
+        {worker && (
+          <>
+            <div style={{ position: "absolute", left: 30, top: 200, translate: jit }}>
+              <Worker size={400} expr="normal" pose="holdTool" helmet vest seed={3} />
+            </div>
+            <div style={{ position: "absolute", left: 90, top: 470, rotate: "-16deg", translate: jit }}>
+              <Grinder size={200} spin={t < grindUntil} />
+            </div>
+          </>
+        )}
+      </div>
+    </>
+  );
+};
+
+/** Bang Jo santai di sofa (badan bawah tertutup sofa) */
+const JoOnSofa: React.FC<{ expr: "happy" | "smirk" | "pain" | "shocked" | "normal"; phone?: boolean; shake?: boolean }> = ({ expr, phone = true, shake }) => {
+  const t = useT();
+  return (
+    <>
+      <div style={{ position: "absolute", left: 150, top: 560, translate: shake ? `${Math.sin(t * 40) * 6}px 0px` : "0px 0px" }}>
+        <Worker size={520} expr={expr} pose="holdTool" shirt={C.lime} seed={1} />
+      </div>
+      {phone && (
+        <div style={{ position: "absolute", left: 270, top: 860, rotate: "-8deg" }}>
+          <Phone />
+        </div>
+      )}
+      <div style={{ position: "absolute", left: 40, top: 930 }}>
+        <Sofa />
+      </div>
+    </>
+  );
+};
+
+/** Kartu kecil material (keramik/beton/batu) */
+const Material: React.FC<{ icon: string; label: string }> = ({ icon, label }) => (
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: 18,
+      width: 400,
+      padding: "14px 24px",
+      borderRadius: 30,
+      background: C.cream,
+      border: `${OUTLINE}px solid ${C.ink}`,
+      boxShadow: `0 10px 0 ${C.ink}`,
+      fontFamily: HEAD,
+      fontSize: 58,
+      color: C.ink,
+    }}
+  >
+    <span style={{ fontSize: 70 }}>{icon}</span>
+    {label}
+  </div>
+);
+
 /* ----------------------------------------------------------------- adegan */
 
 const Ep5Scenes: React.FC = () => {
   const t = useT();
   const cam = useShake([
     { t: 0.05, a: 8 },
-    { t: 8.95, a: 26 },
-    { t: 21.12, a: 18 },
-    { t: 35.47, a: 12 },
-    { t: 55.31, a: 12 },
+    { t: 11.91, a: 26 },
+    { t: 22.15, a: 18 },
+    { t: 36.9, a: 12 },
+    { t: 56.8, a: 12 },
   ]);
-  const grind = (from: number, to: number) => (t >= from && t < to ? `${(random(`g${Math.floor(t * 60)}`) - 0.5) * 6}px ${(random(`h${Math.floor(t * 60)}`) - 0.5) * 6}px` : "0px 0px");
   return (
     <AbsoluteFill style={{ translate: cam }}>
-      {/* 1 — HOOK: potong keramik kering, debu ngebul */}
-      <Scene a={0} b={5.95} zoom={false}>
-        <Room wall="#4A3A2A" floor="#2E2418" />
-        <Tile x={330} y={1020} />
-        <div style={{ position: "absolute", left: 90, top: 520, translate: grind(0, 5.95) }}>
-          <Worker size={620} expr={t < 3.42 ? "shocked" : "smirk"} pose="holdTool" helmet vest seed={1} />
-        </div>
-        <div style={{ position: "absolute", left: 360, top: 870, rotate: "-18deg", translate: grind(0, 5.95) }}>
-          <Grinder size={330} />
-        </div>
-        <DustCloud x={640} y={1010} from={0.0} scale={1.15} />
-        <Sticker at={0.1} out={3.3} y={290} bg={C.cream} size={68}>
-          DEBU KERAMIK NGEBUL 💨
+      {/* 1 — HOOK: renovasi rumah, debu sampai ruang tamu, kamu santai aja */}
+      <Scene a={0} b={9.32} zoom={false}>
+        <LivingRoom grindUntil={9.32} />
+        <JoOnSofa expr={t < 5.12 ? "normal" : "happy"} />
+        <DriftDust from={0.3} />
+        <Sticker at={0.1} out={4.35} y={290} bg={C.cream} size={68}>
+          RENOVASI RUMAH 🏠🔨
         </Sticker>
-        <Sticker at={3.45} y={290} bg={C.yellow} size={56}>
+        <Sticker at={4.43} out={5.05} y={290} bg={C.yellow} size={42}>
+          DEBUNYA SAMPAI RUANG TAMU 💨
+        </Sticker>
+        <Sticker at={5.12} out={6.5} y={290} bg={C.pink} color={C.white} size={68}>
+          KAMU SANTAI AJA? 😅
+        </Sticker>
+        <Sticker at={6.57} y={290} bg={C.yellow} size={56}>
           YANG KELIATAN MASIH MENDING 👌
         </Sticker>
       </Scene>
 
       {/* 2 — yang bahaya justru yang nggak kelihatan: scanner */}
-      <Scene a={5.95} b={8.62}>
-        <Room wall="#4A3A2A" floor="#2E2418" dark={interpolate(t, [5.95, 6.4], [0, 0.6], clamp)}>
-          <div />
-        </Room>
-        <Tile x={330} y={1020} />
-        <div style={{ position: "absolute", left: 90, top: 520, opacity: 0.55 }}>
-          <Worker size={620} expr="normal" pose="holdTool" helmet vest seed={1} />
+      <Scene a={9.32} b={11.7}>
+        <LivingRoom dark={interpolate(t, [9.32, 9.8], [0, 0.6], clamp)} grindUntil={11.7} />
+        <div style={{ opacity: 0.55 }}>
+          <JoOnSofa expr="happy" />
         </div>
-        <DustCloud x={640} y={1010} from={0} fadeAt={5.95} fadeDur={0.9} scale={1.15} />
-        <Scanner at={6.85} dur={0.9} top={330} height={850}>
+        <DriftDust from={0.3} fadeAt={9.32} />
+        <Scanner at={9.7} dur={0.9} top={330} height={850}>
           <Sparkles x={60} y={340} w={960} h={820} n={90} />
           <div style={{ position: "absolute", left: 560, top: 420 }}>
             <SiHalus size={420} variant="dust" />
           </div>
         </Scanner>
-        <Sticker at={6.0} y={290} bg={C.bg1} color={C.yellow} size={64}>
+        <Sticker at={9.37} y={290} bg={C.bg1} color={C.yellow} size={64}>
           YANG BAHAYA NGGAK KELIATAN 👁️
         </Sticker>
       </Scene>
 
       {/* 3 — title card */}
-      <Scene a={8.62} b={9.9}>
+      <Scene a={11.7} b={12.8}>
         <Sparkles x={60} y={330} w={960} h={860} n={70} />
         <div style={{ position: "absolute", left: 250, top: 380 }}>
-          <Pop at={8.66}>
+          <Pop at={11.72}>
             <SiHalus size={700} variant="dust" mood="laugh" />
           </Pop>
         </div>
-        <Sticker at={8.95} y={1060} bg={C.yellow} size={78} rotate={-5}>
+        <Sticker at={11.91} y={1060} bg={C.yellow} size={78} rotate={-5}>
           SI HALUS: DEBU SILIKA
         </Sticker>
       </Scene>
 
       {/* 4 — 100x lebih kecil dari pasir */}
-      <Scene a={9.9} b={13.08}>
-        <BigStat at={10.6} from={1} to={100} dur={0.7} suffix="×" label="LEBIH KECIL DARI PASIR PANTAI" y={330} color={C.yellow} />
-        <Pop at={12.15} x={110} y={720}>
+      <Scene a={12.8} b={15.42}>
+        <BigStat at={12.85} from={1} to={100} dur={0.9} suffix="×" label="LEBIH KECIL DARI PASIR PANTAI" y={330} color={C.yellow} />
+        <Pop at={14.5} x={110} y={720}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 18 }}>
             <svg width={340} height={340} viewBox="0 0 340 340">
               <path d="M170 20 Q300 40 320 170 Q300 300 170 320 Q40 300 20 170 Q40 40 170 20 Z" fill="#E3C38A" {...S} />
@@ -275,7 +391,7 @@ const Ep5Scenes: React.FC = () => {
             <Label size={46}>🏖️ PASIR PANTAI</Label>
           </div>
         </Pop>
-        <Pop at={12.4} x={640} y={720}>
+        <Pop at={14.75} x={640} y={720}>
           <div style={{ width: 340, display: "flex", flexDirection: "column", alignItems: "center", gap: 18 }}>
             <div style={{ width: 340, height: 340, display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
               <div style={{ width: 8, height: 8, borderRadius: "50%", background: C.yellow, boxShadow: `0 0 30px 12px rgba(255,210,63,0.55)` }} />
@@ -286,27 +402,27 @@ const Ep5Scenes: React.FC = () => {
             </Label>
           </div>
         </Pop>
-        <Pop at={12.6} x={0} y={1180} style={{ width: 1080, textAlign: "center" }}>
+        <Pop at={14.9} x={0} y={1180} style={{ width: 1080, textAlign: "center" }}>
           <div style={{ fontFamily: BODY, fontWeight: 700, fontSize: 30, color: C.cream, opacity: 0.8 }}>sumber: OSHA</div>
         </Pop>
       </Scene>
 
       {/* 5 — masuk ujung paru, nggak bisa keluar; paru kaku & berparut */}
-      <Scene a={13.08} b={20.4}>
-        <Sticker at={13.15} out={17.1} y={290} bg={C.cream} size={64}>
+      <Scene a={15.42} b={21.55}>
+        <Sticker at={15.45} out={18.75} y={290} bg={C.cream} size={64}>
           MASUK SAMPAI UJUNG PARU 🫁
         </Sticker>
-        <Sticker at={17.25} y={290} bg={C.pink} color={C.white} size={64}>
+        <Sticker at={18.82} y={290} bg={C.pink} color={C.white} size={64}>
           LAMA-LAMA PARU JADI KAKU
         </Sticker>
         <div style={{ position: "absolute", left: 240, top: 420 }}>
           <Lungs
-            stiff={interpolate(t, [17.3, 19.0], [0, 1], { ...clamp, easing: easeInOut })}
-            particles={interpolate(t, [13.2, 14.0], [0, 1], clamp)}
-            scars={interpolate(t, [19.3, 20.2], [0, 1], clamp)}
+            stiff={interpolate(t, [18.9, 20.5], [0, 1], { ...clamp, easing: easeInOut })}
+            particles={interpolate(t, [15.5, 16.3], [0, 1], clamp)}
+            scars={interpolate(t, [20.8, 21.5], [0, 1], clamp)}
           />
         </div>
-        <Pop at={15.9} out={17.1} x={70} y={600}>
+        <Pop at={17.56} out={18.75} x={70} y={600}>
           <div style={{ rotate: "-8deg" }}>
             <Label size={46} color={C.yellow}>
               NGGAK BISA
@@ -315,14 +431,14 @@ const Ep5Scenes: React.FC = () => {
             </Label>
           </div>
         </Pop>
-        <Pop at={18.71} x={770} y={560}>
+        <Pop at={20.04} x={770} y={560}>
           <div style={{ rotate: "6deg" }}>
             <Label size={52} color={C.pink}>
               KAKU
             </Label>
           </div>
         </Pop>
-        <Pop at={19.64} x={710} y={900}>
+        <Pop at={20.87} x={710} y={900}>
           <div style={{ rotate: "-4deg" }}>
             <Label size={44} color={C.cream}>
               JARINGAN
@@ -334,11 +450,11 @@ const Ep5Scenes: React.FC = () => {
       </Scene>
 
       {/* 6 — SILIKOSIS, nggak bisa disembuhin */}
-      <Scene a={20.4} b={24.4}>
+      <Scene a={21.55} b={25.05}>
         <div style={{ position: "absolute", left: 240, top: 420, opacity: 0.45 }}>
           <Lungs stiff={1} particles={0} scars={1} />
         </div>
-        <Pop at={21.1} x={0} y={560} style={{ width: 1080, display: "flex", justifyContent: "center" }}>
+        <Pop at={22.15} x={0} y={560} style={{ width: 1080, display: "flex", justifyContent: "center" }}>
           <div
             style={{
               fontFamily: HEAD,
@@ -355,130 +471,150 @@ const Ep5Scenes: React.FC = () => {
             SILIKOSIS
           </div>
         </Pop>
-        <Sticker at={20.45} out={23.5} y={290} bg={C.cream} size={64}>
+        <Sticker at={21.6} out={22.95} y={290} bg={C.cream} size={64}>
           NAMANYA… 🩻
         </Sticker>
-        <Sticker at={23.6} y={290} bg={C.pink} color={C.white} size={64}>
+        <Sticker at={23.02} y={290} bg={C.pink} color={C.white} size={64}>
           ❌ NGGAK BISA DISEMBUHIN
         </Sticker>
       </Scene>
 
-      {/* 7 — Australia melarang batu buatan */}
-      <Scene a={24.4} b={33.28}>
-        <Sticker at={24.45} y={290} bg={C.yellow} size={64}>
-          SAKING BAHAYANYA… 😳
+      {/* 7 — yang paling kena: tukang & pekerja */}
+      <Scene a={25.05} b={29.8}>
+        <Sticker at={25.1} y={290} bg={C.yellow} size={50}>
+          PALING KENA: TUKANG & PEKERJA 👷
         </Sticker>
-        {t < 30.35 ? (
-          <>
-            <Pop at={25.5} x={0} y={410} style={{ width: 1080, display: "flex", justifyContent: "center" }}>
-              <div style={{ fontFamily: HEAD, fontSize: 96, color: C.cream, WebkitTextStroke: `12px ${C.ink}`, paintOrder: "stroke fill", textShadow: `0 10px 0 ${C.ink}` }}>
-                🇦🇺 AUSTRALIA
-              </div>
-            </Pop>
-            <Pop at={26.8} x={280} y={560}>
-              <Countertop />
-            </Pop>
-            <Pop at={27.05} x={600} y={560}>
-              <Verdict ok={false} size={170} />
-            </Pop>
-            <Pop at={26.38} x={0} y={890} style={{ width: 1080, display: "flex", justifyContent: "center" }}>
-              <div style={{ padding: "14px 40px", borderRadius: 28, background: C.pink, border: `${OUTLINE}px solid ${C.ink}`, boxShadow: `0 10px 0 ${C.ink}`, fontFamily: HEAD, fontSize: 64, color: C.white }}>
-                BATU BUATAN DILARANG
-              </div>
-            </Pop>
-            <Pop at={28.55} x={0} y={1040} style={{ width: 1080, display: "flex", justifyContent: "center" }}>
-              <div style={{ fontFamily: BODY, fontWeight: 800, fontSize: 44, color: C.cream, background: "rgba(0,0,0,0.4)", padding: "8px 28px", borderRadius: 20 }}>
-                📅 mulai 1 Juli 2024 · Safe Work Australia
-              </div>
-            </Pop>
-          </>
-        ) : (
-          <>
-            <div style={{ position: "absolute", left: 120, top: 470 }}>
-              <Worker size={640} expr="pain" pose="idle" vest shirt="#3D7BFF" seed={2} />
-            </div>
-            <CoughPuffs x={420} y={560} from={30.5} until={33.3} />
-            <Pop at={31.3} x={600} y={640}>
-              <div style={{ rotate: "4deg" }}>
-                <Label size={56} color={C.yellow}>
-                  KENA DI
-                  <br />
-                  USIA MUDA
-                </Label>
-              </div>
-            </Pop>
-            <Pop at={31.3} x={640} y={860}>
-              <div style={{ fontFamily: HEAD, fontSize: 110 }}>😢</div>
-            </Pop>
-          </>
-        )}
+        <div style={{ position: "absolute", left: 40, top: 470 }}>
+          <Worker size={620} expr="pain" pose="holdTool" helmet vest shirt="#3D7BFF" seed={2} />
+        </div>
+        <div style={{ position: "absolute", left: 130, top: 860, rotate: "-14deg" }}>
+          <Grinder size={240} spin />
+        </div>
+        <CoughPuffs x={300} y={560} from={26.0} until={29.8} />
+        <Pop at={28.12} x={590} y={470}>
+          <Material icon="🟫" label="KERAMIK" />
+        </Pop>
+        <Pop at={28.7} x={590} y={680}>
+          <Material icon="🧱" label="BETON" />
+        </Pop>
+        <Pop at={29.23} x={590} y={890}>
+          <Material icon="🪨" label="BATU" />
+        </Pop>
       </Scene>
 
-      {/* 8 — mitos masker kain */}
-      <Scene a={33.28} b={39.68}>
-        <Sticker at={33.35} y={290} bg={C.cream} size={64}>
+      {/* 8 — Australia melarang batu buatan */}
+      <Scene a={29.8} b={35.02}>
+        <Sticker at={29.84} y={290} bg={C.yellow} size={64}>
+          SAKING BAHAYANYA… 😳
+        </Sticker>
+        <Pop at={31.16} x={0} y={410} style={{ width: 1080, display: "flex", justifyContent: "center" }}>
+          <div style={{ fontFamily: HEAD, fontSize: 96, color: C.cream, WebkitTextStroke: `12px ${C.ink}`, paintOrder: "stroke fill", textShadow: `0 10px 0 ${C.ink}` }}>
+            🇦🇺 AUSTRALIA
+          </div>
+        </Pop>
+        <Pop at={30.1} x={280} y={560}>
+          <Countertop />
+        </Pop>
+        <Pop at={32.69} x={600} y={560}>
+          <Verdict ok={false} size={170} />
+        </Pop>
+        <Pop at={31.68} x={0} y={890} style={{ width: 1080, display: "flex", justifyContent: "center" }}>
+          <div style={{ padding: "14px 40px", borderRadius: 28, background: C.pink, border: `${OUTLINE}px solid ${C.ink}`, boxShadow: `0 10px 0 ${C.ink}`, fontFamily: HEAD, fontSize: 64, color: C.white }}>
+            BATU BUATAN DILARANG
+          </div>
+        </Pop>
+        <Pop at={33.7} x={0} y={1040} style={{ width: 1080, display: "flex", justifyContent: "center" }}>
+          <div style={{ fontFamily: BODY, fontWeight: 800, fontSize: 44, color: C.cream, background: "rgba(0,0,0,0.4)", padding: "8px 28px", borderRadius: 20 }}>
+            📅 mulai 1 Juli 2024 · Safe Work Australia
+          </div>
+        </Pop>
+      </Scene>
+
+      {/* 9 — mitos masker kain */}
+      <Scene a={35.02} b={40.72}>
+        <Sticker at={35.07} y={290} bg={C.cream} size={64}>
           MASKER KAIN CUKUP? 🤔
         </Sticker>
-        <Pop at={33.84} x={330} y={430}>
+        <Pop at={35.2} x={330} y={430}>
           <div style={{ rotate: "-6deg" }}>
             <ClothMask size={420} />
           </div>
         </Pop>
-        <Pop at={34.2} x={760} y={400}>
-          <div style={{ scale: t >= 35.47 ? String(1 + 0.25 * Math.exp(-(t - 35.47) * 8)) : "1" }}>
-            <Verdict ok={t < 35.47} size={170} />
+        <Pop at={36.2} x={760} y={400}>
+          <div style={{ scale: t >= 36.9 ? String(1 + 0.25 * Math.exp(-(t - 36.9) * 8)) : "1" }}>
+            <Verdict ok={t < 36.9} size={170} />
           </div>
         </Pop>
-        <Pop at={36.59} x={150} y={790}>
+        <Pop at={37.91} x={150} y={790}>
           <InfoCard title="😷 MASKER KAIN & BEDAH" value="≠ RESPIRATOR" sub="partikelnya lolos" color={C.pink} w={780} valueSize={96} />
         </Pop>
       </Scene>
 
-      {/* 9 — solusi */}
-      <Scene a={39.68} b={50.45}>
-        <Sticker at={39.72} y={290} bg={C.yellow} size={76}>
-          YANG BENER 👇
+      {/* 10 — tips di rumah */}
+      <Scene a={40.72} b={46.52}>
+        <Sticker at={40.77} y={290} bg={C.yellow} size={72}>
+          KALAU DI RUMAH 🏠
         </Sticker>
-        <div style={{ position: "absolute", top: 440, left: 80, display: "flex", flexDirection: "column", gap: 34 }}>
-          <CheckRow icon="💧" label="Potong basah: air ngalir terus" at={40.58} />
-          <CheckRow icon="🌀" label="Alat yang ada penyedot debunya" at={44.27} />
-          <CheckRow icon="😷" label="Respirator minimal N95, rapet" at={46.67} />
+        <div style={{ position: "absolute", top: 450, left: 80, display: "flex", flexDirection: "column", gap: 34 }}>
+          <CheckRow icon="🚪" label="Tutup pintunya" at={42.83} />
+          <CheckRow icon="👶" label="Jauhin anak-anak" at={43.8} />
+          <CheckRow icon="💧" label="Minta tukang motong pakai air" at={45.62} />
         </div>
+        <Pop at={41.0} out={42.7} x={0} y={520} style={{ width: 1080, display: "flex", justifyContent: "center" }}>
+          <svg width={360} height={320} viewBox="0 0 360 320">
+            <path d="M30 150 L180 30 L330 150 Z" fill={C.pink} {...S} />
+            <rect x={60} y={150} width={240} height={150} fill={C.cream} {...S} />
+            <rect x={150} y={200} width={60} height={100} fill="#8B5E3C" {...S} />
+            <rect x={80} y={180} width={50} height={50} fill={C.cyan} {...S} />
+            <rect x={230} y={180} width={50} height={50} fill={C.cyan} {...S} />
+          </svg>
+        </Pop>
+      </Scene>
+
+      {/* 11 — tips buat tukang */}
+      <Scene a={46.52} b={52.4}>
+        <Sticker at={46.58} y={290} bg={C.yellow} size={72}>
+          BUAT TUKANGNYA 👷
+        </Sticker>
+        <div style={{ position: "absolute", top: 450, left: 80, display: "flex", flexDirection: "column", gap: 34 }}>
+          <CheckRow icon="🌀" label="Alat yang ada penyedot debunya" at={48.27} />
+          <CheckRow icon="😷" label="Respirator minimal N95, rapet" at={49.38} />
+        </div>
+        <Pop at={46.8} x={90} y={780}>
+          <Worker size={420} expr="happy" pose="wave" helmet vest seed={4} />
+        </Pop>
         <div
           style={{
             position: "absolute",
-            left: interpolate(t, [41.2, 50.4], [700, 1400], { ...clamp, easing: (x: number) => x * x }),
-            top: 980,
-            rotate: `${interpolate(t, [41.2, 50.4], [0, 40], clamp)}deg`,
+            left: interpolate(t, [48.6, 52.4], [640, 1400], { ...clamp, easing: (x: number) => x * x }),
+            top: 860,
+            rotate: `${interpolate(t, [48.6, 52.4], [0, 40], clamp)}deg`,
           }}
         >
-          <SiHalus size={240} variant="dust" mood="scared" />
+          <SiHalus size={280} variant="dust" mood="scared" />
         </div>
       </Scene>
 
-      {/* 10 — punchline */}
-      <Scene a={50.45} b={EP5.endStart}>
-        <Room wall="#4A3A2A" floor="#2E2418" />
-        <Tile x={560} y={1020} />
-        <div style={{ position: "absolute", left: 70, top: 540, translate: t > 52.1 && t < 53.6 ? `${Math.sin(t * 40) * 6}px 0px` : "0px 0px" }}>
-          <Worker size={600} expr={t < 55.3 ? "pain" : "shocked"} pose={t < 53.7 ? "idle" : "shrug"} helmet vest seed={1} />
-        </div>
-        <CoughPuffs x={330} y={640} from={52.1} until={53.7} />
-        <Pop at={53.75} x={330} y={340} out={55.15}>
-          <Bubble w={600} tail="left" size={58}>
+      {/* 12 — punchline: abis renovasi batuk-batuk */}
+      <Scene a={52.4} b={EP5.endStart}>
+        <LivingRoom worker={false} />
+        <JoOnSofa expr={t < 56.8 ? "pain" : "shocked"} phone={false} shake={t > 53.9 && t < 54.9} />
+        <CoughPuffs x={420} y={600} from={53.9} until={54.95} />
+        <Pop at={54.92} x={300} y={350} out={56.7}>
+          <Bubble w={620} tail="left" size={58}>
             “Ah… cuma debu doang 😅”
           </Bubble>
         </Pop>
-        <Sticker at={55.31} out={56.95} y={300} bg={C.pink} color={C.white} size={64}>
+        <Sticker at={56.8} out={58.25} y={300} bg={C.pink} color={C.white} size={64}>
           JUSTRU ITU MASALAHNYA!
         </Sticker>
-        <Scanner at={57.0} dur={0.8} top={330} height={850}>
+        <Scanner at={58.32} dur={0.8} top={330} height={850}>
           <Sparkles x={60} y={340} w={960} h={820} n={70} />
           <div style={{ position: "absolute", left: 640, top: 520 }}>
             <SiHalus size={360} variant="dust" mood="laugh" />
           </div>
         </Scanner>
-        <Sticker at={57.05} y={300} bg={C.yellow} size={48}>
+        <Sticker at={58.35} y={300} bg={C.yellow} size={48}>
           BAHAYANYA YANG NGGAK KELIATAN 👁️
         </Sticker>
       </Scene>
@@ -487,7 +623,7 @@ const Ep5Scenes: React.FC = () => {
 };
 
 export const Ep5: React.FC = () => (
-  <Episode ep={5} accent={C.yellow} tint="#3D3422" words={words} endStart={EP5.endStart} revealAt={EP5.revealAt} flashes={[8.95]}>
+  <Episode ep={5} accent={C.yellow} tint="#3D3422" words={words} endStart={EP5.endStart} revealAt={EP5.revealAt} flashes={[11.91]}>
     <Ep5Scenes />
   </Episode>
 );

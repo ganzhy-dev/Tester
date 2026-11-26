@@ -1,358 +1,403 @@
 [
  {
-  "t": 0.05,
+  "t": 0.0,
+  "type": "whoosh",
+  "gain": 0.8
+ },
+ {
+  "t": 0.08,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 2.06,
+  "t": 1.5,
+  "type": "whoosh",
+  "gain": 1
+ },
+ {
+  "t": 1.56,
+  "type": "pop",
+  "gain": 1
+ },
+ {
+  "t": 2.95,
+  "type": "whoosh",
+  "gain": 1
+ },
+ {
+  "t": 3.0,
+  "type": "pop",
+  "gain": 1
+ },
+ {
+  "t": 4.65,
+  "type": "whoosh",
+  "gain": 1
+ },
+ {
+  "t": 4.88,
   "type": "boing",
   "gain": 0.8
  },
  {
-  "t": 3.91,
-  "type": "thud",
-  "gain": 0.9
+  "t": 5.33,
+  "type": "pop",
+  "gain": 1
  },
  {
-  "t": 4.7,
+  "t": 6.03,
+  "type": "pop",
+  "gain": 1
+ },
+ {
+  "t": 6.59,
+  "type": "pop",
+  "gain": 1
+ },
+ {
+  "t": 7.43,
+  "type": "buzz",
+  "gain": 0.7
+ },
+ {
+  "t": 8.55,
   "type": "whoosh",
   "gain": 1
  },
  {
-  "t": 4.8,
+  "t": 8.64,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 5.3,
-  "type": "riser",
-  "gain": 0.5,
-  "dur": 0.9
- },
- {
-  "t": 8.57,
-  "type": "pop",
-  "gain": 1
- },
- {
-  "t": 9.5,
-  "type": "pop",
-  "gain": 0.8
- },
- {
-  "t": 10.82,
-  "type": "whoosh",
-  "gain": 1
- },
- {
-  "t": 10.9,
-  "type": "pop",
-  "gain": 1
- },
- {
-  "t": 11.65,
+  "t": 9.3,
   "type": "scan",
   "gain": 1
  },
  {
-  "t": 13.95,
+  "t": 11.5,
   "type": "stop",
-  "dur": 0.42
+  "dur": 0.46
  },
  {
-  "t": 14.3,
+  "t": 11.9,
   "type": "whoosh",
   "gain": 1
  },
  {
-  "t": 14.37,
+  "t": 11.96,
   "type": "thud",
   "gain": 1.2
  },
  {
-  "t": 14.42,
+  "t": 12.0,
   "type": "sparkle",
   "gain": 0.8
  },
  {
-  "t": 15.9,
+  "t": 13.6,
   "type": "whoosh",
   "gain": 1
  },
  {
-  "t": 15.96,
+  "t": 13.66,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 18.1,
+  "t": 14.0,
+  "type": "pop",
+  "gain": 0.8
+ },
+ {
+  "t": 14.6,
+  "type": "pop",
+  "gain": 0.8
+ },
+ {
+  "t": 15.65,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 19.0,
+  "t": 16.56,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 20.3,
-  "type": "buzz",
-  "gain": 0.7
- },
- {
-  "t": 21.11,
-  "type": "pop",
-  "gain": 1
- },
- {
-  "t": 22.65,
+  "t": 18.15,
   "type": "whoosh",
   "gain": 1
  },
  {
-  "t": 22.72,
+  "t": 18.62,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 23.18,
+  "t": 19.57,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 24.19,
+  "t": 20.19,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 24.82,
+  "t": 20.82,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 25.37,
+  "t": 21.36,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 25.9,
-  "type": "sparkle",
-  "gain": 0.7
- },
- {
-  "t": 27.04,
+  "t": 22.79,
   "type": "ding",
   "gain": 1
  },
  {
-  "t": 28.46,
+  "t": 24.04,
   "type": "ding",
   "gain": 1
  },
  {
-  "t": 28.98,
+  "t": 24.6,
   "type": "ding",
   "gain": 1
  },
  {
-  "t": 29.85,
+  "t": 25.5,
   "type": "whoosh",
   "gain": 1
  },
  {
-  "t": 29.95,
+  "t": 25.57,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 30.57,
+  "t": 26.22,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 31.47,
+  "t": 27.09,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 32.51,
+  "t": 28.1,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 33.3,
+  "t": 28.92,
   "type": "thud",
   "gain": 1.2
  },
  {
-  "t": 33.35,
+  "t": 29.0,
   "type": "buzz",
   "gain": 0.8
  },
  {
-  "t": 34.34,
+  "t": 30.04,
   "type": "buzz",
   "gain": 0.8
  },
  {
-  "t": 35.1,
+  "t": 30.6,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 36.2,
+  "t": 31.71,
   "type": "thud",
-  "gain": 0.9
+  "gain": 1
  },
  {
-  "t": 37.7,
+  "t": 33.0,
   "type": "whoosh",
   "gain": 1
  },
  {
-  "t": 38.0,
+  "t": 33.43,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 39.1,
+  "t": 34.4,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 39.92,
+  "t": 35.2,
   "type": "whoosh",
   "gain": 1
  },
  {
-  "t": 39.96,
+  "t": 35.27,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 41.29,
+  "t": 36.66,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 41.56,
+  "t": 37.32,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 43.9,
+  "t": 37.91,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 45.16,
-  "type": "boing",
-  "gain": 0.6
- },
- {
-  "t": 46.5,
-  "type": "whoosh",
-  "gain": 1
- },
- {
-  "t": 46.57,
-  "type": "pop",
-  "gain": 1
- },
- {
-  "t": 47.3,
-  "type": "pop",
-  "gain": 0.8
- },
- {
-  "t": 48.38,
+  "t": 38.71,
   "type": "buzz",
-  "gain": 0.6
+  "gain": 0.7
  },
  {
-  "t": 49.29,
-  "type": "pop",
-  "gain": 1
- },
- {
-  "t": 50.42,
+  "t": 39.85,
   "type": "whoosh",
   "gain": 1
  },
  {
-  "t": 50.47,
+  "t": 39.95,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 51.65,
+  "t": 40.4,
+  "type": "riser",
+  "dur": 0.9,
+  "gain": 0.6
+ },
+ {
+  "t": 41.1,
+  "type": "pop",
+  "gain": 1
+ },
+ {
+  "t": 43.82,
+  "type": "thud",
+  "gain": 1
+ },
+ {
+  "t": 44.97,
+  "type": "pop",
+  "gain": 1
+ },
+ {
+  "t": 46.25,
+  "type": "whoosh",
+  "gain": 1
+ },
+ {
+  "t": 46.34,
+  "type": "pop",
+  "gain": 1
+ },
+ {
+  "t": 46.97,
+  "type": "pop",
+  "gain": 1
+ },
+ {
+  "t": 47.24,
+  "type": "pop",
+  "gain": 1
+ },
+ {
+  "t": 49.54,
   "type": "tick",
   "gain": 1
  },
  {
-  "t": 52.15,
+  "t": 49.8,
   "type": "tick",
   "gain": 1
  },
  {
-  "t": 52.65,
-  "type": "tick",
+  "t": 50.81,
+  "type": "pop",
   "gain": 1
  },
  {
-  "t": 53.15,
-  "type": "tick",
+  "t": 52.25,
+  "type": "whoosh",
   "gain": 1
  },
  {
-  "t": 53.65,
+  "t": 52.33,
+  "type": "pop",
+  "gain": 1
+ },
+ {
+  "t": 53.0,
   "type": "ding",
   "gain": 1
  },
  {
-  "t": 55.0,
+  "t": 54.14,
+  "type": "buzz",
+  "gain": 0.7
+ },
+ {
+  "t": 55.25,
+  "type": "pop",
+  "gain": 1
+ },
+ {
+  "t": 56.1,
   "type": "whoosh",
   "gain": 1
  },
  {
-  "t": 56.0,
+  "t": 56.17,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 58.77,
+  "t": 57.62,
   "type": "pop",
   "gain": 1
  },
  {
-  "t": 59.44,
+  "t": 58.5,
+  "type": "whoosh",
+  "gain": 0.8
+ },
+ {
+  "t": 59.16,
   "type": "boing",
   "gain": 1
  },
  {
-  "t": 59.9,
-  "type": "thud",
-  "gain": 0.8
+  "t": 60.0,
+  "type": "pop",
+  "gain": 1
  },
  {
-  "t": 60.2,
-  "type": "sparkle",
-  "gain": 0.8
- },
- {
-  "t": 61.69,
+  "t": 60.81,
   "type": "whoosh",
+  "gain": 1
+ },
+ {
+  "t": 63.04,
+  "type": "scan",
   "gain": 1
  },
  {
   "t": 64.0,
-  "type": "scan",
-  "gain": 1
- },
- {
-  "t": 65.0,
   "type": "sparkle",
-  "gain": 0.7
+  "gain": 0.8
  }
 ]
