@@ -160,7 +160,7 @@ export const EndCard: React.FC<{ revealAt: number; ep?: number; ctaAt?: number; 
     <AbsoluteFill>
       <AbsoluteFill
         style={{
-          background: isLight(ep) ? "radial-gradient(ellipse at 50% 45%, #FFFFFF, #FFE9C7 75%)" : `radial-gradient(ellipse at 50% 45%, ${C.bg2}, ${C.bg1} 70%)`,
+          background: isLight(ep) ? "radial-gradient(ellipse at 50% 45%, #FFEFD9, #F1C38F 78%)" : `radial-gradient(ellipse at 50% 45%, ${C.bg2}, ${C.bg1} 70%)`,
           opacity: intro,
         }}
       />
@@ -237,7 +237,7 @@ export const Episode: React.FC<EpisodeProps> = (props) => {
   const hc = HOOKCTA[props.ep];
   const introF = Math.round(hc.hookDur * fps);
   return (
-    <AbsoluteFill style={{ background: isLight(props.ep) ? "#FFF7EC" : C.bg1, overflow: "hidden" }}>
+    <AbsoluteFill style={{ background: isLight(props.ep) ? "#F6E1C4" : C.bg1, overflow: "hidden" }}>
       <Audio src={staticFile(`audio/ep${props.ep}_mix.wav`)} />
       <Sequence name="Isi utama" from={introF}>
         <EpisodeBody {...withInsert(props, INSERTS[props.ep])} insert={INSERTS[props.ep]} ctaAt={hc.ctaAt} ctaText={hc.ctaText} ctaDur={hc.ctaDur} />
@@ -280,7 +280,7 @@ const EpisodeBody: React.FC<EpisodeProps & { ctaAt: number; ctaText: string; cta
   const t = frame / fps;
   const f = flashAt(t, warp ? flashes.map((x) => warpOldToNew(x, warp)) : flashes);
   return (
-    <AbsoluteFill style={{ background: isLight(ep) ? "#FFF7EC" : C.bg1, overflow: "hidden" }}>
+    <AbsoluteFill style={{ background: isLight(ep) ? "#F6E1C4" : C.bg1, overflow: "hidden" }}>
       <Backdrop accent={accent} tint={tint} light={isLight(ep)} />
       <AbsoluteFill style={{ translate: `0px ${contentShift(ep)}px` }}>
       {warp ? (

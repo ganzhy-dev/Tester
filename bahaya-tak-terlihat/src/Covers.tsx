@@ -23,7 +23,7 @@ const CoverFrame: React.FC<{
 }> = ({ ep, accent, tint, line1, line2, sub, children }) => (
   <AbsoluteFill
     style={{
-      background: ep >= 10 ? `radial-gradient(ellipse 85% 60% at 50% 62%, #FFFFFF 0%, ${tint} 80%)` : `radial-gradient(ellipse 85% 60% at 50% 62%, ${tint} 0%, ${C.bg1} 78%)`,
+      background: ep >= 10 ? `radial-gradient(ellipse 85% 60% at 50% 62%, #FFEFD9 0%, ${tint} 82%)` : `radial-gradient(ellipse 85% 60% at 50% 62%, ${tint} 0%, ${C.bg1} 78%)`,
       overflow: "hidden",
     }}
   >
@@ -342,7 +342,7 @@ const Clothesline: React.FC = () => (
 );
 
 export const Cover10: React.FC = () => (
-  <CoverFrame ep={10} accent="#FFC21A" tint="#FFE9A3" line1="JANGAN LANGSUNG" line2="PEGANG!" sub="ada yang kesetrum? baca ini ⚡">
+  <CoverFrame ep={10} accent="#FFB21A" tint="#F3C98B" line1="JANGAN LANGSUNG" line2="PEGANG!" sub="ada yang kesetrum? baca ini ⚡">
     <div style={{ position: "absolute", left: 50, top: 1000 }}>
       <Clothesline />
     </div>
@@ -357,7 +357,7 @@ export const Cover10: React.FC = () => (
 );
 
 export const Cover11: React.FC = () => (
-  <CoverFrame ep={11} accent="#9B7BD9" tint="#E6DAFF" line1="100 JAM SEMINGGU," line2="TANPA GAJI" sub="kamu manggilnya: Ibu 🤍">
+  <CoverFrame ep={11} accent="#A77BC9" tint="#E3C4D6" line1="100 JAM SEMINGGU," line2="TANPA GAJI" sub="kamu manggilnya: Ibu 🤍">
     <ScanLine y={1450} />
     <div style={{ position: "absolute", left: 90, top: 1010 }}>
       <Worker size={640} expr="dizzy" pose="shrug" shirt="#B5838D" pants="#4A3B5C" hijab="#6D597A" seed={6} />
@@ -369,7 +369,7 @@ export const Cover11: React.FC = () => (
 );
 
 export const Cover12: React.FC = () => (
-  <CoverFrame ep={12} accent="#2FB4D8" tint="#CFF3FA" line1="LANTAI KAMAR MANDI" line2="BASAH?" sub="orang tua kita taruhannya 🛁">
+  <CoverFrame ep={12} accent="#2FA7B8" tint="#BFDCCB" line1="LANTAI KAMAR MANDI" line2="BASAH?" sub="orang tua kita taruhannya 🛁">
     <ScanLine y={1450} />
     <div style={{ position: "absolute", left: 80, top: 1010 }}>
       <Worker size={640} expr="shocked" pose="shrug" shirt="#7A9E7E" pants="#3B3B4F" hair="#D9D9E0" seed={7} />

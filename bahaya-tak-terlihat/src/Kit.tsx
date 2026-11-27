@@ -24,7 +24,7 @@ export const Backdrop: React.FC<{ accent: string; tint?: string; light?: boolean
     <AbsoluteFill
       style={{
         background: light
-          ? `radial-gradient(ellipse 90% 60% at 50% 42%, #FFFFFF 0%, ${tint} 78%)`
+          ? `radial-gradient(ellipse 90% 60% at 50% 42%, #FFEFD9 0%, ${tint} 82%)`
           : `radial-gradient(ellipse 90% 60% at 50% 42%, ${tint} 0%, ${C.bg1} 75%)`,
       }}
     >

@@ -30,7 +30,7 @@ const Ep12Scenes: React.FC = () => {
 };
 
 export const Ep12: React.FC = () => (
-  <Episode ep={12} accent="#2FB4D8" tint="#CFF3FA" words={words} endStart={EP12.endStart} revealAt={EP12.revealAt} flashes={[]}>
+  <Episode ep={12} accent="#2FA7B8" tint="#BFDCCB" words={words} endStart={EP12.endStart} revealAt={EP12.revealAt} flashes={[]}>
     <Ep12Scenes />
   </Episode>
 );

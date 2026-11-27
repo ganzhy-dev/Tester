@@ -22,7 +22,7 @@ const EPS: Ep[] = [
     title: "JANGAN LANGSUNG PEGANG!",
     ghost: "volt",
     ghostName: "Listrik Nyasar",
-    palette: ["#FFE9A3", "#FFC21A", "#7A5200", "#FF4F8B", "#FFFFFF"],
+    palette: ["#F3C98B", "#FFB21A", "#7A4A00", "#E8634A", "#FFEFD9"],
     hook: "“Seorang ibu lari nolongin anaknya yang kesetrum… dan dua-duanya nggak selamat.”",
     heart: "“Ibu itu nggak salah. Dia cuma ngelakuin yang semua ibu bakal lakuin.”",
     scenes: "🧺 jemuran kawat · 🏚️ seng + kabel putus · ⚡ MCB OFF · 🧹 sapu kering · 🔌 colokan kayak sate · 🌊 banjir",
@@ -33,7 +33,7 @@ const EPS: Ep[] = [
     title: "100 JAM SEMINGGU, TANPA GAJI",
     ghost: "load",
     ghostName: "Beban Tak Kelihatan",
-    palette: ["#E6DAFF", "#9B7BD9", "#4B2E8A", "#FFB37A", "#FFFFFF"],
+    palette: ["#E3C4D6", "#A77BC9", "#5A2E6E", "#F2A07B", "#FFEFD9"],
     hook: "“Ada pekerjaan yang jamnya bisa seratus jam seminggu… dan kamu manggilnya: Ibu.”",
     heart: "“Ibu nggak minta digaji. Dia cuma butuh dibantu… dan dibilang makasih.”",
     scenes: "⏰ jam berputar · 🍳 subuh · 🧺 ember & galon · 🦵 lutut & pinggang · 🛌 tidur terpotong · 🤝 angkat berdua",
@@ -44,7 +44,7 @@ const EPS: Ep[] = [
     title: "LANTAI KAMAR MANDI BASAH?",
     ghost: "slip",
     ghostName: "Lantai Licin",
-    palette: ["#CFF3FA", "#2FB4D8", "#0E5A70", "#FFD23F", "#FFFFFF"],
+    palette: ["#BFDCCB", "#2FA7B8", "#1F5A57", "#F5C451", "#FFEFD9"],
     hook: "“Satu langkah di lantai kamar mandi yang licin… bisa bikin orang tua kita nggak bisa jalan lagi.”",
     heart: "“Dulu mereka yang megangin tangan kita belajar jalan. Sekarang… giliran kita.”",
     scenes: "🌙 malam & lampu redup · 💧 lantai basah · 🦴 tulang panggul · 🧽 keset anti-slip · 🪜 pegangan · 💡 lampu malam",
@@ -53,7 +53,7 @@ const EPS: Ep[] = [
 ];
 
 const Row: React.FC<{ e: Ep; top: number }> = ({ e, top }) => (
-  <div style={{ position: "absolute", top, left: 40, right: 40, height: 540, background: "#FFFFFF", border: `5px solid ${e.palette[1]}`, boxShadow: `0 10px 0 ${e.palette[1]}55`, borderRadius: 40, overflow: "hidden" }}>
+  <div style={{ position: "absolute", top, left: 40, right: 40, height: 540, background: "#FFF6EA", border: `5px solid ${e.palette[1]}`, boxShadow: `0 10px 0 ${e.palette[1]}55`, borderRadius: 40, overflow: "hidden" }}>
     <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 300, background: `radial-gradient(circle at 50% 45%, ${e.palette[0]}AA, ${e.palette[0]}33 70%)` }} />
     <div style={{ position: "absolute", left: 26, top: 70 }}>
       <SiHalus size={300} variant={e.ghost} mood="grin" />
@@ -79,9 +79,9 @@ const Row: React.FC<{ e: Ep; top: number }> = ({ e, top }) => (
 );
 
 export const Moodboard: React.FC = () => (
-  <AbsoluteFill style={{ background: "linear-gradient(180deg, #FFF3D6 0%, #F3E9FF 50%, #DDF6FB 100%)" }}>
+  <AbsoluteFill style={{ background: "linear-gradient(180deg, #F6D7A8 0%, #EBCFD6 50%, #CFE2D2 100%)" }}>
     <div style={{ position: "absolute", top: 50, left: 0, right: 0, textAlign: "center" }}>
-      <div style={{ fontFamily: BODY, fontWeight: 800, fontSize: 30, letterSpacing: 6, color: C.pink }}>MOODBOARD · EP 10–12 · TEMA TERANG</div>
+      <div style={{ fontFamily: BODY, fontWeight: 800, fontSize: 30, letterSpacing: 6, color: C.pink }}>MOODBOARD · EP 10–12 · TEMA HANGAT</div>
       <div style={{ fontFamily: HEAD, fontSize: 84, color: C.cream, WebkitTextStroke: `10px ${C.ink}`, paintOrder: "stroke fill", marginTop: 6 }}>BAHAYA DI RUMAH SENDIRI</div>
       <div style={{ fontFamily: BODY, fontWeight: 700, fontSize: 28, color: C.ink, opacity: 0.85 }}>kasus nyata → Si Halus → fakta → cara aman (save) → kalimat haru (share)</div>
     </div>
