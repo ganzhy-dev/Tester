@@ -24,7 +24,7 @@ import numpy as np
 
 SR = 48000
 src, ep, cta_text = sys.argv[1], int(sys.argv[2]), sys.argv[3]
-GAP = {"sent": 0.28, "para": 0.5}
+GAP = {"sent": 0.16, "para": 0.3}  # rapat, gaya ngobrol/ngegosip
 
 
 def load(path, af=None):
@@ -94,7 +94,8 @@ for line in open(f"data/scripts/ep{ep}.txt", encoding="utf-8"):
         cur = {"tag": m.group(1).lower(), "paras": []}
         sections.append(cur)
         line = line[m.end():]
-    cur["paras"].append([s for s in re.split(r"(?<=[.!?])\s+", line) if s.strip()])
+    if line:
+        cur["paras"].append([s for s in re.split(r"(?<=[.!?])\s+", line) if s.strip()])
 
 hyp_norm = [norm(h["w"]) for h in hyp]
 
@@ -171,6 +172,9 @@ for tag in out:
 json.dump({"words": words["main"]}, open(f"data/ep{ep}_words.json", "w"), ensure_ascii=False, indent=0)
 hd = sum(len(a) for a in out["hook"]) / SR
 cd = sum(len(a) for a in out["cta"]) / SR
+if cd < 0.5:  # CTA tidak direkam: gelembung komen tetap tampil 3 dtk (tanpa suara)
+    cd = 3.0
+    save(np.zeros(int(cd * SR)), f"public/audio/ep{ep}_cta.wav")
 main_end = words["main"][-1]["end"]
 HL = json.load(open("data/hl.json")).get(str(ep), [])
 intro = round(hd + 0.2, 3)
