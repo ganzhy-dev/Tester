@@ -15,6 +15,9 @@ import { Ep6 } from "./ep/Ep6";
 import { Ep7 } from "./ep/Ep7";
 import { Ep8 } from "./ep/Ep8";
 import { Ep9 } from "./ep/Ep9";
+import { Ep10 } from "./ep/Ep10";
+import { Ep11 } from "./ep/Ep11";
+import { Ep12 } from "./ep/Ep12";
 
 /** 1080x1920 @60fps. Render 4K (2160x3840) dengan --scale=2. */
 export const RemotionRoot: React.FC = () => (
@@ -28,6 +31,9 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="EP7-Psikosomatik" component={Ep7} durationInFrames={Math.ceil(HOOKCTA[7].total * FPS)} fps={FPS} width={W} height={H} />
     <Composition id="EP8-NotifMalam" component={Ep8} durationInFrames={Math.ceil(HOOKCTA[8].total * FPS)} fps={FPS} width={W} height={H} />
     <Composition id="EP9-Doomscrolling" component={Ep9} durationInFrames={Math.ceil(HOOKCTA[9].total * FPS)} fps={FPS} width={W} height={H} />
+    <Composition id="EP10-Tersetrum" component={Ep10} durationInFrames={Math.ceil((HOOKCTA[10]?.total ?? 70) * FPS)} fps={FPS} width={W} height={H} />
+    <Composition id="EP11-BebanIbu" component={Ep11} durationInFrames={Math.ceil((HOOKCTA[11]?.total ?? 70) * FPS)} fps={FPS} width={W} height={H} />
+    <Composition id="EP12-LantaiLicin" component={Ep12} durationInFrames={Math.ceil((HOOKCTA[12]?.total ?? 70) * FPS)} fps={FPS} width={W} height={H} />
     <Still id="Cover-EP1" component={Cover1} width={W} height={H} />
     <Still id="Cover-EP2" component={Cover2} width={W} height={H} />
     <Still id="Cover-EP3" component={Cover3} width={W} height={H} />
