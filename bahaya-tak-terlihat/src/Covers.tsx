@@ -322,3 +322,55 @@ export const Cover9: React.FC = () => (
     </div>
   </CoverFrame>
 );
+
+/* ===================== Season 3: Bahaya di Rumah Sendiri (EP10–12) ===================== */
+const Clothesline: React.FC = () => (
+  <svg width={980} height={260} viewBox="0 0 980 260" style={{ overflow: "visible" }}>
+    <rect x={20} y={20} width={22} height={240} fill="#8A6A4A" stroke={C.ink} strokeWidth={OUTLINE} />
+    <rect x={938} y={20} width={22} height={240} fill="#8A6A4A" stroke={C.ink} strokeWidth={OUTLINE} />
+    <path d="M30 40 Q490 90 950 40" fill="none" stroke="#B9C0CC" strokeWidth={8} />
+    <path d="M300 62 l20 -36 l-6 30 l22 -6 l-26 44 l6 -30 z" fill="#FFE14D" stroke={C.ink} strokeWidth={4} />
+    <path d="M640 62 l20 -36 l-6 30 l22 -6 l-26 44 l6 -30 z" fill="#FFE14D" stroke={C.ink} strokeWidth={4} />
+    <path d="M120 52 L120 130 L200 130 L200 58 Z" fill={C.pink} stroke={C.ink} strokeWidth={5} />
+    <path d="M760 50 L760 150 L840 150 L840 46 Z" fill={C.cyan} stroke={C.ink} strokeWidth={5} />
+  </svg>
+);
+
+export const Cover10: React.FC = () => (
+  <CoverFrame ep={10} accent="#FFE14D" tint="#3A3410" line1="JANGAN LANGSUNG" line2="PEGANG!" sub="ada yang kesetrum? baca ini ⚡">
+    <div style={{ position: "absolute", left: 50, top: 1000 }}>
+      <Clothesline />
+    </div>
+    <ScanLine y={1450} />
+    <div style={{ position: "absolute", left: 110, top: 1040 }}>
+      <Worker size={600} expr="shocked" pose="point" shirt="#E85D75" pants="#2E3557" hijab="#3D4E8A" seed={5} />
+    </div>
+    <div style={{ position: "absolute", left: 640, top: 1000, rotate: "8deg" }}>
+      <SiHalus size={360} variant="volt" mood="grin" />
+    </div>
+  </CoverFrame>
+);
+
+export const Cover11: React.FC = () => (
+  <CoverFrame ep={11} accent="#C9B6E8" tint="#2E2048" line1="100 JAM SEMINGGU," line2="TANPA GAJI" sub="kamu manggilnya: Ibu 🤍">
+    <ScanLine y={1450} />
+    <div style={{ position: "absolute", left: 90, top: 1010 }}>
+      <Worker size={640} expr="dizzy" pose="shrug" shirt="#B5838D" pants="#4A3B5C" hijab="#6D597A" seed={6} />
+    </div>
+    <div style={{ position: "absolute", left: 640, top: 960, rotate: "6deg" }}>
+      <SiHalus size={360} variant="load" mood="grin" />
+    </div>
+  </CoverFrame>
+);
+
+export const Cover12: React.FC = () => (
+  <CoverFrame ep={12} accent="#9BE8F7" tint="#12384A" line1="LANTAI KAMAR MANDI" line2="BASAH?" sub="orang tua kita taruhannya 🛁">
+    <ScanLine y={1450} />
+    <div style={{ position: "absolute", left: 80, top: 1010 }}>
+      <Worker size={640} expr="shocked" pose="shrug" shirt="#7A9E7E" pants="#3B3B4F" hair="#D9D9E0" seed={7} />
+    </div>
+    <div style={{ position: "absolute", left: 640, top: 1000, rotate: "-6deg" }}>
+      <SiHalus size={360} variant="slip" mood="grin" />
+    </div>
+  </CoverFrame>
+);

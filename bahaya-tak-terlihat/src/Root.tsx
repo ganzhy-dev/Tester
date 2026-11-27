@@ -1,6 +1,6 @@
 import React from "react";
 import { Composition, Still } from "remotion";
-import { Cover1, Cover2, Cover3, Cover4, Cover5, Cover6, Cover7, Cover8, Cover9 } from "./Covers";
+import { Cover1, Cover2, Cover3, Cover4, Cover5, Cover6, Cover7, Cover8, Cover9, Cover10, Cover11, Cover12 } from "./Covers";
 import { AvatarA, AvatarB, ProfilePicture } from "./Avatar";
 import { CharTest } from "./CharTest";
 import { Moodboard } from "./Moodboard";
@@ -37,6 +37,9 @@ export const RemotionRoot: React.FC = () => (
     <Still id="Cover-EP7" component={Cover7} width={W} height={H} />
     <Still id="Cover-EP8" component={Cover8} width={W} height={H} />
     <Still id="Cover-EP9" component={Cover9} width={W} height={H} />
+    <Still id="Cover-EP10" component={Cover10} width={W} height={H} />
+    <Still id="Cover-EP11" component={Cover11} width={W} height={H} />
+    <Still id="Cover-EP12" component={Cover12} width={W} height={H} />
     <Still id="Avatar-A" component={AvatarA} width={1080} height={1080} />
     <Still id="Avatar-B" component={AvatarB} width={1080} height={1080} />
     <Still id="Moodboard-EP10-12" component={Moodboard} width={W} height={H} />

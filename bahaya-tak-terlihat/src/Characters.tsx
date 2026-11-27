@@ -21,6 +21,8 @@ export const Worker: React.FC<{
   earplug?: boolean;
   shake?: number;
   hair?: string;
+  /** warna hijab (tokoh Ibu); kosong = rambut biasa */
+  hijab?: string;
   skin?: string;
   seed?: number;
   flip?: boolean;
@@ -37,6 +39,7 @@ export const Worker: React.FC<{
   earplug = false,
   shake = 0,
   hair = "#1E1428",
+  hijab,
   skin = C.skin,
   seed = 0,
   flip = false,
@@ -165,16 +168,18 @@ export const Worker: React.FC<{
       <circle cx={hL[0]} cy={hL[1]} r={24} fill={skin} {...s} />
       <circle cx={hR[0]} cy={hR[1]} r={24} fill={skin} {...s} />
       {/* kepala */}
-      <circle cx={65} cy={205} r={26} fill={skin} {...s} />
-      <circle cx={335} cy={205} r={26} fill={skin} {...s} />
+      {hijab && <path d="M48 200 Q42 36 200 30 Q358 36 352 200 Q358 334 292 366 L108 366 Q42 334 48 200 Z" fill={hijab} {...s} />}
+      {!hijab && <circle cx={65} cy={205} r={26} fill={skin} {...s} />}
+      {!hijab && <circle cx={335} cy={205} r={26} fill={skin} {...s} />}
       {earplug && (
         <>
           <circle cx={65} cy={205} r={13} fill={C.orange} {...s} strokeWidth={4} />
           <circle cx={335} cy={205} r={13} fill={C.orange} {...s} strokeWidth={4} />
         </>
       )}
-      <circle cx={200} cy={190} r={138} fill={skin} {...s} />
-      {!helmet && (
+      {hijab ? <ellipse cx={200} cy={206} rx={116} ry={128} fill={skin} {...s} /> : <circle cx={200} cy={190} r={138} fill={skin} {...s} />}
+      {hijab && !helmet && <path d="M82 178 Q86 72 200 66 Q314 72 318 178 Q292 120 200 118 Q108 120 82 178 Z" fill={hijab} {...s} />}
+      {!helmet && !hijab && (
         <path d="M66 180 Q68 46 200 46 Q332 46 334 180 Q300 112 230 118 Q215 92 190 120 Q110 112 66 180Z" fill={hair} {...s} />
       )}
       {helmet && (
