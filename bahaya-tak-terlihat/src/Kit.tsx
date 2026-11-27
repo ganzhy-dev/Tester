@@ -18,11 +18,17 @@ const useT = () => {
 };
 
 /* ------------------------------------------------------------ latar */
-export const Backdrop: React.FC<{ accent: string; tint?: string }> = ({ accent, tint = C.bg2 }) => {
+export const Backdrop: React.FC<{ accent: string; tint?: string; light?: boolean }> = ({ accent, tint = C.bg2, light = false }) => {
   const t = useT();
   return (
-    <AbsoluteFill style={{ background: `radial-gradient(ellipse 90% 60% at 50% 42%, ${tint} 0%, ${C.bg1} 75%)` }}>
-      <svg width={1080} height={1920} style={{ position: "absolute", inset: 0, opacity: 0.16 }}>
+    <AbsoluteFill
+      style={{
+        background: light
+          ? `radial-gradient(ellipse 90% 60% at 50% 42%, #FFFFFF 0%, ${tint} 78%)`
+          : `radial-gradient(ellipse 90% 60% at 50% 42%, ${tint} 0%, ${C.bg1} 75%)`,
+      }}
+    >
+      <svg width={1080} height={1920} style={{ position: "absolute", inset: 0, opacity: light ? 0.3 : 0.16 }}>
         {new Array(16).fill(0).map((_, r) =>
           new Array(10).fill(0).map((__, c) => (
             <circle key={`${r}-${c}`} cx={54 + c * 108 + (r % 2) * 54} cy={((r * 120 + t * 18) % 1920)} r={4} fill={accent} />

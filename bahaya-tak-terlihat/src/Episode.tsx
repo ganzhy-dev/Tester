@@ -131,6 +131,10 @@ const CommentBubble: React.FC<{ text: string; dur: number }> = ({ text, dur }) =
 };
 
 
+/** EP10+: tema terang (latar pastel) dan konten diturunkan sedikit supaya lebih pas di layar TikTok */
+export const isLight = (ep: number) => ep >= 10;
+export const contentShift = (ep: number) => (ep >= 10 ? 56 : 0);
+
 /** Peta waktu lama -> baru (piecewise linear) */
 export const warpOldToNew = (x: number, w: [number, number][]) => {
   for (let i = 0; i < w.length - 1; i++) {
@@ -154,7 +158,12 @@ export const EndCard: React.FC<{ revealAt: number; ep?: number; ctaAt?: number; 
   const intro = interpolate(t, [0, 0.25], [0, 1], clamp);
   return (
     <AbsoluteFill>
-      <AbsoluteFill style={{ background: `radial-gradient(ellipse at 50% 45%, ${C.bg2}, ${C.bg1} 70%)`, opacity: intro }} />
+      <AbsoluteFill
+        style={{
+          background: isLight(ep) ? "radial-gradient(ellipse at 50% 45%, #FFFFFF, #FFE9C7 75%)" : `radial-gradient(ellipse at 50% 45%, ${C.bg2}, ${C.bg1} 70%)`,
+          opacity: intro,
+        }}
+      />
       <div style={{ position: "absolute", top: 380, left: 0, right: 0, textAlign: "center", scale: String(interpolate(s, [0, 1], [0.5, 1]) * (1 - 0.28 * p)), transformOrigin: "50% 0%", translate: `0px ${-110 * p}px`, opacity: s }}>
         <div style={{ fontFamily: BODY, fontWeight: 800, fontSize: 46, color: C.lime, letterSpacing: 6 }}>👁️ SERIAL K3 · IHOH</div>
         <div
@@ -228,7 +237,7 @@ export const Episode: React.FC<EpisodeProps> = (props) => {
   const hc = HOOKCTA[props.ep];
   const introF = Math.round(hc.hookDur * fps);
   return (
-    <AbsoluteFill style={{ background: C.bg1, overflow: "hidden" }}>
+    <AbsoluteFill style={{ background: isLight(props.ep) ? "#FFF7EC" : C.bg1, overflow: "hidden" }}>
       <Audio src={staticFile(`audio/ep${props.ep}_mix.wav`)} />
       <Sequence name="Isi utama" from={introF}>
         <EpisodeBody {...withInsert(props, INSERTS[props.ep])} insert={INSERTS[props.ep]} ctaAt={hc.ctaAt} ctaText={hc.ctaText} ctaDur={hc.ctaDur} />
@@ -271,8 +280,9 @@ const EpisodeBody: React.FC<EpisodeProps & { ctaAt: number; ctaText: string; cta
   const t = frame / fps;
   const f = flashAt(t, warp ? flashes.map((x) => warpOldToNew(x, warp)) : flashes);
   return (
-    <AbsoluteFill style={{ background: C.bg1, overflow: "hidden" }}>
-      <Backdrop accent={accent} tint={tint} />
+    <AbsoluteFill style={{ background: isLight(ep) ? "#FFF7EC" : C.bg1, overflow: "hidden" }}>
+      <Backdrop accent={accent} tint={tint} light={isLight(ep)} />
+      <AbsoluteFill style={{ translate: `0px ${contentShift(ep)}px` }}>
       {warp ? (
         warp.slice(0, -1).map(([oA, nA], i) => {
           const [oB, nB] = warp[i + 1];
@@ -302,6 +312,7 @@ const EpisodeBody: React.FC<EpisodeProps & { ctaAt: number; ctaText: string; cta
         <EndCard revealAt={revealAt - endStart} ep={ep} ctaAt={ctaAt - endStart} ctaText={ctaText} ctaDur={ctaDur} />
       </Sequence>
       {t < endStart && <Captions words={words.filter((w) => w.start < endStart - 0.05)} />}
+      </AbsoluteFill>
       <HandleTag ep={`EP ${ep}`} />
       {f > 0.01 && <AbsoluteFill style={{ background: C.white, opacity: f * 0.85 }} />}
     </AbsoluteFill>
