@@ -238,7 +238,6 @@ const Ep11Scenes: React.FC = () => {
             <div style={{ fontFamily: BODY, fontWeight: 800, fontSize: 34, color: "#5A3E5E" }}>perempuan mencatat jam kerja ngurus keluarga</div>
           </div>
         </Pop>
-        <Clock x={110} y={620} size={180} speed={1.6} />
         <Stat at={9.6} from={0} to={100} dur={1.4} suffix="+" label="JAM / MINGGU" y={590} color={MAUVE} />
         <Pop at={10.9} x={760} y={640}>
           <Tag bg="#FFD8C9" size={38} rot={6}>
@@ -331,7 +330,7 @@ const Ep11Scenes: React.FC = () => {
           )}
         </Room>
         <div style={{ position: "absolute", left: 540, top: 380, display: "flex", flexDirection: "column", gap: 26 }}>
-          <BodySpot at={24.45} icon="🔙" label="Pinggang" color={PEACH} />
+          <BodySpot at={24.45} icon="💢" label="Pinggang" color={PEACH} />
           <div style={{ fontFamily: BODY, fontWeight: 800, fontSize: 30, color: "#5A3E5E", marginTop: -14, opacity: t > 24.6 ? 1 : 0 }}>angkat galon & ember</div>
           <BodySpot at={26.6} icon="🦵" label="Lutut" color={PEACH} />
           <div style={{ fontFamily: BODY, fontWeight: 800, fontSize: 30, color: "#5A3E5E", marginTop: -14, opacity: t > 26.7 ? 1 : 0 }}>jongkok nyuci berjam-jam</div>
@@ -342,7 +341,7 @@ const Ep11Scenes: React.FC = () => {
 
       {/* 9 — Si Halus: Beban yang nggak kelihatan */}
       <Scene a={30.6} b={34.0}>
-        <Room dim={interpolate(t, [30.7, 31.1], [0, 0.45], clamp)}>
+        <Room dim={interpolate(t, [30.7, 31.1], [0, 0.28], clamp)}>
           <div style={{ position: "absolute", left: 120, top: 330 }}>
             <Worker size={460} pose="idle" expr="dizzy" {...IBU} seed={6} />
           </div>
