@@ -2,11 +2,12 @@ import React from "react";
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { BODY, C, HEAD, OUTLINE, clamp, easeInOut, easeOut } from "../brand";
 import { SiHalus, Worker } from "../Characters";
-import { Episode } from "../Episode";
+import { Episode, warpOldToNew } from "../Episode";
 import { Pop, Scanner, Sticker, useShake } from "../Kit";
 import { CheckRow } from "../Props";
 import { Scene } from "./Ep1";
 import { words } from "./ep10.words";
+import { warp } from "./ep10.warp";
 
 /** Semua waktu = detik isi utama (data/ep10_words.json). Tema HANGAT/terang — teks gelap di atas latar terang. */
 export const EP10 = { endStart: 49.46, revealAt: 51.39 };
@@ -430,8 +431,10 @@ const Ep10Scenes: React.FC = () => {
   );
 };
 
+const W = warp.length ? warp : undefined;
+
 export const Ep10: React.FC = () => (
-  <Episode ep={10} accent="#FFB21A" tint="#F3C98B" words={words} endStart={EP10.endStart} revealAt={EP10.revealAt} flashes={[2.4, 13.62]}>
+  <Episode ep={10} accent="#FFB21A" tint="#F3C98B" words={words} endStart={W ? warpOldToNew(EP10.endStart, W) : EP10.endStart} revealAt={W ? warpOldToNew(EP10.revealAt, W) : EP10.revealAt} warp={W} flashes={[2.4, 13.62]}>
     <Ep10Scenes />
   </Episode>
 );

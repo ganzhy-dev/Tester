@@ -4,7 +4,7 @@ VO EP10+ dengan OmniVoice (Voicebox, lokal, CPU) — pengganti ElevenLabs saat k
   /home/user/voicebox/backend/venv/bin/python scripts/omnivoice_vo.py <ep> [<ep> ...]
 
 Input : data/scripts/epN.txt  (baris diawali [HOOK]/[MAIN]/[CTA] menandai bagian)
-        data/voice/narator_ref.wav (+ teks referensi) = suara narator tetap (suara sintetis, bukan orang asli)
+        data/voice/user/user_ref.wav (+ teks referensi) = suara narator = suara user sendiri (atas permintaan user)
 Output: out/epN_omni_raw.wav  +  data/epN_omni_words.json  (format mirip Scribe: text/start/end, tag [..] = batas bagian)
 Lalu jalankan: process_vo.py out/epN_omni_raw.wav data/epN_omni_words.json N  &&  split_vo.py N "<teks CTA>"
 
@@ -25,8 +25,14 @@ import torch  # noqa: E402
 from omnivoice import OmniVoice  # noqa: E402
 
 SR = 24000
-REF_WAV = "data/voice/narator_ref.wav"
-REF_TEXT = "Pernah nggak, habis seharian pegang HP, kepala kamu kayak diiket? Itu bukan cuma capek biasa, lho."
+import os  # noqa: E402
+
+# suara narator: default = suara user sendiri (rekaman 10 dtk, data/voice/user/user_ref.wav)
+REF_WAV = os.environ.get("REF_WAV", "data/voice/user/user_ref.wav")
+REF_TEXT = os.environ.get(
+    "REF_TEXT",
+    "Bangun sebelum subuh, masak, nyuci, nganter anak, belanja, beresin rumah, ngurus yang sakit. Terus kalau ditanya kerja apa, jawabnya: cuma ibu rumah tangga.",
+)
 GAP_SENT, GAP_PARA = 0.22, 0.42
 
 torch.manual_seed(7)

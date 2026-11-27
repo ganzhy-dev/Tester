@@ -2,12 +2,13 @@ import React from "react";
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { BODY, C, HEAD, OUTLINE, clamp, easeInOut, easeOut } from "../brand";
 import { Pose, SiHalus, Worker } from "../Characters";
-import { Episode } from "../Episode";
+import { Episode, warpOldToNew } from "../Episode";
 import { Pop, Scanner, Sticker, useShake } from "../Kit";
 import { CheckRow } from "../Props";
 import { BodySpot } from "../PropsStress";
 import { Scene } from "./Ep1";
 import { words } from "./ep11.words";
+import { warp } from "./ep11.warp";
 
 /** Semua waktu = detik isi utama (data/ep11_words.json). Tema HANGAT/terang — teks gelap di atas latar terang. */
 export const EP11 = { endStart: 49.72, revealAt: 51.67 };
@@ -449,8 +450,10 @@ const Ep11Scenes: React.FC = () => {
   );
 };
 
+const W = warp.length ? warp : undefined;
+
 export const Ep11: React.FC = () => (
-  <Episode ep={11} accent="#A77BC9" tint="#E3C4D6" words={words} endStart={EP11.endStart} revealAt={EP11.revealAt} flashes={[32.7]}>
+  <Episode ep={11} accent="#A77BC9" tint="#E3C4D6" words={words} endStart={W ? warpOldToNew(EP11.endStart, W) : EP11.endStart} revealAt={W ? warpOldToNew(EP11.revealAt, W) : EP11.revealAt} warp={W} flashes={[32.7]}>
     <Ep11Scenes />
   </Episode>
 );

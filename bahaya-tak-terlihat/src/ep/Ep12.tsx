@@ -2,10 +2,11 @@ import React from "react";
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { BODY, C, HEAD, OUTLINE, clamp, easeInOut, easeOut } from "../brand";
 import { SiHalus, Worker } from "../Characters";
-import { Episode } from "../Episode";
+import { Episode, warpOldToNew } from "../Episode";
 import { Pop, Scanner, Sticker, useShake } from "../Kit";
 import { Scene } from "./Ep1";
 import { words } from "./ep12.words";
+import { warp } from "./ep12.warp";
 
 /**
  * EP12 "Lantai Kamar Mandi Basah?" — jatuh di rumah (lansia).
@@ -541,8 +542,10 @@ const Ep12Scenes: React.FC = () => {
   );
 };
 
+const W = warp.length ? warp : undefined;
+
 export const Ep12: React.FC = () => (
-  <Episode ep={12} accent="#2FA7B8" tint="#BFDCCB" words={words} endStart={EP12.endStart} revealAt={EP12.revealAt} flashes={[17.5]}>
+  <Episode ep={12} accent="#2FA7B8" tint="#BFDCCB" words={words} endStart={W ? warpOldToNew(EP12.endStart, W) : EP12.endStart} revealAt={W ? warpOldToNew(EP12.revealAt, W) : EP12.revealAt} warp={W} flashes={[17.5]}>
     <Ep12Scenes />
   </Episode>
 );
