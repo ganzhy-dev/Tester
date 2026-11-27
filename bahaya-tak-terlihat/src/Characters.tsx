@@ -203,7 +203,7 @@ export const Worker: React.FC<{
  * Maskot bahaya tak terlihat — "makhluk halus" versi K3.
  * Varian: co2 (kabut ngantuk), vibe (getaran), noise (bising).
  */
-export type HalusVariant = "co2" | "vibe" | "noise" | "heat" | "dust" | "gas" | "stress" | "burnout" | "doom" | "volt" | "load" | "slip";
+export type HalusVariant = "co2" | "vibe" | "noise" | "heat" | "dust" | "gas" | "stress" | "burnout" | "doom" | "volt" | "load" | "slip" | "lpg" | "bottle" | "steam";
 
 export const SiHalus: React.FC<{
   size?: number;
@@ -228,6 +228,9 @@ export const SiHalus: React.FC<{
     volt: ["#FFE14D", "#F2B705"],
     load: ["#C9B6E8", "#9B83C9"],
     slip: ["#9BE8F7", "#4FC3E0"],
+    lpg: ["#FF9E6B", "#E8663D"],
+    bottle: ["#D7F0E8", "#9CCFC0"],
+    steam: ["#FF8FA3", "#E0566F"],
   };
   const [col, col2] = PAL[variant];
   const s = { stroke: C.ink, strokeWidth: OUTLINE, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
@@ -329,6 +332,16 @@ export const SiHalus: React.FC<{
           const p = (t * 0.8 + i / 4) % 1;
           return <path key={i} d={`M${i % 2 ? 290 : 0} ${40 + p * 220} l14 18 l14 -18`} fill="none" stroke="#9FB4FF" strokeWidth={8} strokeLinecap="round" opacity={Math.sin(p * Math.PI)} />;
         })}
+      {variant === "lpg" &&
+        [0, 1, 2].map((i) => {
+          const p = (t * 0.7 + i / 3) % 1;
+          return <path key={i} d={`M${60 + i * 90} ${60 - p * 110} q12 -14 0 -28 q-12 -14 0 -28`} fill="none" stroke="#C9A227" strokeWidth={7} strokeLinecap="round" opacity={0.8 * Math.sin(p * Math.PI)} />;
+        })}
+      {variant === "steam" &&
+        [0, 1, 2].map((i) => {
+          const p = (t * 0.6 + i / 3) % 1;
+          return <path key={i} d={`M${80 + i * 70} ${40 - p * 120} q-16 -18 0 -36 q16 -18 0 -36`} fill="none" stroke="#FFFFFF" strokeWidth={10} strokeLinecap="round" opacity={0.85 * Math.sin(p * Math.PI)} />;
+        })}
       {variant === "slip" && <ellipse cx={150} cy={318} rx={150 + 8 * Math.sin(t * 3)} ry={26} fill="#4FC3E0" opacity={0.45} />}
       {variant === "volt" && (
         <g>
@@ -360,6 +373,22 @@ export const SiHalus: React.FC<{
       {variant === "volt" && (
         <path d={`M80 52 L100 ${-4 - 6 * Math.abs(Math.sin(t * 9))} L120 40 L140 ${-14 - 6 * Math.abs(Math.sin(t * 11))} L160 38 L182 ${-6 - 6 * Math.abs(Math.sin(t * 8))} L200 44 L220 ${4 - 6 * Math.abs(Math.sin(t * 10))} L226 56`} fill="#FFE14D" {...s} />
       )}
+      {variant === "lpg" && (
+        <g>
+          <rect x={112} y={-8} width={76} height={44} rx={10} fill="#3A3F4B" {...s} strokeWidth={5} />
+          <circle cx={150} cy={14} r={11} fill="#FF4F4F" {...s} strokeWidth={4} />
+          <path d={`M188 14 Q230 ${0 + 6 * Math.sin(t * 5)} 262 24`} fill="none" stroke={C.ink} strokeWidth={9} strokeLinecap="round" />
+        </g>
+      )}
+      {variant === "bottle" && (
+        <g>
+          <rect x={126} y={-30} width={48} height={40} rx={8} fill="#8FD0F0" {...s} strokeWidth={5} />
+          <rect x={120} y={-48} width={60} height={22} rx={6} fill="#3F8FD6" {...s} strokeWidth={5} />
+          <rect x={92} y={250} width={116} height={38} rx={8} fill="#FFFFFF" {...s} strokeWidth={4} />
+          <text x={150} y={278} textAnchor="middle" fontFamily="LilitaOne" fontSize={26} fill="#E0566F">AIR?</text>
+        </g>
+      )}
+      {variant === "steam" && <path d="M110 40 Q150 -10 190 40" fill="none" stroke="#FFFFFF" strokeWidth={12} strokeLinecap="round" opacity={0.9} />}
       {variant === "slip" && <path d="M150 -40 Q118 6 120 26 A30 30 0 0 0 180 26 Q182 6 150 -40 Z" fill="#9BE8F7" {...s} strokeWidth={5} />}
       {variant === "load" && (
         <g transform={`rotate(${3 * Math.sin(t * 2)} 150 20)`}>

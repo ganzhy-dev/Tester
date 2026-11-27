@@ -379,3 +379,82 @@ export const Cover12: React.FC = () => (
     </div>
   </CoverFrame>
 );
+
+const GasTank: React.FC = () => (
+  <svg width={300} height={380} viewBox="0 0 300 380" style={{ overflow: "visible" }}>
+    <rect x={60} y={70} width={180} height={290} rx={60} fill="#3FAE5A" stroke={C.ink} strokeWidth={OUTLINE} />
+    <rect x={110} y={30} width={80} height={50} rx={10} fill="#C9CED6" stroke={C.ink} strokeWidth={OUTLINE} />
+    <rect x={80} y={170} width={140} height={60} rx={12} fill="#FFFFFF" stroke={C.ink} strokeWidth={5} />
+    <text x={150} y={212} textAnchor="middle" fontFamily="LilitaOne" fontSize={40} fill={C.ink}>LPG</text>
+    <path d="M190 40 Q260 0 280 60" fill="none" stroke={C.ink} strokeWidth={12} strokeLinecap="round" />
+    {[0, 1, 2].map((i) => (
+      <path key={i} d={`M${250 + i * 18} ${30 - i * 20} q14 -16 0 -32 q-14 -16 0 -32`} fill="none" stroke="#C9A227" strokeWidth={7} strokeLinecap="round" />
+    ))}
+  </svg>
+);
+
+const BottleProp: React.FC = () => (
+  <svg width={170} height={360} viewBox="0 0 170 360" style={{ overflow: "visible" }}>
+    <rect x={55} y={0} width={60} height={34} rx={8} fill="#3F8FD6" stroke={C.ink} strokeWidth={OUTLINE} />
+    <path d="M60 34 L110 34 L110 70 Q160 90 160 140 L160 330 Q160 356 134 356 L36 356 Q10 356 10 330 L10 140 Q10 90 60 70 Z" fill="#CFEFFF" stroke={C.ink} strokeWidth={OUTLINE} />
+    <path d="M14 200 L156 200 L156 330 Q156 352 134 352 L36 352 Q14 352 14 330 Z" fill="#B7E36B" opacity={0.85} />
+    <rect x={20} y={130} width={130} height={50} rx={8} fill="#FFFFFF" stroke={C.ink} strokeWidth={5} />
+    <text x={85} y={165} textAnchor="middle" fontFamily="LilitaOne" fontSize={28} fill="#3F8FD6">AIR?</text>
+  </svg>
+);
+
+const PotProp: React.FC = () => (
+  <svg width={420} height={260} viewBox="0 0 420 260" style={{ overflow: "visible" }}>
+    <rect x={40} y={190} width={340} height={30} rx={10} fill="#6B7280" stroke={C.ink} strokeWidth={OUTLINE} />
+    <rect x={90} y={80} width={220} height={120} rx={18} fill="#C9CED6" stroke={C.ink} strokeWidth={OUTLINE} />
+    <rect x={300} y={110} width={110} height={24} rx={12} fill="#3A3F4B" stroke={C.ink} strokeWidth={OUTLINE} />
+    {[0, 1, 2].map((i) => (
+      <path key={i} d={`M${140 + i * 60} 70 q-16 -20 0 -40 q16 -20 0 -40`} fill="none" stroke="#FFFFFF" strokeWidth={10} strokeLinecap="round" />
+    ))}
+  </svg>
+);
+
+export const Cover13: React.FC = () => (
+  <CoverFrame ep={13} accent="#E8663D" tint="#F6C2A0" line1="CIUM BAU GAS?" line2="JANGAN NYALAIN LAMPU!" sub="ini yang harus kamu lakuin 🔥">
+    <div style={{ position: "absolute", left: 620, top: 1020 }}>
+      <GasTank />
+    </div>
+    <ScanLine y={1450} />
+    <div style={{ position: "absolute", left: 80, top: 1010 }}>
+      <Worker size={620} expr="shocked" pose="coverEars" shirt="#E8634A" pants="#3B3B4F" hijab="#7A3E2E" seed={8} />
+    </div>
+    <div style={{ position: "absolute", left: 440, top: 975, rotate: "-8deg" }}>
+      <SiHalus size={280} variant="lpg" mood="grin" />
+    </div>
+  </CoverFrame>
+);
+
+export const Cover14: React.FC = () => (
+  <CoverFrame ep={14} accent="#2E9E83" tint="#CDE8DC" line1="BOTOL AIR MINERAL" line2="BUKAN ISI AIR?" sub="anak cuma tahu: haus = minum 🍼">
+    <div style={{ position: "absolute", left: 640, top: 1060, rotate: "6deg" }}>
+      <BottleProp />
+    </div>
+    <ScanLine y={1450} />
+    <div style={{ position: "absolute", left: 110, top: 1110 }}>
+      <Worker size={520} expr="happy" pose="point" shirt="#F2B33D" pants="#3B4E8A" seed={9} />
+    </div>
+    <div style={{ position: "absolute", left: 800, top: 975, rotate: "10deg" }}>
+      <SiHalus size={240} variant="bottle" mood="grin" />
+    </div>
+  </CoverFrame>
+);
+
+export const Cover15: React.FC = () => (
+  <CoverFrame ep={15} accent="#E0566F" tint="#F3C1C8" line1="GAGANG PANCI" line2="NONGOL KELUAR?" sub="sedetik lengah, anak taruhannya 🫕">
+    <div style={{ position: "absolute", left: 520, top: 1060 }}>
+      <PotProp />
+    </div>
+    <ScanLine y={1450} />
+    <div style={{ position: "absolute", left: 90, top: 1120 }}>
+      <Worker size={500} expr="shocked" pose="point" shirt="#6FB3E0" pants="#3B3B4F" seed={10} />
+    </div>
+    <div style={{ position: "absolute", left: 790, top: 960, rotate: "-6deg" }}>
+      <SiHalus size={240} variant="steam" mood="grin" />
+    </div>
+  </CoverFrame>
+);

@@ -1,6 +1,6 @@
 import React from "react";
 import { Composition, Still } from "remotion";
-import { Cover1, Cover2, Cover3, Cover4, Cover5, Cover6, Cover7, Cover8, Cover9, Cover10, Cover11, Cover12 } from "./Covers";
+import { Cover1, Cover2, Cover3, Cover4, Cover5, Cover6, Cover7, Cover8, Cover9, Cover10, Cover11, Cover12, Cover13, Cover14, Cover15 } from "./Covers";
 import { AvatarA, AvatarB, ProfilePicture } from "./Avatar";
 import { CharTest } from "./CharTest";
 import { Moodboard } from "./Moodboard";
@@ -18,6 +18,9 @@ import { Ep9 } from "./ep/Ep9";
 import { Ep10 } from "./ep/Ep10";
 import { Ep11 } from "./ep/Ep11";
 import { Ep12 } from "./ep/Ep12";
+import { Ep13 } from "./ep/Ep13";
+import { Ep14 } from "./ep/Ep14";
+import { Ep15 } from "./ep/Ep15";
 
 /** 1080x1920 @60fps. Render 4K (2160x3840) dengan --scale=2. */
 export const RemotionRoot: React.FC = () => (
@@ -34,6 +37,9 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="EP10-Tersetrum" component={Ep10} durationInFrames={Math.ceil((HOOKCTA[10]?.total ?? 70) * FPS)} fps={FPS} width={W} height={H} />
     <Composition id="EP11-BebanIbu" component={Ep11} durationInFrames={Math.ceil((HOOKCTA[11]?.total ?? 70) * FPS)} fps={FPS} width={W} height={H} />
     <Composition id="EP12-LantaiLicin" component={Ep12} durationInFrames={Math.ceil((HOOKCTA[12]?.total ?? 70) * FPS)} fps={FPS} width={W} height={H} />
+    <Composition id="EP13-GasBocor" component={Ep13} durationInFrames={Math.ceil((HOOKCTA[13]?.total ?? 70) * FPS)} fps={FPS} width={W} height={H} />
+    <Composition id="EP14-BotolNyaru" component={Ep14} durationInFrames={Math.ceil((HOOKCTA[14]?.total ?? 70) * FPS)} fps={FPS} width={W} height={H} />
+    <Composition id="EP15-AirPanas" component={Ep15} durationInFrames={Math.ceil((HOOKCTA[15]?.total ?? 70) * FPS)} fps={FPS} width={W} height={H} />
     <Still id="Cover-EP1" component={Cover1} width={W} height={H} />
     <Still id="Cover-EP2" component={Cover2} width={W} height={H} />
     <Still id="Cover-EP3" component={Cover3} width={W} height={H} />
@@ -46,6 +52,9 @@ export const RemotionRoot: React.FC = () => (
     <Still id="Cover-EP10" component={Cover10} width={W} height={H} />
     <Still id="Cover-EP11" component={Cover11} width={W} height={H} />
     <Still id="Cover-EP12" component={Cover12} width={W} height={H} />
+    <Still id="Cover-EP13" component={Cover13} width={W} height={H} />
+    <Still id="Cover-EP14" component={Cover14} width={W} height={H} />
+    <Still id="Cover-EP15" component={Cover15} width={W} height={H} />
     <Still id="Avatar-A" component={AvatarA} width={1080} height={1080} />
     <Still id="Avatar-B" component={AvatarB} width={1080} height={1080} />
     <Still id="Moodboard-EP10-12" component={Moodboard} width={W} height={H} />
