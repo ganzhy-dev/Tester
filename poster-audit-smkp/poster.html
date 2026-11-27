@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<title>Poster Audit SMKP</title>
+<style>
+  @font-face { font-family: "Lilita"; src: url("fonts/LilitaOne.woff2") format("woff2"); }
+  :root {
+    --navy: #0f2a44; --ink: #13263a; --teal: #0f7f86; --teal-d: #0b5c66; --orange: #f28a2e;
+    --lime: #d6f23a; --white: #ffffff; --yellow: #ffcf2e; --green: #3aa65b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; }
+  body { font-family: "Inter", sans-serif; color: var(--white); -webkit-font-smoothing: antialiased; }
+  .poster { position: relative; width: 1080px; height: 1920px; overflow: hidden;
+    background: radial-gradient(ellipse 90% 55% at 50% 47%, #1c9197 0%, var(--teal-d) 40%, var(--navy) 85%); }
+  svg.scene { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+
+  /* pita garis safety */
+  .tape { position: absolute; left: -40px; right: -40px; height: 46px; border-top: 4px solid var(--ink); border-bottom: 4px solid var(--ink);
+    background: repeating-linear-gradient(-45deg, var(--yellow) 0 34px, var(--ink) 34px 68px); }
+  .tape.top { top: 0; }
+  .tape.bot { bottom: 0; }
+
+  .cos { position: absolute; top: 74px; left: 0; right: 0; text-align: center; font: 800 25px/1 "Inter"; letter-spacing: 2.5px; color: var(--white); opacity: .95; }
+  .cos i { font-style: normal; color: var(--orange); margin: 0 10px; }
+
+  /* headline 3D */
+  .head { position: absolute; top: 128px; left: 0; right: 0; text-align: center; transform: rotate(-4deg); }
+  .h { font-family: "Lilita"; line-height: .82; letter-spacing: 4px; -webkit-text-stroke: 18px var(--ink); paint-order: stroke fill; }
+  .h.a { font-size: 250px; color: var(--white);
+    text-shadow: 0 4px 0 var(--ink), 0 8px 0 var(--ink), 0 12px 0 var(--ink), 0 16px 0 var(--ink), 0 20px 0 var(--ink), 0 30px 30px rgba(0,0,0,.35); }
+  .h.b { font-size: 330px; color: var(--orange); margin-top: -10px;
+    text-shadow: 0 5px 0 #a8480f, 0 10px 0 #a8480f, 0 15px 0 #a8480f, 0 20px 0 var(--ink), 0 26px 0 var(--ink), 0 40px 40px rgba(0,0,0,.4); }
+  .sticker { position: absolute; top: 596px; left: 0; right: 0; display: flex; justify-content: center; }
+  .sticker div { font: 44px/1 "Lilita"; color: var(--ink); background: var(--lime); padding: 14px 30px 18px; border-radius: 18px; border: 5px solid var(--ink); box-shadow: 0 9px 0 var(--ink); transform: rotate(3deg); }
+
+  /* tanggal raksasa */
+  .date { position: absolute; top: 1218px; left: -30px; right: -30px; height: 250px; background: var(--orange); border-top: 7px solid var(--ink); border-bottom: 7px solid var(--ink); transform: rotate(-3deg);
+    display: flex; align-items: center; justify-content: center; gap: 26px; box-shadow: 0 16px 0 rgba(0,0,0,.25); }
+  .date .big { font: 196px/1 "Lilita"; color: var(--white); -webkit-text-stroke: 14px var(--ink); paint-order: stroke fill; text-shadow: 0 10px 0 var(--ink); letter-spacing: 2px; }
+  .date .side { font-family: "Lilita"; color: var(--ink); line-height: .95; }
+  .date .side .m { font-size: 74px; }
+  .date .side .y { font-size: 46px; color: var(--white); -webkit-text-stroke: 8px var(--ink); paint-order: stroke fill; }
+  .date .side .d { font: 900 26px/1.2 "Inter"; letter-spacing: 3px; }
+
+  .who { position: absolute; top: 1500px; left: 0; right: 0; text-align: center; }
+  .who span { display: inline-block; font: 40px/1 "Lilita"; color: var(--ink); background: var(--white); border: 5px solid var(--ink); border-radius: 999px; padding: 14px 34px 18px; box-shadow: 0 8px 0 var(--ink); }
+  .who span b { color: var(--orange); font-weight: normal; }
+
+  /* tujuan (kata kunci) */
+  .goals { position: absolute; top: 1612px; left: 44px; right: 44px; }
+  .goals .lbl { text-align: center; font: 900 22px/1 "Inter"; letter-spacing: 8px; color: var(--lime); margin-bottom: 14px; }
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .g { background: var(--white); color: var(--ink); border: 4px solid var(--ink); border-radius: 22px; box-shadow: 0 7px 0 var(--ink); padding: 14px 8px 14px; text-align: center; }
+  .g .ic { font-size: 48px; line-height: 1; }
+  .g .t { font: 28px/1 "Lilita"; margin-top: 8px; }
+  .g .s { font: 700 15px/1.15 "Inter"; color: #4a5a6a; margin-top: 6px; }
+  .g:nth-child(1) .t { color: var(--teal); }
+  .g:nth-child(2) .t { color: #d9661a; }
+  .g:nth-child(3) .t { color: var(--navy); }
+  .g:nth-child(4) .t { color: var(--green); }
+
+  .hash { position: absolute; bottom: 62px; left: 0; right: 0; text-align: center; font: 30px/1 "Lilita"; color: var(--white); letter-spacing: 1px; }
+  .hash b { color: var(--lime); font-weight: normal; }
+</style>
+</head>
+<body>
+<div class="poster">
+  <svg class="scene" viewBox="0 0 1080 1920" id="scene"></svg>
+  <div class="tape top"></div>
+
+  <div class="cos">PT JULOI COAL<i>●</i>PT KALTENG COAL<i>●</i>PT SUMBER BARITO COAL</div>
+
+  <div class="head">
+    <div class="h a">AUDIT</div>
+    <div class="h b">SMKP</div>
+  </div>
+  <div class="sticker"><div>SIAP DIAUDIT, SIAP SELAMAT! 💪</div></div>
+
+  <div class="date">
+    <div class="big">2–3</div>
+    <div class="side"><div class="m">DESEMBER</div><div class="y">2026</div><div class="d">RABU – KAMIS</div></div>
+  </div>
+
+  <div class="who"><span>👷 SELURUH PEKERJA <b>IKUT AUDIT!</b></span></div>
+
+  <div class="goals">
+    <div class="lbl">TUJUAN AUDIT</div>
+    <div class="row">
+      <div class="g"><div class="ic">🎯</div><div class="t">KESESUAIAN</div><div class="s">dengan kriteria audit</div></div>
+      <div class="g"><div class="ic">⚖️</div><div class="t">KEPATUHAN</div><div class="s">peraturan perundang-undangan</div></div>
+      <div class="g"><div class="ic">📈</div><div class="t">KEEFEKTIFAN</div><div class="s">capai tujuan yang ditetapkan</div></div>
+      <div class="g"><div class="ic">🚀</div><div class="t">PENINGKATAN</div><div class="s">temukan yang bisa lebih baik</div></div>
+    </div>
+  </div>
+
+  <div class="hash">#<b>SiapAudit</b>SMKP · Pulang selamat, tiap hari 🦺</div>
+  <div class="tape bot"></div>
+</div>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="gd" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f28a2e" />
+      <stop offset="1" stop-color="#0f7f86" />
+    </linearGradient>
+  </defs>
+</svg>
+<script src="characters.js"></script>
+</body>
+</html>
