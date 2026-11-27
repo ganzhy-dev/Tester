@@ -406,3 +406,82 @@ python3 scripts/make_inserts.py        # sisipan kasus viral + hook baru EP9
 python3 scripts/make_audio.py 7        # dst.
 ./scripts/render_all.sh EP7-Psikosomatik EP8-NotifMalam EP9-Doomscrolling
 ```
+
+---
+
+# Season 3: EP10–EP15, seri RUMAH (bahaya yang nggak kelihatan di rumah sendiri)
+
+Tema hangat (latar pastel, teks gelap), konten diturunkan 56 px. VO: narator sintetis OmniVoice (`data/voice/narator_ref.wav`). Kalau nanti ada rekaman/CapCut sendiri, ganti lewat `scripts/user_vo.py` + `scripts/words_warp.py`; animasi ikut menyesuaikan otomatis.
+
+| EP | Judul | File | Durasi |
+|---|---|---|---|
+| 10 | Tersetrum colokan | `video/EP10_Tersetrum_1080p60.mp4` | 62 s |
+| 11 | Beban ibu rumah tangga | `video/EP11_BebanIbu_1080p60.mp4` | 64 s |
+| 12 | Lantai kamar mandi licin | `video/EP12_LantaiLicin_1080p60.mp4` | 62 s |
+| 13 | Gas elpiji bocor | `video/EP13_GasBocor_1080p60.mp4` | 62 s |
+| 14 | Botol air mineral isi cairan berbahaya | `video/EP14_BotolNyaru_1080p60.mp4` | 62 s |
+| 15 | Air panas di dapur | `video/EP15_AirPanas_1080p60.mp4` | ±70 s |
+
+Naskah lengkap: `data/scripts/ep10.txt` … `ep15.txt`. Cover: still `Cover-EP10` … `Cover-EP15`.
+
+## Caption TikTok EP13–15
+
+**EP13**
+```
+cium bau gas di dapur… JANGAN nyalain lampu dulu 😨
+
+Elpiji lebih berat dari udara, dia ngumpul di lantai nunggu satu percikan. Saklar lampu, colokan HP, kompor, semua bisa jadi pemicunya.
+
+Yang harus kamu lakuin: buka pintu & jendela, cabut regulator, keluar dulu. Simpan video ini buat orang rumah 📌
+
+Di rumahmu, regulator terakhir dicek kapan? Jawab di komen 👇
+
+#gasbocor #elpiji #lpg #k3 #keselamatanrumah #iburumahtangga #dapur #fyp
+```
+
+**EP14**
+```
+anak cuma tahu: haus, ada botol, minum 🍼💔
+
+Air aki, minyak tanah, disinfektan… jangan pernah dipindah ke botol air mineral. Kalau terlanjur ketelen: jangan disuruh muntah, langsung ke IGD dan bawa botolnya.
+
+Di rumah kamu ada botol "air" yang isinya bukan air? Ngaku di komen 👇
+
+#keselamatananak #parenting #ibuanak #balita #keracunan #k3 #tipsibu #fyp
+```
+
+**EP15**
+```
+cuma sedetik lengah… dan panci itu ketarik 😢
+
+Kulit anak lebih tipis, air panas yang buat kita cuma bikin kaget bisa jadi luka bakar dalam buat mereka.
+
+Kalau kejadian: siram air mengalir yang sejuk ±20 menit. JANGAN es, odol, mentega, atau kecap. Simpan & kirim ke orang tua/pengasuh 📌
+
+Gagang panci di rumahmu sekarang ngadep ke mana? Cek, terus jawab di komen 👇
+
+#lukabakar #airpanas #pertolonganpertama #parenting #balita #dapur #k3 #fyp
+```
+
+**Komentar pertama untuk di-pin:**
+- EP13: "baru tahu kalau nyalain lampu aja bisa jadi pemicu 😳 regulator di rumahku terakhir ganti… lupa 🥲"
+- EP14: "ngaku: di rumahku ada botol aqua isi minyak tanah 🙈 hari ini langsung aku pindahin"
+- EP15: "odol itu ternyata MITOS ya 😭 siapa yang dari kecil diajarin pakai odol?"
+
+## Sumber riset EP13–15
+- EP13 Pekalongan, November 2025: Pertamina memastikan ledakan (3 orang meninggal) dari regulator bocor. https://www.detik.com/jateng/bisnis/d-8195730/pertamina-pastikan-ledakan-tewaskan-3-orang-di-pekalongan-dari-regulator-bocor
+- EP13 Ditjen Migas ESDM: periksa selang & regulator, langkah saat gas bocor. https://migas.esdm.go.id/post/hindari-kecelakaan-saat-memasak-jangan-lupa-periksa-selang-dan-regulator-lpg
+- EP13 tanda gas bocor dan langkah aman (Damkar/RRI/detik). https://megapolitan.antaranews.com/berita/547964/damkar-bekasi-ingatkan-warga-waspadai-kebocoran-gas-di-rumah · https://www.detik.com/properti/tips-dan-panduan/d-8119888/belajar-dari-kasus-ledakan-pamulang-segera-lakukan-ini-bila-gas-bocor
+- EP14 kasus balita 2 tahun di Sukabumi (disinfektan di botol air mineral) dan penjelasan dokter anak IDAI (dr. Ariani Dewi Widodo): air aki & minyak tanah paling sering; jangan dipancing muntah, langsung ke IGD dan bawa wadahnya. Kasus serupa di restoran Bali: https://www.detik.com/bali/hukum-dan-kriminal/d-8198016/fatal-cairan-pembersih-di-botol-air-mineral-restoran-diminum-pelanggan
+- EP15 kasus balita di Ponorogo tercebur panci air panas (Orami).
+- EP15 WHO, *Burns* fact sheet: ±180.000 kematian/tahun, sebagian besar di rumah & tempat kerja; dinginkan dengan air mengalir yang sejuk, jangan es. https://www.who.int/news-room/fact-sheets/detail/burns
+- EP15 pertolongan pertama luka air panas pada anak (±20 menit air mengalir; jangan odol/mentega/kecap; lepas perhiasan kecuali yang menempel; ke dokter bila lebih besar dari telapak tangan atau kena wajah): https://health.detik.com/anak-dan-remaja/d-3071696/si-kecil-tersiram-air-panas-begini-pertolongan-pertamanya · https://www.alodokter.com/kenali-pertolongan-pertama-kena-air-panas · https://hellosehat.com/hidup-sehat/pertolongan-pertama/mengatasi-luka-bakar-pada-anak/
+
+## Cara render ulang EP10–15
+```bash
+for n in 13 14 15; do python3 scripts/make_audio.py $n; done
+./scripts/render_all.sh EP13-GasBocor EP14-BotolNyaru EP15-AirPanas
+```
+
+## Kantor virtual
+Tim agen ada di `.claude/agents/`: manager-produser (Mbak Rani), riset-fakta (Dika), copywriter (Laras), art-director (Bima), motion-designer (Sekar), sound-vo (Yoga), qa-reviewer (Nina), sosmed-strategist (Fajar). Panggil lewat Claude Code, misalnya "pakai agen copywriter buat naskah EP16".

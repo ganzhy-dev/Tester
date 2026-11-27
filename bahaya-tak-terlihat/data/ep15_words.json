@@ -1,0 +1,939 @@
+{
+"words": [
+{
+"text": "Sedetik",
+"start": 0.25,
+"end": 0.611
+},
+{
+"text": "aja",
+"start": 0.651,
+"end": 0.832
+},
+{
+"text": "kita",
+"start": 0.851,
+"end": 1.076
+},
+{
+"text": "lengah,",
+"start": 1.101,
+"end": 1.597
+},
+{
+"text": "tangan",
+"start": 1.652,
+"end": 1.968
+},
+{
+"text": "kecil",
+"start": 2.002,
+"end": 2.273
+},
+{
+"text": "itu",
+"start": 2.303,
+"end": 2.484
+},
+{
+"text": "narik,",
+"start": 2.503,
+"end": 2.953
+},
+{
+"text": "dan",
+"start": 3.005,
+"end": 3.184
+},
+{
+"text": "air",
+"start": 3.205,
+"end": 3.385
+},
+{
+"text": "panasnya",
+"start": 3.405,
+"end": 3.81
+},
+{
+"text": "tumpah",
+"start": 3.856,
+"end": 4.171
+},
+{
+"text": "ke",
+"start": 4.206,
+"end": 4.34
+},
+{
+"text": "badannya.",
+"start": 4.356,
+"end": 4.807
+},
+{
+"text": "Kasus",
+"start": 5.058,
+"end": 5.231
+},
+{
+"text": "kayak",
+"start": 5.256,
+"end": 5.477
+},
+{
+"text": "gini",
+"start": 5.502,
+"end": 5.687
+},
+{
+"text": "sering",
+"start": 5.708,
+"end": 5.966
+},
+{
+"text": "banget.",
+"start": 5.996,
+"end": 6.291
+},
+{
+"text": "Di",
+"start": 6.564,
+"end": 6.69
+},
+{
+"text": "Ponorogo,",
+"start": 6.705,
+"end": 7.25
+},
+{
+"text": "ada",
+"start": 7.311,
+"end": 7.48
+},
+{
+"text": "balita",
+"start": 7.498,
+"end": 7.793
+},
+{
+"text": "yang",
+"start": 7.825,
+"end": 8.035
+},
+{
+"text": "kecebur",
+"start": 8.059,
+"end": 8.395
+},
+{
+"text": "panci",
+"start": 8.433,
+"end": 8.685
+},
+{
+"text": "air",
+"start": 8.712,
+"end": 8.881
+},
+{
+"text": "panas.",
+"start": 8.899,
+"end": 9.194
+},
+{
+"text": "Itu",
+"start": 9.444,
+"end": 9.618
+},
+{
+"text": "ulah",
+"start": 9.637,
+"end": 9.855
+},
+{
+"text": "makhluk",
+"start": 9.878,
+"end": 10.226
+},
+{
+"text": "halus",
+"start": 10.265,
+"end": 10.526
+},
+{
+"text": "yang",
+"start": 10.555,
+"end": 10.772
+},
+{
+"text": "paling",
+"start": 10.796,
+"end": 11.1
+},
+{
+"text": "deket",
+"start": 11.135,
+"end": 11.396
+},
+{
+"text": "sama",
+"start": 11.424,
+"end": 11.641
+},
+{
+"text": "dapur",
+"start": 11.665,
+"end": 11.926
+},
+{
+"text": "kita...",
+"start": 11.956,
+"end": 12.434
+},
+{
+"text": "Air",
+"start": 12.487,
+"end": 12.661
+},
+{
+"text": "panas!",
+"start": 12.681,
+"end": 12.985
+},
+{
+"text": "Kulit",
+"start": 13.247,
+"end": 13.507
+},
+{
+"text": "anak",
+"start": 13.535,
+"end": 13.751
+},
+{
+"text": "itu",
+"start": 13.775,
+"end": 13.948
+},
+{
+"text": "lebih",
+"start": 13.968,
+"end": 14.227
+},
+{
+"text": "tipis",
+"start": 14.256,
+"end": 14.515
+},
+{
+"text": "dari",
+"start": 14.545,
+"end": 14.76
+},
+{
+"text": "kulit",
+"start": 14.785,
+"end": 15.044
+},
+{
+"text": "orang",
+"start": 15.073,
+"end": 15.333
+},
+{
+"text": "dewasa.",
+"start": 15.361,
+"end": 15.707
+},
+{
+"text": "Air",
+"start": 15.985,
+"end": 16.162
+},
+{
+"text": "panas",
+"start": 16.182,
+"end": 16.447
+},
+{
+"text": "yang",
+"start": 16.477,
+"end": 16.698
+},
+{
+"text": "buat",
+"start": 16.723,
+"end": 16.945
+},
+{
+"text": "kita",
+"start": 16.969,
+"end": 17.19
+},
+{
+"text": "cuma",
+"start": 17.215,
+"end": 17.436
+},
+{
+"text": "bikin",
+"start": 17.461,
+"end": 17.727
+},
+{
+"text": "kaget,",
+"start": 17.757,
+"end": 18.199
+},
+{
+"text": "buat",
+"start": 18.248,
+"end": 18.47
+},
+{
+"text": "mereka",
+"start": 18.495,
+"end": 18.805
+},
+{
+"text": "bisa",
+"start": 18.839,
+"end": 19.061
+},
+{
+"text": "jadi",
+"start": 19.085,
+"end": 19.307
+},
+{
+"text": "luka",
+"start": 19.332,
+"end": 19.552
+},
+{
+"text": "bakar",
+"start": 19.577,
+"end": 19.843
+},
+{
+"text": "yang",
+"start": 19.873,
+"end": 20.094
+},
+{
+"text": "dalam.",
+"start": 20.119,
+"end": 20.428
+},
+{
+"text": "WHO",
+"start": 20.757,
+"end": 20.925
+},
+{
+"text": "nyatet,",
+"start": 20.945,
+"end": 21.409
+},
+{
+"text": "luka",
+"start": 21.461,
+"end": 21.672
+},
+{
+"text": "bakar",
+"start": 21.696,
+"end": 21.949
+},
+{
+"text": "nyebabin",
+"start": 21.977,
+"end": 22.357
+},
+{
+"text": "sekitar",
+"start": 22.399,
+"end": 22.737
+},
+{
+"text": "seratus",
+"start": 22.775,
+"end": 23.112
+},
+{
+"text": "delapan",
+"start": 23.15,
+"end": 23.488
+},
+{
+"text": "puluh",
+"start": 23.525,
+"end": 23.78
+},
+{
+"text": "ribu",
+"start": 23.808,
+"end": 24.019
+},
+{
+"text": "kematian",
+"start": 24.041,
+"end": 24.422
+},
+{
+"text": "tiap",
+"start": 24.464,
+"end": 24.675
+},
+{
+"text": "tahun,",
+"start": 24.699,
+"end": 25.121
+},
+{
+"text": "dan",
+"start": 25.169,
+"end": 25.337
+},
+{
+"text": "kebanyakan",
+"start": 25.356,
+"end": 25.821
+},
+{
+"text": "kejadiannya",
+"start": 25.872,
+"end": 26.38
+},
+{
+"text": "di",
+"start": 26.435,
+"end": 26.562
+},
+{
+"text": "rumah",
+"start": 26.576,
+"end": 26.83
+},
+{
+"text": "dan",
+"start": 26.858,
+"end": 27.026
+},
+{
+"text": "tempat",
+"start": 27.046,
+"end": 27.341
+},
+{
+"text": "kerja.",
+"start": 27.374,
+"end": 27.67
+},
+{
+"text": "Kalau",
+"start": 28.159,
+"end": 28.394
+},
+{
+"text": "kejadian,",
+"start": 28.42,
+"end": 28.928
+},
+{
+"text": "siram",
+"start": 28.985,
+"end": 29.22
+},
+{
+"text": "lukanya",
+"start": 29.246,
+"end": 29.559
+},
+{
+"text": "pakai",
+"start": 29.594,
+"end": 29.828
+},
+{
+"text": "air",
+"start": 29.855,
+"end": 30.011
+},
+{
+"text": "mengalir",
+"start": 30.028,
+"end": 30.381
+},
+{
+"text": "yang",
+"start": 30.42,
+"end": 30.615
+},
+{
+"text": "sejuk,",
+"start": 30.637,
+"end": 31.028
+},
+{
+"text": "kira-kira",
+"start": 31.072,
+"end": 31.463
+},
+{
+"text": "dua",
+"start": 31.507,
+"end": 31.663
+},
+{
+"text": "puluh",
+"start": 31.681,
+"end": 31.915
+},
+{
+"text": "menit.",
+"start": 31.941,
+"end": 32.215
+},
+{
+"text": "Jangan",
+"start": 32.485,
+"end": 32.737
+},
+{
+"text": "pakai",
+"start": 32.765,
+"end": 32.982
+},
+{
+"text": "es,",
+"start": 33.006,
+"end": 33.259
+},
+{
+"text": "jangan",
+"start": 33.286,
+"end": 33.539
+},
+{
+"text": "odol,",
+"start": 33.568,
+"end": 33.891
+},
+{
+"text": "jangan",
+"start": 33.928,
+"end": 34.181
+},
+{
+"text": "mentega,",
+"start": 34.209,
+"end": 34.641
+},
+{
+"text": "jangan",
+"start": 34.689,
+"end": 34.943
+},
+{
+"text": "kecap.",
+"start": 34.971,
+"end": 35.223
+},
+{
+"text": "Lepas",
+"start": 35.49,
+"end": 35.73
+},
+{
+"text": "baju",
+"start": 35.756,
+"end": 35.956
+},
+{
+"text": "atau",
+"start": 35.977,
+"end": 36.176
+},
+{
+"text": "perhiasan",
+"start": 36.199,
+"end": 36.597
+},
+{
+"text": "di",
+"start": 36.641,
+"end": 36.761
+},
+{
+"text": "sekitarnya,",
+"start": 36.774,
+"end": 37.372
+},
+{
+"text": "kecuali",
+"start": 37.439,
+"end": 37.758
+},
+{
+"text": "yang",
+"start": 37.794,
+"end": 37.993
+},
+{
+"text": "udah",
+"start": 38.014,
+"end": 38.214
+},
+{
+"text": "nempel.",
+"start": 38.236,
+"end": 38.555
+},
+{
+"text": "Tutup",
+"start": 38.83,
+"end": 39.06
+},
+{
+"text": "pakai",
+"start": 39.086,
+"end": 39.316
+},
+{
+"text": "kain",
+"start": 39.343,
+"end": 39.535
+},
+{
+"text": "bersih,",
+"start": 39.557,
+"end": 39.98
+},
+{
+"text": "terus",
+"start": 40.026,
+"end": 40.258
+},
+{
+"text": "ke",
+"start": 40.284,
+"end": 40.399
+},
+{
+"text": "dokter,",
+"start": 40.412,
+"end": 40.835
+},
+{
+"text": "apalagi",
+"start": 40.882,
+"end": 41.19
+},
+{
+"text": "kalau",
+"start": 41.224,
+"end": 41.455
+},
+{
+"text": "lukanya",
+"start": 41.481,
+"end": 41.788
+},
+{
+"text": "lebih",
+"start": 41.823,
+"end": 42.053
+},
+{
+"text": "besar",
+"start": 42.08,
+"end": 42.31
+},
+{
+"text": "dari",
+"start": 42.336,
+"end": 42.528
+},
+{
+"text": "telapak",
+"start": 42.55,
+"end": 42.858
+},
+{
+"text": "tangan",
+"start": 42.891,
+"end": 43.161
+},
+{
+"text": "atau",
+"start": 43.191,
+"end": 43.384
+},
+{
+"text": "kena",
+"start": 43.405,
+"end": 43.597
+},
+{
+"text": "muka.",
+"start": 43.619,
+"end": 43.85
+},
+{
+"text": "Cegahnya,",
+"start": 44.332,
+"end": 44.856
+},
+{
+"text": "arahin",
+"start": 44.913,
+"end": 45.196
+},
+{
+"text": "gagang",
+"start": 45.227,
+"end": 45.509
+},
+{
+"text": "panci",
+"start": 45.54,
+"end": 45.782
+},
+{
+"text": "ke",
+"start": 45.809,
+"end": 45.93
+},
+{
+"text": "dalam.",
+"start": 45.943,
+"end": 46.225
+},
+{
+"text": "Termos",
+"start": 46.496,
+"end": 46.713
+},
+{
+"text": "sama",
+"start": 46.737,
+"end": 46.894
+},
+{
+"text": "dispenser",
+"start": 46.911,
+"end": 47.222
+},
+{
+"text": "air",
+"start": 47.257,
+"end": 47.382
+},
+{
+"text": "panas",
+"start": 47.395,
+"end": 47.582
+},
+{
+"text": "taruh",
+"start": 47.602,
+"end": 47.789
+},
+{
+"text": "di",
+"start": 47.81,
+"end": 47.903
+},
+{
+"text": "tempat",
+"start": 47.914,
+"end": 48.133
+},
+{
+"text": "tinggi.",
+"start": 48.157,
+"end": 48.406
+},
+{
+"text": "Anak",
+"start": 48.673,
+"end": 48.889
+},
+{
+"text": "jangan",
+"start": 48.913,
+"end": 49.216
+},
+{
+"text": "main",
+"start": 49.25,
+"end": 49.466
+},
+{
+"text": "di",
+"start": 49.491,
+"end": 49.621
+},
+{
+"text": "dapur",
+"start": 49.635,
+"end": 49.896
+},
+{
+"text": "pas",
+"start": 49.924,
+"end": 50.098
+},
+{
+"text": "lagi",
+"start": 50.116,
+"end": 50.334
+},
+{
+"text": "masak.",
+"start": 50.358,
+"end": 50.661
+},
+{
+"text": "Kita",
+"start": 51.043,
+"end": 51.206
+},
+{
+"text": "nggak",
+"start": 51.223,
+"end": 51.419
+},
+{
+"text": "bisa",
+"start": 51.44,
+"end": 51.603
+},
+{
+"text": "jagain",
+"start": 51.622,
+"end": 51.85
+},
+{
+"text": "anak",
+"start": 51.875,
+"end": 52.038
+},
+{
+"text": "tiap",
+"start": 52.057,
+"end": 52.22
+},
+{
+"text": "detik.",
+"start": 52.238,
+"end": 52.466
+},
+{
+"text": "Tapi",
+"start": 52.731,
+"end": 52.936
+},
+{
+"text": "kita",
+"start": 52.959,
+"end": 53.164
+},
+{
+"text": "bisa",
+"start": 53.187,
+"end": 53.391
+},
+{
+"text": "bikin",
+"start": 53.414,
+"end": 53.661
+},
+{
+"text": "dapur",
+"start": 53.688,
+"end": 53.935
+},
+{
+"text": "yang",
+"start": 53.962,
+"end": 54.168
+},
+{
+"text": "tetap",
+"start": 54.19,
+"end": 54.436
+},
+{
+"text": "jagain",
+"start": 54.463,
+"end": 54.751
+},
+{
+"text": "mereka,",
+"start": 54.783,
+"end": 55.234
+},
+{
+"text": "pas",
+"start": 55.285,
+"end": 55.449
+},
+{
+"text": "kita",
+"start": 55.466,
+"end": 55.672
+},
+{
+"text": "lengah",
+"start": 55.695,
+"end": 55.982
+},
+{
+"text": "sedetik.",
+"start": 56.014,
+"end": 56.384
+},
+{
+"text": "Follow,",
+"start": 56.881,
+"end": 57.103
+},
+{
+"text": "biar",
+"start": 57.128,
+"end": 57.23
+},
+{
+"text": "bahaya",
+"start": 57.24,
+"end": 57.383
+},
+{
+"text": "yang",
+"start": 57.398,
+"end": 57.499
+},
+{
+"text": "nggak",
+"start": 57.511,
+"end": 57.601
+},
+{
+"text": "kelihatan...",
+"start": 57.601,
+"end": 57.601
+},
+{
+"text": "jadi",
+"start": 57.636,
+"end": 57.737
+},
+{
+"text": "kelihatan.",
+"start": 57.748,
+"end": 57.971
+}
+]
+}
