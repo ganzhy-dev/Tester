@@ -14,7 +14,7 @@ const limb = (pts, color, w = 30) => {
 };
 const hand = (x, y, skin, r = 17) => ns("circle", { cx: x, cy: y, r, fill: skin, stroke: INK, "stroke-width": 5 });
 
-function character({ x, y, s = 1, shirt, pants = "#1f3550", skin, hijab, vest, pose, glasses, flip = false, mouth = "open" }) {
+function character({ x, y, s = 1, shirt, pants = "#1f3550", skin, hijab, vest, pose, glasses, flip = false, mouth = "open", brand = false }) {
   const S = { stroke: INK, "stroke-width": 6, "stroke-linejoin": "round", "stroke-linecap": "round" };
   let g = "";
   // bayangan
@@ -49,6 +49,16 @@ function character({ x, y, s = 1, shirt, pants = "#1f3550", skin, hijab, vest, p
     g += ns("rect", { x: -71, y: -161, width: 54, height: 4, fill: "#e8eef2" }) + ns("rect", { x: 17, y: -161, width: 54, height: 4, fill: "#e8eef2" });
     g += ns("rect", { x: -62, y: -238, width: 44, height: 22, rx: 5, fill: "#fff", stroke: INK, "stroke-width": 3 });
     g += ns("text", { x: -40, y: -222, "text-anchor": "middle", "font-family": "Inter", "font-weight": 900, "font-size": 10, fill: INK }, "AUDITOR");
+  } else if (brand) {
+    // seragam gaya AlamTri: navy, panel toska di sisi, 2 strip reflektif, logo putih di dada
+    g += ns("path", { d: "M-74 -222 Q-74 -262 -40 -262 L-40 -102 L-74 -102 Z", fill: "#12707e" });
+    g += ns("path", { d: "M74 -222 Q74 -262 40 -262 L40 -102 L74 -102 Z", fill: "#12707e" });
+    for (const yy of [-214, -176]) {
+      g += ns("rect", { x: -71, y: yy, width: 142, height: 15, fill: "#d6f23a" });
+      g += ns("rect", { x: -71, y: yy + 5.5, width: 142, height: 4, fill: "#eef3f6" });
+    }
+    g += ns("image", { href: "assets/alamtri_white.png", x: -30, y: -250, width: 60, height: 12.3 });
+    g += ns("rect", { x: -74, y: -262, width: 148, height: 160, rx: 40, fill: "none", ...S });
   } else {
     // strip reflektif kemeja (horizontal + bahu)
     g += ns("rect", { x: -71, y: -168, width: 142, height: 16, fill: "#d6f23a" });
@@ -121,9 +131,13 @@ function character({ x, y, s = 1, shirt, pants = "#1f3550", skin, hijab, vest, p
   // helm
   const hh = hy - 18;
   g += ns("path", { d: `M-84 ${hh} Q-84 ${hh - 86} 0 ${hh - 90} Q84 ${hh - 86} 84 ${hh} Z`, fill: "#ffffff", ...S });
-  g += ns("path", { d: `M-10 ${hh - 88} L-10 ${hh - 2} M10 ${hh - 88} L10 ${hh - 2}`, stroke: "#d5dde3", "stroke-width": 6 });
+  g += ns("path", { d: brand ? `M-10 ${hh - 88} L-10 ${hh - 70} M10 ${hh - 88} L10 ${hh - 70}` : `M-10 ${hh - 88} L-10 ${hh - 2} M10 ${hh - 88} L10 ${hh - 2}`, stroke: "#d5dde3", "stroke-width": 6 });
   g += ns("rect", { x: -100, y: hh - 8, width: 200, height: 20, rx: 10, fill: "#ffffff", ...S });
-  g += `<g transform="translate(-58 ${hh - 58}) scale(.62)"><path d="M22 2 C30 14 42 24 42 36 A20 18 0 0 1 2 36 C2 24 14 14 22 2 Z" fill="url(#gd)" stroke="${INK}" stroke-width="4"/></g>`;
+  if (brand) {
+    g += ns("image", { href: "assets/alamtrigeo_navy.png", x: -44, y: hh - 66, width: 88, height: 31.7 });
+  } else {
+    g += `<g transform="translate(-58 ${hh - 58}) scale(.62)"><path d="M22 2 C30 14 42 24 42 36 A20 18 0 0 1 2 36 C2 24 14 14 22 2 Z" fill="url(#gd)" stroke="${INK}" stroke-width="4"/></g>`;
+  }
   return `<g transform="translate(${x} ${y}) scale(${flip ? -s : s} ${s})">${g}</g>`;
 }
 
@@ -137,42 +151,48 @@ function dropCluster(x, y, s, rot = 0) {
     .join("")}</g>`;
 }
 
+function cloud(x, y, k) {
+  return `<g transform="translate(${x} ${y}) scale(${k})" fill="#fff" opacity=".95"><ellipse cx="0" cy="0" rx="90" ry="38"/><ellipse cx="-60" cy="12" rx="60" ry="30"/><ellipse cx="70" cy="10" rx="70" ry="32"/><ellipse cx="10" cy="-26" rx="58" ry="40"/></g>`;
+}
+
+function haulTruck(x, y, k) {
+  return `<g transform="translate(${x} ${y}) scale(${k})">
+    <path d="M-10 -30 L260 -48 L238 -128 L4 -118 Z" fill="#f5b819" stroke="${INK}" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M20 -116 Q120 -170 230 -124" fill="#2a2c33"/>
+    <rect x="-10" y="-34" width="270" height="70" rx="10" fill="#f5b819" stroke="${INK}" stroke-width="7"/>
+    <rect x="252" y="-80" width="86" height="116" rx="10" fill="#f5b819" stroke="${INK}" stroke-width="7"/>
+    <rect x="266" y="-68" width="56" height="40" rx="6" fill="#bfe6ef" stroke="${INK}" stroke-width="5"/>
+    <rect x="236" y="-4" width="110" height="14" fill="${INK}"/>
+    ${[40, 120, 290].map((cx) => `<circle cx="${cx}" cy="56" r="50" fill="#1b1d22" stroke="${INK}" stroke-width="7"/><circle cx="${cx}" cy="56" r="22" fill="#8a8f99" stroke="${INK}" stroke-width="5"/>`).join("")}
+  </g>`;
+}
+
 function scene() {
-  // viewBox 1080 x 1920 (latar penuh versi HP, gaya bombastis)
+  // viewBox 1080 x 1920 — versi 3: langit cerah, tambang, haul truck besar, karakter berseragam AlamTri
   let s = "";
   s += `<defs>
-    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#fff1c9" stop-opacity="1"/><stop offset=".3" stop-color="#ffb866" stop-opacity=".75"/><stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/></radialGradient>
-    <linearGradient id="bench" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a6f78"/><stop offset="1" stop-color="#0c4a56"/></linearGradient>
-    <radialGradient id="rayMask" cx="0.5" cy="0.5" r="0.5"><stop offset=".15" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>
-    <mask id="rm"><rect x="0" y="0" width="1080" height="1920" fill="url(#rayMask)"/></mask>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f8fd8"/><stop offset=".55" stop-color="#8fd0f2"/><stop offset="1" stop-color="#e9f6fb"/></linearGradient>
+    <linearGradient id="pit1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b79b7a"/><stop offset="1" stop-color="#8a7258"/></linearGradient>
+    <linearGradient id="pit2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9c8166"/><stop offset="1" stop-color="#6e5946"/></linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff7d6" stop-opacity=".95"/><stop offset="1" stop-color="#fff7d6" stop-opacity="0"/></radialGradient>
   </defs>`;
-  // sinar sunburst
-  const cx = 540, cy = 900;
-  let rays = "";
-  for (let i = 0; i < 28; i++) {
-    const a0 = (i / 28) * Math.PI * 2, a1 = a0 + Math.PI / 28;
-    rays += `<path d="M${cx} ${cy} L${cx + Math.cos(a0) * 1400} ${cy + Math.sin(a0) * 1400} L${cx + Math.cos(a1) * 1400} ${cy + Math.sin(a1) * 1400} Z"/>`;
-  }
-  s += `<g fill="#ffd36b" opacity=".16" mask="url(#rm)">${rays}</g>`;
-  s += `<circle cx="${cx}" cy="${cy}" r="420" fill="url(#sun)" opacity=".85"/>`;
-  // jenjang tambang
-  s += `<path d="M0 1080 L120 1080 L150 1058 L320 1058 L350 1036 L540 1036 L570 1014 L740 1014 L770 996 L1080 996 L1080 1300 L0 1300 Z" fill="#0b4752"/>`;
-  s += `<path d="M0 1150 L190 1150 L220 1126 L450 1126 L480 1106 L680 1106 L710 1088 L1080 1088 L1080 1300 L0 1300 Z" fill="url(#bench)"/>`;
-  s += `<path d="M220 1126 L450 1126 L480 1106 L680 1106 L710 1088 L1080 1088 L1080 1100 L716 1100 L686 1118 L486 1118 L456 1138 L226 1138 L190 1162 L0 1162 L0 1150 L190 1150 Z" fill="#1b1d22" opacity=".85"/>`;
-  s += `<g transform="translate(60 1062) scale(.55)">
-     <rect x="0" y="0" width="120" height="46" rx="6" fill="#f2b632" stroke="${INK}" stroke-width="6"/>
-     <path d="M-6 0 L130 -10 L112 -46 L6 -40 Z" fill="#f2b632" stroke="${INK}" stroke-width="6"/>
-     <rect x="120" y="-16" width="40" height="62" rx="6" fill="#f2b632" stroke="${INK}" stroke-width="6"/>
-     <rect x="128" y="-8" width="22" height="18" rx="3" fill="#bfe6ef" stroke="${INK}" stroke-width="4"/>
-     <circle cx="28" cy="56" r="22" fill="#1b1d22" stroke="${INK}" stroke-width="6"/><circle cx="132" cy="56" r="22" fill="#1b1d22" stroke="${INK}" stroke-width="6"/>
-     <path d="M2 -36 Q40 -66 100 -44" fill="#1b1d22"/>
-  </g>`;
-  s += dropCluster(-30, 1080, 1.1, -8);
-  s += dropCluster(985, 1010, 0.8, 14);
-  // karakter (urutan gambar: tengah dulu supaya tangan kiri-kanan tampil di depan)
-  s += character({ x: 548, y: 1262, s: 1.2, shirt: "#0f7f86", pose: "clipboard", skin: SKIN[2], hijab: "#1f3550" });
-  s += character({ x: 800, y: 1250, s: 1.22, shirt: "#1f3550", vest: true, pose: "magnifier", skin: SKIN[1], glasses: true, mouth: "smile" });
-  s += character({ x: 262, y: 1250, s: 1.22, shirt: "#0f7f86", pose: "thumbs", skin: SKIN[0], glasses: true });
+  s += `<rect x="0" y="0" width="1080" height="1240" fill="url(#sky)"/>`;
+  s += cloud(160, 210, 1.1) + cloud(930, 140, 0.9) + cloud(600, 300, 0.7);
+  // jenjang tambang (cokelat, seperti foto lokasi)
+  s += `<path d="M0 760 L160 740 L200 712 L420 700 L460 676 L700 668 L740 646 L1080 636 L1080 1240 L0 1240 Z" fill="url(#pit1)"/>`;
+  s += `<path d="M0 760 L160 740 L200 712 L420 700 L460 676 L700 668 L740 646 L1080 636 L1080 652 L744 662 L704 684 L464 692 L424 716 L204 728 L164 756 L0 776 Z" fill="#5b4a3a" opacity=".6"/>`;
+  s += `<path d="M0 860 L230 846 L270 820 L560 810 L600 788 L1080 776 L1080 1240 L0 1240 Z" fill="url(#pit2)"/>`;
+  s += `<path d="M0 860 L230 846 L270 820 L560 810 L600 788 L1080 776 L1080 790 L604 802 L564 824 L274 834 L234 860 L0 874 Z" fill="#2a2420" opacity=".75"/>`;
+  s += `<path d="M0 1000 L1080 970 L1080 1240 L0 1240 Z" fill="#6b5847"/>`;
+  s += `<circle cx="820" cy="760" r="420" fill="url(#glow)" opacity=".7"/>`;
+  // debu
+  s += `<g fill="#e6d6c0" opacity=".55"><ellipse cx="80" cy="980" rx="160" ry="40"/><ellipse cx="300" cy="1000" rx="120" ry="30"/></g>`;
+  s += haulTruck(30, 800, 0.6);
+  s += `<g fill="#e6d6c0" opacity=".5"><ellipse cx="60" cy="850" rx="90" ry="22"/></g>`;
+  // karakter pendukung (kiri) + karakter utama besar (kanan)
+  s += character({ x: 250, y: 1215, s: 0.98, shirt: "#1c3a56", pose: "clipboard", skin: SKIN[2], hijab: "#1f3550", brand: true });
+  s += character({ x: 450, y: 1205, s: 1.0, shirt: "#1f3550", vest: true, pose: "magnifier", skin: SKIN[1], glasses: true, mouth: "smile" });
+  s += character({ x: 800, y: 1230, s: 1.62, shirt: "#1c3a56", pose: "thumbs", skin: SKIN[0], glasses: true, brand: true });
   return s;
 }
 
