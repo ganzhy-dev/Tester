@@ -198,7 +198,7 @@ export const Worker: React.FC<{
  * Maskot bahaya tak terlihat — "makhluk halus" versi K3.
  * Varian: co2 (kabut ngantuk), vibe (getaran), noise (bising).
  */
-export type HalusVariant = "co2" | "vibe" | "noise" | "heat" | "dust" | "gas" | "stress" | "burnout" | "doom";
+export type HalusVariant = "co2" | "vibe" | "noise" | "heat" | "dust" | "gas" | "stress" | "burnout" | "doom" | "volt" | "load" | "slip";
 
 export const SiHalus: React.FC<{
   size?: number;
@@ -220,6 +220,9 @@ export const SiHalus: React.FC<{
     stress: ["#FF6B6B", "#D63C44"],
     burnout: ["#A89A90", "#7A6C63"],
     doom: ["#6C8CFF", "#3F5FE0"],
+    volt: ["#FFE14D", "#F2B705"],
+    load: ["#C9B6E8", "#9B83C9"],
+    slip: ["#9BE8F7", "#4FC3E0"],
   };
   const [col, col2] = PAL[variant];
   const s = { stroke: C.ink, strokeWidth: OUTLINE, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
@@ -321,7 +324,16 @@ export const SiHalus: React.FC<{
           const p = (t * 0.8 + i / 4) % 1;
           return <path key={i} d={`M${i % 2 ? 290 : 0} ${40 + p * 220} l14 18 l14 -18`} fill="none" stroke="#9FB4FF" strokeWidth={8} strokeLinecap="round" opacity={Math.sin(p * Math.PI)} />;
         })}
-      <path d={d} fill={col} {...s} />
+      {variant === "slip" && <ellipse cx={150} cy={318} rx={150 + 8 * Math.sin(t * 3)} ry={26} fill="#4FC3E0" opacity={0.45} />}
+      {variant === "volt" && (
+        <g>
+          <path d={`M250 250 Q320 ${280 + 10 * Math.sin(t * 4)} 330 340`} fill="none" stroke={C.ink} strokeWidth={12} strokeLinecap="round" />
+          <path d={`M250 250 Q320 ${280 + 10 * Math.sin(t * 4)} 330 340`} fill="none" stroke="#3A3A44" strokeWidth={6} strokeLinecap="round" />
+          <rect x={312} y={336} width={38} height={30} rx={6} fill="#F4F4F6" {...s} strokeWidth={5} />
+          <path d="M322 366 L322 382 M340 366 L340 382" stroke={C.ink} strokeWidth={6} strokeLinecap="round" />
+        </g>
+      )}
+      <path d={d} fill={col} {...s} opacity={variant === "slip" ? 0.88 : 1} />
       {variant === "doom" && <path d={d} fill="url(#doomGlow)" stroke="none" />}
       <path d="M70 120 Q80 60 140 52" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth={14} strokeLinecap="round" />
       {variant === "heat" && (
@@ -338,6 +350,18 @@ export const SiHalus: React.FC<{
       {variant === "stress" && (
         <g transform={`translate(205 50) scale(${1 + 0.12 * Math.abs(Math.sin(t * 6))})`}>
           <path d="M-22 -6 Q-8 -8 -6 -22 M6 -22 Q8 -8 22 -6 M22 6 Q8 8 6 22 M-6 22 Q-8 8 -22 6" fill="none" stroke="#B0182A" strokeWidth={8} strokeLinecap="round" />
+        </g>
+      )}
+      {variant === "volt" && (
+        <path d={`M80 52 L100 ${-4 - 6 * Math.abs(Math.sin(t * 9))} L120 40 L140 ${-14 - 6 * Math.abs(Math.sin(t * 11))} L160 38 L182 ${-6 - 6 * Math.abs(Math.sin(t * 8))} L200 44 L220 ${4 - 6 * Math.abs(Math.sin(t * 10))} L226 56`} fill="#FFE14D" {...s} />
+      )}
+      {variant === "slip" && <path d="M150 -40 Q118 6 120 26 A30 30 0 0 0 180 26 Q182 6 150 -40 Z" fill="#9BE8F7" {...s} strokeWidth={5} />}
+      {variant === "load" && (
+        <g transform={`rotate(${3 * Math.sin(t * 2)} 150 20)`}>
+          <rect x={86} y={-2} width={128} height={46} rx={12} fill="#E9D3A8" {...s} strokeWidth={5} />
+          <path d="M96 10 L204 10 M96 24 L204 24" stroke="#C9A86E" strokeWidth={5} />
+          <rect x={118} y={-60} width={64} height={62} rx={14} fill="#9FD8F5" {...s} strokeWidth={5} />
+          <rect x={136} y={-74} width={28} height={16} rx={4} fill="#3F8FD6" {...s} strokeWidth={4} />
         </g>
       )}
       {variant === "burnout" && (
