@@ -50,7 +50,7 @@ def trim(w, thr=0.012):
 
 
 # ejaan bantu supaya OmniVoice tidak salah ucap (teks caption tetap pakai ejaan asli)
-SAY = {"Simalungun": "Sima lungun", "makhluk": "mahluk", "ELCB": "E L C B", "MCB": "M C B", "ILO": "I L O", "WHO": "W H O"}
+SAY = {"Simalungun": "Sima lungun", "makhluk": "mahluk", "ELCB": "E L C B", "MCB": "M C B", "ILO": "I L O", "WHO": "W H O", "Rhabdomyolysis": "Rabdomiolisis", "rhabdomyolysis": "rabdomiolisis", "Heat stroke": "Hit strok", "thermal runaway": "termal ranawei", "CPR": "C P R", "FOMO": "fomo", "Enzy": "Enzi", "ke AC": "ke A C", "IGD": "I G D", "watt-jam": "wat jam", "lithium": "litium", "charger": "carjer", "half marathon": "haf maraton", "full marathon": "ful maraton", "American Heart Association": "Amerikan Hart Asosiasyen"}
 
 
 def say(x):
