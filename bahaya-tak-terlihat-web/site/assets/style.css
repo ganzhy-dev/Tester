@@ -310,7 +310,7 @@ textarea { min-height: 140px; resize: vertical; }
 .empty { color: var(--muted); background: var(--surface); border: 2px dashed var(--line); border-radius: var(--radius); padding: 18px 20px; }
 
 /* galeri video vertikal */
-.reels { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 22px; list-style: none; padding: 0; margin: 0; }
+.reels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; max-width: 900px; list-style: none; padding: 0; margin: 0; }
 .reel { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .reel .frame { position: relative; aspect-ratio: 9 / 16; border-radius: 20px; overflow: hidden; background: var(--ink); border: 3px solid var(--ink); box-shadow: var(--shadow); }
 .reel video, .reel img { display: block; width: 100%; height: 100%; object-fit: cover; }

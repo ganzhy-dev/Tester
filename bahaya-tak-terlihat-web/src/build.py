@@ -227,7 +227,7 @@ def head(title: str, desc: str, rel: str, path: str, og_type: str = "website", j
     )
     if full:
         return f'<!doctype html>\n<html lang="id">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n{meta}\n</head>\n<body>\n'
-    return meta + "\n"
+    return '<link rel="artifact-thumbnail" href="assets/og.png">' + meta + "\n"
 
 
 def header(rel: str, current: str) -> str:
