@@ -658,11 +658,11 @@ const HandWash: React.FC<{ t: number; foam?: number; w?: number }> = ({ t, foam 
   const rub = Math.sin(t * 12) * 16;
   return (
     <div style={{ position: "relative", width: w, height: w * 0.86 }}>
-      <div style={{ position: "absolute", left: w * 0.12 + rub, top: w * 0.14 }}>
-        <Palm w={w * 0.46} rot={28} />
+      <div style={{ position: "absolute", left: w * 0.06 + rub, top: w * 0.12 }}>
+        <Palm w={w * 0.5} rot={14} />
       </div>
-      <div style={{ position: "absolute", left: w * 0.4 - rub, top: w * 0.14 }}>
-        <Palm w={w * 0.46} flip rot={-28} />
+      <div style={{ position: "absolute", left: w * 0.42 - rub, top: w * 0.12 }}>
+        <Palm w={w * 0.5} flip rot={-14} />
       </div>
       {foam > 0 &&
         new Array(9).fill(0).map((_, i) => {
@@ -982,8 +982,8 @@ const Ep16Scenes: React.FC = () => {
     <AbsoluteFill style={{ translate: shake }}>
       {/* 1a — kena infeksi virus & parasit amuba */}
       <Scene a={0} b={2.72} zoom={false}>
-        <Panel y={450} h={620} at={0} bg="#F4FBEF">
-          <div style={{ position: "absolute", left: 260, top: 250 }}>
+        <Panel y={440} h={530} at={0} bg="#F4FBEF">
+          <div style={{ position: "absolute", left: 260, top: 196 }}>
             <SaladBowl w={420} />
           </div>
           <At at={1.05} x={70} y={50}>
@@ -1007,11 +1007,11 @@ const Ep16Scenes: React.FC = () => {
 
       {/* 1b — dirawat sekitar dua hari */}
       <Scene a={2.72} b={5.12}>
-        <Panel y={440} h={640} at={2.74} bg="#F4FAFD">
-          <div style={{ position: "absolute", left: 50, top: 70 }}>
-            <Hospital w={440} />
+        <Panel y={440} h={530} at={2.74} bg="#F4FAFD">
+          <div style={{ position: "absolute", left: 60, top: 30 }}>
+            <Hospital w={400} />
           </div>
-          <At at={4.15} x={570} y={150}>
+          <At at={4.15} x={570} y={110}>
             <Calendar text="±2" sub="HARI" w={290} />
           </At>
         </Panel>
@@ -1024,9 +1024,9 @@ const Ep16Scenes: React.FC = () => {
 
       {/* 2a — dugaannya: salad mentah */}
       <Scene a={5.12} b={7.62}>
-        <Panel y={440} h={600} at={5.14} bg="#F4FBEF">
-          <div style={{ position: "absolute", left: 250, top: 190 }}>
-            <SaladBowl w={440} />
+        <Panel y={440} h={530} at={5.14} bg="#F4FBEF">
+          <div style={{ position: "absolute", left: 250, top: 180 }}>
+            <SaladBowl w={420} />
           </div>
           <div style={{ position: "absolute", left: magX, top: 90, rotate: "-8deg" }}>
             <Magnifier w={230} />
@@ -1347,12 +1347,12 @@ const Ep16Scenes: React.FC = () => {
         </Sticker>
         <Panel y={470} h={430} at={42.0} bg="#FBFEF8">
           <div style={{ position: "absolute", left: 40, top: 30, display: "flex", flexWrap: "wrap", width: 880, gap: "14px 26px", justifyContent: "center" }}>
-            {new Array(20).fill(0).map((_, i) => {
-              const on = t >= 42.1 + i * 0.07;
+            {new Array(24).fill(0).map((_, i) => {
+              const on = t >= 42.1 + i * 0.06;
               const sick = t >= 43.74 && i % 3 === 0;
               return (
                 <div key={i} style={{ opacity: on ? 1 : 0, scale: on ? "1" : "0.4", translate: sick ? `${3 * Math.sin(t * 10 + i)}px 0px` : undefined }}>
-                  <PersonIcon w={62} c={sick ? "#B9A6FF" : "#F2A65A"} />
+                  <PersonIcon w={74} c={sick ? "#B9A6FF" : "#F2A65A"} />
                 </div>
               );
             })}
@@ -1527,11 +1527,11 @@ const Ep16Scenes: React.FC = () => {
           <At at={61.96} x={40} y={130}>
             <FruitCup w={380} />
           </At>
-          <div style={{ position: "absolute", left: 520, top: 60 }}>
-            <Clock sweep={sweep4} size={350} />
+          <div style={{ position: "absolute", left: 560, top: 30 }}>
+            <Clock sweep={sweep4} size={310} />
           </div>
-          <At at={64.09} x={560} y={170}>
-            <div style={{ fontFamily: HEAD, fontSize: 96, color: C.ink, background: "rgba(255,255,255,0.88)", borderRadius: 24, padding: "0 20px", lineHeight: 1.15, border: `6px solid ${C.ink}` }}>2 JAM</div>
+          <At at={64.09} x={590} y={355}>
+            <div style={{ fontFamily: HEAD, fontSize: 64, color: C.ink, background: "#FFE27A", borderRadius: 22, padding: "0 22px", lineHeight: 1.2, border: `6px solid ${C.ink}`, boxShadow: `0 6px 0 ${C.ink}` }}>MAKS 2 JAM</div>
           </At>
           <At at={64.49} x={60} y={30}>
             <Tag bg="#FFFFFF" size={34} rot={-2}>
