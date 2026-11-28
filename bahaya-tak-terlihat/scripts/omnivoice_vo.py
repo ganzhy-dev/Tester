@@ -10,8 +10,10 @@ Lalu jalankan: process_vo.py out/epN_omni_raw.wav data/epN_omni_words.json N  &&
 
 Catatan lisensi: bobot model OmniVoice berlisensi CC-BY-NC (non-komersial).
 """
+import difflib
 import json
 import re
+import subprocess
 import sys
 import time
 
@@ -49,8 +51,50 @@ def trim(w, thr=0.012):
     return w[s:e]
 
 
+# cek isi tiap kalimat pakai Whisper (server voicebox di :17493) — ASR_CHECK=1
+ASR_CHECK = os.environ.get("ASR_CHECK") == "1"
+SATU = ["nol", "satu", "dua", "tiga", "empat", "lima", "enam", "tujuh", "delapan", "sembilan", "sepuluh", "sebelas"]
+
+
+def terbilang(n):
+    n = int(n)
+    if n < 12:
+        return SATU[n]
+    if n < 20:
+        return terbilang(n - 10) + " belas"
+    if n < 100:
+        return terbilang(n // 10) + " puluh" + ("" if n % 10 == 0 else " " + terbilang(n % 10))
+    if n < 200:
+        return "seratus" + ("" if n == 100 else " " + terbilang(n - 100))
+    if n < 1000:
+        return terbilang(n // 100) + " ratus" + ("" if n % 100 == 0 else " " + terbilang(n % 100))
+    if n < 2000:
+        return "seribu" + ("" if n == 1000 else " " + terbilang(n - 1000))
+    if n < 1000000:
+        return terbilang(n // 1000) + " ribu" + ("" if n % 1000 == 0 else " " + terbilang(n % 1000))
+    return str(n)
+
+
+def norm(s):
+    s = s.lower().replace("-", " ").replace(".", " ")
+    s = re.sub(r"\d+", lambda m: " " + terbilang(m.group(0)) + " ", s)
+    s = re.sub(r"\s+", " ", re.sub(r"[^a-z ]", "", s)).strip()
+    return s.replace("nggak", "gak").replace("ngga", "ga")
+
+
+def asr_score(w, sent):
+    path = "out/_asr_tmp.wav"
+    sf.write(path, w, SR)
+    r = subprocess.run(["curl", "-s", "-X", "POST", "http://127.0.0.1:17493/transcribe", "-F", f"file=@{path}", "-F", "language=id", "-F", "model=small", "--max-time", "180"], capture_output=True, text=True)
+    try:
+        txt = json.loads(r.stdout).get("text", "")
+    except Exception:
+        return 1.0, "(ASR gagal)"
+    return difflib.SequenceMatcher(None, norm(sent), norm(txt)).ratio(), txt
+
+
 # ejaan bantu supaya OmniVoice tidak salah ucap (teks caption tetap pakai ejaan asli)
-SAY = {"Simalungun": "Sima lungun", "makhluk": "mahluk", "ELCB": "E L C B", "MCB": "M C B", "ILO": "I L O", "WHO": "W H O", "ber-SNI": "ber S N I", "Rhabdomyolysis": "Rabdomiolisis", "rhabdomyolysis": "rabdomiolisis", "Heat stroke": "Hit strok", "thermal runaway": "termal ranawei", "CPR": "C P R", "FOMO": "fomo", "Enzy": "Enzi", "ke AC": "ke A C", "IGD": "I G D", "watt-jam": "wat jam", "lithium": "litium", "charger": "carjer", "half marathon": "haf maraton", "full marathon": "ful maraton", "American Heart Association": "Amerikan Hart Asosiasyen"}
+SAY = {"Simalungun": "Sima lungun", "makhluk": "mahluk", "ELCB": "E L C B", "MCB": "M C B", "ILO": "I L O", "WHO": "W H O", "hafal": "hapal", "ber-SNI": "ber S N I", "Rhabdomyolysis": "Rabdomiolisis", "rhabdomyolysis": "rabdomiolisis", "Heat stroke": "Hit strok", "thermal runaway": "termal ranawei", "CPR": "C P R", "FOMO": "fomo", "Enzy": "Enzi", "ke AC": "ke A C", "IGD": "I G D", "watt-jam": "wat jam", "lithium": "litium", "charger": "carjer", "half marathon": "haf maraton", "full marathon": "ful maraton", "American Heart Association": "Amerikan Hart Asosiasyen"}
 
 
 def say(x):
@@ -87,16 +131,25 @@ for ep in [int(a) for a in sys.argv[1:]]:
             words.append({"text": f"[{tag.group(1).lower()}]", "start": round(t, 3), "end": round(t + 0.01, 3)})
             line = line[tag.end():]
         for si, sent in enumerate(sentences(line)):
-            for attempt in range(3):
+            best = None
+            for attempt in range(4 if ASR_CHECK else 3):
                 torch.manual_seed(1000 * ep + 10 * li + si + 97 * attempt)
                 out = m.generate(text=say(sent), language="id", num_step=32, voice_clone_prompt=prompt)
                 w = out[0] if isinstance(out, (list, tuple)) else out
                 w = w.squeeze().cpu().numpy() if hasattr(w, "cpu") else np.asarray(w).squeeze()
                 w = trim(w.astype(np.float32))
                 dur = len(w) / SR
-                if dur >= 0.055 * len(sent):  # terlalu pendek = ada kata yang hilang -> ulang dengan seed lain
+                short = dur < 0.05 * len(sent)
+                sc, heard = asr_score(w, sent) if ASR_CHECK else (1.0, "")
+                score = sc - (0.3 if short else 0)
+                if best is None or score > best[0]:
+                    best = (score, w, dur)
+                if not short and sc >= 0.84:  # isi cocok dengan naskah
                     break
-                print(f"  ulang ({attempt + 1}): '{sent[:40]}' cuma {dur:.2f}s", flush=True)
+                print(f"  ulang ({attempt + 1}): '{sent[:40]}' {dur:.2f}s cocok {sc:.2f} -> '{heard[:60]}'", flush=True)
+            score, w, dur = best
+            if ASR_CHECK:
+                print(f"  ok {score:.2f}: '{sent[:50]}'", flush=True)
             # waktu kata: proporsional panjang huruf dalam kalimat (ditambah bobot jeda koma/elipsis)
             toks = sent.split()
             wts = [len(x) + 1 + (3 if x.endswith(("...", ",", ":")) else 0) for x in toks]
