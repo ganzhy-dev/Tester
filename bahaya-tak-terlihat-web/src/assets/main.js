@@ -89,6 +89,12 @@
     b.addEventListener("click", function () { copyText(b.getAttribute("data-copy-text"), b, "Tersalin"); });
   });
 
+  // Satu video diputar pada satu waktu
+  var vids = document.querySelectorAll("video");
+  vids.forEach(function (v) {
+    v.addEventListener("play", function () { vids.forEach(function (o) { if (o !== v) o.pause(); }); });
+  });
+
   // Formulir pratinjau (belum tersambung ke layanan apa pun)
   document.querySelectorAll("form[data-demo]").forEach(function (f) {
     f.addEventListener("submit", function (e) {

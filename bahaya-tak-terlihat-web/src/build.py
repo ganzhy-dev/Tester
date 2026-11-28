@@ -49,6 +49,35 @@ VIDEOS = [  # episode video TikTok terbaru dan artikel pendampingnya
     ("EP18", "Bantal bara (powerbank)", "powerbank", "powerbank-mengecas-di-kasur"),
 ]
 
+KANTOR_URL = "https://claude.ai/artifact/HkQxgkJwMmq8K46CX7oABZ"  # kantor virtual tim (artifact)
+
+# Galeri video: (nomor, judul, musim, slug artikel terkait atau "", varian maskot)
+# Video web (720p, terkompresi) ada di src/media/video/epN.mp4; poster di src/media/poster/epN.jpg.
+EPISODES = [
+    (13, "Cium bau gas? Tenang, lakuin ini", "rumah", "gas-elpiji-bocor", "lpg"),
+    (14, "Botol air mineral isi cairan berbahaya", "rumah", "botol-bekas-cairan-kimia", "bottle"),
+    (15, "Air panas di dapur", "rumah", "luka-bakar-air-panas-anak", "steam"),
+    (10, "Tersetrum colokan", "rumah", "", "volt"),
+    (11, "Beban ibu rumah tangga", "rumah", "", "stress"),
+    (12, "Lantai kamar mandi licin", "rumah", "", "slip"),
+    (7, "Psikosomatik: stres yang bicara lewat badan", "stres", "stres-kerja-psikosomatik", "stress"),
+    (8, "Notifikasi malam dan burnout", "stres", "stres-kerja-psikosomatik", "stress"),
+    (9, "Doomscrolling", "stres", "", "stress"),
+    (1, "CO₂ di ruang rapat", "kerja", "", "co2"),
+    (2, "Getaran alat kerja", "kerja", "", "volt"),
+    (3, "Kebisingan", "kerja", "kebisingan-kesehatan-telinga", "noise"),
+    (4, "Tekanan panas", "kerja", "", "lpg"),
+    (5, "Debu silika", "kerja", "", "bottle"),
+    (6, "Karbon monoksida", "kerja", "", "co2"),
+]
+SEASONS = {
+    "rumah": ("Musim 3: Bahaya di rumah", "Dapur, kamar mandi, colokan, dan botol yang menyamar."),
+    "stres": ("Musim 2: Bahaya di kepala", "Stres, burnout, dan kebiasaan layar yang diam-diam melelahkan."),
+    "kerja": ("Musim 1: Bahaya di tempat kerja (IHOH)", "Udara, getaran, bising, panas, dan debu di lingkungan kerja."),
+}
+SOON = [(16, "Salad yang licik", "salad-makanan-mentah", "salad"), (17, "Siap lari, siap CPR", "persiapan-lari-dan-cpr", "finish"), (18, "Pindah ngecas ke meja", "powerbank-mengecas-di-kasur", "powerbank")]
+MEDIA = ROOT / "media"
+
 BULAN = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Baloo+2:wght@700;800&display=swap">'
@@ -209,7 +238,7 @@ def header(rel: str, current: str) -> str:
     return f"""<a class="skip" href="#isi">Langsung ke isi</a>
 <header class="site-header"><div class="wrap">
 <a class="brand" href="{home}" aria-label="{SITE['name']}, ke beranda">{halus_svg('lpg')}<span><b>Bahaya Tak Terlihat</b><small>Edukasi K3 &amp; kesehatan sehari-hari</small></span></a>
-<nav class="nav" aria-label="Menu utama">{nav('' if rel else './', 'Beranda', 'home').replace('href=""', f'href="{home}"')}{nav('artikel/index.html', 'Artikel', 'artikel')}{nav('tentang.html', 'Tentang', 'tentang')}{nav('kolaborasi.html', 'Kolaborasi', 'kolaborasi')}</nav>
+<nav class="nav" aria-label="Menu utama">{nav('' if rel else './', 'Beranda', 'home').replace('href=""', f'href="{home}"')}{nav('artikel/index.html', 'Artikel', 'artikel')}{nav('video.html', 'Video', 'video')}{nav('tentang.html', 'Tentang', 'tentang')}{nav('kolaborasi.html', 'Kolaborasi', 'kolaborasi')}</nav>
 <div class="tools"><button class="icon-btn" id="fs-toggle" type="button" aria-label="Perbesar huruf" aria-pressed="false">A+</button><button class="icon-btn" id="theme-toggle" type="button" aria-label="Ganti mode gelap" aria-pressed="false">{ICON['moon']}</button></div>
 </div></header>
 <main id="isi">
@@ -288,6 +317,55 @@ def page(path: str, title: str, desc: str, current: str, content: str, depth: in
 # ----------------------------------------------------------------- halaman
 
 
+def has_video(n: int) -> bool:
+    return (MEDIA / "video" / f"ep{n}.mp4").exists()
+
+
+def video_card(e, rel: str, by_slug: dict) -> str:
+    n, title, _season, slug, variant = e
+    poster = f"{rel}media/poster/ep{n}.jpg"
+    if has_video(n):
+        media = (f'<video controls preload="none" playsinline poster="{poster}" aria-label="Video EP{n}: {esc(title)}">'
+                 f'<source src="{rel}media/video/ep{n}.mp4" type="video/mp4"></video>')
+    else:
+        media = (f'<a class="reel-tiktok" href="{SITE["tiktok"]}" target="_blank" rel="noopener" aria-label="Tonton EP{n} di TikTok">'
+                 f'<img src="{poster}" alt="" loading="lazy" width="360" height="640"><span class="play">{ICON["tiktok"]} Tonton di TikTok</span></a>')
+    art = by_slug.get(slug)
+    links = f'<a href="{rel}artikel/{slug}.html">Baca artikelnya</a>' if art else ""
+    links += f'<a href="{SITE["tiktok"]}" target="_blank" rel="noopener">Buka di TikTok</a>'
+    return f'<li class="reel"><div class="frame">{media}</div><span class="ep">EP{n:02d}</span><b>{esc(title)}</b><div class="links">{links}</div></li>'
+
+
+def kantor_block(rel: str = "") -> str:
+    return f"""<section class="section"><div class="wrap kantor">
+<a class="kantor-shot" href="{KANTOR_URL}" target="_blank" rel="noopener"><img src="{rel}media/kantor.jpg" alt="Kantor pixel-art Bahaya Tak Terlihat: tim riset, copywriter, art director, motion designer, booth VO, ruang rapat, pantry kopi, dan Kopi si kucing kantor" loading="lazy" width="1148" height="720"></a>
+<div><span class="eyebrow">Di balik layar</span><h2>Mampir ke kantor kami</h2>
+<p>Setiap episode lahir dari kantor virtual ini: Dika mengecek fakta, Laras menulis naskah, Bima menggambar Si Halus, Sekar menganimasikan, Yoga merekam suara, Nina memeriksa, Fajar menyiapkan caption. Klik orangnya untuk melihat apa yang sedang ia kerjakan. Jangan bangunkan Kopi, kucing kantor yang sedang tidur di karpet.</p>
+<div class="btn-row"><a class="btn btn-scan" href="{KANTOR_URL}" target="_blank" rel="noopener">Masuk ke kantor</a></div>
+<p class="form-note">Kantor dibuka di tab baru.</p></div>
+</div></section>"""
+
+
+def build_videos(arts: list[dict]) -> str:
+    by_slug = {a["slug"]: a for a in arts}
+    secs = []
+    for key, (name, blurb) in SEASONS.items():
+        cards = "".join(video_card(e, "", by_slug) for e in EPISODES if e[2] == key)
+        secs.append(f'<section class="cat-section" id="{key}"><h2>{esc(name)}</h2><p>{esc(blurb)}</p><ul class="reels">{cards}</ul></section>')
+    soon = "".join(
+        f'<li class="reel"><div class="frame soon">{halus_svg(v)}<span class="ph">segera tayang</span></div><span class="ep">EP{n}</span><b>{esc(t)}</b><div class="links"><a href="artikel/{slug}.html">Baca artikelnya dulu</a></div></li>'
+        for n, t, slug, v in SOON)
+    secs.insert(0, f'<section class="cat-section" id="segera"><h2>Segera tayang</h2><p>Naskah dan cover sudah jadi, videonya sedang diproduksi.</p><ul class="reels">{soon}</ul></section>')
+    nav = '<a href="#segera">Segera</a>' + "".join(f'<a href="#{k}">{esc(v[0].split(": ")[1])}</a>' for k, v in SEASONS.items())
+    content = f"""<div class="wrap"><div class="page-head"><h1>Video</h1><p>Semua episode Si Halus, dari bahaya di tempat kerja sampai di dapur sendiri. Yang bertanda putar bisa ditonton langsung di sini.</p>
+<div class="btn-row" style="margin-top:18px"><a class="btn btn-scan" href="{SITE['tiktok']}" target="_blank" rel="noopener">{ICON['tiktok']} Follow {SITE['tiktok_handle']}</a></div></div>
+<nav class="cat-nav" aria-label="Musim video">{nav}</nav>
+{''.join(secs)}
+{ad_slot()}
+</div>{kantor_block()}"""
+    return page("video.html", "Video", "Galeri video edukasi K3 Si Halus: bahaya di rumah, stres, dan tempat kerja, lengkap dengan artikel pendamping.", "video", content)
+
+
 def build_home(arts: list[dict], full: bool = True) -> str:
     rel = ""
     latest = "".join(card(a, rel) for a in arts[:6])
@@ -296,11 +374,7 @@ def build_home(arts: list[dict], full: bool = True) -> str:
         f'<li><a href="artikel/{a["slug"]}.html">{halus_svg(a["halus"])}<b>{esc(a["halus_name"])}</b><span>{esc(a["title"].split(":")[0])}</span></a></li>'
         for a in arts
     )
-    vids = "".join(
-        f"""<li class="video"><div class="thumb">{halus_svg(v)}</div><div><span class="ep">{ep}</span><b>{esc(t)}</b>
-<div class="links"><a href="{SITE['tiktok']}" target="_blank" rel="noopener">Tonton di TikTok</a><a href="artikel/{slug}.html">Baca artikelnya</a></div></div></li>"""
-        for ep, t, v, slug in VIDEOS if slug in by_slug
-    )
+    featured = "".join(video_card(e, "", by_slug) for e in EPISODES if e[0] in (13, 14, 15))
     counts = {k: sum(1 for a in arts if a["category"] == k) for k in CATEGORIES}
     cats = "".join(
         f'<li><a href="artikel/index.html#{k}"><b>{esc(v[0])}</b><span>{esc(v[1])}</span><em>{counts[k]} artikel</em></a></li>'
@@ -334,8 +408,9 @@ def build_home(arts: list[dict], full: bool = True) -> str:
 <div class="wrap">{ad_slot()}</div>
 
 <section class="section"><div class="wrap">
-<div class="section-head"><h2>Video terbaru di TikTok</h2><p>Satu menit, satu bahaya, satu cara mengatasinya. Setiap episode punya artikel pendamping yang lebih lengkap.</p></div>
-<ul class="videos">{vids}</ul>
+<div class="section-head"><h2>Tonton Si Halus beraksi</h2><p>Satu menit, satu bahaya, satu cara mengatasinya. Putar langsung di sini, lalu baca artikel pendampingnya.</p></div>
+<ul class="reels">{featured}</ul>
+<div class="btn-row" style="margin-top:20px"><a class="btn btn-primary" href="video.html">Semua video</a><a class="btn btn-scan" href="{SITE['tiktok']}" target="_blank" rel="noopener">{ICON['tiktok']} Lebih banyak di TikTok</a></div>
 </div></section>
 
 <section class="section band"><div class="wrap">
@@ -347,6 +422,8 @@ def build_home(arts: list[dict], full: bool = True) -> str:
 <div class="section-head"><h2>Jelajahi menurut kategori</h2></div>
 <ul class="cats">{cats}</ul>
 </div></section>
+
+{kantor_block()}
 
 <section class="section band" id="ikuti"><div class="wrap follow">
 <div><h2>Ikuti supaya tidak ketinggalan</h2><p>Episode baru dan tips singkat terbit di TikTok. Halaman Facebook dan saluran WhatsApp sedang disiapkan untuk keluarga yang lebih nyaman membaca di sana.</p>
@@ -453,7 +530,7 @@ def build_about() -> str:
 <p>Penulis, pemeriksa fakta, dan ilustrator dari latar belakang K3, kesehatan masyarakat, dan desain. <span class="ph">profil penulis menyusul</span></p>
 <p>Untuk konten kesehatan, kami berencana bekerja sama dengan tenaga kesehatan sebagai peninjau. Nama peninjau akan dicantumkan di setiap artikel yang sudah ditinjau.</p>
 {social_buttons()}</div>
-</div></div>"""
+</div></div>{kantor_block()}"""
     return page("tentang.html", "Tentang kami", "Tentang Bahaya Tak Terlihat: misi, cara menulis, dan tim di balik edukasi K3 dan IHOH sehari-hari.", "tentang", content)
 
 
@@ -587,6 +664,8 @@ def main():
                 child.unlink()
     OUT.mkdir(exist_ok=True)
     (OUT / "assets").mkdir(exist_ok=True)
+    if MEDIA.exists():
+        shutil.copytree(MEDIA, OUT / "media")
     for f in ("style.css", "main.js"):
         shutil.copy(ROOT / "assets" / f, OUT / "assets" / f)
     (OUT / "assets" / "favicon.svg").write_text(halus_svg("lpg"), encoding="utf-8")
@@ -596,6 +675,7 @@ def main():
     for a in arts:
         write(f"artikel/{a['slug']}.html", build_article(a, arts))
     write("tentang.html", build_about())
+    write("video.html", build_videos(arts))
     write("kolaborasi.html", build_collab())
     write("kebijakan-privasi.html", text_page("kebijakan-privasi.html", "Kebijakan privasi", "Kebijakan privasi Bahaya Tak Terlihat: data yang dikumpulkan, kuki, iklan pihak ketiga, dan hak Anda.", "Bagaimana kami memperlakukan data Anda di situs ini.", PRIVACY))
     write("disclaimer.html", text_page("disclaimer.html", "Disclaimer", "Disclaimer Bahaya Tak Terlihat: konten edukasi umum, bukan pengganti nasihat medis atau profesional.", "Hal-hal yang perlu Anda ketahui sebelum memakai informasi di situs ini.", DISCLAIMER))
@@ -608,7 +688,7 @@ def main():
     # artefak pratinjau: beranda tanpa kerangka <html> (dibungkus otomatis saat publikasi)
     write("_preview_index.html", build_home(arts, full=False))
 
-    urls = ["", "artikel/", "tentang.html", "kolaborasi.html", "kebijakan-privasi.html", "disclaimer.html"] + [f"artikel/{a['slug']}.html" for a in arts]
+    urls = ["", "artikel/", "video.html", "tentang.html", "kolaborasi.html", "kebijakan-privasi.html", "disclaimer.html"] + [f"artikel/{a['slug']}.html" for a in arts]
     today = date.today().isoformat()
     sm = "".join(f"<url><loc>{SITE['url']}/{u}</loc><lastmod>{today}</lastmod></url>" for u in urls)
     write("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')

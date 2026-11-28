@@ -308,3 +308,29 @@ textarea { min-height: 140px; resize: vertical; }
 .cat-section h2 { font-size: var(--step-2); margin-bottom: 6px; }
 .cat-section > p { color: var(--muted); margin-bottom: 18px; }
 .empty { color: var(--muted); background: var(--surface); border: 2px dashed var(--line); border-radius: var(--radius); padding: 18px 20px; }
+
+/* galeri video vertikal */
+.reels { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 22px; list-style: none; padding: 0; margin: 0; }
+.reel { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.reel .frame { position: relative; aspect-ratio: 9 / 16; border-radius: 20px; overflow: hidden; background: var(--ink); border: 3px solid var(--ink); box-shadow: var(--shadow); }
+.reel video, .reel img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.reel-tiktok { display: block; width: 100%; height: 100%; position: relative; }
+.reel-tiktok .play { position: absolute; left: 10px; right: 10px; bottom: 12px; display: flex; gap: 8px; align-items: center; justify-content: center; min-height: 48px; border-radius: 999px; background: var(--scan); color: var(--scan-ink); font-weight: 700; border: 2px solid #1f1630; }
+.reel-tiktok .play svg { width: 20px; height: 20px; }
+.reel-tiktok:hover img { opacity: 0.85; }
+.reel .frame.soon { display: grid; place-items: center; align-content: center; gap: 12px; background: var(--surface-2); }
+.reel .frame.soon svg { width: 60%; height: auto; }
+.reel .ep { font: 700 0.8rem ui-monospace, Menlo, monospace; color: var(--muted); letter-spacing: 0.06em; margin-top: 6px; }
+.reel b { font-family: var(--f-display); font-size: 1.2rem; line-height: 1.2; }
+.reel .links { display: flex; flex-wrap: wrap; gap: 2px 14px; font-weight: 700; font-size: 0.98rem; }
+@media (max-width: 520px) { .reels { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } .reel b { font-size: 1.05rem; } .reel-tiktok .play { font-size: 0.85rem; min-height: 44px; } }
+
+/* kantor */
+.kantor { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 32px; align-items: center; }
+.kantor-shot { display: block; border-radius: 16px; overflow: hidden; border: 3px solid var(--ink); box-shadow: 0 6px 0 var(--ink); }
+.kantor-shot img { display: block; width: 100%; height: auto; image-rendering: pixelated; transition: transform .3s ease; }
+.kantor-shot:hover img { transform: scale(1.02); }
+.kantor h2 { font-size: var(--step-3); margin-bottom: 12px; }
+.kantor p { color: var(--muted); margin-bottom: 18px; }
+@media (max-width: 820px) { .kantor { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .kantor-shot img { transition: none; } }
