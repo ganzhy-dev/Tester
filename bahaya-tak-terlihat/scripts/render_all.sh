@@ -2,7 +2,7 @@
 # Render 1080x1920@60 lalu encode final H.264 BT.709 (TikTok-ready)
 set -e
 cd "$(dirname "$0")/.."
-declare -A NAME=([EP1-CO2]=EP1_CO2_RuangRapat [EP2-Getaran]=EP2_Getaran [EP3-Bising]=EP3_Kebisingan [EP4-Panas]=EP4_TekananPanas [EP5-DebuSilika]=EP5_DebuSilika [EP6-KarbonMonoksida]=EP6_KarbonMonoksida [EP7-Psikosomatik]=EP7_Psikosomatik [EP8-NotifMalam]=EP8_NotifMalam_Burnout [EP9-Doomscrolling]=EP9_Doomscrolling [EP10-Tersetrum]=EP10_Tersetrum [EP11-BebanIbu]=EP11_BebanIbu [EP12-LantaiLicin]=EP12_LantaiLicin [EP13-GasBocor]=EP13_GasBocor [EP14-BotolNyaru]=EP14_BotolNyaru [EP15-AirPanas]=EP15_AirPanas)
+declare -A NAME=([EP1-CO2]=EP1_CO2_RuangRapat [EP2-Getaran]=EP2_Getaran [EP3-Bising]=EP3_Kebisingan [EP4-Panas]=EP4_TekananPanas [EP5-DebuSilika]=EP5_DebuSilika [EP6-KarbonMonoksida]=EP6_KarbonMonoksida [EP7-Psikosomatik]=EP7_Psikosomatik [EP8-NotifMalam]=EP8_NotifMalam_Burnout [EP9-Doomscrolling]=EP9_Doomscrolling [EP10-Tersetrum]=EP10_Tersetrum [EP11-BebanIbu]=EP11_BebanIbu [EP12-LantaiLicin]=EP12_LantaiLicin [EP13-GasBocor]=EP13_GasBocor [EP14-BotolNyaru]=EP14_BotolNyaru [EP15-AirPanas]=EP15_AirPanas [EP16-SaladLicik]=EP16_SaladLicik [EP17-GarisFinis]=EP17_GarisFinis [EP18-BantalBara]=EP18_BantalBara)
 for id in "${@:-EP1-CO2 EP2-Getaran EP3-Bising EP4-Panas EP5-DebuSilika EP6-KarbonMonoksida}"; do
   for c in $id; do
     npx remotion render src/index.ts $c out/${c}_raw.mp4 --crf=8 --concurrency=4 --browser-executable=/opt/pw-browsers/chromium_headless_shell --log=error
