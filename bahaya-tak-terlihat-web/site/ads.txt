@@ -1,0 +1,2 @@
+# Isi baris dari Google AdSense setelah akun disetujui, contoh:
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
