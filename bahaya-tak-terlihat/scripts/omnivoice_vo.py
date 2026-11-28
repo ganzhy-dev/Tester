@@ -25,6 +25,7 @@ import numpy as np  # noqa: E402
 import soundfile as sf  # noqa: E402
 import torch  # noqa: E402
 from omnivoice import OmniVoice  # noqa: E402
+from omnivoice.models.omnivoice import OmniVoiceGenerationConfig  # noqa: E402
 
 SR = 24000
 import os  # noqa: E402
@@ -35,7 +36,9 @@ REF_TEXT = os.environ.get(
     "REF_TEXT",
     "Bangun sebelum subuh, masak, nyuci, nganter anak, belanja, beresin rumah, ngurus yang sakit. Terus kalau ditanya kerja apa, jawabnya: cuma ibu rumah tangga.",
 )
-GAP_SENT, GAP_PARA = 0.22, 0.42
+# STYLE=santai: nada lebih hidup (class_temperature), jeda lebih lega, pilih take paling ekspresif
+SANTAI = os.environ.get("STYLE") == "santai"
+GAP_SENT, GAP_PARA = (0.34, 0.62) if SANTAI else (0.22, 0.42)
 
 torch.manual_seed(7)
 m = OmniVoice.from_pretrained("k2-fsa/OmniVoice", device_map="cpu", dtype=torch.float32)
@@ -80,6 +83,15 @@ def norm(s):
     s = re.sub(r"\d+", lambda m: " " + terbilang(m.group(0)) + " ", s)
     s = re.sub(r"\s+", " ", re.sub(r"[^a-z ]", "", s)).strip()
     return s.replace("nggak", "gak").replace("ngga", "ga")
+
+
+def f0_var(w):
+    import librosa
+    f0, _, _ = librosa.pyin(w, fmin=70, fmax=400, sr=SR, frame_length=1024)
+    f = f0[~np.isnan(f0)]
+    if len(f) < 5:
+        return 0.0
+    return float(np.std(12 * np.log2(f / np.median(f))))
 
 
 def asr_score(w, sent):
@@ -132,9 +144,13 @@ for ep in [int(a) for a in sys.argv[1:]]:
             line = line[tag.end():]
         for si, sent in enumerate(sentences(line)):
             best = None
-            for attempt in range(4 if ASR_CHECK else 3):
+            passed = []
+            for attempt in range(5 if SANTAI else (4 if ASR_CHECK else 3)):
                 torch.manual_seed(1000 * ep + 10 * li + si + 97 * attempt)
-                out = m.generate(text=say(sent), language="id", num_step=32, voice_clone_prompt=prompt)
+                if SANTAI:
+                    out = m.generate(text=say(sent), language="id", voice_clone_prompt=prompt, speed=0.9, generation_config=OmniVoiceGenerationConfig(num_step=32, class_temperature=0.7))
+                else:
+                    out = m.generate(text=say(sent), language="id", num_step=32, voice_clone_prompt=prompt)
                 w = out[0] if isinstance(out, (list, tuple)) else out
                 w = w.squeeze().cpu().numpy() if hasattr(w, "cpu") else np.asarray(w).squeeze()
                 w = trim(w.astype(np.float32))
@@ -144,10 +160,19 @@ for ep in [int(a) for a in sys.argv[1:]]:
                 score = sc - (0.3 if short else 0)
                 if best is None or score > best[0]:
                     best = (score, w, dur)
+                if SANTAI:
+                    if not short and sc >= 0.84:
+                        passed.append((f0_var(w), sc, w, dur))
+                    if len(passed) >= 3 or (passed and attempt >= 3):
+                        break
+                    continue
                 if not short and sc >= 0.84:  # isi cocok dengan naskah
                     break
                 print(f"  ulang ({attempt + 1}): '{sent[:40]}' {dur:.2f}s cocok {sc:.2f} -> '{heard[:60]}'", flush=True)
             score, w, dur = best
+            if passed:
+                fv, score, w, dur = max(passed, key=lambda x: x[0])
+                print(f"  ekspresif {fv:.2f} dari {len(passed)} take", flush=True)
             if ASR_CHECK:
                 print(f"  ok {score:.2f}: '{sent[:50]}'", flush=True)
             # waktu kata: proporsional panjang huruf dalam kalimat (ditambah bobot jeda koma/elipsis)
