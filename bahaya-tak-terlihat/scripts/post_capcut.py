@@ -1,7 +1,7 @@
 """Setelah user_vo.py: perbarui highlight hook (data/hl.json), data/epN_hookcta.json & baris N di src/ep/hookcta2.ts."""
 import json, re, sys
 ep = int(sys.argv[1])
-HOOK_HL = {11: ["seratus", "jam", "seminggu,", "digaji,", "ibu."], 12: ["Lantai", "kamar", "mandi", "basah", "orang", "tua"],
+HOOK_HL = {11: ["seratus", "jam", "seminggu,", "digaji,", "ibu."], 12: ["nggak", "mau", "sekolah?", "dimarahin."],
            13: ["tiga", "puluh", "detik", "gas", "bocor"], 14: ["Botol", "air", "mineral", "beneran"],
            15: ["gagang", "panci", "aman", "anak."], 16: ["Enzy", "Storia", "dirawat", "salad."],
            17: ["rajin", "lari,", "persiapan", "simpel"], 18: ["ngecas", "powerbank", "kasur"]}

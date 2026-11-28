@@ -8,15 +8,17 @@ Salin isi di dalam kotak, tempel apa adanya. Komentar pin ditulis dari akun send
 Video: `video/EP10_Tersetrum_1080p60.mp4` · Cover: `Cover_EP10.jpg`
 
 ```
-Ada yang kesetrum di depan mata… refleks kita pasti pengen langsung narik badannya ⚡
+Kawat jemuran di rumah kamu aman nggak dari listrik nyasar? ⚡
 
-Tahan dulu. Matikan MCB di meteran. Kalau nggak sempat, dorong pakai kayu atau sapu kering sambil berdiri di alas yang kering. Di rumah, pasang ELCB (pengaman arus bocor) biar listrik terputus otomatis dalam hitungan milidetik.
+Kabel putus yang nyentuh atap seng bisa bikin kawat jemuran ikut beraliran listrik. Kalau lihat orang kesetrum, jangan langsung dipegang. Matikan MCB dulu, atau dorong pakai kayu atau gagang sapu kering sambil berdiri di alas kering.
 
-Simpan video ini, terus kirim ke grup keluarga. Di rumahmu udah ada ELCB belum? Jawab di komen 👇
+Cek rumah sebentar: kabel ngelupas, colokan numpuk, kawat jemuran yang dekat kabel atau seng. Kalau bisa, pasang ELCB biar listrik langsung putus kalau ada arus bocor.
 
-#k3 #listrik #kesetrum #keselamatanrumah #iburumahtangga #tipsrumah #bahayataktelihat #fyp
+Udah cek? Tulis "jemuran aman" di komen ✅ Simpan dan kirim ke grup keluarga, ya.
+
+#k3 #listrik #kesetrum #jemuran #keselamatanrumah #iburumahtangga #bahayataktelihat #fyp
 ```
-Komentar pin: `baru tahu ada pengaman arus bocor buat rumah 😳 rumahku udah ada belum ya…`
+Komentar pin: `jemuran aman ✅ ternyata kawat jemuranku nempel ke seng, langsung aku pindahin`
 
 ---
 
@@ -24,11 +26,11 @@ Komentar pin: `baru tahu ada pengaman arus bocor buat rumah 😳 rumahku udah ad
 Video: `video/EP11_BebanIbu_1080p60.mp4` · Cover: `Cover_EP11.jpg`
 
 ```
-Kerja dari subuh sampai malam, nggak ada gaji, nggak ada cuti. Kamu manggilnya: Ibu 🤍
+Seratus jam seminggu, nggak digaji, nggak ada cuti. Itu kerjaan ibu 🤍
 
-Kerja perawatan yang nggak dibayar itu nyata dan berat. Data ILO bilang sebagian besar dikerjakan perempuan. Capeknya bukan lebay, dan bantuan kecil dari orang rumah itu berarti banget.
+Ngangkat galon, jongkok nyuci berjam-jam, tidur yang sering kepotong. Capeknya nyata, cuma sering nggak kelihatan. Kabar baiknya, beban ini bisa diringanin bareng-bareng: angkat barang berat berdua, kasih bangku kecil buat nyuci, dan kasih ibu waktu tidur siang.
 
-Hari ini, ambil satu kerjaan rumah tanpa disuruh. Terus tag ibu, istri, atau kakak kamu di komen 👇
+Hari ini ambil satu kerjaan rumah, terus tulis di komen kerjaan apa yang kamu ambil 👇 Jangan lupa bilang makasih ke ibu, ya.
 
 #iburumahtangga #ibu #bebanganda #kesehatanmental #keluarga #k3 #bahayataktelihat #fyp
 ```
