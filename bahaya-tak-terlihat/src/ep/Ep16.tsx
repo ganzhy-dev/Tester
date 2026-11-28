@@ -1534,7 +1534,7 @@ const Ep16Scenes: React.FC = () => {
           <div style={{ position: "absolute", left: 560, top: 30 }}>
             <Clock sweep={sweep4} size={310} />
           </div>
-          <At at={64.09} x={575} y={358}>
+          <At at={64.09} x={548} y={358}>
             <div style={{ whiteSpace: "nowrap", fontFamily: HEAD, fontSize: 58, color: C.ink, background: "#FFE27A", borderRadius: 22, padding: "0 22px", lineHeight: 1.2, border: `6px solid ${C.ink}`, boxShadow: `0 6px 0 ${C.ink}` }}>MAKS 2 JAM</div>
           </At>
           <At at={64.49} x={60} y={30}>
