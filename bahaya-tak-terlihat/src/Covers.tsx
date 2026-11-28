@@ -427,22 +427,22 @@ const PotProp: React.FC = () => (
 );
 
 export const Cover13: React.FC = () => (
-  <CoverFrame ep={13} accent="#E8663D" tint="#F6C2A0" line1="CIUM BAU GAS?" line2="JANGAN NYALAIN LAMPU!" sub="ini yang harus kamu lakuin 🔥">
+  <CoverFrame ep={13} accent="#E8663D" tint="#F6C2A0" line1="CIUM BAU GAS?" line2="TENANG, LAKUIN INI" sub="cek 30 detik pakai air sabun ✅" subSize={subFit("cek 30 detik pakai air sabun ✅")}>
     <div style={{ position: "absolute", left: 620, top: 1020 }}>
       <GasTank />
     </div>
     <ScanLine y={1450} />
     <div style={{ position: "absolute", left: 80, top: 1010 }}>
-      <Worker size={620} expr="shocked" pose="coverEars" shirt="#E8634A" pants="#3B3B4F" hijab="#7A3E2E" seed={8} />
+      <Worker size={620} expr="happy" pose="point" shirt="#E8634A" pants="#3B3B4F" hijab="#7A3E2E" seed={8} />
     </div>
     <div style={{ position: "absolute", left: 440, top: 975, rotate: "-8deg" }}>
-      <SiHalus size={280} variant="lpg" mood="grin" />
+      <SiHalus size={280} variant="lpg" mood="busted" />
     </div>
   </CoverFrame>
 );
 
 export const Cover14: React.FC = () => (
-  <CoverFrame ep={14} accent="#2E9E83" tint="#CDE8DC" line1="BOTOL AIR MINERAL" line2="BUKAN ISI AIR?" sub="anak cuma tahu: haus = minum 🍼">
+  <CoverFrame ep={14} accent="#2E9E83" tint="#CDE8DC" line1="ISINYA AIR?" line2="CEK BOTOL DI RUMAH" sub="kebiasaan kecil biar si kecil aman 💧" subSize={subFit("kebiasaan kecil biar si kecil aman 💧")}>
     <div style={{ position: "absolute", left: 640, top: 1060, rotate: "6deg" }}>
       <BottleProp />
     </div>
@@ -451,22 +451,22 @@ export const Cover14: React.FC = () => (
       <Worker size={520} expr="happy" pose="point" shirt="#F2B33D" pants="#3B4E8A" seed={9} />
     </div>
     <div style={{ position: "absolute", left: 800, top: 975, rotate: "10deg" }}>
-      <SiHalus size={240} variant="bottle" mood="grin" />
+      <SiHalus size={240} variant="bottle" mood="busted" />
     </div>
   </CoverFrame>
 );
 
 export const Cover15: React.FC = () => (
-  <CoverFrame ep={15} accent="#E0566F" tint="#F3C1C8" line1="GAGANG PANCI" line2="NONGOL KELUAR?" sub="sedetik lengah, anak taruhannya 🫕">
+  <CoverFrame ep={15} accent="#E0566F" tint="#F3C1C8" line1="TRIK GAGANG PANCI" line2="DAPUR RAMAH ANAK" sub="plus pertolongan pertama air panas 💛" subSize={subFit("plus pertolongan pertama air panas 💛")}>
     <div style={{ position: "absolute", left: 520, top: 1060 }}>
       <PotProp />
     </div>
     <ScanLine y={1450} />
     <div style={{ position: "absolute", left: 90, top: 1120 }}>
-      <Worker size={500} expr="shocked" pose="point" shirt="#6FB3E0" pants="#3B3B4F" seed={10} />
+      <Worker size={500} expr="happy" pose="point" shirt="#6FB3E0" pants="#3B3B4F" seed={10} />
     </div>
     <div style={{ position: "absolute", left: 790, top: 960, rotate: "-6deg" }}>
-      <SiHalus size={240} variant="steam" mood="grin" />
+      <SiHalus size={240} variant="steam" mood="busted" />
     </div>
   </CoverFrame>
 );
@@ -474,9 +474,9 @@ export const Cover15: React.FC = () => (
 /* ===================== EP16–18 ===================== */
 /** Teks cover — copywriter cukup ganti di sini. "\n" = pecah baris hook. */
 export const COVER_COPY = {
-  16: { line1: "SALAD SEHAT,", line2: "KOK MASUK RS?", sub: "yang bikin sakit bukan sayurnya 🥗" },
-  17: { line1: "IKUT LARI\nKARENA FOMO?", line2: "JANTUNG BELUM SIAP", sub: "lari itu sehat, FOMO-nya yang bahaya 🏃" },
-  18: { line1: "NGECAS DI KASUR?", line2: "POWERBANK\nBISA MELEDAK", sub: "kebakaran rumah bisa mulai dari bantal 🔥" },
+  16: { line1: "ENZY CURIGA SALAD?", line2: "TENANG, ADA CARANYA", sub: "kebiasaan simpel biar salad tetap sehat 🥗" },
+  17: { line1: "DEMAM LARI?", line2: "SIAPIN INI DULU, YUK", sub: "biar kuat lari lebih lama, sampai finis 🏃" },
+  18: { line1: "NGECAS DI KASUR?", line2: "PINDAH KE MEJA, YUK", sub: "kebiasaan kecil biar tidur lebih tenang 🔋" },
 };
 
 /** Font sub-hook otomatis mengecil kalau kalimatnya panjang (maks 60). */
@@ -578,7 +578,7 @@ const Bib: React.FC<{ text: string; w?: number }> = ({ text, w = 130 }) => (
 );
 
 /** Kartu detak jantung ala jam pintar */
-const BpmBadge: React.FC<{ bpm: number }> = ({ bpm }) => (
+export const BpmBadge: React.FC<{ bpm: number }> = ({ bpm }) => (
   <div
     style={{
       display: "flex",
@@ -644,13 +644,10 @@ export const Cover16: React.FC = () => (
     </div>
     <ScanLine y={1450} />
     <div style={{ position: "absolute", left: 80, top: 1030 }}>
-      <Worker size={600} expr="pain" pose="holdTool" shirt="#F2B33D" pants="#3B3B4F" hijab="#3F6E5A" seed={11} />
-    </div>
-    <div style={{ position: "absolute", left: 60, top: 1010 }}>
-      <SweatDrops />
+      <Worker size={600} expr="happy" pose="holdTool" shirt="#F2B33D" pants="#3B3B4F" hijab="#3F6E5A" seed={11} />
     </div>
     <div style={{ position: "absolute", left: 700, top: 1000, rotate: "8deg" }}>
-      <SiHalus size={300} variant="salad" mood="grin" />
+      <SiHalus size={300} variant="salad" mood="busted" />
     </div>
   </CoverFrame>
 );
@@ -662,19 +659,13 @@ export const Cover17: React.FC = () => (
     </div>
     <ScanLine y={1450} />
     <div style={{ position: "absolute", left: 80, top: 1040 }}>
-      <Worker size={600} expr="pain" pose="holdTool" shirt="#2FA7B8" pants="#2E3557" seed={12} />
+      <Worker size={600} expr="happy" pose="wave" shirt="#2FA7B8" pants="#2E3557" seed={12} />
     </div>
     <div style={{ position: "absolute", left: 216, top: 1362 }}>
       <Bib text="10K" w={116} />
     </div>
-    <div style={{ position: "absolute", left: 60, top: 1020 }}>
-      <SweatDrops />
-    </div>
-    <div style={{ position: "absolute", left: 90, top: 960 }}>
-      <BpmBadge bpm={190} />
-    </div>
     <div style={{ position: "absolute", left: 680, top: 1140, rotate: "-6deg" }}>
-      <SiHalus size={270} variant="finish" mood="grin" />
+      <SiHalus size={270} variant="finish" mood="busted" />
     </div>
   </CoverFrame>
 );
@@ -686,10 +677,10 @@ export const Cover18: React.FC = () => (
     </div>
     <ScanLine y={1450} />
     <div style={{ position: "absolute", left: 80, top: 1030 }}>
-      <Worker size={600} expr="shocked" pose="point" shirt="#7C5CFF" pants="#3B3B4F" seed={13} />
+      <Worker size={600} expr="happy" pose="point" shirt="#7C5CFF" pants="#3B3B4F" seed={13} />
     </div>
     <div style={{ position: "absolute", left: 780, top: 1010, rotate: "8deg" }}>
-      <SiHalus size={280} variant="powerbank" mood="laugh" />
+      <SiHalus size={280} variant="powerbank" mood="busted" />
     </div>
   </CoverFrame>
 );
