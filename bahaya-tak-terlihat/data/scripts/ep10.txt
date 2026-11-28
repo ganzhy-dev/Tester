@@ -1,12 +1,17 @@
-[HOOK] Seorang ibu lari nolongin anaknya yang kesetrum... dan dua-duanya nggak selamat.
-[MAIN] Simalungun, tahun dua ribu dua puluh satu. Lagi jemur baju, anaknya kesetrum di kawat jemuran. Ibunya refleks narik tangan anaknya... dan ikut kesetrum.
-Ternyata, ada kabel listrik putus yang nyentuh atap seng. Dan seng itu nyambung ke kawat jemuran.
-Itu ulah makhluk halus paling cepat... Listrik nyasar!
-Arus sekecil tiga puluh sampai lima puluh miliampere aja udah bisa ganggu jantung. Apalagi kalau badan lagi basah.
-Jadi, kalau ada orang kesetrum, jangan langsung dipegang. Matiin dulu MCB di meteran. Kalau nggak sempat, dorong pakai kayu atau sapu kering, sambil berdiri di alas yang kering.
-Terus, cek rumah kamu. Kabel yang ngelupas. Colokan numpuk kayak sate. Kawat jemuran yang deket kabel atau atap seng.
-Pasang ELCB. Alat kecil ini motong listrik dalam hitungan milidetik begitu ada arus bocor ke badan. Harganya jauh lebih murah dari nyawa.
-Dan kalau rumah kebanjiran, matiin listrik dulu sebelum beres-beres.
-Ibu itu nggak salah. Dia cuma ngelakuin yang semua ibu bakal lakuin. Tugas kita... bikin rumah yang nggak bikin dia harus milih.
-Follow, biar bahaya yang nggak kelihatan... jadi kelihatan.
-[CTA] Simpan video ini, terus kirim ke grup keluarga. Siapa tahu suatu hari, ini yang nyelametin nyawa.
+[HOOK] Kamu tahu nggak, kawat jemuran di rumah bisa jadi jalan listrik nyasar?
+[MAIN] Tahun dua ribu dua puluh satu, di Simalungun, ada kejadian yang bikin kita banyak belajar.
+Seorang anak kesetrum waktu jemur baju, dan ibunya ikut kesetrum waktu mau nolong.
+Ternyata ada kabel listrik putus yang nyentuh atap seng. Atap seng itu nyambung ke kawat jemuran.
+Di akun ini, bahaya kayak gini kami sebut Si Halus Listrik Nyasar.
+Arus kecil, sekitar tiga puluh sampai lima puluh miliampere, udah bisa ganggu kerja jantung. Risikonya makin besar kalau badan lagi basah.
+Jadi, kalau lihat orang kesetrum, jangan langsung dipegang.
+Matikan dulu MCB, yaitu saklar utama di dekat meteran listrik.
+Kalau nggak sempat, dorong pakai kayu atau gagang sapu yang kering. Pastikan kamu berdiri di alas yang kering juga.
+Habis itu, yuk cek rumah sebentar.
+Cari kabel yang ngelupas, atau colokan yang ditumpuk kayak sate. Cek juga kawat jemuran yang dekat kabel atau atap seng.
+Kalau bisa, pasang ELCB, alat pemutus arus bocor.
+Alat ini langsung mutus listrik dalam hitungan milidetik kalau ada arus bocor ke badan. Harganya jauh lebih murah dibanding risikonya.
+Satu lagi, kalau rumah kebanjiran, matikan listrik dulu sebelum beres-beres.
+Ibu itu cuma ngelakuin yang pasti kita lakuin juga, yaitu nolong anaknya. Tugas kita sekarang, bikin rumah yang lebih aman buat semua.
+Follow ya, biar bahaya yang nggak kelihatan jadi kelihatan.
+[CTA] Simpan video ini, terus cek kawat jemuran kamu hari ini. Kalau udah, tulis jemuran aman di komen, dan kirim ke grup keluarga, ya.
