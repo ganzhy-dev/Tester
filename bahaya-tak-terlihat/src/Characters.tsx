@@ -202,8 +202,9 @@ export const Worker: React.FC<{
 /* ================================================================ SI HALUS
  * Maskot bahaya tak terlihat — "makhluk halus" versi K3.
  * Varian: co2 (kabut ngantuk), vibe (getaran), noise (bising).
+ * EP16–18: salad (kuman di makanan segar), finish (lari FOMO, jantung), powerbank (baterai menggembung).
  */
-export type HalusVariant = "co2" | "vibe" | "noise" | "heat" | "dust" | "gas" | "stress" | "burnout" | "doom" | "volt" | "load" | "slip" | "lpg" | "bottle" | "steam";
+export type HalusVariant = "co2" | "vibe" | "noise" | "heat" | "dust" | "gas" | "stress" | "burnout" | "doom" | "volt" | "load" | "slip" | "lpg" | "bottle" | "steam" | "salad" | "finish" | "powerbank";
 
 export const SiHalus: React.FC<{
   size?: number;
@@ -231,9 +232,25 @@ export const SiHalus: React.FC<{
     lpg: ["#FF9E6B", "#E8663D"],
     bottle: ["#D7F0E8", "#9CCFC0"],
     steam: ["#FF8FA3", "#E0566F"],
+    salad: ["#5FC25A", "#2E8B3E"],
+    finish: ["#FF6A45", "#D9381F"],
+    powerbank: ["#FFA62B", "#DB6414"],
   };
   const [col, col2] = PAL[variant];
   const s = { stroke: C.ink, strokeWidth: OUTLINE, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+  /** kuman kecil lucu (varian salad) */
+  const germ = (key: string, x: number, y: number, r: number, c: string, rot: number) => (
+    <g key={key} transform={`translate(${x} ${y}) rotate(${rot})`}>
+      {[0, 1, 2, 3, 4, 5].map((k) => {
+        const a = (k / 6) * Math.PI * 2;
+        return <line key={k} x1={Math.cos(a) * r} y1={Math.sin(a) * r} x2={Math.cos(a) * (r + 7)} y2={Math.sin(a) * (r + 7)} stroke={C.ink} strokeWidth={4} strokeLinecap="round" />;
+      })}
+      <circle r={r} fill={c} stroke={C.ink} strokeWidth={4} />
+      <circle cx={-r * 0.36} cy={-r * 0.12} r={2.8} fill={C.ink} />
+      <circle cx={r * 0.36} cy={-r * 0.12} r={2.8} fill={C.ink} />
+      <path d={`M${-r * 0.3} ${r * 0.3} Q0 ${r * 0.62} ${r * 0.3} ${r * 0.3}`} fill="none" stroke={C.ink} strokeWidth={3} strokeLinecap="round" />
+    </g>
+  );
   const float = Math.sin(t * Math.PI * 1.2) * 12;
   const jit = variant === "vibe" ? (random(`hj${frame}`) - 0.5) * 10 : variant === "stress" ? (random(`hs${frame}`) - 0.5) * 4 : 0;
 
@@ -342,6 +359,23 @@ export const SiHalus: React.FC<{
           const p = (t * 0.6 + i / 3) % 1;
           return <path key={i} d={`M${80 + i * 70} ${40 - p * 120} q-16 -18 0 -36 q16 -18 0 -36`} fill="none" stroke="#FFFFFF" strokeWidth={10} strokeLinecap="round" opacity={0.85 * Math.sin(p * Math.PI)} />;
         })}
+      {variant === "powerbank" &&
+        [0, 1, 2].map((i) => {
+          const p = (t * 0.9 + i / 3) % 1;
+          return <path key={i} d={`M${85 + i * 65} ${22 - p * 110} q14 -14 0 -28 q-14 -14 0 -28`} fill="none" stroke="#FF5A2E" strokeWidth={8} strokeLinecap="round" opacity={0.9 * Math.sin((0.15 + p * 0.85) * Math.PI)} />;
+        })}
+      {variant === "finish" &&
+        [-1, 1].map((side) => {
+          const w = 8 * Math.sin(t * 5 + side);
+          const dd = side < 0 ? `M62 196 Q12 ${186 + w} -34 ${232 + w}` : `M238 196 Q288 ${186 - w} 334 ${232 - w}`;
+          return (
+            <g key={side}>
+              <path d={dd} fill="none" stroke={C.ink} strokeWidth={30} strokeLinecap="round" />
+              <path d={dd} fill="none" stroke="#FFFFFF" strokeWidth={18} strokeLinecap="round" />
+              <path d={dd} fill="none" stroke="#E8323C" strokeWidth={18} strokeDasharray="14 14" />
+            </g>
+          );
+        })}
       {variant === "slip" && <ellipse cx={150} cy={318} rx={150 + 8 * Math.sin(t * 3)} ry={26} fill="#4FC3E0" opacity={0.45} />}
       {variant === "volt" && (
         <g>
@@ -386,6 +420,27 @@ export const SiHalus: React.FC<{
           <rect x={120} y={-48} width={60} height={22} rx={6} fill="#3F8FD6" {...s} strokeWidth={5} />
           <rect x={92} y={250} width={116} height={38} rx={8} fill="#FFFFFF" {...s} strokeWidth={4} />
           <text x={150} y={278} textAnchor="middle" fontFamily="LilitaOne" fontSize={26} fill="#E0566F">AIR?</text>
+        </g>
+      )}
+      {variant === "salad" && (
+        <g transform={`rotate(${4 * Math.sin(t * 2)} 150 30)`}>
+          <path d="M94 0 Q80 -38 116 -34 Q122 -64 150 -46 Q172 -68 186 -36 Q222 -42 208 0 Z" fill="#9BE36A" {...s} strokeWidth={5} />
+          <path d="M120 -4 Q116 -26 132 -30 M182 -4 Q186 -24 170 -32" fill="none" stroke="#3E9A3A" strokeWidth={5} strokeLinecap="round" />
+          <circle cx={126} cy={-14} r={13} fill="#FF5A4F" {...s} strokeWidth={4} />
+          <circle cx={180} cy={-16} r={12} fill="#FF5A4F" {...s} strokeWidth={4} />
+          <ellipse cx={153} cy={-8} rx={15} ry={10} fill="#E8F5C8" {...s} strokeWidth={4} />
+          <path d="M82 -4 L218 -4 Q214 48 150 50 Q86 48 82 -4 Z" fill="#FFFFFF" {...s} strokeWidth={5} />
+          <path d="M92 14 L208 14" stroke={col2} strokeWidth={8} />
+        </g>
+      )}
+      {variant === "finish" && (
+        <g>
+          <path d="M58 -4 L112 -4 L126 -34 L142 26 L158 -26 L170 -4 L214 -4" fill="none" stroke={C.ink} strokeWidth={14} strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M58 -4 L112 -4 L126 -34 L142 26 L158 -26 L170 -4 L214 -4" fill="none" stroke="#FF3B5C" strokeWidth={6} strokeLinecap="round" strokeLinejoin="round" />
+          <g transform={`translate(246 -6) scale(${1 + 0.18 * Math.abs(Math.sin(t * 7))})`}>
+            <path d="M0 14 C-30 -6 -18 -34 0 -16 C18 -34 30 -6 0 14 Z" fill="#FF3B5C" {...s} strokeWidth={5} />
+          </g>
+          <path d="M248 62 q12 18 0 28 q-12 -10 0 -28 Z" fill={C.cyan} {...s} strokeWidth={4} />
         </g>
       )}
       {variant === "steam" && <path d="M110 40 Q150 -10 190 40" fill="none" stroke="#FFFFFF" strokeWidth={12} strokeLinecap="round" opacity={0.9} />}
@@ -475,6 +530,50 @@ export const SiHalus: React.FC<{
             2
           </tspan>
         </text>
+      )}
+      {variant === "salad" && (
+        <g>
+          <rect x={80} y={250} width={140} height={38} rx={8} fill="#FFFFFF" {...s} strokeWidth={4} />
+          <text x={150} y={278} textAnchor="middle" fontFamily="LilitaOne" fontSize={26} fill="#E0566F">SEGAR?</text>
+        </g>
+      )}
+      {variant === "salad" &&
+        [0, 1, 2, 3, 4, 5].map((i) => {
+          const a = (i / 6) * Math.PI * 2 + t * 0.7 + 0.4;
+          const r = 172 + 14 * Math.sin(t * 3 + i);
+          return germ(`g${i}`, 150 + Math.cos(a) * r, 165 + Math.sin(a) * r * 0.92, 15 + (i % 3) * 4, i % 2 ? "#B48CF0" : "#F2C94C", 15 * Math.sin(t * 4 + i));
+        })}
+      {variant === "finish" && (
+        <g transform="translate(150 266) rotate(-4)">
+          <rect x={-56} y={-27} width={112} height={54} rx={7} fill="#FFFFFF" {...s} strokeWidth={4} />
+          <rect x={-52} y={-23} width={104} height={9} rx={3} fill={col2} />
+          {[[-46, -9], [46, -9], [-46, 19], [46, 19]].map(([x, y], k) => (
+            <circle key={k} cx={x} cy={y} r={3.2} fill={C.ink} />
+          ))}
+          <text x={0} y={20} textAnchor="middle" fontFamily="LilitaOne" fontSize={28} fill={C.ink}>FOMO</text>
+        </g>
+      )}
+      {variant === "powerbank" && (
+        <g transform={`translate(150 276) rotate(${-6 + 1.5 * Math.sin(t * 22)})`}>
+          <path d="M-50 -34 Q0 -50 50 -34 Q76 0 50 34 Q0 50 -50 34 Q-76 0 -50 -34 Z" fill="#3A3F4B" {...s} strokeWidth={5} />
+          <path d="M-40 -26 Q0 -36 40 -26" fill="none" stroke="#6B7385" strokeWidth={5} strokeLinecap="round" />
+          <path d="M6 -24 L-14 4 L-2 4 L-8 26 L14 -6 L2 -6 Z" fill="#FFE14D" stroke={C.ink} strokeWidth={3} strokeLinejoin="round" />
+          <circle cx={30} cy={20} r={4} fill="#FF3B3B" opacity={0.5 + 0.5 * Math.abs(Math.sin(t * 6))} />
+          <circle cx={40} cy={18} r={4} fill="#FF3B3B" opacity={0.5 + 0.5 * Math.abs(Math.cos(t * 6))} />
+          <circle cx={-64} cy={2} r={15} fill={col} {...s} strokeWidth={5} />
+          <circle cx={64} cy={2} r={15} fill={col} {...s} strokeWidth={5} />
+          {[[-66, -46, 0], [70, -42, 1.7], [-76, 42, 3.1]].map(([x, y, ph], k) => (
+            <path
+              key={k}
+              d="M0 -19 L5 -5 L19 0 L5 5 L0 19 L-5 5 L-19 0 L-5 -5 Z"
+              transform={`translate(${x} ${y}) scale(${0.7 + 0.45 * Math.abs(Math.sin(t * 9 + ph))})`}
+              fill="#FFE14D"
+              stroke={C.ink}
+              strokeWidth={3}
+              strokeLinejoin="round"
+            />
+          ))}
+        </g>
       )}
       <ellipse cx={86} cy={178} rx={16} ry={9} fill={col2} opacity={0.6} />
       <ellipse cx={214} cy={178} rx={16} ry={9} fill={col2} opacity={0.6} />
