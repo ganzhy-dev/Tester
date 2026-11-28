@@ -11,9 +11,7 @@ Situs statis (HTML/CSS/JS tanpa framework) untuk edukasi K3 & IHOH, pendamping a
 
 ## Wajib diganti sebelum terbit (PLACEHOLDER di `SITE` pada `src/build.py`)
 - `url` — domain (usulan: bahayatakterlihat.id, belum dibeli)
-- `facebook` — URL halaman Facebook
 - `whatsapp_channel` — saluran WhatsApp
-- `email` — surel resmi
 - Angka audiens di halaman Kolaborasi, profil penulis/peninjau di halaman Tentang
 - Slot iklan (`ad_slot`) dan `site/ads.txt` setelah AdSense disetujui; form buletin & kontak belum punya backend.
 

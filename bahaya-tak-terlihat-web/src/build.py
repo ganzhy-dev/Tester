@@ -23,12 +23,12 @@ OUT = ROOT.parent / "site"
 SITE = {
     "name": "Bahaya Tak Terlihat",
     "tagline": "Biar bahaya yang nggak kelihatan… jadi kelihatan.",
-    "url": "https://bahayatakterlihat.id",  # PLACEHOLDER: domain usulan, belum dibeli
+    "url": "https://bahaya-tak-terlihat.vercel.app",  # ganti ke domain sendiri (usulan: bahayatakterlihat.id) bila sudah dibeli
     "tiktok": "https://www.tiktok.com/@bahayataktelihat",
     "tiktok_handle": "@bahayataktelihat",
-    "facebook": "",  # PLACEHOLDER: URL halaman Facebook belum diberikan
+    "facebook": "https://www.facebook.com/share/14pm6G6hohi/",
     "whatsapp_channel": "",  # PLACEHOLDER: saluran WhatsApp belum dibuat
-    "email": "halo@bahayatakterlihat.id",  # PLACEHOLDER: contoh, belum aktif
+    "email": "mhmd.mansur21@gmail.com",
     "lang": "id",
 }
 
@@ -426,7 +426,7 @@ def build_home(arts: list[dict], full: bool = True) -> str:
 {kantor_block()}
 
 <section class="section band" id="ikuti"><div class="wrap follow">
-<div><h2>Ikuti supaya tidak ketinggalan</h2><p>Episode baru dan tips singkat terbit di TikTok. Halaman Facebook dan saluran WhatsApp sedang disiapkan untuk keluarga yang lebih nyaman membaca di sana.</p>
+<div><h2>Ikuti supaya tidak ketinggalan</h2><p>Episode baru dan tips singkat terbit di TikTok. Kami juga hadir di Facebook untuk keluarga yang lebih nyaman membaca di sana, dan saluran WhatsApp sedang disiapkan.</p>
 {social_buttons()}<div class="btn-row" style="margin-top:12px">{wa_btn}</div></div>
 <form class="newsletter" data-demo="Terima kasih! Formulir ini masih pratinjau dan belum tersambung ke layanan buletin, jadi alamat Anda belum tersimpan.">
 <h3>Buletin bulanan</h3><p class="form-note">Satu surel sebulan: ringkasan artikel baru dan daftar periksa keselamatan. <span class="ph">belum aktif</span></p>
@@ -541,7 +541,7 @@ def build_collab() -> str:
 <section class="section" style="padding-top:12px"><div class="section-head"><h2>Media kit singkat</h2><p>Angka audiens diperbarui setiap bulan. Minta versi PDF lengkap lewat surel.</p></div>
 <div class="table-wrap"><table class="stats"><thead><tr><th scope="col">Kanal</th><th scope="col">Pengikut</th><th scope="col">Rata-rata tayangan per video</th><th scope="col">Catatan</th></tr></thead>
 <tbody><tr><td>TikTok {SITE['tiktok_handle']}</td><td><span class="ph">isi angka</span></td><td><span class="ph">isi angka</span></td><td>Seri video motion 60–75 detik</td></tr>
-<tr><td>Facebook</td><td><span class="ph">isi angka</span></td><td><span class="ph">isi angka</span></td><td>Halaman menyusul</td></tr>
+<tr><td>Facebook</td><td><span class="ph">isi angka</span></td><td><span class="ph">isi angka</span></td><td>Halaman Bahaya Tak Terlihat</td></tr>
 <tr><td>Situs web</td><td>—</td><td><span class="ph">isi kunjungan bulanan</span></td><td>Artikel panjang dengan rujukan</td></tr></tbody></table></div>
 <p class="form-note" style="margin-top:10px">Audiens utama: keluarga muda, pekerja, pelajar, dan komunitas K3 di Indonesia.</p>
 </section>
@@ -560,7 +560,7 @@ def build_collab() -> str:
 <div><h2 style="font-size:var(--step-3);margin-bottom:10px">Hubungi kami</h2>
 <p style="color:var(--muted);margin-bottom:16px">Untuk kerja sama, koreksi artikel, atau usulan topik. Kami berusaha membalas dalam tiga hari kerja.</p>
 <div class="copy-row"><code>{email}</code><button class="btn" type="button" data-copy-text="{email}">{ICON['mail']} Salin alamat</button></div>
-<p class="form-note" style="margin-top:8px"><span class="ph">placeholder</span> Alamat ini contoh dan belum aktif. Ganti dengan surel resmi sebelum terbit.</p>
+
 <div style="margin-top:20px">{social_buttons()}</div></div>
 <form class="form-grid" data-demo="Pesan belum terkirim: formulir ini masih pratinjau tanpa server. Untuk sementara, kirim pesan langsung ke alamat surel di samping.">
 <div class="field"><label for="c-nama">Nama</label><input id="c-nama" name="nama" autocomplete="name" required></div>
