@@ -1197,8 +1197,12 @@ const Ep16Scenes: React.FC = () => {
           <At at={25.64} x={560} y={170}>
             <Smudge w={300} />
           </At>
-          <At at={25.7} x={570} y={390}>
-            <div style={{ fontFamily: HEAD, fontSize: 44, color: DEEP }}>kotoran (nggak keliatan)</div>
+          <At at={25.7} x={500} y={380}>
+            <div style={{ width: 420, textAlign: "center", fontFamily: HEAD, fontSize: 44, lineHeight: 1.05, color: DEEP }}>
+              kotoran
+              <br />
+              (nggak kelihatan)
+            </div>
           </At>
         </Panel>
         <CPop at={24.36} y={320}>
@@ -1420,7 +1424,7 @@ const Ep16Scenes: React.FC = () => {
           <Glint x={600} y={360} at={48.4} />
           <Glint x={880} y={400} s={0.7} at={48.6} ph={2} />
         </Kitchen>
-        <Sticker at={48.12} y={330} bg="#FFE27A" color={C.ink} size={60} rotate={-3}>
+        <Sticker at={48.12} y={330} bg="#FFFFFF" color={C.ink} size={60} rotate={-3}>
           {"VERSI GAMPANGNYA 👇"}
         </Sticker>
         <CPop at={48.7} y={1050}>
@@ -1530,8 +1534,8 @@ const Ep16Scenes: React.FC = () => {
           <div style={{ position: "absolute", left: 560, top: 30 }}>
             <Clock sweep={sweep4} size={310} />
           </div>
-          <At at={64.09} x={590} y={355}>
-            <div style={{ fontFamily: HEAD, fontSize: 64, color: C.ink, background: "#FFE27A", borderRadius: 22, padding: "0 22px", lineHeight: 1.2, border: `6px solid ${C.ink}`, boxShadow: `0 6px 0 ${C.ink}` }}>MAKS 2 JAM</div>
+          <At at={64.09} x={575} y={358}>
+            <div style={{ whiteSpace: "nowrap", fontFamily: HEAD, fontSize: 58, color: C.ink, background: "#FFE27A", borderRadius: 22, padding: "0 22px", lineHeight: 1.2, border: `6px solid ${C.ink}`, boxShadow: `0 6px 0 ${C.ink}` }}>MAKS 2 JAM</div>
           </At>
           <At at={64.49} x={60} y={30}>
             <Tag bg="#FFFFFF" size={34} rot={-2}>
