@@ -1000,11 +1000,11 @@ const Ep15Scenes: React.FC = () => {
           {"BIASAIN 3 HAL INI 👇"}
         </Sticker>
         {[
-          { y: 430, at: 31.32 },
-          { y: 650, at: 31.52 },
-          { y: 895, at: 31.68 },
+          { y: 430, at: 31.32, card: 32.0 },
+          { y: 650, at: 31.52, card: 33.43 },
+          { y: 895, at: 31.68, card: 36.12 },
         ].map((p, i) => {
-          if (t < p.at - 0.05) return null;
+          if (t < p.at - 0.05 || t > p.card + 0.35) return null;
           const s = pop(t, p.at, fps, 11, 220);
           return (
             <div key={i} style={{ position: "absolute", left: 60, top: p.y, width: 960, height: 190, boxSizing: "border-box", borderRadius: 36, border: `7px dashed ${ROSE}`, background: "rgba(255,240,236,0.6)", display: "flex", alignItems: "center", gap: 30, padding: "0 40px", scale: String(interpolate(s, [0, 1], [0.6, 1])), opacity: interpolate(s, [0, 0.3], [0, 1], clamp) }}>
