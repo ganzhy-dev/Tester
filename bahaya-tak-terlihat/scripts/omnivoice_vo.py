@@ -139,7 +139,7 @@ for ep in [int(a) for a in sys.argv[1:]]:
                 w = w.squeeze().cpu().numpy() if hasattr(w, "cpu") else np.asarray(w).squeeze()
                 w = trim(w.astype(np.float32))
                 dur = len(w) / SR
-                short = dur < 0.05 * len(sent)
+                short = dur < (0.03 if ASR_CHECK else 0.05) * len(sent)
                 sc, heard = asr_score(w, sent) if ASR_CHECK else (1.0, "")
                 score = sc - (0.3 if short else 0)
                 if best is None or score > best[0]:
